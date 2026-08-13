@@ -4,6 +4,8 @@ A static, accessible proof of concept for exploring the names and visual identit
 
 The initial dataset covers product-name periods and displays each product’s current logo from the Microsoft Cloud Logos collection. Researching historical logo periods remains the next dataset expansion, because Microsoft branding history has never been content with one dimension.
 
+The site also links to [Microsoft Cloud Logos](https://www.mscloudlogos.com/) for current and historical visual identities and [Let Me Correct That For You](https://www.letmecorrectthatforyou.com/) for Microsoft terminology. Together they form the tongue-in-cheek “Get Your Story Straight” network: if you’re going to say something, be right about it.
+
 ## Run locally
 
 Requires Node.js 20 or later.
