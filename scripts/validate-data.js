@@ -16,6 +16,8 @@ for (const source of data.sources) {
 for (const product of data.products) {
   if (ids.has(product.id)) errors.push(`Duplicate ID: ${product.id}`);
   ids.add(product.id);
+  if (!product.logo?.src || !product.logo?.alt || !product.logo?.source) errors.push(`Incomplete logo: ${product.id}`);
+  if (product.logo?.src && !product.logo.src.startsWith('src/assets/logos/')) errors.push(`Invalid logo path: ${product.id}`);
   const current = product.periods.filter(period => period.end === null);
   if (current.length !== 1) errors.push(`${product.id} must have exactly one current period`);
   let previousEnd = null;

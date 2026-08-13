@@ -4,71 +4,398 @@
   "methodology": "Dates are inclusive starts and exclusive ends. Month-only evidence is normalized to the first of that month for duration calculations while its precision remains visible.",
   "products": [
     {
-      "id": "entra-id", "name": "Microsoft Entra ID", "family": "Identity and access",
+      "id": "entra-id",
+      "name": "Microsoft Entra ID",
+      "family": "Identity and access",
       "periods": [
-        {"id":"entra-azure-ad","name":"Azure Active Directory","start":"2013-04","end":"2023-07","startPrecision":"month","endPrecision":"month","startQualifier":"by","endQualifier":"announced","sources":["azure-ad-ga","entra-rename"]},
-        {"id":"entra-current","name":"Microsoft Entra ID","start":"2023-07","end":null,"startPrecision":"month","endPrecision":null,"startQualifier":"announced","endQualifier":null,"sources":["entra-rename"]}
-      ]
+        {
+          "id": "entra-azure-ad",
+          "name": "Azure Active Directory",
+          "start": "2013-04",
+          "end": "2023-07",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "azure-ad-ga",
+            "entra-rename"
+          ]
+        },
+        {
+          "id": "entra-current",
+          "name": "Microsoft Entra ID",
+          "start": "2023-07",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "entra-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-id.svg",
+        "alt": "Microsoft Entra ID logo",
+        "source": "https://www.mscloudlogos.com"
+      }
     },
     {
-      "id": "microsoft-365", "name": "Microsoft 365", "family": "Productivity",
+      "id": "microsoft-365",
+      "name": "Microsoft 365",
+      "family": "Productivity",
       "periods": [
-        {"id":"m365-office","name":"Office 365","start":"2011-06-28","end":"2020-04-21","startPrecision":"day","endPrecision":"day","startQualifier":"launched","endQualifier":"effective","sources":["office365-launch","m365-change"]},
-        {"id":"m365-current","name":"Microsoft 365","start":"2020-04-21","end":null,"startPrecision":"day","endPrecision":null,"startQualifier":"effective","endQualifier":null,"sources":["m365-change"]}
-      ]
+        {
+          "id": "m365-office",
+          "name": "Office 365",
+          "start": "2011-06-28",
+          "end": "2020-04-21",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "effective",
+          "sources": [
+            "office365-launch",
+            "m365-change"
+          ]
+        },
+        {
+          "id": "m365-current",
+          "name": "Microsoft 365",
+          "start": "2020-04-21",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "effective",
+          "endQualifier": null,
+          "sources": [
+            "m365-change"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/microsoft-365.png",
+        "alt": "Microsoft 365 logo",
+        "source": "https://www.mscloudlogos.com"
+      }
     },
     {
-      "id": "onedrive", "name": "Microsoft OneDrive", "family": "Storage",
+      "id": "onedrive",
+      "name": "Microsoft OneDrive",
+      "family": "Storage",
       "periods": [
-        {"id":"onedrive-skydrive","name":"SkyDrive","start":"2007-08","end":"2014-02-19","startPrecision":"month","endPrecision":"day","startQualifier":"by","endQualifier":"launched","sources":["skydrive-history","onedrive-launch"]},
-        {"id":"onedrive-current","name":"OneDrive","start":"2014-02-19","end":null,"startPrecision":"day","endPrecision":null,"startQualifier":"launched","endQualifier":null,"sources":["onedrive-launch"]}
-      ]
+        {
+          "id": "onedrive-skydrive",
+          "name": "SkyDrive",
+          "start": "2007-08",
+          "end": "2014-02-19",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "launched",
+          "sources": [
+            "skydrive-history",
+            "onedrive-launch"
+          ]
+        },
+        {
+          "id": "onedrive-current",
+          "name": "OneDrive",
+          "start": "2014-02-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "launched",
+          "endQualifier": null,
+          "sources": [
+            "onedrive-launch"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/onedrive.png",
+        "alt": "Microsoft OneDrive logo",
+        "source": "https://www.mscloudlogos.com"
+      }
     },
     {
-      "id": "power-automate", "name": "Microsoft Power Automate", "family": "Power Platform",
+      "id": "power-automate",
+      "name": "Microsoft Power Automate",
+      "family": "Power Platform",
       "periods": [
-        {"id":"automate-flow","name":"Microsoft Flow","start":"2016-11-01","end":"2019-11-04","startPrecision":"day","endPrecision":"day","startQualifier":"generally available","endQualifier":"announced","sources":["flow-ga","power-automate-announce"]},
-        {"id":"automate-current","name":"Microsoft Power Automate","start":"2019-11-04","end":null,"startPrecision":"day","endPrecision":null,"startQualifier":"announced","endQualifier":null,"sources":["power-automate-announce"]}
-      ]
+        {
+          "id": "automate-flow",
+          "name": "Microsoft Flow",
+          "start": "2016-11-01",
+          "end": "2019-11-04",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "generally available",
+          "endQualifier": "announced",
+          "sources": [
+            "flow-ga",
+            "power-automate-announce"
+          ]
+        },
+        {
+          "id": "automate-current",
+          "name": "Microsoft Power Automate",
+          "start": "2019-11-04",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "power-automate-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/power-automate.svg",
+        "alt": "Microsoft Power Automate logo",
+        "source": "https://www.mscloudlogos.com"
+      }
     },
     {
-      "id": "azure-devops", "name": "Azure DevOps", "family": "Developer tools",
+      "id": "azure-devops",
+      "name": "Azure DevOps",
+      "family": "Developer tools",
       "periods": [
-        {"id":"devops-vso","name":"Visual Studio Online","start":"2013-11-13","end":"2015-11-18","startPrecision":"day","endPrecision":"day","startQualifier":"announced","endQualifier":"announced","sources":["vso-announce","vsts-rename"]},
-        {"id":"devops-vsts","name":"Visual Studio Team Services","start":"2015-11-18","end":"2018-09-10","startPrecision":"day","endPrecision":"day","startQualifier":"announced","endQualifier":"announced","sources":["vsts-rename","azure-devops-announce"]},
-        {"id":"devops-current","name":"Azure DevOps","start":"2018-09-10","end":null,"startPrecision":"day","endPrecision":null,"startQualifier":"announced","endQualifier":null,"sources":["azure-devops-announce"]}
-      ]
+        {
+          "id": "devops-vso",
+          "name": "Visual Studio Online",
+          "start": "2013-11-13",
+          "end": "2015-11-18",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "vso-announce",
+            "vsts-rename"
+          ]
+        },
+        {
+          "id": "devops-vsts",
+          "name": "Visual Studio Team Services",
+          "start": "2015-11-18",
+          "end": "2018-09-10",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "vsts-rename",
+            "azure-devops-announce"
+          ]
+        },
+        {
+          "id": "devops-current",
+          "name": "Azure DevOps",
+          "start": "2018-09-10",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "azure-devops-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/azure-devops.svg",
+        "alt": "Azure DevOps logo",
+        "source": "https://www.mscloudlogos.com"
+      }
     },
     {
-      "id": "viva-engage", "name": "Microsoft Viva Engage", "family": "Employee experience",
+      "id": "viva-engage",
+      "name": "Microsoft Viva Engage",
+      "family": "Employee experience",
       "periods": [
-        {"id":"engage-yammer","name":"Yammer","start":"2008-09","end":"2023-02","startPrecision":"month","endPrecision":"month","startQualifier":"launched","endQualifier":"announced","sources":["yammer-history","yammer-viva"]},
-        {"id":"engage-current","name":"Microsoft Viva Engage","start":"2023-02","end":null,"startPrecision":"month","endPrecision":null,"startQualifier":"announced","endQualifier":null,"sources":["yammer-viva"]}
-      ]
+        {
+          "id": "engage-yammer",
+          "name": "Yammer",
+          "start": "2008-09",
+          "end": "2023-02",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "yammer-history",
+            "yammer-viva"
+          ]
+        },
+        {
+          "id": "engage-current",
+          "name": "Microsoft Viva Engage",
+          "start": "2023-02",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "yammer-viva"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/viva-engage.png",
+        "alt": "Microsoft Viva Engage logo",
+        "source": "https://www.mscloudlogos.com"
+      }
     },
     {
-      "id": "dynamics-365", "name": "Microsoft Dynamics 365", "family": "Business applications",
+      "id": "dynamics-365",
+      "name": "Microsoft Dynamics 365",
+      "family": "Business applications",
       "periods": [
-        {"id":"dynamics-crm","name":"Microsoft Dynamics CRM","start":"2003-01","end":"2016-11-01","startPrecision":"month","endPrecision":"day","startQualifier":"launched","endQualifier":"launched","sources":["crm-history","dynamics365-launch"]},
-        {"id":"dynamics-current","name":"Microsoft Dynamics 365","start":"2016-11-01","end":null,"startPrecision":"day","endPrecision":null,"startQualifier":"launched","endQualifier":null,"sources":["dynamics365-launch"]}
-      ]
+        {
+          "id": "dynamics-crm",
+          "name": "Microsoft Dynamics CRM",
+          "start": "2003-01",
+          "end": "2016-11-01",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "launched",
+          "sources": [
+            "crm-history",
+            "dynamics365-launch"
+          ]
+        },
+        {
+          "id": "dynamics-current",
+          "name": "Microsoft Dynamics 365",
+          "start": "2016-11-01",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "launched",
+          "endQualifier": null,
+          "sources": [
+            "dynamics365-launch"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/dynamics-365.svg",
+        "alt": "Microsoft Dynamics 365 logo",
+        "source": "https://www.mscloudlogos.com"
+      }
     }
   ],
   "sources": [
-    {"id":"azure-ad-ga","title":"Windows Azure Active Directory is now generally available","publisher":"Microsoft Azure Blog","published":"2013-04-08","url":"https://azure.microsoft.com/en-us/blog/windows-azure-active-directory-is-now-generally-available/"},
-    {"id":"entra-rename","title":"Azure AD is becoming Microsoft Entra ID","publisher":"Microsoft Security Blog","published":"2023-07-11","url":"https://www.microsoft.com/en-us/security/blog/2023/07/11/azure-ad-is-becoming-microsoft-entra-id/"},
-    {"id":"office365-launch","title":"Microsoft Launches Office 365 Globally","publisher":"Microsoft Source","published":"2011-06-28","url":"https://news.microsoft.com/2011/06/28/microsoft-launches-office-365-globally/"},
-    {"id":"m365-change","title":"New Microsoft 365 offerings for small and medium-sized businesses","publisher":"Microsoft 365 Blog","published":"2020-03-30","url":"https://www.microsoft.com/en-us/microsoft-365/blog/2020/03/30/new-microsoft-365-offerings-small-and-medium-sized-businesses/"},
-    {"id":"skydrive-history","title":"The evolution of SkyDrive","publisher":"Microsoft 365 Blog","published":"2012-08-14","url":"https://www.microsoft.com/en-us/microsoft-365/blog/2012/08/14/the-evolution-of-skydrive/"},
-    {"id":"onedrive-launch","title":"OneDrive is now available worldwide","publisher":"Microsoft 365 Blog","published":"2014-02-19","url":"https://www.microsoft.com/en-us/microsoft-365/blog/2014/02/19/onedrive-is-now-available-worldwide/"},
-    {"id":"flow-ga","title":"Microsoft Flow and PowerApps general availability","publisher":"Microsoft Power Platform Blog","published":"2016-10-31","url":"https://www.microsoft.com/en-us/power-platform/blog/power-apps/microsoft-flow-and-powerapps-general-availability/"},
-    {"id":"power-automate-announce","title":"Microsoft rebrands Flow as Power Automate and adds RPA features","publisher":"Microsoft Power Platform Blog","published":"2019-11-04","url":"https://www.microsoft.com/en-us/power-platform/blog/power-automate/microsoft-rebrands-flow-as-power-automate-and-adds-rpa-features/"},
-    {"id":"vso-announce","title":"Visual Studio 2013 launched; Visual Studio Online announced","publisher":"Microsoft News Center","published":"2013-11-13","url":"https://news.microsoft.com/2013/11/13/visual-studio-2013-launched-visual-studio-online-announced/"},
-    {"id":"vsts-rename","title":"Visual Studio Online is now Visual Studio Team Services","publisher":"Azure DevOps Blog","published":"2015-11-18","url":"https://devblogs.microsoft.com/devops/visual-studio-online-is-now-visual-studio-team-services/"},
-    {"id":"azure-devops-announce","title":"Introducing Azure DevOps","publisher":"Azure DevOps Blog","published":"2018-09-10","url":"https://devblogs.microsoft.com/devops/introducing-azure-devops/"},
-    {"id":"yammer-history","title":"Microsoft to acquire Yammer","publisher":"Microsoft News Center","published":"2012-06-25","url":"https://news.microsoft.com/2012/06/25/microsoft-to-acquire-yammer/"},
-    {"id":"yammer-viva","title":"Yammer is evolving to Microsoft Viva Engage","publisher":"Microsoft 365 Blog","published":"2023-02-13","url":"https://www.microsoft.com/en-us/microsoft-365/blog/2023/02/13/yammer-is-evolving-to-microsoft-viva-engage/"},
-    {"id":"crm-history","title":"The history of Microsoft Dynamics","publisher":"Microsoft Dynamics 365 Blog","published":"2011-05-04","url":"https://www.microsoft.com/en-us/dynamics-365/blog/no-audience/2011/05/04/the-history-of-microsoft-dynamics/"},
-    {"id":"dynamics365-launch","title":"Microsoft Dynamics 365 launches worldwide","publisher":"Microsoft News Center","published":"2016-11-01","url":"https://news.microsoft.com/2016/11/01/microsoft-dynamics-365-launches-worldwide/"}
+    {
+      "id": "azure-ad-ga",
+      "title": "Windows Azure Active Directory is now generally available",
+      "publisher": "Microsoft Azure Blog",
+      "published": "2013-04-08",
+      "url": "https://azure.microsoft.com/en-us/blog/windows-azure-active-directory-is-now-generally-available/"
+    },
+    {
+      "id": "entra-rename",
+      "title": "Azure AD is becoming Microsoft Entra ID",
+      "publisher": "Microsoft Security Blog",
+      "published": "2023-07-11",
+      "url": "https://www.microsoft.com/en-us/security/blog/2023/07/11/azure-ad-is-becoming-microsoft-entra-id/"
+    },
+    {
+      "id": "office365-launch",
+      "title": "Microsoft Launches Office 365 Globally",
+      "publisher": "Microsoft Source",
+      "published": "2011-06-28",
+      "url": "https://news.microsoft.com/2011/06/28/microsoft-launches-office-365-globally/"
+    },
+    {
+      "id": "m365-change",
+      "title": "New Microsoft 365 offerings for small and medium-sized businesses",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2020-03-30",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2020/03/30/new-microsoft-365-offerings-small-and-medium-sized-businesses/"
+    },
+    {
+      "id": "skydrive-history",
+      "title": "The evolution of SkyDrive",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2012-08-14",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2012/08/14/the-evolution-of-skydrive/"
+    },
+    {
+      "id": "onedrive-launch",
+      "title": "OneDrive is now available worldwide",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2014-02-19",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2014/02/19/onedrive-is-now-available-worldwide/"
+    },
+    {
+      "id": "flow-ga",
+      "title": "Microsoft Flow and PowerApps general availability",
+      "publisher": "Microsoft Power Platform Blog",
+      "published": "2016-10-31",
+      "url": "https://www.microsoft.com/en-us/power-platform/blog/power-apps/microsoft-flow-and-powerapps-general-availability/"
+    },
+    {
+      "id": "power-automate-announce",
+      "title": "Microsoft rebrands Flow as Power Automate and adds RPA features",
+      "publisher": "Microsoft Power Platform Blog",
+      "published": "2019-11-04",
+      "url": "https://www.microsoft.com/en-us/power-platform/blog/power-automate/microsoft-rebrands-flow-as-power-automate-and-adds-rpa-features/"
+    },
+    {
+      "id": "vso-announce",
+      "title": "Visual Studio 2013 launched; Visual Studio Online announced",
+      "publisher": "Microsoft News Center",
+      "published": "2013-11-13",
+      "url": "https://news.microsoft.com/2013/11/13/visual-studio-2013-launched-visual-studio-online-announced/"
+    },
+    {
+      "id": "vsts-rename",
+      "title": "Visual Studio Online is now Visual Studio Team Services",
+      "publisher": "Azure DevOps Blog",
+      "published": "2015-11-18",
+      "url": "https://devblogs.microsoft.com/devops/visual-studio-online-is-now-visual-studio-team-services/"
+    },
+    {
+      "id": "azure-devops-announce",
+      "title": "Introducing Azure DevOps",
+      "publisher": "Azure DevOps Blog",
+      "published": "2018-09-10",
+      "url": "https://devblogs.microsoft.com/devops/introducing-azure-devops/"
+    },
+    {
+      "id": "yammer-history",
+      "title": "Microsoft to acquire Yammer",
+      "publisher": "Microsoft News Center",
+      "published": "2012-06-25",
+      "url": "https://news.microsoft.com/2012/06/25/microsoft-to-acquire-yammer/"
+    },
+    {
+      "id": "yammer-viva",
+      "title": "Yammer is evolving to Microsoft Viva Engage",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2023-02-13",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2023/02/13/yammer-is-evolving-to-microsoft-viva-engage/"
+    },
+    {
+      "id": "crm-history",
+      "title": "The history of Microsoft Dynamics",
+      "publisher": "Microsoft Dynamics 365 Blog",
+      "published": "2011-05-04",
+      "url": "https://www.microsoft.com/en-us/dynamics-365/blog/no-audience/2011/05/04/the-history-of-microsoft-dynamics/"
+    },
+    {
+      "id": "dynamics365-launch",
+      "title": "Microsoft Dynamics 365 launches worldwide",
+      "publisher": "Microsoft News Center",
+      "published": "2016-11-01",
+      "url": "https://news.microsoft.com/2016/11/01/microsoft-dynamics-365-launches-worldwide/"
+    }
   ]
 }

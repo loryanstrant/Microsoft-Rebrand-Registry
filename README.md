@@ -2,7 +2,7 @@
 
 A static, accessible proof of concept for exploring the names and visual identities Microsoft cloud products have accumulated over time. The primary view is a research table with inline duration bars; a timeline is available as a secondary view.
 
-The initial dataset covers product names. Logo periods are the next dataset expansion, because Microsoft branding history has never been content with one dimension.
+The initial dataset covers product-name periods and displays each product’s current logo from the Microsoft Cloud Logos collection. Researching historical logo periods remains the next dataset expansion, because Microsoft branding history has never been content with one dimension.
 
 ## Run locally
 
