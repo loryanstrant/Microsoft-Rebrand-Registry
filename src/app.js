@@ -1,4 +1,4 @@
-import { dateLabel, durationLabel, monthDiff, parseDate } from './dates.js';
+import { currentFirst, dateLabel, durationLabel, monthDiff, parseDate } from './dates.js';
 
 const DATA_URL = './src/data/products.json';
 const state = { data: null, view: 'table', query: '', family: 'all', status: 'all' };
@@ -11,10 +11,8 @@ const els = {
 function visibleProducts() {
   const query = state.query.toLowerCase();
   return state.data.products.map(product => {
-    const matchesQuery = !query || product.name.toLowerCase().includes(query)
-      || product.periods.some(period => period.name.toLowerCase().includes(query));
-    const periods = product.periods.filter(period => state.status === 'all'
-      || (state.status === 'current') === !period.end);
+    const periods = currentFirst(product.periods.filter(period => state.status === 'all'
+      || (state.status === 'current') === !period.end));
     return { product, periods };
   }).filter(({ product, periods }) => (state.family === 'all' || product.family === state.family)
     && periods.length && (!query || product.name.toLowerCase().includes(query)
