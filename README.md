@@ -1,6 +1,8 @@
-# Microsoft Product Lifecycle Tracker
+# The Rebrand Registry
 
-A static, accessible proof of concept for exploring the current and former names of Microsoft cloud products. The primary view is a sortable-style research table with inline duration bars; a timeline is available as a secondary view.
+A static, accessible proof of concept for exploring the names and visual identities Microsoft cloud products have accumulated over time. The primary view is a research table with inline duration bars; a timeline is available as a secondary view.
+
+The initial dataset covers product names. Logo periods are the next dataset expansion, because Microsoft branding history has never been content with one dimension.
 
 ## Run locally
 
@@ -48,6 +50,14 @@ The repository root is both the app location and output location; there is no AP
 - **Output location:** leave blank
 
 `staticwebapp.config.json` provides navigation fallback and baseline security headers. No credentials are needed by the app.
+
+Planned production resources use the **Free** Static Web Apps tier in the **MVP 1k per month benefit** subscription:
+
+- Resource group: `rg-rebrand-registry-prod`
+- Static Web App: `swa-rebrand-registry`
+- Region: Australia East
+
+Provisioning is intentionally separate from publishing. Creating the resource does not make this proof of concept public until a deployment workflow or deployment token uploads the site.
 
 ## Accessibility
 

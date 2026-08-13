@@ -1,6 +1,6 @@
 # Copy to .github/workflows/azure-static-web-apps.yml if deploying through GitHub Actions.
 # Azure normally generates this workflow and stores the deployment token as a repository secret.
-name: Deploy Azure Static Web App
+name: Deploy The Rebrand Registry
 on:
   push:
     branches: [main]
