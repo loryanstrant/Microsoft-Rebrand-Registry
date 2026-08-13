@@ -29,7 +29,7 @@ function sourcesFor(periods) {
 function renderPeriod(period, max, asOf) {
   const months = monthDiff(parseDate(period.start), period.end ? parseDate(period.end) : asOf);
   return `<div class="name-period">
-    <div class="name-identity"><span class="period-name">${period.name}</span><span class="badge ${period.end ? 'former' : ''}">${period.end ? '○ Former' : '● Current'}</span></div>
+    <div class="name-identity ${period.end ? '' : 'current'}"><span class="period-name">${period.name}</span><span class="badge ${period.end ? 'former' : ''}">${period.end ? '○ Former' : '● Current'}</span></div>
     <div class="period-date">${dateLabel(period.start, period.startPrecision, period.startQualifier)}<span class="precision">${period.startQualifier}; ${period.startPrecision} precision</span></div>
     <div class="period-date">${dateLabel(period.end, period.endPrecision, period.endQualifier)}${period.end ? `<span class="precision">${period.endQualifier}; ${period.endPrecision} precision</span>` : ''}</div>
     <div class="duration"><span class="duration-label">${durationLabel(months)}</span><div class="duration-track" aria-hidden="true"><span class="duration-bar" style="width:${Math.max(3, months / max * 100)}%"></span></div></div>
@@ -55,7 +55,7 @@ function renderTimeline(groups) {
     .filter((_, index) => index % Math.max(1, Math.ceil(span / 9)) === 0);
   const pct = date => (date.getUTCFullYear() + date.getUTCMonth() / 12 - minYear) / span * 100;
   els.timelineGrid.innerHTML = `<div class="timeline-grid"><div class="timeline-axis"><div></div><div class="axis-years">${years.map(year => `<span class="axis-year" style="left:${(year - minYear) / span * 100}%">${year}</span>`).join('')}</div></div>${groups.map(({ product, periods }) =>
-    `<div class="timeline-row"><div class="timeline-product"><img src="${product.logo.src}" alt="" width="32" height="32"><span>${product.name}</span></div><div class="timeline-lanes">${periods.map((period, index) => {
+    `<div class="timeline-row"><div class="timeline-product"><img src="${product.logo.src}" alt="" width="32" height="32"><span>${product.name}</span></div><div class="timeline-lanes" style="min-height:${Math.max(72, periods.length * 29 + 19)}px">${periods.map((period, index) => {
       const left = pct(parseDate(period.start)), right = pct(period.end ? parseDate(period.end) : maxDate);
       const label = `${period.name}: ${dateLabel(period.start, period.startPrecision, period.startQualifier)} to ${dateLabel(period.end, period.endPrecision, period.endQualifier)}`;
       return `<div class="timeline-bar ${period.end ? '' : 'current'}" tabindex="0" aria-label="${label}" style="left:${left}%;width:${Math.max(.5, right - left)}%;top:${10 + index * 29}px" title="${label}">${period.name}</div>`;
