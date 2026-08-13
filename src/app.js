@@ -31,7 +31,7 @@ function renderTimeline(rows) {
   const pct=date=>(date.getUTCFullYear()+date.getUTCMonth()/12-minYear)/span*100;
   els.timelineGrid.innerHTML=`<div class="timeline-grid"><div class="timeline-axis"><div></div><div class="axis-years">${years.map(y=>`<span class="axis-year" style="left:${(y-minYear)/span*100}%">${y}</span>`).join('')}</div></div>${products.map(product=>{
     const periods=rows.filter(row=>row.product.id===product.id).map(row=>row.period);
-    return `<div class="timeline-row"><div class="timeline-product">${product.name}</div><div class="timeline-lanes">${periods.map((p,i)=>{const left=pct(parseDate(p.start)),right=pct(p.end?parseDate(p.end):maxDate); return `<div class="timeline-bar ${p.end?'':'current'}" tabindex="0" style="left:${left}%;width:${Math.max(.5,right-left)}%;top:${10+i*29}px" title="${p.name}: ${dateLabel(p.start,p.startPrecision,p.startQualifier)} to ${dateLabel(p.end,p.endPrecision,p.endQualifier)}">${p.name}</div>`}).join('')}</div></div>`}).join('')}</div>`;
+    return `<div class="timeline-row"><div class="timeline-product">${product.name}</div><div class="timeline-lanes">${periods.map((p,i)=>{const left=pct(parseDate(p.start)),right=pct(p.end?parseDate(p.end):maxDate); const label=`${p.name}: ${dateLabel(p.start,p.startPrecision,p.startQualifier)} to ${dateLabel(p.end,p.endPrecision,p.endQualifier)}`; return `<div class="timeline-bar ${p.end?'':'current'}" tabindex="0" aria-label="${label}" style="left:${left}%;width:${Math.max(.5,right-left)}%;top:${10+i*29}px" title="${label}">${p.name}</div>`}).join('')}</div></div>`}).join('')}</div>`;
 }
 function render() {
   const rows=visiblePeriods(), hasRows=rows.length>0;
