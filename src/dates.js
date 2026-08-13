@@ -12,12 +12,12 @@ export function durationLabel(months) {
   return [years && `${years} yr${years === 1 ? '' : 's'}`, remainder && `${remainder} mo`].filter(Boolean).join(' ') || '< 1 mo';
 }
 
-export function currentFirst(periods) {
+export function currentThenChronological(periods) {
   return [...periods].sort((a, b) => {
     const aCurrent = !a.end;
     const bCurrent = !b.end;
     if (aCurrent !== bCurrent) return aCurrent ? -1 : 1;
-    return b.start.localeCompare(a.start);
+    return a.start.localeCompare(b.start);
   });
 }
 
