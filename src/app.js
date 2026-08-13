@@ -1,12 +1,24 @@
-import { alphabeticalProducts, currentThenChronological, dateLabel, durationLabel, monthDiff, parseDate } from './dates.js';
+import { alphabeticalProducts, currentThenChronological, dateLabel, durationLabel, monthDiff, parseDate, productLetter } from './dates.js';
 
 const DATA_URL = './src/data/products.json';
 const state = { data: null, view: 'table', query: '', family: 'all', status: 'all' };
 const $ = (selector) => document.querySelector(selector);
 const els = {
   loading: $('#loading'), error: $('#error'), empty: $('#empty'), table: $('#table-view'),
-  timeline: $('#timeline-view'), body: $('#history-body'), timelineGrid: $('#timeline')
+  timeline: $('#timeline-view'), body: $('#history-body'), timelineGrid: $('#timeline'), letterNav: $('#letter-nav')
 };
+
+function letterId(letter, view) {
+  return `${view}-letter-${letter === '#' ? 'other' : letter.toLowerCase()}`;
+}
+
+function renderLetterNav(groups) {
+  const available = new Set(groups.map(({ product }) => productLetter(product.name)));
+  els.letterNav.innerHTML = ['#', ...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'].map(letter => available.has(letter)
+    ? `<a href="#${letterId(letter, state.view)}">${letter}</a>`
+    : `<span aria-hidden="true">${letter}</span>`).join('');
+  els.letterNav.hidden = groups.length < 10;
+}
 
 function visibleProducts() {
   const query = state.query.toLowerCase();
@@ -40,10 +52,16 @@ function renderTable(groups) {
   const asOf = parseDate(state.data.asOf);
   const allPeriods = groups.flatMap(group => group.periods);
   const max = Math.max(...allPeriods.map(period => monthDiff(parseDate(period.start), period.end ? parseDate(period.end) : asOf)), 1);
-  els.body.innerHTML = groups.map(({ product, periods }) => `<tr>
-    <th scope="row" class="product-cell"><div class="product-identity"><img class="product-logo" src="${product.logo.src}" alt="${product.logo.alt}" width="52" height="52"><div><span class="product-name">${product.name}</span><span class="family">${product.family}</span></div></div></th>
-    <td colspan="5" class="history-cell">${periods.map(period => renderPeriod(period, max, asOf)).join('')}</td>
-  </tr>`).join('');
+  let previousLetter = '';
+  els.body.innerHTML = groups.map(({ product, periods }) => {
+    const letter = productLetter(product.name);
+    const heading = letter !== previousLetter ? `<tr class="letter-row" id="${letterId(letter, 'table')}"><th colspan="6" scope="colgroup"><span>${letter}</span><a href="#explorer-heading">Back to registry</a></th></tr>` : '';
+    previousLetter = letter;
+    return `${heading}<tr>
+      <th scope="row" class="product-cell"><div class="product-identity"><img class="product-logo" src="${product.logo.src}" alt="${product.logo.alt}" width="52" height="52"><div><span class="product-name">${product.name}</span><span class="family">${product.family}</span></div></div></th>
+      <td colspan="5" class="history-cell">${periods.map(period => renderPeriod(period, max, asOf)).join('')}</td>
+    </tr>`;
+  }).join('');
 }
 
 function renderTimeline(groups) {
@@ -53,12 +71,17 @@ function renderTimeline(groups) {
   const years = Array.from({ length: span + 1 }, (_, index) => minYear + index)
     .filter((_, index) => index % Math.max(1, Math.ceil(span / 9)) === 0);
   const pct = date => (date.getUTCFullYear() + date.getUTCMonth() / 12 - minYear) / span * 100;
-  els.timelineGrid.innerHTML = `<div class="timeline-grid"><div class="timeline-axis"><div></div><div class="axis-years">${years.map(year => `<span class="axis-year" style="left:${(year - minYear) / span * 100}%">${year}</span>`).join('')}</div></div>${groups.map(({ product, periods }) =>
-    `<div class="timeline-row"><div class="timeline-product"><img src="${product.logo.src}" alt="" width="32" height="32"><span>${product.name}</span></div><div class="timeline-lanes" style="min-height:${Math.max(72, periods.length * 29 + 19)}px">${periods.map((period, index) => {
+  let previousLetter = '';
+  els.timelineGrid.innerHTML = `<div class="timeline-grid"><div class="timeline-axis"><div></div><div class="axis-years">${years.map(year => `<span class="axis-year" style="left:${(year - minYear) / span * 100}%">${year}</span>`).join('')}</div></div>${groups.map(({ product, periods }) => {
+    const letter = productLetter(product.name);
+    const heading = letter !== previousLetter ? `<div class="timeline-letter" id="${letterId(letter, 'timeline')}"><strong>${letter}</strong><a href="#explorer-heading">Back to registry</a></div>` : '';
+    previousLetter = letter;
+    return `${heading}<div class="timeline-row"><div class="timeline-product"><img src="${product.logo.src}" alt="" width="32" height="32"><span>${product.name}</span></div><div class="timeline-lanes" style="min-height:${Math.max(72, periods.length * 29 + 19)}px">${periods.map((period, index) => {
       const left = pct(parseDate(period.start)), right = pct(period.end ? parseDate(period.end) : maxDate);
       const label = `${period.name}: ${dateLabel(period.start, period.startPrecision, period.startQualifier)} to ${dateLabel(period.end, period.endPrecision, period.endQualifier)}`;
       return `<div class="timeline-bar ${period.end ? '' : 'current'}" tabindex="0" aria-label="${label}" style="left:${left}%;width:${Math.max(.5, right - left)}%;top:${10 + index * 29}px" title="${label}">${period.name}</div>`;
-    }).join('')}</div></div>`).join('')}</div>`;
+    }).join('')}</div></div>`;
+  }).join('')}</div>`;
 }
 
 function render() {
@@ -66,7 +89,8 @@ function render() {
   els.loading.hidden = true; els.error.hidden = true; els.empty.hidden = hasRows;
   els.table.hidden = !hasRows || state.view !== 'table';
   els.timeline.hidden = !hasRows || state.view !== 'timeline';
-  if (hasRows) { renderTable(groups); renderTimeline(groups); }
+  els.letterNav.hidden = true;
+  if (hasRows) { renderLetterNav(groups); renderTable(groups); renderTimeline(groups); }
 }
 
 async function load() {

@@ -289,6 +289,750 @@
         "alt": "Microsoft Dynamics 365 logo",
         "source": "https://www.mscloudlogos.com"
       }
+    },
+    {
+      "id": "azure-ai-document-intelligence",
+      "name": "Azure AI Document Intelligence",
+      "family": "Artificial intelligence",
+      "periods": [
+        {
+          "id": "document-form-recognizer",
+          "name": "Form Recognizer",
+          "start": "2019-05-06",
+          "end": "2023-07-21",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "previewed",
+          "endQualifier": "announced",
+          "sources": [
+            "form-recognizer-preview",
+            "document-intelligence-rename"
+          ]
+        },
+        {
+          "id": "document-current",
+          "name": "Azure AI Document Intelligence",
+          "start": "2023-07-21",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "document-intelligence-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/azure-ai-document-intelligence.svg",
+        "alt": "Azure AI Document Intelligence logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "azure-ai-search",
+      "name": "Azure AI Search",
+      "family": "Artificial intelligence",
+      "periods": [
+        {
+          "id": "search-azure",
+          "name": "Azure Search",
+          "start": "2015-03-05",
+          "end": "2019-11-04",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "generally available",
+          "endQualifier": "announced",
+          "sources": [
+            "azure-search-ga",
+            "cognitive-search-rename"
+          ]
+        },
+        {
+          "id": "search-cognitive",
+          "name": "Azure Cognitive Search",
+          "start": "2019-11-04",
+          "end": "2023-11-15",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "cognitive-search-rename",
+            "ai-search-rename"
+          ]
+        },
+        {
+          "id": "search-current",
+          "name": "Azure AI Search",
+          "start": "2023-11-15",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "ai-search-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/azure-ai-search.svg",
+        "alt": "Azure AI Search logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "azure-app-service",
+      "name": "Azure App Service",
+      "family": "Application platform",
+      "periods": [
+        {
+          "id": "app-azure-websites",
+          "name": "Windows Azure Web Sites",
+          "start": "2012-06-07",
+          "end": "2014-04-03",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "previewed",
+          "endQualifier": "announced",
+          "sources": [
+            "azure-websites-preview",
+            "azure-name-change"
+          ]
+        },
+        {
+          "id": "app-azure-websites-short",
+          "name": "Azure Websites",
+          "start": "2014-04-03",
+          "end": "2015-03-24",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "azure-name-change",
+            "app-service-launch"
+          ]
+        },
+        {
+          "id": "app-current",
+          "name": "Azure App Service",
+          "start": "2015-03-24",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "app-service-launch"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/azure-app-service.svg",
+        "alt": "Azure App Service logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "azure-cosmos-db",
+      "name": "Azure Cosmos DB",
+      "family": "Databases",
+      "periods": [
+        {
+          "id": "cosmos-documentdb",
+          "name": "Azure DocumentDB",
+          "start": "2015-04-08",
+          "end": "2017-05-10",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "generally available",
+          "endQualifier": "announced",
+          "sources": [
+            "documentdb-ga",
+            "cosmos-launch"
+          ]
+        },
+        {
+          "id": "cosmos-current",
+          "name": "Azure Cosmos DB",
+          "start": "2017-05-10",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "cosmos-launch"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/azure-cosmos-db.svg",
+        "alt": "Azure Cosmos DB logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "azure-local",
+      "name": "Azure Local",
+      "family": "Hybrid cloud",
+      "periods": [
+        {
+          "id": "local-stack-hci",
+          "name": "Azure Stack HCI",
+          "start": "2019-03-26",
+          "end": "2024-11-19",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "stack-hci-launch",
+            "azure-local-rename"
+          ]
+        },
+        {
+          "id": "local-current",
+          "name": "Azure Local",
+          "start": "2024-11-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "azure-local-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/azure-local.svg",
+        "alt": "Azure Local logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "azure-synapse-analytics",
+      "name": "Azure Synapse Analytics",
+      "family": "Analytics",
+      "periods": [
+        {
+          "id": "synapse-sql-dw",
+          "name": "Azure SQL Data Warehouse",
+          "start": "2015-04-29",
+          "end": "2019-11-04",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "previewed",
+          "endQualifier": "announced",
+          "sources": [
+            "sql-dw-preview",
+            "synapse-launch"
+          ]
+        },
+        {
+          "id": "synapse-current",
+          "name": "Azure Synapse Analytics",
+          "start": "2019-11-04",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "synapse-launch"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/azure-synapse-analytics.svg",
+        "alt": "Azure Synapse Analytics logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "azure-virtual-desktop",
+      "name": "Azure Virtual Desktop",
+      "family": "Virtual desktop",
+      "periods": [
+        {
+          "id": "avd-wvd",
+          "name": "Windows Virtual Desktop",
+          "start": "2019-09-30",
+          "end": "2021-06-07",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "generally available",
+          "endQualifier": "announced",
+          "sources": [
+            "wvd-ga",
+            "avd-rename"
+          ]
+        },
+        {
+          "id": "avd-current",
+          "name": "Azure Virtual Desktop",
+          "start": "2021-06-07",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "avd-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/azure-virtual-desktop.svg",
+        "alt": "Azure Virtual Desktop logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "copilot-studio",
+      "name": "Microsoft Copilot Studio",
+      "family": "Power Platform",
+      "periods": [
+        {
+          "id": "copilot-pva",
+          "name": "Power Virtual Agents",
+          "start": "2019-12-02",
+          "end": "2023-11-15",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "pva-launch",
+            "copilot-studio-rename"
+          ]
+        },
+        {
+          "id": "copilot-studio-current",
+          "name": "Microsoft Copilot Studio",
+          "start": "2023-11-15",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "copilot-studio-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/copilot-studio.svg",
+        "alt": "Microsoft Copilot Studio logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "dataverse",
+      "name": "Microsoft Dataverse",
+      "family": "Power Platform",
+      "periods": [
+        {
+          "id": "dataverse-cds",
+          "name": "Common Data Service",
+          "start": "2016-11-01",
+          "end": "2020-07-21",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "generally available",
+          "endQualifier": "announced",
+          "sources": [
+            "cds-launch",
+            "dataverse-rename"
+          ]
+        },
+        {
+          "id": "dataverse-current",
+          "name": "Microsoft Dataverse",
+          "start": "2020-07-21",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "dataverse-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/dataverse.svg",
+        "alt": "Microsoft Dataverse logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "customer-voice",
+      "name": "Dynamics 365 Customer Voice",
+      "family": "Business applications",
+      "periods": [
+        {
+          "id": "voice-forms-pro",
+          "name": "Microsoft Forms Pro",
+          "start": "2019-07-01",
+          "end": "2020-07-01",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "generally available",
+          "endQualifier": "announced",
+          "sources": [
+            "forms-pro-ga",
+            "customer-voice-rename"
+          ]
+        },
+        {
+          "id": "voice-current",
+          "name": "Dynamics 365 Customer Voice",
+          "start": "2020-07-01",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "customer-voice-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/customer-voice.svg",
+        "alt": "Dynamics 365 Customer Voice logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "microsoft-copilot",
+      "name": "Microsoft Copilot",
+      "family": "Artificial intelligence",
+      "periods": [
+        {
+          "id": "copilot-bing-chat",
+          "name": "Bing Chat",
+          "start": "2023-02-07",
+          "end": "2023-11-15",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "new-bing-launch",
+            "copilot-rename"
+          ]
+        },
+        {
+          "id": "copilot-current",
+          "name": "Microsoft Copilot",
+          "start": "2023-11-15",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "copilot-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/microsoft-copilot.png",
+        "alt": "Microsoft Copilot logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "microsoft-defender-xdr",
+      "name": "Microsoft Defender XDR",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "xdr-threat-protection",
+          "name": "Microsoft Threat Protection",
+          "start": "2019-09-19",
+          "end": "2020-09-22",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "threat-protection",
+            "m365-defender-rename"
+          ]
+        },
+        {
+          "id": "xdr-m365-defender",
+          "name": "Microsoft 365 Defender",
+          "start": "2020-09-22",
+          "end": "2023-11-15",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "m365-defender-rename",
+            "defender-xdr-rename"
+          ]
+        },
+        {
+          "id": "xdr-current",
+          "name": "Microsoft Defender XDR",
+          "start": "2023-11-15",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "defender-xdr-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/microsoft-defender.png",
+        "alt": "Microsoft Defender XDR logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "microsoft-intune",
+      "name": "Microsoft Intune",
+      "family": "Endpoint management",
+      "periods": [
+        {
+          "id": "intune-windows",
+          "name": "Windows Intune",
+          "start": "2011-03-23",
+          "end": "2014-10",
+          "startPrecision": "day",
+          "endPrecision": "month",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "windows-intune-launch",
+            "intune-rename"
+          ]
+        },
+        {
+          "id": "intune-current",
+          "name": "Microsoft Intune",
+          "start": "2014-10",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "intune-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/microsoft-intune.png",
+        "alt": "Microsoft Intune logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "microsoft-purview",
+      "name": "Microsoft Purview",
+      "family": "Data governance",
+      "periods": [
+        {
+          "id": "purview-azure",
+          "name": "Azure Purview",
+          "start": "2020-12-03",
+          "end": "2022-04-19",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "previewed",
+          "endQualifier": "announced",
+          "sources": [
+            "azure-purview-preview",
+            "microsoft-purview-launch"
+          ]
+        },
+        {
+          "id": "purview-current",
+          "name": "Microsoft Purview",
+          "start": "2022-04-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "microsoft-purview-launch"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/microsoft-purview.svg",
+        "alt": "Microsoft Purview logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "microsoft-sentinel",
+      "name": "Microsoft Sentinel",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "sentinel-azure",
+          "name": "Azure Sentinel",
+          "start": "2019-09-24",
+          "end": "2021-11-02",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "generally available",
+          "endQualifier": "announced",
+          "sources": [
+            "azure-sentinel-ga",
+            "microsoft-sentinel-rename"
+          ]
+        },
+        {
+          "id": "sentinel-current",
+          "name": "Microsoft Sentinel",
+          "start": "2021-11-02",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "microsoft-sentinel-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/microsoft-sentinel.svg",
+        "alt": "Microsoft Sentinel logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "power-apps",
+      "name": "Microsoft Power Apps",
+      "family": "Power Platform",
+      "periods": [
+        {
+          "id": "apps-powerapps",
+          "name": "PowerApps",
+          "start": "2016-11-01",
+          "end": "2019-07-25",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "generally available",
+          "endQualifier": "announced",
+          "sources": [
+            "powerapps-ga",
+            "power-apps-name"
+          ]
+        },
+        {
+          "id": "apps-current",
+          "name": "Microsoft Power Apps",
+          "start": "2019-07-25",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "power-apps-name"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/power-apps.svg",
+        "alt": "Microsoft Power Apps logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "power-bi",
+      "name": "Microsoft Power BI",
+      "family": "Analytics",
+      "periods": [
+        {
+          "id": "pbi-office365",
+          "name": "Power BI for Office 365",
+          "start": "2013-07-08",
+          "end": "2015-07-24",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "generally available",
+          "sources": [
+            "power-bi-office",
+            "power-bi-ga"
+          ]
+        },
+        {
+          "id": "pbi-current",
+          "name": "Microsoft Power BI",
+          "start": "2015-07-24",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "generally available",
+          "endQualifier": null,
+          "sources": [
+            "power-bi-ga"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/power-bi.svg",
+        "alt": "Microsoft Power BI logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "power-pages",
+      "name": "Microsoft Power Pages",
+      "family": "Power Platform",
+      "periods": [
+        {
+          "id": "pages-portals",
+          "name": "Power Apps portals",
+          "start": "2019-10-01",
+          "end": "2022-05-24",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "generally available",
+          "endQualifier": "previewed",
+          "sources": [
+            "portals-ga",
+            "power-pages-preview"
+          ]
+        },
+        {
+          "id": "pages-current",
+          "name": "Microsoft Power Pages",
+          "start": "2022-05-24",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "previewed",
+          "endQualifier": null,
+          "sources": [
+            "power-pages-preview"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/power-pages.svg",
+        "alt": "Microsoft Power Pages logo",
+        "source": "https://www.mscloudlogos.com"
+      }
     }
   ],
   "sources": [
@@ -396,6 +1140,279 @@
       "publisher": "Microsoft News Center",
       "published": "2016-11-01",
       "url": "https://news.microsoft.com/2016/11/01/microsoft-dynamics-365-launches-worldwide/"
+    },
+    {
+      "id": "form-recognizer-preview",
+      "title": "Form Recognizer enters preview",
+      "publisher": "Azure Blog",
+      "published": "2019-05-06",
+      "url": "https://azure.microsoft.com/en-us/blog/automated-data-entry-form-recognizer-now-available-in-preview/"
+    },
+    {
+      "id": "document-intelligence-rename",
+      "title": "Form Recognizer is now Azure AI Document Intelligence",
+      "publisher": "Microsoft Learn",
+      "published": "2023-07-21",
+      "url": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/whats-new?view=doc-intel-4.0.0"
+    },
+    {
+      "id": "azure-search-ga",
+      "title": "Azure Search generally available",
+      "publisher": "Azure Blog",
+      "published": "2015-03-05",
+      "url": "https://azure.microsoft.com/en-us/blog/azure-search-is-now-generally-available/"
+    },
+    {
+      "id": "cognitive-search-rename",
+      "title": "Azure Search is now Azure Cognitive Search",
+      "publisher": "Azure Blog",
+      "published": "2019-11-04",
+      "url": "https://azure.microsoft.com/en-us/blog/azure-cognitive-search-innovations-for-knowledge-mining/"
+    },
+    {
+      "id": "ai-search-rename",
+      "title": "Azure Cognitive Search is now Azure AI Search",
+      "publisher": "Microsoft Learn",
+      "published": "2023-11-15",
+      "url": "https://learn.microsoft.com/en-us/azure/search/whats-new"
+    },
+    {
+      "id": "azure-websites-preview",
+      "title": "Meet the new Windows Azure",
+      "publisher": "Azure Blog",
+      "published": "2012-06-07",
+      "url": "https://azure.microsoft.com/en-us/blog/meet-the-new-windows-azure/"
+    },
+    {
+      "id": "azure-name-change",
+      "title": "Upcoming name change for Windows Azure",
+      "publisher": "Azure Blog",
+      "published": "2014-03-25",
+      "url": "https://azure.microsoft.com/en-us/blog/upcoming-name-change-for-windows-azure/"
+    },
+    {
+      "id": "app-service-launch",
+      "title": "Announcing the new Azure App Service",
+      "publisher": "Azure Blog",
+      "published": "2015-03-24",
+      "url": "https://azure.microsoft.com/en-us/blog/announcing-the-new-azure-app-service/"
+    },
+    {
+      "id": "documentdb-ga",
+      "title": "Azure DocumentDB generally available",
+      "publisher": "Azure Blog",
+      "published": "2015-04-08",
+      "url": "https://azure.microsoft.com/en-us/blog/azure-documentdb-now-generally-available/"
+    },
+    {
+      "id": "cosmos-launch",
+      "title": "Azure Cosmos DB: Microsoft\u2019s globally distributed database service",
+      "publisher": "Azure Blog",
+      "published": "2017-05-10",
+      "url": "https://azure.microsoft.com/en-us/blog/azure-cosmos-db-microsofts-globally-distributed-multi-model-database-service/"
+    },
+    {
+      "id": "stack-hci-launch",
+      "title": "Introducing Azure Stack HCI",
+      "publisher": "Azure Blog",
+      "published": "2019-03-26",
+      "url": "https://azure.microsoft.com/en-us/blog/introducing-azure-stack-hci-solutions/"
+    },
+    {
+      "id": "azure-local-rename",
+      "title": "Introducing Azure Local",
+      "publisher": "Azure Blog",
+      "published": "2024-11-19",
+      "url": "https://azure.microsoft.com/en-us/blog/introducing-azure-local-cloud-infrastructure-for-distributed-locations/"
+    },
+    {
+      "id": "sql-dw-preview",
+      "title": "Azure SQL Data Warehouse limited public preview",
+      "publisher": "Azure Blog",
+      "published": "2015-04-29",
+      "url": "https://azure.microsoft.com/en-us/blog/azure-sql-data-warehouse/"
+    },
+    {
+      "id": "synapse-launch",
+      "title": "Azure Synapse Analytics is now in public preview",
+      "publisher": "Azure Blog",
+      "published": "2019-11-04",
+      "url": "https://azure.microsoft.com/en-us/blog/azure-synapse-analytics/"
+    },
+    {
+      "id": "wvd-ga",
+      "title": "Windows Virtual Desktop is now generally available",
+      "publisher": "Azure Blog",
+      "published": "2019-09-30",
+      "url": "https://azure.microsoft.com/en-us/blog/windows-virtual-desktop-is-now-generally-available-worldwide/"
+    },
+    {
+      "id": "avd-rename",
+      "title": "Azure Virtual Desktop: The flexible cloud VDI platform",
+      "publisher": "Azure Blog",
+      "published": "2021-06-07",
+      "url": "https://azure.microsoft.com/en-us/blog/azure-virtual-desktop-the-flexible-cloud-vdi-platform-for-the-hybrid-workplace/"
+    },
+    {
+      "id": "pva-launch",
+      "title": "Power Virtual Agents general availability",
+      "publisher": "Microsoft Power Platform Blog",
+      "published": "2019-12-02",
+      "url": "https://www.microsoft.com/en-us/power-platform/blog/power-apps/power-virtual-agents-now-generally-available/"
+    },
+    {
+      "id": "copilot-studio-rename",
+      "title": "Introducing Microsoft Copilot Studio",
+      "publisher": "Microsoft Copilot Blog",
+      "published": "2023-11-15",
+      "url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/introducing-microsoft-copilot-studio/"
+    },
+    {
+      "id": "cds-launch",
+      "title": "PowerApps and Microsoft Flow general availability",
+      "publisher": "Microsoft Power Platform Blog",
+      "published": "2016-10-31",
+      "url": "https://www.microsoft.com/en-us/power-platform/blog/power-apps/microsoft-flow-and-powerapps-general-availability/"
+    },
+    {
+      "id": "dataverse-rename",
+      "title": "Common Data Service is now Microsoft Dataverse",
+      "publisher": "Microsoft Power Platform Blog",
+      "published": "2020-07-21",
+      "url": "https://www.microsoft.com/en-us/power-platform/blog/power-apps/common-data-service-is-now-microsoft-dataverse/"
+    },
+    {
+      "id": "forms-pro-ga",
+      "title": "Microsoft Forms Pro is generally available",
+      "publisher": "Dynamics 365 Blog",
+      "published": "2019-07-01",
+      "url": "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2019/07/01/microsoft-forms-pro-is-generally-available/"
+    },
+    {
+      "id": "customer-voice-rename",
+      "title": "Microsoft Forms Pro is now Dynamics 365 Customer Voice",
+      "publisher": "Dynamics 365 Blog",
+      "published": "2020-07-01",
+      "url": "https://www.microsoft.com/en-us/dynamics-365/blog/it-professional/2020/07/01/microsoft-forms-pro-is-now-dynamics-365-customer-voice/"
+    },
+    {
+      "id": "new-bing-launch",
+      "title": "Reinventing search with a new AI-powered Bing and Edge",
+      "publisher": "Microsoft Source",
+      "published": "2023-02-07",
+      "url": "https://news.microsoft.com/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/"
+    },
+    {
+      "id": "copilot-rename",
+      "title": "Announcing Microsoft Copilot, your everyday AI companion",
+      "publisher": "The Official Microsoft Blog",
+      "published": "2023-11-15",
+      "url": "https://blogs.microsoft.com/blog/2023/11/15/announcing-microsoft-copilot-your-everyday-ai-companion/"
+    },
+    {
+      "id": "threat-protection",
+      "title": "Microsoft Threat Protection reaches public preview",
+      "publisher": "Microsoft Security Blog",
+      "published": "2019-09-19",
+      "url": "https://www.microsoft.com/en-us/security/blog/2019/09/19/microsoft-threat-protection-reaches-public-preview/"
+    },
+    {
+      "id": "m365-defender-rename",
+      "title": "Microsoft unifies security solutions",
+      "publisher": "Microsoft Security Blog",
+      "published": "2020-09-22",
+      "url": "https://www.microsoft.com/en-us/security/blog/2020/09/22/microsoft-unifies-security-solutions-to-help-protect-you-from-cyberattacks/"
+    },
+    {
+      "id": "defender-xdr-rename",
+      "title": "Microsoft Defender XDR unified security operations platform",
+      "publisher": "Microsoft Security Blog",
+      "published": "2023-11-15",
+      "url": "https://www.microsoft.com/en-us/security/blog/2023/11/15/microsoft-ignite-2023-ai-innovation-in-security/"
+    },
+    {
+      "id": "windows-intune-launch",
+      "title": "Windows Intune available for purchase",
+      "publisher": "Microsoft Source",
+      "published": "2011-03-23",
+      "url": "https://news.microsoft.com/2011/03/23/windows-intune-available-for-purchase/"
+    },
+    {
+      "id": "intune-rename",
+      "title": "Microsoft Intune update",
+      "publisher": "Microsoft Learn",
+      "published": "2014-10-01",
+      "url": "https://learn.microsoft.com/en-us/mem/intune/fundamentals/whats-new-archive"
+    },
+    {
+      "id": "azure-purview-preview",
+      "title": "Introducing Azure Purview",
+      "publisher": "Azure Blog",
+      "published": "2020-12-03",
+      "url": "https://azure.microsoft.com/en-us/blog/introducing-azure-purview/"
+    },
+    {
+      "id": "microsoft-purview-launch",
+      "title": "Introducing Microsoft Purview",
+      "publisher": "Microsoft Security Blog",
+      "published": "2022-04-19",
+      "url": "https://www.microsoft.com/en-us/security/blog/2022/04/19/introducing-microsoft-purview/"
+    },
+    {
+      "id": "azure-sentinel-ga",
+      "title": "Azure Sentinel is now generally available",
+      "publisher": "Azure Blog",
+      "published": "2019-09-24",
+      "url": "https://azure.microsoft.com/en-us/blog/azure-sentinel-is-now-generally-available/"
+    },
+    {
+      "id": "microsoft-sentinel-rename",
+      "title": "Azure Sentinel is now Microsoft Sentinel",
+      "publisher": "Microsoft Community Hub",
+      "published": "2021-11-02",
+      "url": "https://techcommunity.microsoft.com/blog/microsoftsentinelblog/azure-sentinel-is-now-microsoft-sentinel/2911036"
+    },
+    {
+      "id": "powerapps-ga",
+      "title": "Microsoft Flow and PowerApps general availability",
+      "publisher": "Microsoft Power Platform Blog",
+      "published": "2016-10-31",
+      "url": "https://www.microsoft.com/en-us/power-platform/blog/power-apps/microsoft-flow-and-powerapps-general-availability/"
+    },
+    {
+      "id": "power-apps-name",
+      "title": "PowerApps updates its name to Power Apps",
+      "publisher": "Microsoft Power Platform Blog",
+      "published": "2019-07-25",
+      "url": "https://www.microsoft.com/en-us/power-platform/blog/power-apps/powerapps-updates-its-name-to-power-apps/"
+    },
+    {
+      "id": "power-bi-office",
+      "title": "Microsoft unveils Power BI for Office 365",
+      "publisher": "Microsoft Source",
+      "published": "2013-07-08",
+      "url": "https://news.microsoft.com/2013/07/08/microsoft-unveils-power-bi-for-office-365/"
+    },
+    {
+      "id": "power-bi-ga",
+      "title": "Power BI is generally available",
+      "publisher": "Microsoft Power BI Blog",
+      "published": "2015-07-24",
+      "url": "https://www.microsoft.com/en-us/power-platform/blog/power-bi/power-bi-is-generally-available-today/"
+    },
+    {
+      "id": "portals-ga",
+      "title": "Power Apps portals general availability",
+      "publisher": "Microsoft Power Platform Blog",
+      "published": "2019-10-01",
+      "url": "https://www.microsoft.com/en-us/power-platform/blog/power-apps/powerapps-portals-general-availability/"
+    },
+    {
+      "id": "power-pages-preview",
+      "title": "Introducing Microsoft Power Pages",
+      "publisher": "Microsoft Power Platform Blog",
+      "published": "2022-05-24",
+      "url": "https://www.microsoft.com/en-us/power-platform/blog/power-pages/introducing-microsoft-power-pages/"
     }
   ]
 }

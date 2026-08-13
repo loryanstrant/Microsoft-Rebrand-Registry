@@ -21,8 +21,18 @@ export function currentThenChronological(periods) {
   });
 }
 
+export function productSortName(name) {
+  const trimmed = name.trim();
+  return trimmed.replace(/^Microsoft\s+(?=[A-Za-z])/, '') || trimmed;
+}
+
 export function alphabeticalProducts(groups) {
-  return [...groups].sort((a, b) => a.product.name.localeCompare(b.product.name, 'en-AU'));
+  return [...groups].sort((a, b) => productSortName(a.product.name).localeCompare(productSortName(b.product.name), 'en-AU'));
+}
+
+export function productLetter(name) {
+  const letter = productSortName(name).charAt(0).toUpperCase();
+  return /[A-Z]/.test(letter) ? letter : '#';
 }
 
 export function dateLabel(value, precision, qualifier) {

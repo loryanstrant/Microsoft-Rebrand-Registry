@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { alphabeticalProducts, currentThenChronological, monthDiff, parseDate, durationLabel, dateLabel } from '../src/dates.js';
+import { alphabeticalProducts, currentThenChronological, monthDiff, parseDate, durationLabel, dateLabel, productLetter } from '../src/dates.js';
 
 const data = JSON.parse(await readFile(new URL('../src/data/products.json', import.meta.url), 'utf8'));
 test('every product has exactly one ongoing period', () => { for (const product of data.products) assert.equal(product.periods.filter(p => !p.end).length, 1, product.id); });
@@ -25,6 +25,19 @@ test('products are listed alphabetically without mutating canonical data', () =>
     { product: { name: 'Azure DevOps' } },
     { product: { name: 'Microsoft 365' } }
   ];
-  assert.deepEqual(alphabeticalProducts(groups).map(group => group.product.name), ['Azure DevOps', 'Microsoft 365', 'Microsoft Entra ID']);
+  assert.deepEqual(alphabeticalProducts(groups).map(group => group.product.name), ['Azure DevOps', 'Microsoft Entra ID', 'Microsoft 365']);
   assert.equal(groups[0].product.name, 'Microsoft Entra ID');
+});
+test('product letters support alphabetical navigation', () => {
+  assert.equal(productLetter(' Azure DevOps'), 'A');
+  assert.equal(productLetter('Microsoft 365'), 'M');
+  assert.equal(productLetter('Microsoft Entra ID'), 'E');
+  assert.equal(productLetter('365 Copilot'), '#');
+});
+test('expanded registry contains 25 cloud products in alphabetical sections', () => {
+  assert.equal(data.products.length, 25);
+  const groups = alphabeticalProducts(data.products.map(product => ({ product })));
+  const letters = [...new Set(groups.map(group => productLetter(group.product.name)))];
+  assert.deepEqual(letters, [...letters].sort());
+  assert.ok(letters.length >= 4);
 });

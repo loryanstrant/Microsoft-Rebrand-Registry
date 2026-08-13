@@ -45,6 +45,8 @@
         <label><span>Status</span><select id="status"><option value="all">Current and former</option><option value="current">Current only</option><option value="former">Former only</option></select></label>
       </div>
 
+      <nav id="letter-nav" class="letter-nav" aria-label="Jump to product letter" hidden></nav>
+
       <div id="loading" class="state" role="status">◐ Loading product history…</div>
       <div id="error" class="state error" role="alert" hidden>○ We couldn’t load the product history. <button type="button" id="retry">Try again</button></div>
       <div id="empty" class="state" hidden>○ No product history matches those filters.</div>
