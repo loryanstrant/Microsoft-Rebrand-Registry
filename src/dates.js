@@ -17,8 +17,12 @@ export function currentThenChronological(periods) {
     const aCurrent = !a.end;
     const bCurrent = !b.end;
     if (aCurrent !== bCurrent) return aCurrent ? -1 : 1;
-    return a.start.localeCompare(b.start);
+    return b.start.localeCompare(a.start);
   });
+}
+
+export function alphabeticalProducts(groups) {
+  return [...groups].sort((a, b) => a.product.name.localeCompare(b.product.name, 'en-AU'));
 }
 
 export function dateLabel(value, precision, qualifier) {
