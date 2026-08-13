@@ -51,13 +51,14 @@ The repository root is both the app location and output location; there is no AP
 
 `staticwebapp.config.json` provides navigation fallback and baseline security headers. No credentials are needed by the app.
 
-Planned production resources use the **Free** Static Web Apps tier in the **MVP 1k per month benefit** subscription:
+The production shell is provisioned on the **Free** Static Web Apps tier in the **MVP 1k per month benefit** subscription:
 
-- Resource group: `rg-rebrand-registry-prod`
+- Resource group: `rebrandregistry`
 - Static Web App: `swa-rebrand-registry`
-- Region: Australia East
+- Region: West US 2
+- Azure hostname: `wonderful-ocean-034ff8f1e.7.azurestaticapps.net`
 
-Provisioning is intentionally separate from publishing. Creating the resource does not make this proof of concept public until a deployment workflow or deployment token uploads the site.
+Provisioning is intentionally separate from publishing. The resource is not connected to a repository, and no site content is deployed until a deployment workflow or deployment token uploads the site.
 
 ## Accessibility
 
