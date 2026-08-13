@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the current and former names of Microsoft cloud products.">
+  <title>Microsoft product lifecycle tracker</title>
+  <link rel="stylesheet" href="src/styles.css">
+  <script type="module" src="src/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#history">Skip to product history</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div><p class="eyebrow">Proof of concept</p><h1>Microsoft product lifecycle tracker</h1></div>
+    </div>
+  </header>
+
+  <main id="history">
+    <section class="intro" aria-labelledby="intro-heading">
+      <div>
+        <p class="eyebrow">Names through time</p>
+        <h2 id="intro-heading">How Microsoft cloud products evolved</h2>
+        <p>Compare current and former product names, see how long each was used, and follow the evidence behind every transition.</p>
+      </div>
+      <dl class="summary" aria-label="Dataset summary">
+        <div><dt id="product-count">—</dt><dd>products</dd></div>
+        <div><dt id="name-count">—</dt><dd>documented names</dd></div>
+      </dl>
+    </section>
+
+    <section class="explorer" aria-labelledby="explorer-heading">
+      <div class="section-heading">
+        <div><p class="eyebrow">Explore</p><h2 id="explorer-heading">Product name history</h2></div>
+        <div class="view-switcher" role="group" aria-label="Choose a view">
+          <button type="button" class="view-button active" data-view="table" aria-pressed="true">Table</button>
+          <button type="button" class="view-button" data-view="timeline" aria-pressed="false">Timeline</button>
+        </div>
+      </div>
+
+      <div class="controls">
+        <label class="search"><span>Search products or names</span><input id="search" type="search" placeholder="For example, SkyDrive"></label>
+        <label><span>Product family</span><select id="family"><option value="all">All families</option></select></label>
+        <label><span>Status</span><select id="status"><option value="all">Current and former</option><option value="current">Current only</option><option value="former">Former only</option></select></label>
+      </div>
+
+      <div id="loading" class="state" role="status">◐ Loading product history…</div>
+      <div id="error" class="state error" role="alert" hidden>○ We couldn’t load the product history. <button type="button" id="retry">Try again</button></div>
+      <div id="empty" class="state" hidden>○ No product history matches those filters.</div>
+
+      <div id="table-view" hidden>
+        <div class="table-scroll">
+          <table>
+            <caption class="sr-only">Current and former Microsoft product names and their duration</caption>
+            <thead><tr><th scope="col">Product</th><th scope="col">Name</th><th scope="col">Used from</th><th scope="col">Used until</th><th scope="col">Duration</th><th scope="col">Evidence</th></tr></thead>
+            <tbody id="history-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="timeline-view" hidden aria-label="Product name timeline">
+        <p class="timeline-help">Scroll horizontally to explore the full history. Dates reflect the precision supported by the cited source.</p>
+        <div class="timeline-scroll"><div id="timeline"></div></div>
+      </div>
+    </section>
+
+    <aside class="method-note">
+      <h2>About the dates</h2>
+      <p>Periods use the most precise date supported by available evidence. “By” means a source confirms the name was in use by that month, but may not establish its exact first day. Ongoing durations are calculated to the dataset’s “as of” date.</p>
+    </aside>
+  </main>
+  <footer><p>Independent research project. Microsoft product names and trademarks belong to Microsoft.</p><p id="as-of"></p></footer>
+</body>
+</html>

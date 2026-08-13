@@ -1,0 +1,14 @@
+{
+  "name": "microsoft-product-lifecycle-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes serve@14.2.4 .",
+    "test": "node --test",
+    "validate": "node scripts/validate-data.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
