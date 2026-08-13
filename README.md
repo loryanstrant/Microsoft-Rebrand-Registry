@@ -58,7 +58,7 @@ The production shell is provisioned on the **Free** Static Web Apps tier in the 
 - Region: West US 2
 - Azure hostname: `wonderful-ocean-034ff8f1e.7.azurestaticapps.net`
 
-Provisioning is intentionally separate from publishing. The resource is not connected to a repository, and no site content is deployed until a deployment workflow or deployment token uploads the site.
+The proof of concept is published at <https://wonderful-ocean-034ff8f1e.7.azurestaticapps.net>. The resource is not connected to a repository; releases are currently uploaded with a deployment token. The example workflow can be adopted later for automatic deployments from `main`.
 
 ## Accessibility
 
