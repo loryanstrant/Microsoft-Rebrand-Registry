@@ -31,6 +31,7 @@ npm test
 - `YYYY-MM` values retain month precision. They are normalized to the first day only for calculating and drawing durations.
 - A qualifier records whether a date is a launch, announcement, effective date, or merely the earliest date established by a source (`by`).
 - Each period must cite at least one source, and each product must have exactly one ongoing period.
+- The registry includes only products that still exist. It excludes discontinued products and broader product or platform transformations; former names are included only when they document a continuing product's rename history.
 - Durations for ongoing names are calculated to the top-level `asOf` date, making the output reproducible.
 - Sources are evidence for the transition, but historical pages do not always establish an exact first-use date. The interface exposes precision and qualifiers rather than implying unsupported accuracy.
 

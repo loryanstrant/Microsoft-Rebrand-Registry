@@ -4,6 +4,12 @@ import { readFile } from 'node:fs/promises';
 import { alphabeticalProducts, currentThenChronological, monthDiff, parseDate, durationLabel, dateLabel, productLetter } from '../src/dates.js';
 
 const data = JSON.parse(await readFile(new URL('../src/data/products.json', import.meta.url), 'utf8'));
+const page = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+test('scope disclaimer excludes former products and transformations', () => {
+  assert.match(page, /Every entry is a product that still exists today/);
+  assert.match(page, /Discontinued products are not listed/);
+  assert.match(page, /Product or platform transformations/);
+});
 test('every product has exactly one ongoing period', () => { for (const product of data.products) assert.equal(product.periods.filter(p => !p.end).length, 1, product.id); });
 test('every period cites an existing source', () => { const sources=new Set(data.sources.map(s=>s.id)); for(const product of data.products) for(const period of product.periods) assert.ok(period.sources.every(id=>sources.has(id)),period.id); });
 test('every product has a valid accessible local logo', async () => {
