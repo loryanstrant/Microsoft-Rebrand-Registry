@@ -1210,13 +1210,26 @@
       "family": "Security",
       "periods": [
         {
-          "id": "defender-office-atp",
-          "name": "Office 365 Advanced Threat Protection",
+          "id": "defender-office-eop-atp",
+          "name": "Exchange Online Advanced Threat Protection",
           "start": "2015-04-08",
-          "end": "2020-09-22",
+          "end": "2016-11-07",
           "startPrecision": "day",
           "endPrecision": "day",
           "startQualifier": "announced",
+          "endQualifier": "renamed by",
+          "sources": [
+            "o365-atp-announce"
+          ]
+        },
+        {
+          "id": "defender-office-atp",
+          "name": "Office 365 Advanced Threat Protection",
+          "start": "2016-11-07",
+          "end": "2020-09-22",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "renamed by",
           "endQualifier": "announced",
           "sources": [
             "o365-atp-announce",

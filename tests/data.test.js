@@ -41,3 +41,11 @@ test('expanded registry contains 30 cloud products in alphabetical sections', ()
   assert.deepEqual(letters, [...letters].sort());
   assert.ok(letters.length >= 4);
 });
+test('Defender for Office 365 preserves both ATP names', () => {
+  const product = data.products.find(({ id }) => id === 'defender-office-365');
+  assert.deepEqual(product.periods.map(({ name }) => name), [
+    'Exchange Online Advanced Threat Protection',
+    'Office 365 Advanced Threat Protection',
+    'Microsoft Defender for Office 365'
+  ]);
+});
