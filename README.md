@@ -4,7 +4,7 @@ A static, accessible proof of concept for exploring the names and visual identit
 
 The initial dataset covers product-name periods and displays each product’s current logo from the Microsoft Cloud Logos collection. Researching historical logo periods remains the next dataset expansion, because Microsoft branding history has never been content with one dimension.
 
-The site credits [Microsoft Cloud Logos](https://www.mscloudlogos.com/) for current and historical visual identities, [M365 Maps](https://m365maps.com/renames.htm) and [Rebranded by Microsoft](https://rebrandedbyms.com/) for rename leads, and [Let Me Correct That For You](https://www.letmecorrectthatforyou.com/) for Microsoft terminology. Together they form the tongue-in-cheek “Get Your Story Straight” network: if you’re going to say something, be right about it. Rename leads are checked against first-party sources where those remain available.
+The site’s tongue-in-cheek “Get Your Story Straight” network credits [Microsoft Cloud Logos](https://www.mscloudlogos.com/) for current and historical visual identities and [Let Me Correct That For You](https://www.letmecorrectthatforyou.com/) for Microsoft terminology: if you’re going to say something, be right about it. A separate attribution notes that some rename leads were drawn from [M365 Maps](https://m365maps.com/renames.htm) and [Rebranded by Microsoft](https://rebrandedbyms.com/), then checked against cited sources.
 
 ## Run locally
 
