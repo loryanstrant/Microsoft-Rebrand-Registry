@@ -1033,6 +1033,215 @@
         "alt": "Microsoft Power Pages logo",
         "source": "https://www.mscloudlogos.com"
       }
+    },
+    {
+      "id": "defender-cloud",
+      "name": "Microsoft Defender for Cloud",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "defender-cloud-asc",
+          "name": "Azure Security Center",
+          "start": "2015-12-02",
+          "end": "2021-11-02",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "azure-security-center-intro",
+            "defender-cloud-rename"
+          ]
+        },
+        {
+          "id": "defender-cloud-current",
+          "name": "Microsoft Defender for Cloud",
+          "start": "2021-11-02",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "defender-cloud-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/defender.png",
+        "source": "https://www.mscloudlogos.com",
+        "alt": "Microsoft Defender for Cloud logo"
+      }
+    },
+    {
+      "id": "defender-cloud-apps",
+      "name": "Microsoft Defender for Cloud Apps",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "defender-cloud-apps-mcas",
+          "name": "Microsoft Cloud App Security",
+          "start": "2016-04-06",
+          "end": "2021-11-02",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "generally available",
+          "endQualifier": "announced",
+          "sources": [
+            "mcas-ga",
+            "defender-cloud-apps-rename"
+          ]
+        },
+        {
+          "id": "defender-cloud-apps-current",
+          "name": "Microsoft Defender for Cloud Apps",
+          "start": "2021-11-02",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "defender-cloud-apps-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/defender.png",
+        "source": "https://www.mscloudlogos.com",
+        "alt": "Microsoft Defender for Cloud Apps logo"
+      }
+    },
+    {
+      "id": "defender-endpoint",
+      "name": "Microsoft Defender for Endpoint",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "defender-endpoint-wdatp",
+          "name": "Windows Defender Advanced Threat Protection",
+          "start": "2016-03-01",
+          "end": "2019-03-21",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "wdatp-announce",
+            "mdatp-rename"
+          ]
+        },
+        {
+          "id": "defender-endpoint-mdatp",
+          "name": "Microsoft Defender Advanced Threat Protection",
+          "start": "2019-03-21",
+          "end": "2020-09-22",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "mdatp-rename",
+            "defender-suite-rename"
+          ]
+        },
+        {
+          "id": "defender-endpoint-current",
+          "name": "Microsoft Defender for Endpoint",
+          "start": "2020-09-22",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "defender-suite-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/defender.png",
+        "source": "https://www.mscloudlogos.com",
+        "alt": "Microsoft Defender for Endpoint logo"
+      }
+    },
+    {
+      "id": "defender-identity",
+      "name": "Microsoft Defender for Identity",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "defender-identity-aatp",
+          "name": "Azure Advanced Threat Protection",
+          "start": "2017-09-27",
+          "end": "2020-09-22",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "aatp-announce",
+            "defender-suite-rename"
+          ]
+        },
+        {
+          "id": "defender-identity-current",
+          "name": "Microsoft Defender for Identity",
+          "start": "2020-09-22",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "defender-suite-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/defender.png",
+        "source": "https://www.mscloudlogos.com",
+        "alt": "Microsoft Defender for Identity logo"
+      }
+    },
+    {
+      "id": "defender-office-365",
+      "name": "Microsoft Defender for Office 365",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "defender-office-atp",
+          "name": "Office 365 Advanced Threat Protection",
+          "start": "2015-04-08",
+          "end": "2020-09-22",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "o365-atp-announce",
+            "defender-suite-rename"
+          ]
+        },
+        {
+          "id": "defender-office-current",
+          "name": "Microsoft Defender for Office 365",
+          "start": "2020-09-22",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "defender-suite-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/defender.png",
+        "source": "https://www.mscloudlogos.com",
+        "alt": "Microsoft Defender for Office 365 logo"
+      }
     }
   ],
   "sources": [
@@ -1206,7 +1415,7 @@
     },
     {
       "id": "cosmos-launch",
-      "title": "Azure Cosmos DB: Microsoft\u2019s globally distributed database service",
+      "title": "Azure Cosmos DB: Microsoft’s globally distributed database service",
       "publisher": "Azure Blog",
       "published": "2017-05-10",
       "url": "https://azure.microsoft.com/en-us/blog/azure-cosmos-db-microsofts-globally-distributed-multi-model-database-service/"
@@ -1413,6 +1622,69 @@
       "publisher": "Microsoft Power Platform Blog",
       "published": "2022-05-24",
       "url": "https://www.microsoft.com/en-us/power-platform/blog/power-pages/introducing-microsoft-power-pages/"
+    },
+    {
+      "id": "azure-security-center-intro",
+      "title": "Introducing Azure Security Center",
+      "publisher": "Microsoft Community Hub",
+      "published": "2015-12-02",
+      "url": "https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/introducing-azure-security-center/259715"
+    },
+    {
+      "id": "defender-cloud-rename",
+      "title": "Introducing Microsoft Defender for Cloud",
+      "publisher": "Microsoft Community Hub",
+      "published": "2021-11-02",
+      "url": "https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/introducing-microsoft-defender-for-cloud/2930612"
+    },
+    {
+      "id": "mcas-ga",
+      "title": "Microsoft Cloud App Security generally available",
+      "publisher": "Microsoft Community Hub",
+      "published": "2016-04-06",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft-security-blog/microsoft-cloud-app-security-is-generally-available/250041"
+    },
+    {
+      "id": "defender-cloud-apps-rename",
+      "title": "Microsoft Cloud App Security is now Microsoft Defender for Cloud Apps",
+      "publisher": "Microsoft Community Hub",
+      "published": "2021-11-02",
+      "url": "https://techcommunity.microsoft.com/blog/microsoftdefendercloudappsblog/microsoft-cloud-app-security-is-now-microsoft-defender-for-cloud-apps/2965210"
+    },
+    {
+      "id": "wdatp-announce",
+      "title": "Announcing Windows Defender Advanced Threat Protection",
+      "publisher": "Windows Blog",
+      "published": "2016-03-01",
+      "url": "https://blogs.windows.com/windowsexperience/2016/03/01/announcing-windows-defender-advanced-threat-protection/"
+    },
+    {
+      "id": "mdatp-rename",
+      "title": "Windows Defender ATP becomes Microsoft Defender ATP",
+      "publisher": "Microsoft Community Hub",
+      "published": "2019-03-21",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft-security-blog/windows-defender-advanced-threat-protection-is-now-microsoft-defender-advanced-t/369052"
+    },
+    {
+      "id": "defender-suite-rename",
+      "title": "Microsoft unified SIEM and XDR modernize security operations",
+      "publisher": "Microsoft Security Blog",
+      "published": "2020-09-22",
+      "url": "https://www.microsoft.com/en-us/security/blog/2020/09/22/microsoft-unified-siem-xdr-modernize-security-operations/"
+    },
+    {
+      "id": "aatp-announce",
+      "title": "Announcing Azure Advanced Threat Protection",
+      "publisher": "Microsoft Community Hub",
+      "published": "2017-09-27",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft-security-blog/announcing-azure-advanced-threat-protection/250043"
+    },
+    {
+      "id": "o365-atp-announce",
+      "title": "Introducing Office 365 Advanced Threat Protection",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2015-04-08",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2015/04/08/introducing-exchange-online-advanced-threat-protection/"
     }
   ]
 }
