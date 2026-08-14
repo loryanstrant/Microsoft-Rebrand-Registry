@@ -2733,6 +2733,300 @@
         "alt": "Microsoft Purview Records Management logo",
         "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
       }
+    },
+    {
+      "id": "azure-sql-database",
+      "name": "Azure SQL Database",
+      "family": "Databases",
+      "periods": [
+        {
+          "id": "azure-sql-sql-azure",
+          "name": "SQL Azure",
+          "start": "2010-02",
+          "end": "2012-04",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "generally available",
+          "endQualifier": "announced",
+          "sources": [
+            "sql-azure-ga",
+            "windows-azure-sql-rename"
+          ]
+        },
+        {
+          "id": "azure-sql-windows",
+          "name": "Windows Azure SQL Database",
+          "start": "2012-04",
+          "end": "2014-04-03",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "windows-azure-sql-rename",
+            "microsoft-azure-rename"
+          ]
+        },
+        {
+          "id": "azure-sql-current",
+          "name": "Azure SQL Database",
+          "start": "2014-04-03",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "microsoft-azure-rename",
+            "azure-sql-current-docs"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/azure-sql-database.svg",
+        "alt": "Azure SQL Database logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "defender-antivirus",
+      "name": "Microsoft Defender Antivirus",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "defender-antivirus-windows",
+          "name": "Windows Defender Antivirus",
+          "start": "2017-04-11",
+          "end": "2019-03-21",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "windows-defender-antivirus",
+            "defender-antivirus-rename"
+          ]
+        },
+        {
+          "id": "defender-antivirus-current",
+          "name": "Microsoft Defender Antivirus",
+          "start": "2019-03-21",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "defender-antivirus-rename",
+            "defender-antivirus-docs"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/defender-antivirus.png",
+        "alt": "Microsoft Defender Antivirus logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "entra-connect",
+      "name": "Microsoft Entra Connect",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "entra-connect-azure-ad",
+          "name": "Azure AD Connect",
+          "start": "2015-06-24",
+          "end": "2023-10-01",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "released",
+          "endQualifier": "effective",
+          "sources": [
+            "azure-ad-connect-release",
+            "entra-name-glossary"
+          ]
+        },
+        {
+          "id": "entra-connect-current",
+          "name": "Microsoft Entra Connect",
+          "start": "2023-10-01",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "effective",
+          "endQualifier": null,
+          "sources": [
+            "entra-name-glossary",
+            "entra-connect-docs"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-connect.svg",
+        "alt": "Microsoft Entra Connect logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "entra-connect-health",
+      "name": "Microsoft Entra Connect Health",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "connect-health-azure-ad",
+          "name": "Azure AD Connect Health",
+          "start": "2015-06-24",
+          "end": "2023-10-01",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "released",
+          "endQualifier": "effective",
+          "sources": [
+            "azure-ad-connect-release",
+            "entra-name-glossary"
+          ]
+        },
+        {
+          "id": "connect-health-current",
+          "name": "Microsoft Entra Connect Health",
+          "start": "2023-10-01",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "effective",
+          "endQualifier": null,
+          "sources": [
+            "entra-name-glossary",
+            "entra-connect-docs"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-connect-health.svg",
+        "alt": "Microsoft Entra Connect Health logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "entra-multifactor-authentication",
+      "name": "Microsoft Entra multifactor authentication",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "mfa-azure",
+          "name": "Azure Multi-Factor Authentication",
+          "start": "2013-10-07",
+          "end": "2023-10-01",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "generally available",
+          "endQualifier": "effective",
+          "sources": [
+            "azure-mfa-ga",
+            "entra-name-glossary"
+          ]
+        },
+        {
+          "id": "mfa-current",
+          "name": "Microsoft Entra multifactor authentication",
+          "start": "2023-10-01",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "effective",
+          "endQualifier": null,
+          "sources": [
+            "entra-name-glossary",
+            "entra-mfa-docs"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-multifactor-authentication.svg",
+        "alt": "Microsoft Entra multifactor authentication logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "defender-iot",
+      "name": "Microsoft Defender for IoT",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "defender-iot-azure",
+          "name": "Azure Defender for IoT",
+          "start": "2020-09-22",
+          "end": "2021-11-02",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "azure-defender-iot-launch",
+            "defender-iot-rename"
+          ]
+        },
+        {
+          "id": "defender-iot-current",
+          "name": "Microsoft Defender for IoT",
+          "start": "2021-11-02",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "defender-iot-rename",
+            "defender-iot-docs"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/defender-iot.svg",
+        "alt": "Microsoft Defender for IoT logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "windows-security",
+      "name": "Windows Security",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "windows-security-defender-center",
+          "name": "Windows Defender Security Center",
+          "start": "2017-04-11",
+          "end": "2018-10-02",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "launched",
+          "sources": [
+            "windows-defender-security-center",
+            "windows-security-rename"
+          ]
+        },
+        {
+          "id": "windows-security-current",
+          "name": "Windows Security",
+          "start": "2018-10-02",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "launched",
+          "endQualifier": null,
+          "sources": [
+            "windows-security-rename",
+            "windows-security-docs"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/windows-security.png",
+        "alt": "Windows Security logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
     }
   ],
   "sources": [
@@ -3477,6 +3771,132 @@
       "publisher": "Microsoft Learn",
       "published": "2026-06-29",
       "url": "https://learn.microsoft.com/en-us/purview/edisc"
+    },
+    {
+      "id": "sql-azure-ga",
+      "title": "SQL Azure is now generally available",
+      "publisher": "Microsoft Azure Blog",
+      "published": "2010-02-01",
+      "url": "https://azure.microsoft.com/en-us/blog/sql-azure-is-now-generally-available/"
+    },
+    {
+      "id": "windows-azure-sql-rename",
+      "title": "SQL Azure is now Windows Azure SQL Database",
+      "publisher": "Microsoft Azure Blog",
+      "published": "2012-04-27",
+      "url": "https://azure.microsoft.com/en-us/blog/sql-azure-is-now-windows-azure-sql-database/"
+    },
+    {
+      "id": "azure-sql-current-docs",
+      "title": "What is Azure SQL Database?",
+      "publisher": "Microsoft Learn",
+      "published": "2025-07-30",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview"
+    },
+    {
+      "id": "windows-defender-antivirus",
+      "title": "What's new in Windows 10, version 1703",
+      "publisher": "Microsoft Learn",
+      "published": "2017-04-11",
+      "url": "https://learn.microsoft.com/en-us/windows/whats-new/whats-new-windows-10-version-1703"
+    },
+    {
+      "id": "defender-antivirus-rename",
+      "title": "Windows Defender Antivirus is now Microsoft Defender Antivirus",
+      "publisher": "Microsoft Security Blog",
+      "published": "2019-03-21",
+      "url": "https://www.microsoft.com/en-us/security/blog/2019/03/21/windows-defender-antivirus-is-now-microsoft-defender-antivirus/"
+    },
+    {
+      "id": "defender-antivirus-docs",
+      "title": "Microsoft Defender Antivirus in Windows overview",
+      "publisher": "Microsoft Learn",
+      "published": "2025-10-20",
+      "url": "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows"
+    },
+    {
+      "id": "azure-ad-connect-release",
+      "title": "Azure AD Connect is now generally available",
+      "publisher": "Microsoft Community Hub",
+      "published": "2015-06-24",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/azure-ad-connect-is-now-generally-available/243026"
+    },
+    {
+      "id": "entra-name-glossary",
+      "title": "New name for Azure Active Directory",
+      "publisher": "Microsoft Learn",
+      "published": "2025-05-07",
+      "url": "https://learn.microsoft.com/en-us/entra/fundamentals/new-name"
+    },
+    {
+      "id": "entra-connect-docs",
+      "title": "What is Microsoft Entra Connect?",
+      "publisher": "Microsoft Learn",
+      "published": "2025-01-23",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/whatis-azure-ad-connect"
+    },
+    {
+      "id": "azure-mfa-ga",
+      "title": "Windows Azure Multi-Factor Authentication is now generally available",
+      "publisher": "Microsoft Azure Blog",
+      "published": "2013-10-07",
+      "url": "https://azure.microsoft.com/en-us/blog/windows-azure-multi-factor-authentication-is-now-generally-available-2/"
+    },
+    {
+      "id": "entra-mfa-docs",
+      "title": "How Microsoft Entra multifactor authentication works",
+      "publisher": "Microsoft Learn",
+      "published": "2025-03-31",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/authentication/concept-mfa-howitworks"
+    },
+    {
+      "id": "azure-defender-iot-launch",
+      "title": "Microsoft delivers unified SIEM and XDR to modernize security operations",
+      "publisher": "Microsoft Security Blog",
+      "published": "2020-09-22",
+      "url": "https://www.microsoft.com/en-us/security/blog/2020/09/22/microsoft-delivers-unified-siem-and-xdr-to-modernize-security-operations/"
+    },
+    {
+      "id": "defender-iot-rename",
+      "title": "Microsoft Defender for Cloud and Defender for IoT product name changes",
+      "publisher": "Microsoft Learn",
+      "published": "2021-11-02",
+      "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/release-notes-archive#november-2021"
+    },
+    {
+      "id": "defender-iot-docs",
+      "title": "What is Microsoft Defender for IoT?",
+      "publisher": "Microsoft Learn",
+      "published": "2025-08-06",
+      "url": "https://learn.microsoft.com/en-us/azure/defender-for-iot/organizations/overview"
+    },
+    {
+      "id": "windows-defender-security-center",
+      "title": "What's new in Windows 10, version 1703",
+      "publisher": "Microsoft Learn",
+      "published": "2017-04-11",
+      "url": "https://learn.microsoft.com/en-us/windows/whats-new/whats-new-windows-10-version-1703"
+    },
+    {
+      "id": "windows-security-rename",
+      "title": "What's new in Windows 10, version 1809",
+      "publisher": "Microsoft Learn",
+      "published": "2018-10-02",
+      "url": "https://learn.microsoft.com/en-us/windows/whats-new/whats-new-windows-10-version-1809"
+    },
+    {
+      "id": "windows-security-docs",
+      "title": "Windows Security",
+      "publisher": "Microsoft Learn",
+      "published": "2025-03-26",
+      "url": "https://learn.microsoft.com/en-us/windows/security/operating-system-security/system-security/windows-defender-security-center/windows-defender-security-center"
+    },
+    {
+      "id": "microsoft-azure-rename",
+      "title": "Upcoming name change for Windows Azure",
+      "publisher": "Microsoft Azure Blog",
+      "published": "2014-03-25",
+      "url": "https://azure.microsoft.com/en-us/blog/upcoming-name-change-for-windows-azure/"
     }
   ]
 }

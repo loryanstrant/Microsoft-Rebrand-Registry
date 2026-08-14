@@ -42,8 +42,8 @@ test('product letters support alphabetical navigation', () => {
   assert.equal(productLetter('Microsoft Entra ID'), 'E');
   assert.equal(productLetter('365 Copilot'), '#');
 });
-test('expanded registry contains 66 cloud products in alphabetical sections', () => {
-  assert.equal(data.products.length, 66);
+test('expanded registry contains 73 cloud products in alphabetical sections', () => {
+  assert.equal(data.products.length, 73);
   const groups = alphabeticalProducts(data.products.map(product => ({ product })));
   const letters = [...new Set(groups.map(group => productLetter(group.product.name)))];
   assert.deepEqual(letters, [...letters].sort());
