@@ -2569,11 +2569,11 @@
     },
     {
       "id": "purview-ediscovery",
-      "name": "Microsoft Purview eDiscovery (Standard)",
+      "name": "Microsoft Purview eDiscovery",
       "family": "Data security and compliance",
       "periods": [
         {
-          "id": "purview-ediscovery-former",
+          "id": "purview-ediscovery-office-365",
           "name": "Office 365 Core eDiscovery",
           "start": "2022-03",
           "end": "2022-04-19",
@@ -2586,22 +2586,36 @@
           ]
         },
         {
-          "id": "purview-ediscovery-current",
+          "id": "purview-ediscovery-standard",
           "name": "Microsoft Purview eDiscovery (Standard)",
           "start": "2022-04-19",
+          "end": "2025-08-31",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "retired",
+          "sources": [
+            "purview-portfolio-rename",
+            "purview-ediscovery-classic-retirement"
+          ]
+        },
+        {
+          "id": "purview-ediscovery-current",
+          "name": "Microsoft Purview eDiscovery",
+          "start": "2025-08-31",
           "end": null,
           "startPrecision": "day",
           "endPrecision": null,
-          "startQualifier": "announced",
+          "startQualifier": "by",
           "endQualifier": null,
           "sources": [
-            "purview-portfolio-rename"
+            "purview-ediscovery-classic-retirement"
           ]
         }
       ],
       "logo": {
         "src": "src/assets/logos/purview-ediscovery.svg",
-        "alt": "Microsoft Purview eDiscovery (Standard) logo",
+        "alt": "Microsoft Purview eDiscovery logo",
         "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
       }
     },
@@ -3448,6 +3462,13 @@
       "publisher": "Microsoft Security Blog",
       "published": "2022-04-19",
       "url": "https://www.microsoft.com/en-us/security/blog/2022/04/19/the-future-of-compliance-and-data-governance-is-here-introducing-microsoft-purview/"
+    },
+    {
+      "id": "purview-ediscovery-classic-retirement",
+      "title": "Microsoft Purview eDiscovery legacy solutions",
+      "publisher": "Microsoft Learn",
+      "published": "2025-08-31",
+      "url": "https://learn.microsoft.com/en-us/purview/ediscovery"
     }
   ]
 }

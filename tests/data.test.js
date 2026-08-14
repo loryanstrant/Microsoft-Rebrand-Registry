@@ -77,6 +77,16 @@ test('Entra family products preserve their Azure AD names', () => {
     assert.deepEqual(product.periods.map(period => period.name), names, id);
   }
 });
+test('Purview eDiscovery preserves the retired Standard name', () => {
+  const product = data.products.find(({ id }) => id === 'purview-ediscovery');
+  assert.equal(product.name, 'Microsoft Purview eDiscovery');
+  assert.deepEqual(product.periods.map(({ name }) => name), [
+    'Office 365 Core eDiscovery',
+    'Microsoft Purview eDiscovery (Standard)',
+    'Microsoft Purview eDiscovery'
+  ]);
+  assert.equal(product.periods[1].end, '2025-08-31');
+});
 test('Foundry products use their current names and preserve Azure histories', () => {
   const foundry = data.products.find(({ id }) => id === 'azure-ai-foundry');
   assert.equal(foundry.name, 'Microsoft Foundry');
