@@ -6,7 +6,15 @@ import { alphabeticalProducts, currentThenChronological, monthDiff, parseDate, d
 const data = JSON.parse(await readFile(new URL('../src/data/products.json', import.meta.url), 'utf8'));
 test('every product has exactly one ongoing period', () => { for (const product of data.products) assert.equal(product.periods.filter(p => !p.end).length, 1, product.id); });
 test('every period cites an existing source', () => { const sources=new Set(data.sources.map(s=>s.id)); for(const product of data.products) for(const period of product.periods) assert.ok(period.sources.every(id=>sources.has(id)),period.id); });
-test('every product has an accessible local logo', async () => { for (const product of data.products) { assert.ok(product.logo.alt.includes(product.name), product.id); await assert.doesNotReject(() => readFile(new URL(`../${product.logo.src}`, import.meta.url)), product.id); } });
+test('every product has a valid accessible local logo', async () => {
+  for (const product of data.products) {
+    assert.ok(product.logo.alt.includes(product.name), product.id);
+    const logo = await readFile(new URL(`../${product.logo.src}`, import.meta.url));
+    if (product.logo.src.endsWith('.svg')) assert.match(logo.toString('utf8', 0, 1024), /<svg\b/i, product.id);
+    else if (product.logo.src.endsWith('.png')) assert.deepEqual([...logo.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10], product.id);
+    else assert.fail(`${product.id} uses an unsupported logo format`);
+  }
+});
 test('month duration handles year boundaries', () => assert.equal(monthDiff(parseDate('2019-11-04'),parseDate('2020-11-04')),12));
 test('duration labels years and remaining months', () => assert.equal(durationLabel(26),'2 yrs 2 mo'));
 test('month precision is visibly qualified', () => assert.equal(dateLabel('2007-08','month','by'),'By Aug 2007'));
