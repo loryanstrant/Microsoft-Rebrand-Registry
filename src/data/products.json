@@ -1255,6 +1255,196 @@
         "source": "https://www.mscloudlogos.com",
         "alt": "Microsoft Defender for Office 365 logo"
       }
+    },
+    {
+      "id": "azure-ai-foundry",
+      "name": "Azure AI Foundry",
+      "family": "AI and machine learning",
+      "periods": [
+        {
+          "id": "foundry-studio",
+          "name": "Azure AI Studio",
+          "start": "2023-11-15",
+          "end": "2024-11-19",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "foundry-announce"
+          ]
+        },
+        {
+          "id": "foundry-current",
+          "name": "Azure AI Foundry",
+          "start": "2024-11-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "foundry-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/azure-ai-foundry.png",
+        "alt": "Azure AI Foundry logo",
+        "source": "https://rebrandedbyms.com/"
+      }
+    },
+    {
+      "id": "azure-ai-services",
+      "name": "Azure AI services",
+      "family": "AI and machine learning",
+      "periods": [
+        {
+          "id": "ai-services-cognitive",
+          "name": "Azure Cognitive Services",
+          "start": "2016-03-30",
+          "end": "2023-07-18",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "ai-services-rename"
+          ]
+        },
+        {
+          "id": "ai-services-current",
+          "name": "Azure AI services",
+          "start": "2023-07-18",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "ai-services-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/azure-ai-services.svg",
+        "alt": "Azure AI services logo",
+        "source": "https://www.mscloudlogos.com/"
+      }
+    },
+    {
+      "id": "azure-monitor",
+      "name": "Azure Monitor",
+      "family": "Management and governance",
+      "periods": [
+        {
+          "id": "monitor-oms",
+          "name": "Operations Management Suite",
+          "start": "2015-05-04",
+          "end": "2018-04-28",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "azure-monitor-rename"
+          ]
+        },
+        {
+          "id": "monitor-current",
+          "name": "Azure Monitor",
+          "start": "2018-04-28",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "azure-monitor-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/azure-monitor.svg",
+        "alt": "Azure Monitor logo",
+        "source": "https://www.mscloudlogos.com/"
+      }
+    },
+    {
+      "id": "microsoft-azure",
+      "name": "Microsoft Azure",
+      "family": "Cloud platform",
+      "periods": [
+        {
+          "id": "azure-windows",
+          "name": "Windows Azure",
+          "start": "2010-02-01",
+          "end": "2014-04-03",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "effective",
+          "sources": [
+            "azure-rename"
+          ]
+        },
+        {
+          "id": "azure-current",
+          "name": "Microsoft Azure",
+          "start": "2014-04-03",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "effective",
+          "endQualifier": null,
+          "sources": [
+            "azure-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/microsoft-azure.png",
+        "alt": "Microsoft Azure logo",
+        "source": "https://www.mscloudlogos.com/"
+      }
+    },
+    {
+      "id": "outlook-com",
+      "name": "Outlook.com",
+      "family": "Productivity",
+      "periods": [
+        {
+          "id": "outlook-hotmail",
+          "name": "Hotmail",
+          "start": "1996-07-04",
+          "end": "2012-07-31",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "outlook-com-announce"
+          ]
+        },
+        {
+          "id": "outlook-current",
+          "name": "Outlook.com",
+          "start": "2012-07-31",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "outlook-com-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/outlook-com.png",
+        "alt": "Outlook.com logo",
+        "source": "https://www.mscloudlogos.com/"
+      }
     }
   ],
   "sources": [
@@ -1698,6 +1888,41 @@
       "publisher": "Microsoft 365 Blog",
       "published": "2015-04-08",
       "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2015/04/08/introducing-exchange-online-advanced-threat-protection/"
+    },
+    {
+      "id": "foundry-announce",
+      "title": "Introducing Azure AI Foundry",
+      "publisher": "Microsoft Azure Blog",
+      "published": "2024-11-19",
+      "url": "https://azure.microsoft.com/en-us/blog/introducing-azure-ai-foundry/"
+    },
+    {
+      "id": "ai-services-rename",
+      "title": "Azure Cognitive Services is now Azure AI services",
+      "publisher": "M365 Maps",
+      "published": "2023-07-18",
+      "url": "https://m365maps.com/renames.htm"
+    },
+    {
+      "id": "azure-monitor-rename",
+      "title": "Operations Management Suite is now Azure Monitor",
+      "publisher": "Rebranded by Microsoft",
+      "published": "2018-04-28",
+      "url": "https://rebrandedbyms.com/"
+    },
+    {
+      "id": "azure-rename",
+      "title": "Upcoming name change for Windows Azure",
+      "publisher": "Microsoft Azure Blog",
+      "published": "2014-03-25",
+      "url": "https://azure.microsoft.com/en-us/blog/upcoming-name-change-for-windows-azure/"
+    },
+    {
+      "id": "outlook-com-announce",
+      "title": "Introducing Outlook.com",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2012-07-31",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2012/07/31/introducing-outlook-com-modern-email-for-the-next-billion-mailboxes/"
     }
   ]
 }

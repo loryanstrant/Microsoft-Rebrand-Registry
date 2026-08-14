@@ -4,7 +4,7 @@ A static, accessible proof of concept for exploring the names and visual identit
 
 The initial dataset covers product-name periods and displays each product’s current logo from the Microsoft Cloud Logos collection. Researching historical logo periods remains the next dataset expansion, because Microsoft branding history has never been content with one dimension.
 
-The site also links to [Microsoft Cloud Logos](https://www.mscloudlogos.com/) for current and historical visual identities and [Let Me Correct That For You](https://www.letmecorrectthatforyou.com/) for Microsoft terminology. Together they form the tongue-in-cheek “Get Your Story Straight” network: if you’re going to say something, be right about it.
+The site credits [Microsoft Cloud Logos](https://www.mscloudlogos.com/) for current and historical visual identities, [M365 Maps](https://m365maps.com/renames.htm) and [Rebranded by Microsoft](https://rebrandedbyms.com/) for rename leads, and [Let Me Correct That For You](https://www.letmecorrectthatforyou.com/) for Microsoft terminology. Together they form the tongue-in-cheek “Get Your Story Straight” network: if you’re going to say something, be right about it. Rename leads are checked against first-party sources where those remain available.
 
 ## Run locally
 
@@ -34,7 +34,7 @@ npm test
 - Durations for ongoing names are calculated to the top-level `asOf` date, making the output reproducible.
 - Sources are evidence for the transition, but historical pages do not always establish an exact first-use date. The interface exposes precision and qualifiers rather than implying unsupported accuracy.
 
-The registry currently covers 30 cloud and online products. It uses first-party Microsoft announcements wherever available and should be reviewed as research, not as an official Microsoft chronology. Alphabetical jump links divide the growing catalogue without hiding entries behind pagination or collapsed sections. The index ignores a leading “Microsoft” so related product names remain easy to scan; names beginning with a number are under #.
+The registry currently covers 35 cloud and online products. It uses first-party Microsoft announcements wherever available and should be reviewed as research, not as an official Microsoft chronology. Alphabetical jump links divide the growing catalogue without hiding entries behind pagination or collapsed sections. The index ignores a leading “Microsoft” so related product names remain easy to scan; names beginning with a number are under #.
 
 ## Add a product
 
