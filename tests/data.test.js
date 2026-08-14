@@ -88,6 +88,14 @@ test('Purview eDiscovery preserves the retired Standard name', () => {
   assert.equal(product.periods[1].end, '2025-08-31');
   assert.ok(product.periods[2].sources.includes('purview-ediscovery-current-doc'));
 });
+test('Entra multifactor authentication preserves both Azure names', () => {
+  const product = data.products.find(({ id }) => id === 'entra-multifactor-authentication');
+  assert.deepEqual(product.periods.map(({ name }) => name), [
+    'Windows Azure Multi-Factor Authentication',
+    'Azure Multi-Factor Authentication',
+    'Microsoft Entra multifactor authentication'
+  ]);
+});
 test('Foundry products use their current names and preserve Azure histories', () => {
   const foundry = data.products.find(({ id }) => id === 'azure-ai-foundry');
   assert.equal(foundry.name, 'Microsoft Foundry');

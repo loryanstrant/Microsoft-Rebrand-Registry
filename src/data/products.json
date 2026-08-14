@@ -2914,16 +2914,30 @@
       "family": "Identity and access",
       "periods": [
         {
-          "id": "mfa-azure",
-          "name": "Azure Multi-Factor Authentication",
+          "id": "mfa-windows-azure",
+          "name": "Windows Azure Multi-Factor Authentication",
           "start": "2013-10-07",
-          "end": "2023-10-01",
+          "end": "2014-04-03",
           "startPrecision": "day",
           "endPrecision": "day",
           "startQualifier": "generally available",
-          "endQualifier": "effective",
+          "endQualifier": "announced",
           "sources": [
             "azure-mfa-ga",
+            "microsoft-azure-rename"
+          ]
+        },
+        {
+          "id": "mfa-azure",
+          "name": "Azure Multi-Factor Authentication",
+          "start": "2014-04-03",
+          "end": "2023-10-01",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "effective",
+          "sources": [
+            "microsoft-azure-rename",
             "entra-name-glossary"
           ]
         },
