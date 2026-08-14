@@ -1473,6 +1473,166 @@
         "alt": "Outlook.com logo",
         "source": "https://www.mscloudlogos.com/"
       }
+    },
+    {
+      "id": "entra-domain-services",
+      "name": "Microsoft Entra Domain Services",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "entra-domain-services-azure-ad",
+          "name": "Azure AD Domain Services",
+          "start": "2015-10",
+          "end": "2023-07",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "entra-domain-services-overview",
+            "entra-rename"
+          ]
+        },
+        {
+          "id": "entra-domain-services-current",
+          "name": "Microsoft Entra Domain Services",
+          "start": "2023-07",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "entra-rename",
+            "entra-domain-services-overview"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-domain-services.svg",
+        "alt": "Microsoft Entra Domain Services logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "entra-external-id",
+      "name": "Microsoft Entra External ID",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "entra-external-identities",
+          "name": "Azure AD External Identities",
+          "start": "2020-05",
+          "end": "2023-07",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "entra-external-id-overview",
+            "entra-rename"
+          ]
+        },
+        {
+          "id": "entra-external-id-current",
+          "name": "Microsoft Entra External ID",
+          "start": "2023-07",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "entra-rename",
+            "entra-external-id-overview"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-external-id.svg",
+        "alt": "Microsoft Entra External ID logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "entra-id-governance",
+      "name": "Microsoft Entra ID Governance",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "azure-ad-identity-governance",
+          "name": "Azure AD Identity Governance",
+          "start": "2019-11",
+          "end": "2023-07",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "entra-id-governance-overview",
+            "entra-rename"
+          ]
+        },
+        {
+          "id": "entra-id-governance-current",
+          "name": "Microsoft Entra ID Governance",
+          "start": "2023-07",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "entra-rename",
+            "entra-id-governance-overview"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-id-governance.svg",
+        "alt": "Microsoft Entra ID Governance logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "entra-id-protection",
+      "name": "Microsoft Entra ID Protection",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "azure-ad-identity-protection",
+          "name": "Azure AD Identity Protection",
+          "start": "2016-09",
+          "end": "2023-07",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "entra-id-protection-overview",
+            "entra-rename"
+          ]
+        },
+        {
+          "id": "entra-id-protection-current",
+          "name": "Microsoft Entra ID Protection",
+          "start": "2023-07",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "entra-rename",
+            "entra-id-protection-overview"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-id-protection.svg",
+        "alt": "Microsoft Entra ID Protection logo",
+        "source": "https://www.mscloudlogos.com"
+      }
     }
   ],
   "sources": [
@@ -1958,6 +2118,34 @@
       "publisher": "Microsoft 365 Blog",
       "published": "2012-07-31",
       "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2012/07/31/introducing-outlook-com-modern-email-for-the-next-billion-mailboxes/"
+    },
+    {
+      "id": "entra-domain-services-overview",
+      "title": "What is Microsoft Entra Domain Services?",
+      "publisher": "Microsoft Learn",
+      "published": "2026-02-16",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/domain-services/overview"
+    },
+    {
+      "id": "entra-external-id-overview",
+      "title": "Overview of Microsoft Entra External ID",
+      "publisher": "Microsoft Learn",
+      "published": "2026-04-24",
+      "url": "https://learn.microsoft.com/en-us/entra/external-id/external-identities-overview"
+    },
+    {
+      "id": "entra-id-governance-overview",
+      "title": "What is Microsoft Entra ID Governance?",
+      "publisher": "Microsoft Learn",
+      "published": "2026-05-08",
+      "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+    },
+    {
+      "id": "entra-id-protection-overview",
+      "title": "What is Microsoft Entra ID Protection?",
+      "publisher": "Microsoft Learn",
+      "published": "2025-10-30",
+      "url": "https://learn.microsoft.com/en-us/entra/id-protection/overview-identity-protection"
     }
   ]
 }

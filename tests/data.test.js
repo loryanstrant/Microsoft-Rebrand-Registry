@@ -34,8 +34,8 @@ test('product letters support alphabetical navigation', () => {
   assert.equal(productLetter('Microsoft Entra ID'), 'E');
   assert.equal(productLetter('365 Copilot'), '#');
 });
-test('expanded registry contains 35 cloud products in alphabetical sections', () => {
-  assert.equal(data.products.length, 35);
+test('expanded registry contains 39 cloud products in alphabetical sections', () => {
+  assert.equal(data.products.length, 39);
   const groups = alphabeticalProducts(data.products.map(product => ({ product })));
   const letters = [...new Set(groups.map(group => productLetter(group.product.name)))];
   assert.deepEqual(letters, [...letters].sort());
@@ -48,6 +48,18 @@ test('Defender for Office 365 preserves both ATP names', () => {
     'Office 365 Advanced Threat Protection',
     'Microsoft Defender for Office 365'
   ]);
+});
+test('Entra family products preserve their Azure AD names', () => {
+  const expected = new Map([
+    ['entra-domain-services', ['Azure AD Domain Services', 'Microsoft Entra Domain Services']],
+    ['entra-external-id', ['Azure AD External Identities', 'Microsoft Entra External ID']],
+    ['entra-id-governance', ['Azure AD Identity Governance', 'Microsoft Entra ID Governance']],
+    ['entra-id-protection', ['Azure AD Identity Protection', 'Microsoft Entra ID Protection']]
+  ]);
+  for (const [id, names] of expected) {
+    const product = data.products.find(candidate => candidate.id === id);
+    assert.deepEqual(product.periods.map(period => period.name), names, id);
+  }
 });
 test('Foundry products use their current names and preserve Azure histories', () => {
   const foundry = data.products.find(({ id }) => id === 'azure-ai-foundry');
