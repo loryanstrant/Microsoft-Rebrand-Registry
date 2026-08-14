@@ -21,7 +21,10 @@ Open the local URL printed by `serve`. The app has no build step or runtime API 
 ```bash
 npm run validate
 npm test
+npm run package
 ```
+
+`npm run package` creates the complete uploadable site in `.deploy-package/` and fails if a referenced image or application asset is missing. Deploy that directory rather than assembling an upload by hand.
 
 ## Data methodology
 
@@ -51,6 +54,8 @@ The repository root is both the app location and output location; there is no AP
 - **App location:** `/`
 - **API location:** leave blank
 - **Output location:** leave blank
+
+For token-based manual releases, run `npm run package` and upload `.deploy-package/`. This prevents a partial deployment from silently omitting `src/assets`.
 
 `staticwebapp.config.json` provides navigation fallback and baseline security headers. No credentials are needed by the app.
 
