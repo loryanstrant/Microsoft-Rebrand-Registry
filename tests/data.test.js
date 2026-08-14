@@ -49,3 +49,19 @@ test('Defender for Office 365 preserves both ATP names', () => {
     'Microsoft Defender for Office 365'
   ]);
 });
+test('Foundry products use their current names and preserve Azure histories', () => {
+  const foundry = data.products.find(({ id }) => id === 'azure-ai-foundry');
+  assert.equal(foundry.name, 'Microsoft Foundry');
+  assert.deepEqual(foundry.periods.map(({ name }) => name), [
+    'Azure AI Studio',
+    'Azure AI Foundry',
+    'Microsoft Foundry'
+  ]);
+  const tools = data.products.find(({ id }) => id === 'azure-ai-services');
+  assert.equal(tools.name, 'Foundry Tools');
+  assert.deepEqual(tools.periods.map(({ name }) => name), [
+    'Azure Cognitive Services',
+    'Azure AI services',
+    'Foundry Tools'
+  ]);
+});

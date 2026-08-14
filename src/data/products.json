@@ -1258,7 +1258,7 @@
     },
     {
       "id": "azure-ai-foundry",
-      "name": "Azure AI Foundry",
+      "name": "Microsoft Foundry",
       "family": "AI and machine learning",
       "periods": [
         {
@@ -1275,28 +1275,42 @@
           ]
         },
         {
-          "id": "foundry-current",
+          "id": "foundry-azure-ai",
           "name": "Azure AI Foundry",
           "start": "2024-11-19",
+          "end": "2025-11-18",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "foundry-announce",
+            "microsoft-foundry-announce"
+          ]
+        },
+        {
+          "id": "foundry-current",
+          "name": "Microsoft Foundry",
+          "start": "2025-11-18",
           "end": null,
           "startPrecision": "day",
           "endPrecision": null,
           "startQualifier": "announced",
           "endQualifier": null,
           "sources": [
-            "foundry-announce"
+            "microsoft-foundry-announce"
           ]
         }
       ],
       "logo": {
         "src": "src/assets/logos/azure-ai-foundry.png",
-        "alt": "Azure AI Foundry logo",
+        "alt": "Microsoft Foundry logo",
         "source": "https://rebrandedbyms.com/"
       }
     },
     {
       "id": "azure-ai-services",
-      "name": "Azure AI services",
+      "name": "Foundry Tools",
       "family": "AI and machine learning",
       "periods": [
         {
@@ -1313,22 +1327,36 @@
           ]
         },
         {
-          "id": "ai-services-current",
+          "id": "ai-services-azure-ai",
           "name": "Azure AI services",
           "start": "2023-07-18",
+          "end": "2025-11-18",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "ai-services-rename",
+            "microsoft-foundry-announce"
+          ]
+        },
+        {
+          "id": "ai-services-current",
+          "name": "Foundry Tools",
+          "start": "2025-11-18",
           "end": null,
           "startPrecision": "day",
           "endPrecision": null,
           "startQualifier": "announced",
           "endQualifier": null,
           "sources": [
-            "ai-services-rename"
+            "microsoft-foundry-announce"
           ]
         }
       ],
       "logo": {
         "src": "src/assets/logos/azure-ai-services.svg",
-        "alt": "Azure AI services logo",
+        "alt": "Foundry Tools logo",
         "source": "https://www.mscloudlogos.com/"
       }
     },
@@ -1902,6 +1930,13 @@
       "publisher": "M365 Maps",
       "published": "2023-07-18",
       "url": "https://m365maps.com/renames.htm"
+    },
+    {
+      "id": "microsoft-foundry-announce",
+      "title": "Introducing Microsoft Foundry: The AI app and agent factory",
+      "publisher": "Microsoft Community Hub",
+      "published": "2025-11-18",
+      "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-microsoft-foundry-the-ai-app-and-agent-factory/4465241"
     },
     {
       "id": "azure-monitor-rename",
