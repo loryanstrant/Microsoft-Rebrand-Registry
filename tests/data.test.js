@@ -34,12 +34,20 @@ test('product letters support alphabetical navigation', () => {
   assert.equal(productLetter('Microsoft Entra ID'), 'E');
   assert.equal(productLetter('365 Copilot'), '#');
 });
-test('expanded registry contains 39 cloud products in alphabetical sections', () => {
-  assert.equal(data.products.length, 39);
+test('expanded registry contains 48 cloud products in alphabetical sections', () => {
+  assert.equal(data.products.length, 48);
   const groups = alphabeticalProducts(data.products.map(product => ({ product })));
   const letters = [...new Set(groups.map(group => productLetter(group.product.name)))];
   assert.deepEqual(letters, [...letters].sort());
   assert.ok(letters.length >= 4);
+});
+test('larger expansion preserves multi-step Configuration Manager history', () => {
+  const product = data.products.find(({ id }) => id === 'configuration-manager');
+  assert.deepEqual(product.periods.map(({ name }) => name), [
+    'System Center Configuration Manager',
+    'Microsoft Endpoint Configuration Manager',
+    'Microsoft Configuration Manager'
+  ]);
 });
 test('Defender for Office 365 preserves both ATP names', () => {
   const product = data.products.find(({ id }) => id === 'defender-office-365');

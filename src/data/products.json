@@ -1633,6 +1633,385 @@
         "alt": "Microsoft Entra ID Protection logo",
         "source": "https://www.mscloudlogos.com"
       }
+    },
+    {
+      "id": "configuration-manager",
+      "name": "Microsoft Configuration Manager",
+      "family": "Endpoint management",
+      "periods": [
+        {
+          "id": "configmgr-system-center",
+          "name": "System Center Configuration Manager",
+          "start": "2007-11",
+          "end": "2019-11-04",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "configmgr-2007",
+            "endpoint-manager-announce"
+          ]
+        },
+        {
+          "id": "configmgr-endpoint",
+          "name": "Microsoft Endpoint Configuration Manager",
+          "start": "2019-11-04",
+          "end": "2022-10-12",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "endpoint-manager-announce",
+            "intune-family-announce"
+          ]
+        },
+        {
+          "id": "configmgr-current",
+          "name": "Microsoft Configuration Manager",
+          "start": "2022-10-12",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "intune-family-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/configuration-manager.png",
+        "alt": "Microsoft Configuration Manager logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "defender-vulnerability-management",
+      "name": "Microsoft Defender Vulnerability Management",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "defender-tvm",
+          "name": "Microsoft Defender Threat & Vulnerability Management",
+          "start": "2019-03",
+          "end": "2022-05-11",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "tvm-launch",
+            "defender-vm-announce"
+          ]
+        },
+        {
+          "id": "defender-vm-current",
+          "name": "Microsoft Defender Vulnerability Management",
+          "start": "2022-05-11",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "defender-vm-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/defender-vulnerability-management.png",
+        "alt": "Microsoft Defender Vulnerability Management logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "entra-permissions-management",
+      "name": "Microsoft Entra Permissions Management",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "entra-permissions-cloudknox",
+          "name": "CloudKnox Permissions Management",
+          "start": "2021-07-21",
+          "end": "2022-07-12",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "acquired",
+          "endQualifier": "launched",
+          "sources": [
+            "cloudknox-acquisition",
+            "entra-suite-launch"
+          ]
+        },
+        {
+          "id": "entra-permissions-current",
+          "name": "Microsoft Entra Permissions Management",
+          "start": "2022-07-12",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "launched",
+          "endQualifier": null,
+          "sources": [
+            "entra-suite-launch"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-permissions-management.svg",
+        "alt": "Microsoft Entra Permissions Management logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "entra-workload-id",
+      "name": "Microsoft Entra Workload ID",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "entra-workload-identities",
+          "name": "Microsoft Entra Workload Identities",
+          "start": "2022-07-12",
+          "end": "2023-07-11",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "entra-suite-launch",
+            "entra-id-rename-2023"
+          ]
+        },
+        {
+          "id": "entra-workload-current",
+          "name": "Microsoft Entra Workload ID",
+          "start": "2023-07-11",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "entra-id-rename-2023"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-workload-id.svg",
+        "alt": "Microsoft Entra Workload ID logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "m365-apps-enterprise",
+      "name": "Microsoft 365 Apps for enterprise",
+      "family": "Productivity",
+      "periods": [
+        {
+          "id": "office365-proplus",
+          "name": "Office 365 ProPlus",
+          "start": "2011-06-28",
+          "end": "2020-04-21",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "effective",
+          "sources": [
+            "office365-launch",
+            "m365-apps-rename"
+          ]
+        },
+        {
+          "id": "m365-apps-enterprise-current",
+          "name": "Microsoft 365 Apps for enterprise",
+          "start": "2020-04-21",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "effective",
+          "endQualifier": null,
+          "sources": [
+            "m365-apps-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/microsoft-365-apps-enterprise.png",
+        "alt": "Microsoft 365 Apps for enterprise logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "m365-apps-business",
+      "name": "Microsoft 365 Apps for business",
+      "family": "Productivity",
+      "periods": [
+        {
+          "id": "office365-business",
+          "name": "Office 365 Business",
+          "start": "2014-10-01",
+          "end": "2020-04-21",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "effective",
+          "sources": [
+            "office365-business-launch",
+            "m365-business-rename"
+          ]
+        },
+        {
+          "id": "m365-apps-business-current",
+          "name": "Microsoft 365 Apps for business",
+          "start": "2020-04-21",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "effective",
+          "endQualifier": null,
+          "sources": [
+            "m365-business-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/microsoft-365-apps-business.png",
+        "alt": "Microsoft 365 Apps for business logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "m365-copilot-app",
+      "name": "Microsoft 365 Copilot app",
+      "family": "Productivity",
+      "periods": [
+        {
+          "id": "office-mobile-app",
+          "name": "Office Mobile app",
+          "start": "2019-11-04",
+          "end": "2023-01",
+          "startPrecision": "day",
+          "endPrecision": "month",
+          "startQualifier": "announced",
+          "endQualifier": "effective",
+          "sources": [
+            "office-mobile-announce",
+            "m365-mobile-announce"
+          ]
+        },
+        {
+          "id": "m365-app",
+          "name": "Microsoft 365 app",
+          "start": "2023-01",
+          "end": "2025-01",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "effective",
+          "endQualifier": "effective",
+          "sources": [
+            "m365-mobile-announce",
+            "m365-copilot-app-announce"
+          ]
+        },
+        {
+          "id": "m365-copilot-app-current",
+          "name": "Microsoft 365 Copilot app",
+          "start": "2025-01",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "effective",
+          "endQualifier": null,
+          "sources": [
+            "m365-copilot-app-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/microsoft-365-copilot-app.png",
+        "alt": "Microsoft 365 Copilot app logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "viva-glint",
+      "name": "Microsoft Viva Glint",
+      "family": "Employee experience",
+      "periods": [
+        {
+          "id": "linkedin-glint",
+          "name": "LinkedIn Glint",
+          "start": "2018-11",
+          "end": "2023-04-20",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "acquired",
+          "endQualifier": "announced",
+          "sources": [
+            "linkedin-glint-acquisition",
+            "viva-glint-announce"
+          ]
+        },
+        {
+          "id": "viva-glint-current",
+          "name": "Microsoft Viva Glint",
+          "start": "2023-04-20",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "viva-glint-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/viva-glint.svg",
+        "alt": "Microsoft Viva Glint logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "viva-insights",
+      "name": "Microsoft Viva Insights",
+      "family": "Employee experience",
+      "periods": [
+        {
+          "id": "myanalytics",
+          "name": "MyAnalytics",
+          "start": "2015-11-18",
+          "end": "2021-02-04",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "launched",
+          "sources": [
+            "myanalytics-announce",
+            "viva-launch"
+          ]
+        },
+        {
+          "id": "viva-insights-current",
+          "name": "Microsoft Viva Insights",
+          "start": "2021-02-04",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "launched",
+          "endQualifier": null,
+          "sources": [
+            "viva-launch"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/viva-insights.png",
+        "alt": "Microsoft Viva Insights logo",
+        "source": "https://www.mscloudlogos.com"
+      }
     }
   ],
   "sources": [
@@ -1806,7 +2185,7 @@
     },
     {
       "id": "cosmos-launch",
-      "title": "Azure Cosmos DB: Microsoft’s globally distributed database service",
+      "title": "Azure Cosmos DB: Microsoft\u2019s globally distributed database service",
       "publisher": "Azure Blog",
       "published": "2017-05-10",
       "url": "https://azure.microsoft.com/en-us/blog/azure-cosmos-db-microsofts-globally-distributed-multi-model-database-service/"
@@ -2146,6 +2525,132 @@
       "publisher": "Microsoft Learn",
       "published": "2025-10-30",
       "url": "https://learn.microsoft.com/en-us/entra/id-protection/overview-identity-protection"
+    },
+    {
+      "id": "configmgr-2007",
+      "title": "Introduction to Configuration Manager",
+      "publisher": "Microsoft Learn",
+      "published": "2007-11-01",
+      "url": "https://learn.microsoft.com/en-us/mem/configmgr/core/understand/introduction"
+    },
+    {
+      "id": "endpoint-manager-announce",
+      "title": "Microsoft Endpoint Manager: a unified management platform",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2019-11-04",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2019/11/04/use-the-power-of-cloud-intelligence-to-simplify-and-accelerate-it-and-the-move-to-a-modern-workplace/"
+    },
+    {
+      "id": "intune-family-announce",
+      "title": "Introducing the Microsoft Intune product family",
+      "publisher": "Microsoft Community Hub",
+      "published": "2022-10-12",
+      "url": "https://techcommunity.microsoft.com/blog/microsoftintuneblog/introducing-the-microsoft-intune-product-family/3650769"
+    },
+    {
+      "id": "tvm-launch",
+      "title": "Announcing Microsoft Defender Vulnerability Management",
+      "publisher": "Microsoft Community Hub",
+      "published": "2022-05-11",
+      "url": "https://techcommunity.microsoft.com/blog/microsoftdefendervulnerabilitymanagement/announcing-microsoft-defender-vulnerability-management-in-public-preview/3361003"
+    },
+    {
+      "id": "defender-vm-announce",
+      "title": "Announcing Microsoft Defender Vulnerability Management",
+      "publisher": "Microsoft Community Hub",
+      "published": "2022-05-11",
+      "url": "https://techcommunity.microsoft.com/blog/microsoftdefendervulnerabilitymanagement/announcing-microsoft-defender-vulnerability-management-in-public-preview/3361003"
+    },
+    {
+      "id": "cloudknox-acquisition",
+      "title": "Microsoft acquires CloudKnox Security",
+      "publisher": "The Official Microsoft Blog",
+      "published": "2021-07-21",
+      "url": "https://blogs.microsoft.com/blog/2021/07/21/microsoft-acquires-cloudknox-security-to-offer-unified-privileged-access-and-cloud-entitlement-management/"
+    },
+    {
+      "id": "entra-suite-launch",
+      "title": "Introducing Microsoft Entra",
+      "publisher": "Microsoft Security Blog",
+      "published": "2022-05-31",
+      "url": "https://www.microsoft.com/en-us/security/blog/2022/05/31/secure-access-for-a-connected-worldmeet-microsoft-entra/"
+    },
+    {
+      "id": "entra-id-rename-2023",
+      "title": "Azure AD is becoming Microsoft Entra ID",
+      "publisher": "Microsoft Community Hub",
+      "published": "2023-07-11",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/azure-ad-is-becoming-microsoft-entra-id/2520436"
+    },
+    {
+      "id": "m365-apps-rename",
+      "title": "Name change for Office 365 ProPlus",
+      "publisher": "Microsoft Learn",
+      "published": "2020-04-21",
+      "url": "https://learn.microsoft.com/en-us/deployoffice/name-change"
+    },
+    {
+      "id": "office365-business-launch",
+      "title": "New Microsoft 365 offerings for small and medium-sized businesses",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2020-03-30",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2020/03/30/new-microsoft-365-offerings-small-and-medium-sized-businesses/"
+    },
+    {
+      "id": "m365-business-rename",
+      "title": "New Microsoft 365 offerings for small and medium-sized businesses",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2020-03-30",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2020/03/30/new-microsoft-365-offerings-small-and-medium-sized-businesses/"
+    },
+    {
+      "id": "office-mobile-announce",
+      "title": "Introducing the Microsoft 365 app",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2022-10-12",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2022/10/12/microsoft-365-at-ignite-re-energize-your-workforce-in-the-office-at-home-and-everywhere-in-between/"
+    },
+    {
+      "id": "m365-mobile-announce",
+      "title": "Introducing the Microsoft 365 app",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2022-10-12",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2022/10/12/microsoft-365-at-ignite-re-energize-your-workforce-in-the-office-at-home-and-everywhere-in-between/"
+    },
+    {
+      "id": "m365-copilot-app-announce",
+      "title": "The Microsoft 365 app becomes the Microsoft 365 Copilot app",
+      "publisher": "Microsoft Community Hub",
+      "published": "2024-12-16",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft_365blog/the-microsoft-365-app-transition-to-the-microsoft-365-copilot-app/4356271"
+    },
+    {
+      "id": "linkedin-glint-acquisition",
+      "title": "Transform insight into action with Microsoft Viva",
+      "publisher": "Microsoft Community Hub",
+      "published": "2023-04-20",
+      "url": "https://techcommunity.microsoft.com/blog/viva_glint_blog/transform-insight-into-action-with-microsoft-viva/3800649"
+    },
+    {
+      "id": "viva-glint-announce",
+      "title": "Transform insight into action with Microsoft Viva",
+      "publisher": "Microsoft Community Hub",
+      "published": "2023-04-20",
+      "url": "https://techcommunity.microsoft.com/blog/viva_glint_blog/transform-insight-into-action-with-microsoft-viva/3800649"
+    },
+    {
+      "id": "myanalytics-announce",
+      "title": "Microsoft Viva: empowering every employee for the new digital age",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2021-02-04",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2021/02/04/microsoft-viva-empowering-every-employee-for-the-new-digital-age/"
+    },
+    {
+      "id": "viva-launch",
+      "title": "Microsoft Viva: empowering every employee for the new digital age",
+      "publisher": "The Official Microsoft Blog",
+      "published": "2021-02-04",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2021/02/04/microsoft-viva-empowering-every-employee-for-the-new-digital-age/"
     }
   ]
 }
