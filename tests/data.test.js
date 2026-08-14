@@ -86,6 +86,7 @@ test('Purview eDiscovery preserves the retired Standard name', () => {
     'Microsoft Purview eDiscovery'
   ]);
   assert.equal(product.periods[1].end, '2025-08-31');
+  assert.ok(product.periods[2].sources.includes('purview-ediscovery-current-doc'));
 });
 test('Foundry products use their current names and preserve Azure histories', () => {
   const foundry = data.products.find(({ id }) => id === 'azure-ai-foundry');

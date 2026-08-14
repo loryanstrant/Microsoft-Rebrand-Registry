@@ -2609,7 +2609,8 @@
           "startQualifier": "by",
           "endQualifier": null,
           "sources": [
-            "purview-ediscovery-classic-retirement"
+            "purview-ediscovery-classic-retirement",
+            "purview-ediscovery-current-doc"
           ]
         }
       ],
@@ -3469,6 +3470,13 @@
       "publisher": "Microsoft Learn",
       "published": "2025-08-31",
       "url": "https://learn.microsoft.com/en-us/purview/ediscovery"
+    },
+    {
+      "id": "purview-ediscovery-current-doc",
+      "title": "Learn about eDiscovery",
+      "publisher": "Microsoft Learn",
+      "published": "2026-06-29",
+      "url": "https://learn.microsoft.com/en-us/purview/edisc"
     }
   ]
 }
