@@ -2012,6 +2012,408 @@
         "alt": "Microsoft Viva Insights logo",
         "source": "https://www.mscloudlogos.com"
       }
+    },
+    {
+      "id": "dynamics-365-business-central",
+      "name": "Microsoft Dynamics 365 Business Central",
+      "family": "Business applications",
+      "periods": [
+        {
+          "id": "nav",
+          "name": "Microsoft Dynamics NAV",
+          "start": "2005-09",
+          "end": "2018-04-02",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "launched",
+          "sources": [
+            "nav-history",
+            "business-central-launch"
+          ]
+        },
+        {
+          "id": "business-central",
+          "name": "Microsoft Dynamics 365 Business Central",
+          "start": "2018-04-02",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "launched",
+          "endQualifier": null,
+          "sources": [
+            "business-central-launch"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/dynamics-365-business-central.svg",
+        "alt": "Microsoft Dynamics 365 Business Central logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "dynamics-365-finance",
+      "name": "Microsoft Dynamics 365 Finance",
+      "family": "Business applications",
+      "periods": [
+        {
+          "id": "finance-operations",
+          "name": "Microsoft Dynamics 365 for Finance and Operations",
+          "start": "2017-07",
+          "end": "2019-10",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "finance-operations-split"
+          ]
+        },
+        {
+          "id": "finance-current",
+          "name": "Microsoft Dynamics 365 Finance",
+          "start": "2019-10",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "finance-operations-split"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/dynamics-365-finance.svg",
+        "alt": "Microsoft Dynamics 365 Finance logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "dynamics-365-supply-chain-management",
+      "name": "Microsoft Dynamics 365 Supply Chain Management",
+      "family": "Business applications",
+      "periods": [
+        {
+          "id": "scm-finance-operations",
+          "name": "Microsoft Dynamics 365 for Finance and Operations",
+          "start": "2017-07",
+          "end": "2019-10",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "finance-operations-split"
+          ]
+        },
+        {
+          "id": "scm-current",
+          "name": "Microsoft Dynamics 365 Supply Chain Management",
+          "start": "2019-10",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "finance-operations-split"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/dynamics-365-supply-chain-management.svg",
+        "alt": "Microsoft Dynamics 365 Supply Chain Management logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "dynamics-365-commerce",
+      "name": "Microsoft Dynamics 365 Commerce",
+      "family": "Business applications",
+      "periods": [
+        {
+          "id": "dynamics-retail",
+          "name": "Microsoft Dynamics 365 for Retail",
+          "start": "2016-11-01",
+          "end": "2020-02-03",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "dynamics-365-launch",
+            "commerce-announce"
+          ]
+        },
+        {
+          "id": "commerce-current",
+          "name": "Microsoft Dynamics 365 Commerce",
+          "start": "2020-02-03",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "commerce-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/dynamics-365-commerce.svg",
+        "alt": "Microsoft Dynamics 365 Commerce logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "dynamics-365-project-operations",
+      "name": "Microsoft Dynamics 365 Project Operations",
+      "family": "Business applications",
+      "periods": [
+        {
+          "id": "project-service-automation",
+          "name": "Microsoft Dynamics 365 Project Service Automation",
+          "start": "2016-11-01",
+          "end": "2020-02-19",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "dynamics-365-launch",
+            "project-operations-announce"
+          ]
+        },
+        {
+          "id": "project-operations-current",
+          "name": "Microsoft Dynamics 365 Project Operations",
+          "start": "2020-02-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "project-operations-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/dynamics-365-project-operations.svg",
+        "alt": "Microsoft Dynamics 365 Project Operations logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "dynamics-365-sales",
+      "name": "Microsoft Dynamics 365 Sales",
+      "family": "Business applications",
+      "periods": [
+        {
+          "id": "dynamics-sales-old",
+          "name": "Microsoft Dynamics 365 for Sales",
+          "start": "2016-11-01",
+          "end": "2018-10",
+          "startPrecision": "day",
+          "endPrecision": "month",
+          "startQualifier": "launched",
+          "endQualifier": "by",
+          "sources": [
+            "dynamics-365-launch",
+            "dynamics-app-name-changes"
+          ]
+        },
+        {
+          "id": "dynamics-sales-current",
+          "name": "Microsoft Dynamics 365 Sales",
+          "start": "2018-10",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "by",
+          "endQualifier": null,
+          "sources": [
+            "dynamics-app-name-changes"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/dynamics-365-sales.svg",
+        "alt": "Microsoft Dynamics 365 Sales logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "dynamics-365-customer-service",
+      "name": "Microsoft Dynamics 365 Customer Service",
+      "family": "Business applications",
+      "periods": [
+        {
+          "id": "dynamics-customer-service-old",
+          "name": "Microsoft Dynamics 365 for Customer Service",
+          "start": "2016-11-01",
+          "end": "2018-10",
+          "startPrecision": "day",
+          "endPrecision": "month",
+          "startQualifier": "launched",
+          "endQualifier": "by",
+          "sources": [
+            "dynamics-365-launch",
+            "dynamics-app-name-changes"
+          ]
+        },
+        {
+          "id": "dynamics-customer-service-current",
+          "name": "Microsoft Dynamics 365 Customer Service",
+          "start": "2018-10",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "by",
+          "endQualifier": null,
+          "sources": [
+            "dynamics-app-name-changes"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/dynamics-365-customer-service.svg",
+        "alt": "Microsoft Dynamics 365 Customer Service logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "dynamics-365-field-service",
+      "name": "Microsoft Dynamics 365 Field Service",
+      "family": "Business applications",
+      "periods": [
+        {
+          "id": "fieldone-sky",
+          "name": "FieldOne Sky",
+          "start": "2015-07-16",
+          "end": "2016-11-01",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "acquired",
+          "endQualifier": "launched",
+          "sources": [
+            "fieldone-acquisition",
+            "dynamics-365-launch"
+          ]
+        },
+        {
+          "id": "dynamics-field-service-old",
+          "name": "Microsoft Dynamics 365 for Field Service",
+          "start": "2016-11-01",
+          "end": "2018-10",
+          "startPrecision": "day",
+          "endPrecision": "month",
+          "startQualifier": "launched",
+          "endQualifier": "by",
+          "sources": [
+            "dynamics-365-launch",
+            "dynamics-app-name-changes"
+          ]
+        },
+        {
+          "id": "dynamics-field-service-current",
+          "name": "Microsoft Dynamics 365 Field Service",
+          "start": "2018-10",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "by",
+          "endQualifier": null,
+          "sources": [
+            "dynamics-app-name-changes"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/dynamics-365-field-service.svg",
+        "alt": "Microsoft Dynamics 365 Field Service logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "microsoft-lens",
+      "name": "Microsoft Lens",
+      "family": "Productivity",
+      "periods": [
+        {
+          "id": "office-lens",
+          "name": "Office Lens",
+          "start": "2014-03-17",
+          "end": "2021-02-01",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "office-lens-launch",
+            "lens-rename"
+          ]
+        },
+        {
+          "id": "microsoft-lens-current",
+          "name": "Microsoft Lens",
+          "start": "2021-02-01",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "lens-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/microsoft-lens.svg",
+        "alt": "Microsoft Lens logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "azure-kubernetes-service",
+      "name": "Azure Kubernetes Service",
+      "family": "Cloud infrastructure",
+      "periods": [
+        {
+          "id": "azure-container-service",
+          "name": "Azure Container Service",
+          "start": "2016-04-19",
+          "end": "2017-10-24",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "generally available",
+          "endQualifier": "announced",
+          "sources": [
+            "acs-announce",
+            "aks-announce"
+          ]
+        },
+        {
+          "id": "aks-current",
+          "name": "Azure Kubernetes Service",
+          "start": "2017-10-24",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "aks-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/azure-kubernetes-service.svg",
+        "alt": "Azure Kubernetes Service logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
     }
   ],
   "sources": [
@@ -2185,7 +2587,7 @@
     },
     {
       "id": "cosmos-launch",
-      "title": "Azure Cosmos DB: Microsoft\u2019s globally distributed database service",
+      "title": "Azure Cosmos DB: Microsoft’s globally distributed database service",
       "publisher": "Azure Blog",
       "published": "2017-05-10",
       "url": "https://azure.microsoft.com/en-us/blog/azure-cosmos-db-microsofts-globally-distributed-multi-model-database-service/"
@@ -2651,6 +3053,90 @@
       "publisher": "The Official Microsoft Blog",
       "published": "2021-02-04",
       "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2021/02/04/microsoft-viva-empowering-every-employee-for-the-new-digital-age/"
+    },
+    {
+      "id": "business-central-launch",
+      "title": "Microsoft Dynamics 365 Business Central is generally available",
+      "publisher": "Microsoft Dynamics 365 Blog",
+      "published": "2018-04-02",
+      "url": "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2018/04/02/microsoft-dynamics-365-business-central-is-generally-available/"
+    },
+    {
+      "id": "nav-history",
+      "title": "Welcome to Dynamics NAV 2018",
+      "publisher": "Microsoft Learn",
+      "published": "2018-06-05",
+      "url": "https://learn.microsoft.com/en-us/dynamics-nav/welcome-to-dynamics-nav"
+    },
+    {
+      "id": "finance-operations-split",
+      "title": "Changes to Dynamics 365 licensing and product names",
+      "publisher": "Microsoft Learn",
+      "published": "2019-10-01",
+      "url": "https://learn.microsoft.com/en-us/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming"
+    },
+    {
+      "id": "commerce-announce",
+      "title": "Introducing Microsoft Dynamics 365 Commerce",
+      "publisher": "Microsoft Dynamics 365 Blog",
+      "published": "2020-02-03",
+      "url": "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2020/02/03/introducing-microsoft-dynamics-365-commerce/"
+    },
+    {
+      "id": "project-operations-announce",
+      "title": "Introducing Microsoft Dynamics 365 Project Operations",
+      "publisher": "Microsoft Dynamics 365 Blog",
+      "published": "2020-02-19",
+      "url": "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2020/02/19/introducing-dynamics-365-project-operations/"
+    },
+    {
+      "id": "dynamics-365-launch",
+      "title": "Microsoft Dynamics 365 launches next generation of intelligent business applications",
+      "publisher": "Microsoft News Center",
+      "published": "2016-11-01",
+      "url": "https://news.microsoft.com/2016/11/01/microsoft-dynamics-365-launches-next-generation-of-intelligent-business-applications/"
+    },
+    {
+      "id": "dynamics-app-name-changes",
+      "title": "Important changes (deprecations) coming in Power Apps and customer engagement apps",
+      "publisher": "Microsoft Learn",
+      "published": "2018-10-01",
+      "url": "https://learn.microsoft.com/en-us/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming"
+    },
+    {
+      "id": "fieldone-acquisition",
+      "title": "Microsoft acquires FieldOne to deliver the future of field service management",
+      "publisher": "The Official Microsoft Blog",
+      "published": "2015-07-16",
+      "url": "https://blogs.microsoft.com/blog/2015/07/16/microsoft-acquires-fieldone-to-deliver-the-future-of-field-service-management/"
+    },
+    {
+      "id": "lens-rename",
+      "title": "Office Lens is now Microsoft Lens",
+      "publisher": "Microsoft Support",
+      "published": "2021-02-01",
+      "url": "https://support.microsoft.com/en-us/office/office-lens-for-windows-577ec09d-8da2-4029-8bb7-12f8114f472a"
+    },
+    {
+      "id": "office-lens-launch",
+      "title": "Office Lens: a OneNote scanner for your pocket",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2014-03-17",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2014/03/17/office-lens-a-onenote-scanner-for-your-pocket/"
+    },
+    {
+      "id": "aks-announce",
+      "title": "Introducing Azure Kubernetes Service (AKS)",
+      "publisher": "Microsoft Azure Blog",
+      "published": "2017-10-24",
+      "url": "https://azure.microsoft.com/en-us/blog/introducing-azure-kubernetes-service-aks-managed-kubernetes-and-more/"
+    },
+    {
+      "id": "acs-announce",
+      "title": "Azure Container Service now generally available",
+      "publisher": "Microsoft Azure Blog",
+      "published": "2016-04-19",
+      "url": "https://azure.microsoft.com/en-us/blog/azure-container-service-now-generally-available/"
     }
   ]
 }
