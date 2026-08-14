@@ -2414,6 +2414,310 @@
         "alt": "Azure Kubernetes Service logo",
         "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
       }
+    },
+    {
+      "id": "purview-communication-compliance",
+      "name": "Microsoft Purview Communication Compliance",
+      "family": "Data security and compliance",
+      "periods": [
+        {
+          "id": "purview-communication-compliance-former",
+          "name": "Microsoft 365 Communication Compliance",
+          "start": "2022-03",
+          "end": "2022-04-19",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        },
+        {
+          "id": "purview-communication-compliance-current",
+          "name": "Microsoft Purview Communication Compliance",
+          "start": "2022-04-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/purview-communication-compliance.svg",
+        "alt": "Microsoft Purview Communication Compliance logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "purview-compliance-manager",
+      "name": "Microsoft Purview Compliance Manager",
+      "family": "Data security and compliance",
+      "periods": [
+        {
+          "id": "purview-compliance-manager-former",
+          "name": "Microsoft Compliance Manager",
+          "start": "2022-03",
+          "end": "2022-04-19",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        },
+        {
+          "id": "purview-compliance-manager-current",
+          "name": "Microsoft Purview Compliance Manager",
+          "start": "2022-04-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/purview-compliance-manager.svg",
+        "alt": "Microsoft Purview Compliance Manager logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "purview-data-lifecycle-management",
+      "name": "Microsoft Purview Data Lifecycle Management",
+      "family": "Data security and compliance",
+      "periods": [
+        {
+          "id": "purview-data-lifecycle-management-former",
+          "name": "Microsoft Information Governance",
+          "start": "2022-03",
+          "end": "2022-04-19",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        },
+        {
+          "id": "purview-data-lifecycle-management-current",
+          "name": "Microsoft Purview Data Lifecycle Management",
+          "start": "2022-04-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/purview-data-lifecycle-management.svg",
+        "alt": "Microsoft Purview Data Lifecycle Management logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "purview-data-loss-prevention",
+      "name": "Microsoft Purview Data Loss Prevention",
+      "family": "Data security and compliance",
+      "periods": [
+        {
+          "id": "purview-data-loss-prevention-former",
+          "name": "Office 365 Data Loss Prevention",
+          "start": "2022-03",
+          "end": "2022-04-19",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        },
+        {
+          "id": "purview-data-loss-prevention-current",
+          "name": "Microsoft Purview Data Loss Prevention",
+          "start": "2022-04-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/purview-data-loss-prevention.svg",
+        "alt": "Microsoft Purview Data Loss Prevention logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "purview-ediscovery",
+      "name": "Microsoft Purview eDiscovery (Standard)",
+      "family": "Data security and compliance",
+      "periods": [
+        {
+          "id": "purview-ediscovery-former",
+          "name": "Office 365 Core eDiscovery",
+          "start": "2022-03",
+          "end": "2022-04-19",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        },
+        {
+          "id": "purview-ediscovery-current",
+          "name": "Microsoft Purview eDiscovery (Standard)",
+          "start": "2022-04-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/purview-ediscovery.svg",
+        "alt": "Microsoft Purview eDiscovery (Standard) logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "purview-information-protection",
+      "name": "Microsoft Purview Information Protection",
+      "family": "Data security and compliance",
+      "periods": [
+        {
+          "id": "purview-information-protection-former",
+          "name": "Microsoft Information Protection",
+          "start": "2022-03",
+          "end": "2022-04-19",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        },
+        {
+          "id": "purview-information-protection-current",
+          "name": "Microsoft Purview Information Protection",
+          "start": "2022-04-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/purview-information-protection.svg",
+        "alt": "Microsoft Purview Information Protection logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "purview-insider-risk-management",
+      "name": "Microsoft Purview Insider Risk Management",
+      "family": "Data security and compliance",
+      "periods": [
+        {
+          "id": "purview-insider-risk-management-former",
+          "name": "Microsoft 365 Insider Risk Management",
+          "start": "2022-03",
+          "end": "2022-04-19",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        },
+        {
+          "id": "purview-insider-risk-management-current",
+          "name": "Microsoft Purview Insider Risk Management",
+          "start": "2022-04-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/purview-insider-risk-management.svg",
+        "alt": "Microsoft Purview Insider Risk Management logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "purview-records-management",
+      "name": "Microsoft Purview Records Management",
+      "family": "Data security and compliance",
+      "periods": [
+        {
+          "id": "purview-records-management-former",
+          "name": "Records Management in Microsoft 365",
+          "start": "2022-03",
+          "end": "2022-04-19",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        },
+        {
+          "id": "purview-records-management-current",
+          "name": "Microsoft Purview Records Management",
+          "start": "2022-04-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/purview-records-management.svg",
+        "alt": "Microsoft Purview Records Management logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
     }
   ],
   "sources": [
@@ -3137,6 +3441,13 @@
       "publisher": "Microsoft Azure Blog",
       "published": "2016-04-19",
       "url": "https://azure.microsoft.com/en-us/blog/azure-container-service-now-generally-available/"
+    },
+    {
+      "id": "purview-portfolio-rename",
+      "title": "The future of compliance and data governance is here: Introducing Microsoft Purview",
+      "publisher": "Microsoft Security Blog",
+      "published": "2022-04-19",
+      "url": "https://www.microsoft.com/en-us/security/blog/2022/04/19/the-future-of-compliance-and-data-governance-is-here-introducing-microsoft-purview/"
     }
   ]
 }
