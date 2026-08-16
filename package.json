@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "npx --yes serve@14.2.4 .",
+    "package": "node scripts/package-deployment.js",
     "test": "node --test",
     "validate": "node scripts/validate-data.js"
   },

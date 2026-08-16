@@ -1033,6 +1033,1975 @@
         "alt": "Microsoft Power Pages logo",
         "source": "https://www.mscloudlogos.com"
       }
+    },
+    {
+      "id": "defender-cloud",
+      "name": "Microsoft Defender for Cloud",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "defender-cloud-asc",
+          "name": "Azure Security Center",
+          "start": "2015-12-02",
+          "end": "2021-11-02",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "azure-security-center-intro",
+            "defender-cloud-rename"
+          ]
+        },
+        {
+          "id": "defender-cloud-current",
+          "name": "Microsoft Defender for Cloud",
+          "start": "2021-11-02",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "defender-cloud-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/defender.png",
+        "source": "https://www.mscloudlogos.com",
+        "alt": "Microsoft Defender for Cloud logo"
+      }
+    },
+    {
+      "id": "defender-cloud-apps",
+      "name": "Microsoft Defender for Cloud Apps",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "defender-cloud-apps-mcas",
+          "name": "Microsoft Cloud App Security",
+          "start": "2016-04-06",
+          "end": "2021-11-02",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "generally available",
+          "endQualifier": "announced",
+          "sources": [
+            "mcas-ga",
+            "defender-cloud-apps-rename"
+          ]
+        },
+        {
+          "id": "defender-cloud-apps-current",
+          "name": "Microsoft Defender for Cloud Apps",
+          "start": "2021-11-02",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "defender-cloud-apps-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/defender.png",
+        "source": "https://www.mscloudlogos.com",
+        "alt": "Microsoft Defender for Cloud Apps logo"
+      }
+    },
+    {
+      "id": "defender-endpoint",
+      "name": "Microsoft Defender for Endpoint",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "defender-endpoint-wdatp",
+          "name": "Windows Defender Advanced Threat Protection",
+          "start": "2016-03-01",
+          "end": "2019-03-21",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "wdatp-announce",
+            "mdatp-rename"
+          ]
+        },
+        {
+          "id": "defender-endpoint-mdatp",
+          "name": "Microsoft Defender Advanced Threat Protection",
+          "start": "2019-03-21",
+          "end": "2020-09-22",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "mdatp-rename",
+            "defender-suite-rename"
+          ]
+        },
+        {
+          "id": "defender-endpoint-current",
+          "name": "Microsoft Defender for Endpoint",
+          "start": "2020-09-22",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "defender-suite-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/defender.png",
+        "source": "https://www.mscloudlogos.com",
+        "alt": "Microsoft Defender for Endpoint logo"
+      }
+    },
+    {
+      "id": "defender-identity",
+      "name": "Microsoft Defender for Identity",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "defender-identity-aatp",
+          "name": "Azure Advanced Threat Protection",
+          "start": "2017-09-27",
+          "end": "2020-09-22",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "aatp-announce",
+            "defender-suite-rename"
+          ]
+        },
+        {
+          "id": "defender-identity-current",
+          "name": "Microsoft Defender for Identity",
+          "start": "2020-09-22",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "defender-suite-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/defender.png",
+        "source": "https://www.mscloudlogos.com",
+        "alt": "Microsoft Defender for Identity logo"
+      }
+    },
+    {
+      "id": "defender-office-365",
+      "name": "Microsoft Defender for Office 365",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "defender-office-eop-atp",
+          "name": "Exchange Online Advanced Threat Protection",
+          "start": "2015-04-08",
+          "end": "2016-11-07",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "renamed by",
+          "sources": [
+            "o365-atp-announce"
+          ]
+        },
+        {
+          "id": "defender-office-atp",
+          "name": "Office 365 Advanced Threat Protection",
+          "start": "2016-11-07",
+          "end": "2020-09-22",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "renamed by",
+          "endQualifier": "announced",
+          "sources": [
+            "o365-atp-announce",
+            "defender-suite-rename"
+          ]
+        },
+        {
+          "id": "defender-office-current",
+          "name": "Microsoft Defender for Office 365",
+          "start": "2020-09-22",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "defender-suite-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/defender.png",
+        "source": "https://www.mscloudlogos.com",
+        "alt": "Microsoft Defender for Office 365 logo"
+      }
+    },
+    {
+      "id": "azure-ai-foundry",
+      "name": "Microsoft Foundry",
+      "family": "AI and machine learning",
+      "periods": [
+        {
+          "id": "foundry-studio",
+          "name": "Azure AI Studio",
+          "start": "2023-11-15",
+          "end": "2024-11-19",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "foundry-announce"
+          ]
+        },
+        {
+          "id": "foundry-azure-ai",
+          "name": "Azure AI Foundry",
+          "start": "2024-11-19",
+          "end": "2025-11-18",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "foundry-announce",
+            "microsoft-foundry-announce"
+          ]
+        },
+        {
+          "id": "foundry-current",
+          "name": "Microsoft Foundry",
+          "start": "2025-11-18",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "microsoft-foundry-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/azure-ai-foundry.png",
+        "alt": "Microsoft Foundry logo",
+        "source": "https://rebrandedbyms.com/"
+      }
+    },
+    {
+      "id": "azure-ai-services",
+      "name": "Foundry Tools",
+      "family": "AI and machine learning",
+      "periods": [
+        {
+          "id": "ai-services-cognitive",
+          "name": "Azure Cognitive Services",
+          "start": "2016-03-30",
+          "end": "2023-07-18",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "ai-services-rename"
+          ]
+        },
+        {
+          "id": "ai-services-azure-ai",
+          "name": "Azure AI services",
+          "start": "2023-07-18",
+          "end": "2025-11-18",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "ai-services-rename",
+            "microsoft-foundry-announce"
+          ]
+        },
+        {
+          "id": "ai-services-current",
+          "name": "Foundry Tools",
+          "start": "2025-11-18",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "microsoft-foundry-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/azure-ai-services.svg",
+        "alt": "Foundry Tools logo",
+        "source": "https://www.mscloudlogos.com/"
+      }
+    },
+    {
+      "id": "azure-monitor",
+      "name": "Azure Monitor",
+      "family": "Management and governance",
+      "periods": [
+        {
+          "id": "monitor-oms",
+          "name": "Operations Management Suite",
+          "start": "2015-05-04",
+          "end": "2018-04-28",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "azure-monitor-rename"
+          ]
+        },
+        {
+          "id": "monitor-current",
+          "name": "Azure Monitor",
+          "start": "2018-04-28",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "azure-monitor-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/azure-monitor.svg",
+        "alt": "Azure Monitor logo",
+        "source": "https://www.mscloudlogos.com/"
+      }
+    },
+    {
+      "id": "microsoft-azure",
+      "name": "Microsoft Azure",
+      "family": "Cloud platform",
+      "periods": [
+        {
+          "id": "azure-windows",
+          "name": "Windows Azure",
+          "start": "2010-02-01",
+          "end": "2014-04-03",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "effective",
+          "sources": [
+            "azure-rename"
+          ]
+        },
+        {
+          "id": "azure-current",
+          "name": "Microsoft Azure",
+          "start": "2014-04-03",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "effective",
+          "endQualifier": null,
+          "sources": [
+            "azure-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/microsoft-azure.png",
+        "alt": "Microsoft Azure logo",
+        "source": "https://www.mscloudlogos.com/"
+      }
+    },
+    {
+      "id": "outlook-com",
+      "name": "Outlook.com",
+      "family": "Productivity",
+      "periods": [
+        {
+          "id": "outlook-hotmail",
+          "name": "Hotmail",
+          "start": "1996-07-04",
+          "end": "2012-07-31",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "outlook-com-announce"
+          ]
+        },
+        {
+          "id": "outlook-current",
+          "name": "Outlook.com",
+          "start": "2012-07-31",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "outlook-com-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/outlook-com.png",
+        "alt": "Outlook.com logo",
+        "source": "https://www.mscloudlogos.com/"
+      }
+    },
+    {
+      "id": "entra-domain-services",
+      "name": "Microsoft Entra Domain Services",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "entra-domain-services-azure-ad",
+          "name": "Azure AD Domain Services",
+          "start": "2015-10",
+          "end": "2023-07",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "entra-domain-services-overview",
+            "entra-rename"
+          ]
+        },
+        {
+          "id": "entra-domain-services-current",
+          "name": "Microsoft Entra Domain Services",
+          "start": "2023-07",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "entra-rename",
+            "entra-domain-services-overview"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-domain-services.svg",
+        "alt": "Microsoft Entra Domain Services logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "entra-external-id",
+      "name": "Microsoft Entra External ID",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "entra-external-identities",
+          "name": "Azure AD External Identities",
+          "start": "2020-05",
+          "end": "2023-07",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "entra-external-id-overview",
+            "entra-rename"
+          ]
+        },
+        {
+          "id": "entra-external-id-current",
+          "name": "Microsoft Entra External ID",
+          "start": "2023-07",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "entra-rename",
+            "entra-external-id-overview"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-external-id.svg",
+        "alt": "Microsoft Entra External ID logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "entra-id-governance",
+      "name": "Microsoft Entra ID Governance",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "azure-ad-identity-governance",
+          "name": "Azure AD Identity Governance",
+          "start": "2019-11",
+          "end": "2023-07",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "entra-id-governance-overview",
+            "entra-rename"
+          ]
+        },
+        {
+          "id": "entra-id-governance-current",
+          "name": "Microsoft Entra ID Governance",
+          "start": "2023-07",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "entra-rename",
+            "entra-id-governance-overview"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-id-governance.svg",
+        "alt": "Microsoft Entra ID Governance logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "entra-id-protection",
+      "name": "Microsoft Entra ID Protection",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "azure-ad-identity-protection",
+          "name": "Azure AD Identity Protection",
+          "start": "2016-09",
+          "end": "2023-07",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "entra-id-protection-overview",
+            "entra-rename"
+          ]
+        },
+        {
+          "id": "entra-id-protection-current",
+          "name": "Microsoft Entra ID Protection",
+          "start": "2023-07",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "entra-rename",
+            "entra-id-protection-overview"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-id-protection.svg",
+        "alt": "Microsoft Entra ID Protection logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "configuration-manager",
+      "name": "Microsoft Configuration Manager",
+      "family": "Endpoint management",
+      "periods": [
+        {
+          "id": "configmgr-system-center",
+          "name": "System Center Configuration Manager",
+          "start": "2007-11",
+          "end": "2019-11-04",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "configmgr-2007",
+            "endpoint-manager-announce"
+          ]
+        },
+        {
+          "id": "configmgr-endpoint",
+          "name": "Microsoft Endpoint Configuration Manager",
+          "start": "2019-11-04",
+          "end": "2022-10-12",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "endpoint-manager-announce",
+            "intune-family-announce"
+          ]
+        },
+        {
+          "id": "configmgr-current",
+          "name": "Microsoft Configuration Manager",
+          "start": "2022-10-12",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "intune-family-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/configuration-manager.png",
+        "alt": "Microsoft Configuration Manager logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "defender-vulnerability-management",
+      "name": "Microsoft Defender Vulnerability Management",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "defender-tvm",
+          "name": "Microsoft Defender Threat & Vulnerability Management",
+          "start": "2019-03",
+          "end": "2022-05-11",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "tvm-launch",
+            "defender-vm-announce"
+          ]
+        },
+        {
+          "id": "defender-vm-current",
+          "name": "Microsoft Defender Vulnerability Management",
+          "start": "2022-05-11",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "defender-vm-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/defender-vulnerability-management.png",
+        "alt": "Microsoft Defender Vulnerability Management logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "entra-permissions-management",
+      "name": "Microsoft Entra Permissions Management",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "entra-permissions-cloudknox",
+          "name": "CloudKnox Permissions Management",
+          "start": "2021-07-21",
+          "end": "2022-07-12",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "acquired",
+          "endQualifier": "launched",
+          "sources": [
+            "cloudknox-acquisition",
+            "entra-suite-launch"
+          ]
+        },
+        {
+          "id": "entra-permissions-current",
+          "name": "Microsoft Entra Permissions Management",
+          "start": "2022-07-12",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "launched",
+          "endQualifier": null,
+          "sources": [
+            "entra-suite-launch"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-permissions-management.svg",
+        "alt": "Microsoft Entra Permissions Management logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "entra-workload-id",
+      "name": "Microsoft Entra Workload ID",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "entra-workload-identities",
+          "name": "Microsoft Entra Workload Identities",
+          "start": "2022-07-12",
+          "end": "2023-07-11",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "entra-suite-launch",
+            "entra-id-rename-2023"
+          ]
+        },
+        {
+          "id": "entra-workload-current",
+          "name": "Microsoft Entra Workload ID",
+          "start": "2023-07-11",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "entra-id-rename-2023"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-workload-id.svg",
+        "alt": "Microsoft Entra Workload ID logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "m365-apps-enterprise",
+      "name": "Microsoft 365 Apps for enterprise",
+      "family": "Productivity",
+      "periods": [
+        {
+          "id": "office365-proplus",
+          "name": "Office 365 ProPlus",
+          "start": "2011-06-28",
+          "end": "2020-04-21",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "effective",
+          "sources": [
+            "office365-launch",
+            "m365-apps-rename"
+          ]
+        },
+        {
+          "id": "m365-apps-enterprise-current",
+          "name": "Microsoft 365 Apps for enterprise",
+          "start": "2020-04-21",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "effective",
+          "endQualifier": null,
+          "sources": [
+            "m365-apps-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/microsoft-365-apps-enterprise.png",
+        "alt": "Microsoft 365 Apps for enterprise logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "m365-apps-business",
+      "name": "Microsoft 365 Apps for business",
+      "family": "Productivity",
+      "periods": [
+        {
+          "id": "office365-business",
+          "name": "Office 365 Business",
+          "start": "2014-10-01",
+          "end": "2020-04-21",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "effective",
+          "sources": [
+            "office365-business-launch",
+            "m365-business-rename"
+          ]
+        },
+        {
+          "id": "m365-apps-business-current",
+          "name": "Microsoft 365 Apps for business",
+          "start": "2020-04-21",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "effective",
+          "endQualifier": null,
+          "sources": [
+            "m365-business-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/microsoft-365-apps-business.png",
+        "alt": "Microsoft 365 Apps for business logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "m365-copilot-app",
+      "name": "Microsoft 365 Copilot app",
+      "family": "Productivity",
+      "periods": [
+        {
+          "id": "office-mobile-app",
+          "name": "Office Mobile app",
+          "start": "2019-11-04",
+          "end": "2023-01",
+          "startPrecision": "day",
+          "endPrecision": "month",
+          "startQualifier": "announced",
+          "endQualifier": "effective",
+          "sources": [
+            "office-mobile-announce",
+            "m365-mobile-announce"
+          ]
+        },
+        {
+          "id": "m365-app",
+          "name": "Microsoft 365 app",
+          "start": "2023-01",
+          "end": "2025-01",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "effective",
+          "endQualifier": "effective",
+          "sources": [
+            "m365-mobile-announce",
+            "m365-copilot-app-announce"
+          ]
+        },
+        {
+          "id": "m365-copilot-app-current",
+          "name": "Microsoft 365 Copilot app",
+          "start": "2025-01",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "effective",
+          "endQualifier": null,
+          "sources": [
+            "m365-copilot-app-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/microsoft-365-copilot-app.png",
+        "alt": "Microsoft 365 Copilot app logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "viva-glint",
+      "name": "Microsoft Viva Glint",
+      "family": "Employee experience",
+      "periods": [
+        {
+          "id": "linkedin-glint",
+          "name": "LinkedIn Glint",
+          "start": "2018-11",
+          "end": "2023-04-20",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "acquired",
+          "endQualifier": "announced",
+          "sources": [
+            "linkedin-glint-acquisition",
+            "viva-glint-announce"
+          ]
+        },
+        {
+          "id": "viva-glint-current",
+          "name": "Microsoft Viva Glint",
+          "start": "2023-04-20",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "viva-glint-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/viva-glint.svg",
+        "alt": "Microsoft Viva Glint logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "viva-insights",
+      "name": "Microsoft Viva Insights",
+      "family": "Employee experience",
+      "periods": [
+        {
+          "id": "myanalytics",
+          "name": "MyAnalytics",
+          "start": "2015-11-18",
+          "end": "2021-02-04",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "launched",
+          "sources": [
+            "myanalytics-announce",
+            "viva-launch"
+          ]
+        },
+        {
+          "id": "viva-insights-current",
+          "name": "Microsoft Viva Insights",
+          "start": "2021-02-04",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "launched",
+          "endQualifier": null,
+          "sources": [
+            "viva-launch"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/viva-insights.png",
+        "alt": "Microsoft Viva Insights logo",
+        "source": "https://www.mscloudlogos.com"
+      }
+    },
+    {
+      "id": "dynamics-365-business-central",
+      "name": "Microsoft Dynamics 365 Business Central",
+      "family": "Business applications",
+      "periods": [
+        {
+          "id": "nav",
+          "name": "Microsoft Dynamics NAV",
+          "start": "2005-09",
+          "end": "2018-04-02",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "launched",
+          "sources": [
+            "nav-history",
+            "business-central-launch"
+          ]
+        },
+        {
+          "id": "business-central",
+          "name": "Microsoft Dynamics 365 Business Central",
+          "start": "2018-04-02",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "launched",
+          "endQualifier": null,
+          "sources": [
+            "business-central-launch"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/dynamics-365-business-central.svg",
+        "alt": "Microsoft Dynamics 365 Business Central logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "dynamics-365-finance",
+      "name": "Microsoft Dynamics 365 Finance",
+      "family": "Business applications",
+      "periods": [
+        {
+          "id": "finance-operations",
+          "name": "Microsoft Dynamics 365 for Finance and Operations",
+          "start": "2017-07",
+          "end": "2019-10",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "finance-operations-split"
+          ]
+        },
+        {
+          "id": "finance-current",
+          "name": "Microsoft Dynamics 365 Finance",
+          "start": "2019-10",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "finance-operations-split"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/dynamics-365-finance.svg",
+        "alt": "Microsoft Dynamics 365 Finance logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "dynamics-365-supply-chain-management",
+      "name": "Microsoft Dynamics 365 Supply Chain Management",
+      "family": "Business applications",
+      "periods": [
+        {
+          "id": "scm-finance-operations",
+          "name": "Microsoft Dynamics 365 for Finance and Operations",
+          "start": "2017-07",
+          "end": "2019-10",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "finance-operations-split"
+          ]
+        },
+        {
+          "id": "scm-current",
+          "name": "Microsoft Dynamics 365 Supply Chain Management",
+          "start": "2019-10",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "finance-operations-split"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/dynamics-365-supply-chain-management.svg",
+        "alt": "Microsoft Dynamics 365 Supply Chain Management logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "dynamics-365-commerce",
+      "name": "Microsoft Dynamics 365 Commerce",
+      "family": "Business applications",
+      "periods": [
+        {
+          "id": "dynamics-retail",
+          "name": "Microsoft Dynamics 365 for Retail",
+          "start": "2016-11-01",
+          "end": "2020-02-03",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "dynamics-365-launch",
+            "commerce-announce"
+          ]
+        },
+        {
+          "id": "commerce-current",
+          "name": "Microsoft Dynamics 365 Commerce",
+          "start": "2020-02-03",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "commerce-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/dynamics-365-commerce.svg",
+        "alt": "Microsoft Dynamics 365 Commerce logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "dynamics-365-project-operations",
+      "name": "Microsoft Dynamics 365 Project Operations",
+      "family": "Business applications",
+      "periods": [
+        {
+          "id": "project-service-automation",
+          "name": "Microsoft Dynamics 365 Project Service Automation",
+          "start": "2016-11-01",
+          "end": "2020-02-19",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "dynamics-365-launch",
+            "project-operations-announce"
+          ]
+        },
+        {
+          "id": "project-operations-current",
+          "name": "Microsoft Dynamics 365 Project Operations",
+          "start": "2020-02-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "project-operations-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/dynamics-365-project-operations.svg",
+        "alt": "Microsoft Dynamics 365 Project Operations logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "dynamics-365-sales",
+      "name": "Microsoft Dynamics 365 Sales",
+      "family": "Business applications",
+      "periods": [
+        {
+          "id": "dynamics-sales-old",
+          "name": "Microsoft Dynamics 365 for Sales",
+          "start": "2016-11-01",
+          "end": "2018-10",
+          "startPrecision": "day",
+          "endPrecision": "month",
+          "startQualifier": "launched",
+          "endQualifier": "by",
+          "sources": [
+            "dynamics-365-launch",
+            "dynamics-app-name-changes"
+          ]
+        },
+        {
+          "id": "dynamics-sales-current",
+          "name": "Microsoft Dynamics 365 Sales",
+          "start": "2018-10",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "by",
+          "endQualifier": null,
+          "sources": [
+            "dynamics-app-name-changes"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/dynamics-365-sales.svg",
+        "alt": "Microsoft Dynamics 365 Sales logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "dynamics-365-customer-service",
+      "name": "Microsoft Dynamics 365 Customer Service",
+      "family": "Business applications",
+      "periods": [
+        {
+          "id": "dynamics-customer-service-old",
+          "name": "Microsoft Dynamics 365 for Customer Service",
+          "start": "2016-11-01",
+          "end": "2018-10",
+          "startPrecision": "day",
+          "endPrecision": "month",
+          "startQualifier": "launched",
+          "endQualifier": "by",
+          "sources": [
+            "dynamics-365-launch",
+            "dynamics-app-name-changes"
+          ]
+        },
+        {
+          "id": "dynamics-customer-service-current",
+          "name": "Microsoft Dynamics 365 Customer Service",
+          "start": "2018-10",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "by",
+          "endQualifier": null,
+          "sources": [
+            "dynamics-app-name-changes"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/dynamics-365-customer-service.svg",
+        "alt": "Microsoft Dynamics 365 Customer Service logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "dynamics-365-field-service",
+      "name": "Microsoft Dynamics 365 Field Service",
+      "family": "Business applications",
+      "periods": [
+        {
+          "id": "fieldone-sky",
+          "name": "FieldOne Sky",
+          "start": "2015-07-16",
+          "end": "2016-11-01",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "acquired",
+          "endQualifier": "launched",
+          "sources": [
+            "fieldone-acquisition",
+            "dynamics-365-launch"
+          ]
+        },
+        {
+          "id": "dynamics-field-service-old",
+          "name": "Microsoft Dynamics 365 for Field Service",
+          "start": "2016-11-01",
+          "end": "2018-10",
+          "startPrecision": "day",
+          "endPrecision": "month",
+          "startQualifier": "launched",
+          "endQualifier": "by",
+          "sources": [
+            "dynamics-365-launch",
+            "dynamics-app-name-changes"
+          ]
+        },
+        {
+          "id": "dynamics-field-service-current",
+          "name": "Microsoft Dynamics 365 Field Service",
+          "start": "2018-10",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "by",
+          "endQualifier": null,
+          "sources": [
+            "dynamics-app-name-changes"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/dynamics-365-field-service.svg",
+        "alt": "Microsoft Dynamics 365 Field Service logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "azure-kubernetes-service",
+      "name": "Azure Kubernetes Service",
+      "family": "Cloud infrastructure",
+      "periods": [
+        {
+          "id": "azure-container-service",
+          "name": "Azure Container Service",
+          "start": "2016-04-19",
+          "end": "2017-10-24",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "generally available",
+          "endQualifier": "announced",
+          "sources": [
+            "acs-announce",
+            "aks-announce"
+          ]
+        },
+        {
+          "id": "aks-current",
+          "name": "Azure Kubernetes Service",
+          "start": "2017-10-24",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "aks-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/azure-kubernetes-service.svg",
+        "alt": "Azure Kubernetes Service logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "purview-communication-compliance",
+      "name": "Microsoft Purview Communication Compliance",
+      "family": "Data security and compliance",
+      "periods": [
+        {
+          "id": "purview-communication-compliance-former",
+          "name": "Microsoft 365 Communication Compliance",
+          "start": "2022-03",
+          "end": "2022-04-19",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        },
+        {
+          "id": "purview-communication-compliance-current",
+          "name": "Microsoft Purview Communication Compliance",
+          "start": "2022-04-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/purview-communication-compliance.svg",
+        "alt": "Microsoft Purview Communication Compliance logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "purview-compliance-manager",
+      "name": "Microsoft Purview Compliance Manager",
+      "family": "Data security and compliance",
+      "periods": [
+        {
+          "id": "purview-compliance-manager-former",
+          "name": "Microsoft Compliance Manager",
+          "start": "2022-03",
+          "end": "2022-04-19",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        },
+        {
+          "id": "purview-compliance-manager-current",
+          "name": "Microsoft Purview Compliance Manager",
+          "start": "2022-04-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/purview-compliance-manager.svg",
+        "alt": "Microsoft Purview Compliance Manager logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "purview-data-lifecycle-management",
+      "name": "Microsoft Purview Data Lifecycle Management",
+      "family": "Data security and compliance",
+      "periods": [
+        {
+          "id": "purview-data-lifecycle-management-former",
+          "name": "Microsoft Information Governance",
+          "start": "2022-03",
+          "end": "2022-04-19",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        },
+        {
+          "id": "purview-data-lifecycle-management-current",
+          "name": "Microsoft Purview Data Lifecycle Management",
+          "start": "2022-04-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/purview-data-lifecycle-management.svg",
+        "alt": "Microsoft Purview Data Lifecycle Management logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "purview-data-loss-prevention",
+      "name": "Microsoft Purview Data Loss Prevention",
+      "family": "Data security and compliance",
+      "periods": [
+        {
+          "id": "purview-data-loss-prevention-former",
+          "name": "Office 365 Data Loss Prevention",
+          "start": "2022-03",
+          "end": "2022-04-19",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        },
+        {
+          "id": "purview-data-loss-prevention-current",
+          "name": "Microsoft Purview Data Loss Prevention",
+          "start": "2022-04-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/purview-data-loss-prevention.svg",
+        "alt": "Microsoft Purview Data Loss Prevention logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "purview-ediscovery",
+      "name": "Microsoft Purview eDiscovery",
+      "family": "Data security and compliance",
+      "periods": [
+        {
+          "id": "purview-ediscovery-office-365",
+          "name": "Office 365 Core eDiscovery",
+          "start": "2022-03",
+          "end": "2022-04-19",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        },
+        {
+          "id": "purview-ediscovery-standard",
+          "name": "Microsoft Purview eDiscovery (Standard)",
+          "start": "2022-04-19",
+          "end": "2025-08-31",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "retired",
+          "sources": [
+            "purview-portfolio-rename",
+            "purview-ediscovery-classic-retirement"
+          ]
+        },
+        {
+          "id": "purview-ediscovery-current",
+          "name": "Microsoft Purview eDiscovery",
+          "start": "2025-08-31",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "by",
+          "endQualifier": null,
+          "sources": [
+            "purview-ediscovery-classic-retirement",
+            "purview-ediscovery-current-doc"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/purview-ediscovery.svg",
+        "alt": "Microsoft Purview eDiscovery logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "purview-information-protection",
+      "name": "Microsoft Purview Information Protection",
+      "family": "Data security and compliance",
+      "periods": [
+        {
+          "id": "purview-information-protection-former",
+          "name": "Microsoft Information Protection",
+          "start": "2022-03",
+          "end": "2022-04-19",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        },
+        {
+          "id": "purview-information-protection-current",
+          "name": "Microsoft Purview Information Protection",
+          "start": "2022-04-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/purview-information-protection.svg",
+        "alt": "Microsoft Purview Information Protection logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "purview-insider-risk-management",
+      "name": "Microsoft Purview Insider Risk Management",
+      "family": "Data security and compliance",
+      "periods": [
+        {
+          "id": "purview-insider-risk-management-former",
+          "name": "Microsoft 365 Insider Risk Management",
+          "start": "2022-03",
+          "end": "2022-04-19",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        },
+        {
+          "id": "purview-insider-risk-management-current",
+          "name": "Microsoft Purview Insider Risk Management",
+          "start": "2022-04-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/purview-insider-risk-management.svg",
+        "alt": "Microsoft Purview Insider Risk Management logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "purview-records-management",
+      "name": "Microsoft Purview Records Management",
+      "family": "Data security and compliance",
+      "periods": [
+        {
+          "id": "purview-records-management-former",
+          "name": "Records Management in Microsoft 365",
+          "start": "2022-03",
+          "end": "2022-04-19",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        },
+        {
+          "id": "purview-records-management-current",
+          "name": "Microsoft Purview Records Management",
+          "start": "2022-04-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "purview-portfolio-rename"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/purview-records-management.svg",
+        "alt": "Microsoft Purview Records Management logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "azure-sql-database",
+      "name": "Azure SQL Database",
+      "family": "Databases",
+      "periods": [
+        {
+          "id": "azure-sql-sql-azure",
+          "name": "SQL Azure",
+          "start": "2010-02",
+          "end": "2012-04",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "generally available",
+          "endQualifier": "announced",
+          "sources": [
+            "sql-azure-ga",
+            "windows-azure-sql-rename"
+          ]
+        },
+        {
+          "id": "azure-sql-windows",
+          "name": "Windows Azure SQL Database",
+          "start": "2012-04",
+          "end": "2014-04-03",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "announced",
+          "sources": [
+            "windows-azure-sql-rename",
+            "microsoft-azure-rename"
+          ]
+        },
+        {
+          "id": "azure-sql-current",
+          "name": "Azure SQL Database",
+          "start": "2014-04-03",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "microsoft-azure-rename",
+            "azure-sql-current-docs"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/azure-sql-database.svg",
+        "alt": "Azure SQL Database logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "defender-antivirus",
+      "name": "Microsoft Defender Antivirus",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "defender-antivirus-windows",
+          "name": "Windows Defender Antivirus",
+          "start": "2017-04-11",
+          "end": "2019-03-21",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "windows-defender-antivirus",
+            "defender-antivirus-rename"
+          ]
+        },
+        {
+          "id": "defender-antivirus-current",
+          "name": "Microsoft Defender Antivirus",
+          "start": "2019-03-21",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "defender-antivirus-rename",
+            "defender-antivirus-docs"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/defender-antivirus.png",
+        "alt": "Microsoft Defender Antivirus logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "entra-connect",
+      "name": "Microsoft Entra Connect",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "entra-connect-azure-ad",
+          "name": "Azure AD Connect",
+          "start": "2015-06-24",
+          "end": "2023-10-01",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "released",
+          "endQualifier": "effective",
+          "sources": [
+            "azure-ad-connect-release",
+            "entra-name-glossary"
+          ]
+        },
+        {
+          "id": "entra-connect-current",
+          "name": "Microsoft Entra Connect",
+          "start": "2023-10-01",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "effective",
+          "endQualifier": null,
+          "sources": [
+            "entra-name-glossary",
+            "entra-connect-docs"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-connect.svg",
+        "alt": "Microsoft Entra Connect logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "entra-connect-health",
+      "name": "Microsoft Entra Connect Health",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "connect-health-azure-ad",
+          "name": "Azure AD Connect Health",
+          "start": "2015-06-24",
+          "end": "2023-10-01",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "released",
+          "endQualifier": "effective",
+          "sources": [
+            "azure-ad-connect-release",
+            "entra-name-glossary"
+          ]
+        },
+        {
+          "id": "connect-health-current",
+          "name": "Microsoft Entra Connect Health",
+          "start": "2023-10-01",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "effective",
+          "endQualifier": null,
+          "sources": [
+            "entra-name-glossary",
+            "entra-connect-docs"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-connect-health.svg",
+        "alt": "Microsoft Entra Connect Health logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "entra-multifactor-authentication",
+      "name": "Microsoft Entra multifactor authentication",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "mfa-windows-azure",
+          "name": "Windows Azure Multi-Factor Authentication",
+          "start": "2013-10-07",
+          "end": "2014-04-03",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "generally available",
+          "endQualifier": "announced",
+          "sources": [
+            "azure-mfa-ga",
+            "microsoft-azure-rename"
+          ]
+        },
+        {
+          "id": "mfa-azure",
+          "name": "Azure Multi-Factor Authentication",
+          "start": "2014-04-03",
+          "end": "2023-10-01",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "effective",
+          "sources": [
+            "microsoft-azure-rename",
+            "entra-name-glossary"
+          ]
+        },
+        {
+          "id": "mfa-current",
+          "name": "Microsoft Entra multifactor authentication",
+          "start": "2023-10-01",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "effective",
+          "endQualifier": null,
+          "sources": [
+            "entra-name-glossary",
+            "entra-mfa-docs"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/entra-multifactor-authentication.svg",
+        "alt": "Microsoft Entra multifactor authentication logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "defender-iot",
+      "name": "Microsoft Defender for IoT",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "defender-iot-azure",
+          "name": "Azure Defender for IoT",
+          "start": "2020-09-22",
+          "end": "2021-11-02",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "azure-defender-iot-launch",
+            "defender-iot-rename"
+          ]
+        },
+        {
+          "id": "defender-iot-current",
+          "name": "Microsoft Defender for IoT",
+          "start": "2021-11-02",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "defender-iot-rename",
+            "defender-iot-docs"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/defender-iot.svg",
+        "alt": "Microsoft Defender for IoT logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
+    },
+    {
+      "id": "windows-security",
+      "name": "Windows Security",
+      "family": "Security",
+      "periods": [
+        {
+          "id": "windows-security-defender-center",
+          "name": "Windows Defender Security Center",
+          "start": "2017-04-11",
+          "end": "2018-10-02",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "launched",
+          "sources": [
+            "windows-defender-security-center",
+            "windows-security-rename"
+          ]
+        },
+        {
+          "id": "windows-security-current",
+          "name": "Windows Security",
+          "start": "2018-10-02",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "launched",
+          "endQualifier": null,
+          "sources": [
+            "windows-security-rename",
+            "windows-security-docs"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/windows-security.png",
+        "alt": "Windows Security logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+      }
     }
   ],
   "sources": [
@@ -1206,7 +3175,7 @@
     },
     {
       "id": "cosmos-launch",
-      "title": "Azure Cosmos DB: Microsoft\u2019s globally distributed database service",
+      "title": "Azure Cosmos DB: Microsoft’s globally distributed database service",
       "publisher": "Azure Blog",
       "published": "2017-05-10",
       "url": "https://azure.microsoft.com/en-us/blog/azure-cosmos-db-microsofts-globally-distributed-multi-model-database-service/"
@@ -1413,6 +3382,482 @@
       "publisher": "Microsoft Power Platform Blog",
       "published": "2022-05-24",
       "url": "https://www.microsoft.com/en-us/power-platform/blog/power-pages/introducing-microsoft-power-pages/"
+    },
+    {
+      "id": "azure-security-center-intro",
+      "title": "Introducing Azure Security Center",
+      "publisher": "Microsoft Community Hub",
+      "published": "2015-12-02",
+      "url": "https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/introducing-azure-security-center/259715"
+    },
+    {
+      "id": "defender-cloud-rename",
+      "title": "Introducing Microsoft Defender for Cloud",
+      "publisher": "Microsoft Community Hub",
+      "published": "2021-11-02",
+      "url": "https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/introducing-microsoft-defender-for-cloud/2930612"
+    },
+    {
+      "id": "mcas-ga",
+      "title": "Microsoft Cloud App Security generally available",
+      "publisher": "Microsoft Community Hub",
+      "published": "2016-04-06",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft-security-blog/microsoft-cloud-app-security-is-generally-available/250041"
+    },
+    {
+      "id": "defender-cloud-apps-rename",
+      "title": "Microsoft Cloud App Security is now Microsoft Defender for Cloud Apps",
+      "publisher": "Microsoft Community Hub",
+      "published": "2021-11-02",
+      "url": "https://techcommunity.microsoft.com/blog/microsoftdefendercloudappsblog/microsoft-cloud-app-security-is-now-microsoft-defender-for-cloud-apps/2965210"
+    },
+    {
+      "id": "wdatp-announce",
+      "title": "Announcing Windows Defender Advanced Threat Protection",
+      "publisher": "Windows Blog",
+      "published": "2016-03-01",
+      "url": "https://blogs.windows.com/windowsexperience/2016/03/01/announcing-windows-defender-advanced-threat-protection/"
+    },
+    {
+      "id": "mdatp-rename",
+      "title": "Windows Defender ATP becomes Microsoft Defender ATP",
+      "publisher": "Microsoft Community Hub",
+      "published": "2019-03-21",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft-security-blog/windows-defender-advanced-threat-protection-is-now-microsoft-defender-advanced-t/369052"
+    },
+    {
+      "id": "defender-suite-rename",
+      "title": "Microsoft unified SIEM and XDR modernize security operations",
+      "publisher": "Microsoft Security Blog",
+      "published": "2020-09-22",
+      "url": "https://www.microsoft.com/en-us/security/blog/2020/09/22/microsoft-unified-siem-xdr-modernize-security-operations/"
+    },
+    {
+      "id": "aatp-announce",
+      "title": "Announcing Azure Advanced Threat Protection",
+      "publisher": "Microsoft Community Hub",
+      "published": "2017-09-27",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft-security-blog/announcing-azure-advanced-threat-protection/250043"
+    },
+    {
+      "id": "o365-atp-announce",
+      "title": "Introducing Office 365 Advanced Threat Protection",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2015-04-08",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2015/04/08/introducing-exchange-online-advanced-threat-protection/"
+    },
+    {
+      "id": "foundry-announce",
+      "title": "Introducing Azure AI Foundry",
+      "publisher": "Microsoft Azure Blog",
+      "published": "2024-11-19",
+      "url": "https://azure.microsoft.com/en-us/blog/introducing-azure-ai-foundry/"
+    },
+    {
+      "id": "ai-services-rename",
+      "title": "Azure Cognitive Services is now Azure AI services",
+      "publisher": "M365 Maps",
+      "published": "2023-07-18",
+      "url": "https://m365maps.com/renames.htm"
+    },
+    {
+      "id": "microsoft-foundry-announce",
+      "title": "Introducing Microsoft Foundry: The AI app and agent factory",
+      "publisher": "Microsoft Community Hub",
+      "published": "2025-11-18",
+      "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-microsoft-foundry-the-ai-app-and-agent-factory/4465241"
+    },
+    {
+      "id": "azure-monitor-rename",
+      "title": "Operations Management Suite is now Azure Monitor",
+      "publisher": "Rebranded by Microsoft",
+      "published": "2018-04-28",
+      "url": "https://rebrandedbyms.com/"
+    },
+    {
+      "id": "azure-rename",
+      "title": "Upcoming name change for Windows Azure",
+      "publisher": "Microsoft Azure Blog",
+      "published": "2014-03-25",
+      "url": "https://azure.microsoft.com/en-us/blog/upcoming-name-change-for-windows-azure/"
+    },
+    {
+      "id": "outlook-com-announce",
+      "title": "Introducing Outlook.com",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2012-07-31",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2012/07/31/introducing-outlook-com-modern-email-for-the-next-billion-mailboxes/"
+    },
+    {
+      "id": "entra-domain-services-overview",
+      "title": "What is Microsoft Entra Domain Services?",
+      "publisher": "Microsoft Learn",
+      "published": "2026-02-16",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/domain-services/overview"
+    },
+    {
+      "id": "entra-external-id-overview",
+      "title": "Overview of Microsoft Entra External ID",
+      "publisher": "Microsoft Learn",
+      "published": "2026-04-24",
+      "url": "https://learn.microsoft.com/en-us/entra/external-id/external-identities-overview"
+    },
+    {
+      "id": "entra-id-governance-overview",
+      "title": "What is Microsoft Entra ID Governance?",
+      "publisher": "Microsoft Learn",
+      "published": "2026-05-08",
+      "url": "https://learn.microsoft.com/en-us/entra/id-governance/identity-governance-overview"
+    },
+    {
+      "id": "entra-id-protection-overview",
+      "title": "What is Microsoft Entra ID Protection?",
+      "publisher": "Microsoft Learn",
+      "published": "2025-10-30",
+      "url": "https://learn.microsoft.com/en-us/entra/id-protection/overview-identity-protection"
+    },
+    {
+      "id": "configmgr-2007",
+      "title": "Introduction to Configuration Manager",
+      "publisher": "Microsoft Learn",
+      "published": "2007-11-01",
+      "url": "https://learn.microsoft.com/en-us/mem/configmgr/core/understand/introduction"
+    },
+    {
+      "id": "endpoint-manager-announce",
+      "title": "Microsoft Endpoint Manager: a unified management platform",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2019-11-04",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2019/11/04/use-the-power-of-cloud-intelligence-to-simplify-and-accelerate-it-and-the-move-to-a-modern-workplace/"
+    },
+    {
+      "id": "intune-family-announce",
+      "title": "Introducing the Microsoft Intune product family",
+      "publisher": "Microsoft Community Hub",
+      "published": "2022-10-12",
+      "url": "https://techcommunity.microsoft.com/blog/microsoftintuneblog/introducing-the-microsoft-intune-product-family/3650769"
+    },
+    {
+      "id": "tvm-launch",
+      "title": "Announcing Microsoft Defender Vulnerability Management",
+      "publisher": "Microsoft Community Hub",
+      "published": "2022-05-11",
+      "url": "https://techcommunity.microsoft.com/blog/microsoftdefendervulnerabilitymanagement/announcing-microsoft-defender-vulnerability-management-in-public-preview/3361003"
+    },
+    {
+      "id": "defender-vm-announce",
+      "title": "Announcing Microsoft Defender Vulnerability Management",
+      "publisher": "Microsoft Community Hub",
+      "published": "2022-05-11",
+      "url": "https://techcommunity.microsoft.com/blog/microsoftdefendervulnerabilitymanagement/announcing-microsoft-defender-vulnerability-management-in-public-preview/3361003"
+    },
+    {
+      "id": "cloudknox-acquisition",
+      "title": "Microsoft acquires CloudKnox Security",
+      "publisher": "The Official Microsoft Blog",
+      "published": "2021-07-21",
+      "url": "https://blogs.microsoft.com/blog/2021/07/21/microsoft-acquires-cloudknox-security-to-offer-unified-privileged-access-and-cloud-entitlement-management/"
+    },
+    {
+      "id": "entra-suite-launch",
+      "title": "Introducing Microsoft Entra",
+      "publisher": "Microsoft Security Blog",
+      "published": "2022-05-31",
+      "url": "https://www.microsoft.com/en-us/security/blog/2022/05/31/secure-access-for-a-connected-worldmeet-microsoft-entra/"
+    },
+    {
+      "id": "entra-id-rename-2023",
+      "title": "Azure AD is becoming Microsoft Entra ID",
+      "publisher": "Microsoft Community Hub",
+      "published": "2023-07-11",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/azure-ad-is-becoming-microsoft-entra-id/2520436"
+    },
+    {
+      "id": "m365-apps-rename",
+      "title": "Name change for Office 365 ProPlus",
+      "publisher": "Microsoft Learn",
+      "published": "2020-04-21",
+      "url": "https://learn.microsoft.com/en-us/deployoffice/name-change"
+    },
+    {
+      "id": "office365-business-launch",
+      "title": "New Microsoft 365 offerings for small and medium-sized businesses",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2020-03-30",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2020/03/30/new-microsoft-365-offerings-small-and-medium-sized-businesses/"
+    },
+    {
+      "id": "m365-business-rename",
+      "title": "New Microsoft 365 offerings for small and medium-sized businesses",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2020-03-30",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2020/03/30/new-microsoft-365-offerings-small-and-medium-sized-businesses/"
+    },
+    {
+      "id": "office-mobile-announce",
+      "title": "Introducing the Microsoft 365 app",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2022-10-12",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2022/10/12/microsoft-365-at-ignite-re-energize-your-workforce-in-the-office-at-home-and-everywhere-in-between/"
+    },
+    {
+      "id": "m365-mobile-announce",
+      "title": "Introducing the Microsoft 365 app",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2022-10-12",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2022/10/12/microsoft-365-at-ignite-re-energize-your-workforce-in-the-office-at-home-and-everywhere-in-between/"
+    },
+    {
+      "id": "m365-copilot-app-announce",
+      "title": "The Microsoft 365 app becomes the Microsoft 365 Copilot app",
+      "publisher": "Microsoft Community Hub",
+      "published": "2024-12-16",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft_365blog/the-microsoft-365-app-transition-to-the-microsoft-365-copilot-app/4356271"
+    },
+    {
+      "id": "linkedin-glint-acquisition",
+      "title": "Transform insight into action with Microsoft Viva",
+      "publisher": "Microsoft Community Hub",
+      "published": "2023-04-20",
+      "url": "https://techcommunity.microsoft.com/blog/viva_glint_blog/transform-insight-into-action-with-microsoft-viva/3800649"
+    },
+    {
+      "id": "viva-glint-announce",
+      "title": "Transform insight into action with Microsoft Viva",
+      "publisher": "Microsoft Community Hub",
+      "published": "2023-04-20",
+      "url": "https://techcommunity.microsoft.com/blog/viva_glint_blog/transform-insight-into-action-with-microsoft-viva/3800649"
+    },
+    {
+      "id": "myanalytics-announce",
+      "title": "Microsoft Viva: empowering every employee for the new digital age",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2021-02-04",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2021/02/04/microsoft-viva-empowering-every-employee-for-the-new-digital-age/"
+    },
+    {
+      "id": "viva-launch",
+      "title": "Microsoft Viva: empowering every employee for the new digital age",
+      "publisher": "The Official Microsoft Blog",
+      "published": "2021-02-04",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2021/02/04/microsoft-viva-empowering-every-employee-for-the-new-digital-age/"
+    },
+    {
+      "id": "business-central-launch",
+      "title": "Microsoft Dynamics 365 Business Central is generally available",
+      "publisher": "Microsoft Dynamics 365 Blog",
+      "published": "2018-04-02",
+      "url": "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2018/04/02/microsoft-dynamics-365-business-central-is-generally-available/"
+    },
+    {
+      "id": "nav-history",
+      "title": "Welcome to Dynamics NAV 2018",
+      "publisher": "Microsoft Learn",
+      "published": "2018-06-05",
+      "url": "https://learn.microsoft.com/en-us/dynamics-nav/welcome-to-dynamics-nav"
+    },
+    {
+      "id": "finance-operations-split",
+      "title": "Changes to Dynamics 365 licensing and product names",
+      "publisher": "Microsoft Learn",
+      "published": "2019-10-01",
+      "url": "https://learn.microsoft.com/en-us/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming"
+    },
+    {
+      "id": "commerce-announce",
+      "title": "Introducing Microsoft Dynamics 365 Commerce",
+      "publisher": "Microsoft Dynamics 365 Blog",
+      "published": "2020-02-03",
+      "url": "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2020/02/03/introducing-microsoft-dynamics-365-commerce/"
+    },
+    {
+      "id": "project-operations-announce",
+      "title": "Introducing Microsoft Dynamics 365 Project Operations",
+      "publisher": "Microsoft Dynamics 365 Blog",
+      "published": "2020-02-19",
+      "url": "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2020/02/19/introducing-dynamics-365-project-operations/"
+    },
+    {
+      "id": "dynamics-365-launch",
+      "title": "Microsoft Dynamics 365 launches next generation of intelligent business applications",
+      "publisher": "Microsoft News Center",
+      "published": "2016-11-01",
+      "url": "https://news.microsoft.com/2016/11/01/microsoft-dynamics-365-launches-next-generation-of-intelligent-business-applications/"
+    },
+    {
+      "id": "dynamics-app-name-changes",
+      "title": "Important changes (deprecations) coming in Power Apps and customer engagement apps",
+      "publisher": "Microsoft Learn",
+      "published": "2018-10-01",
+      "url": "https://learn.microsoft.com/en-us/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming"
+    },
+    {
+      "id": "fieldone-acquisition",
+      "title": "Microsoft acquires FieldOne to deliver the future of field service management",
+      "publisher": "The Official Microsoft Blog",
+      "published": "2015-07-16",
+      "url": "https://blogs.microsoft.com/blog/2015/07/16/microsoft-acquires-fieldone-to-deliver-the-future-of-field-service-management/"
+    },
+    {
+      "id": "aks-announce",
+      "title": "Introducing Azure Kubernetes Service (AKS)",
+      "publisher": "Microsoft Azure Blog",
+      "published": "2017-10-24",
+      "url": "https://azure.microsoft.com/en-us/blog/introducing-azure-kubernetes-service-aks-managed-kubernetes-and-more/"
+    },
+    {
+      "id": "acs-announce",
+      "title": "Azure Container Service now generally available",
+      "publisher": "Microsoft Azure Blog",
+      "published": "2016-04-19",
+      "url": "https://azure.microsoft.com/en-us/blog/azure-container-service-now-generally-available/"
+    },
+    {
+      "id": "purview-portfolio-rename",
+      "title": "The future of compliance and data governance is here: Introducing Microsoft Purview",
+      "publisher": "Microsoft Security Blog",
+      "published": "2022-04-19",
+      "url": "https://www.microsoft.com/en-us/security/blog/2022/04/19/the-future-of-compliance-and-data-governance-is-here-introducing-microsoft-purview/"
+    },
+    {
+      "id": "purview-ediscovery-classic-retirement",
+      "title": "Microsoft Purview eDiscovery legacy solutions",
+      "publisher": "Microsoft Learn",
+      "published": "2025-08-31",
+      "url": "https://learn.microsoft.com/en-us/purview/ediscovery"
+    },
+    {
+      "id": "purview-ediscovery-current-doc",
+      "title": "Learn about eDiscovery",
+      "publisher": "Microsoft Learn",
+      "published": "2026-06-29",
+      "url": "https://learn.microsoft.com/en-us/purview/edisc"
+    },
+    {
+      "id": "sql-azure-ga",
+      "title": "SQL Azure is now generally available",
+      "publisher": "Microsoft Azure Blog",
+      "published": "2010-02-01",
+      "url": "https://azure.microsoft.com/en-us/blog/sql-azure-is-now-generally-available/"
+    },
+    {
+      "id": "windows-azure-sql-rename",
+      "title": "SQL Azure is now Windows Azure SQL Database",
+      "publisher": "Microsoft Azure Blog",
+      "published": "2012-04-27",
+      "url": "https://azure.microsoft.com/en-us/blog/sql-azure-is-now-windows-azure-sql-database/"
+    },
+    {
+      "id": "azure-sql-current-docs",
+      "title": "What is Azure SQL Database?",
+      "publisher": "Microsoft Learn",
+      "published": "2025-07-30",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview"
+    },
+    {
+      "id": "windows-defender-antivirus",
+      "title": "What's new in Windows 10, version 1703",
+      "publisher": "Microsoft Learn",
+      "published": "2017-04-11",
+      "url": "https://learn.microsoft.com/en-us/windows/whats-new/whats-new-windows-10-version-1703"
+    },
+    {
+      "id": "defender-antivirus-rename",
+      "title": "Windows Defender Antivirus is now Microsoft Defender Antivirus",
+      "publisher": "Microsoft Security Blog",
+      "published": "2019-03-21",
+      "url": "https://www.microsoft.com/en-us/security/blog/2019/03/21/windows-defender-antivirus-is-now-microsoft-defender-antivirus/"
+    },
+    {
+      "id": "defender-antivirus-docs",
+      "title": "Microsoft Defender Antivirus in Windows overview",
+      "publisher": "Microsoft Learn",
+      "published": "2025-10-20",
+      "url": "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows"
+    },
+    {
+      "id": "azure-ad-connect-release",
+      "title": "Azure AD Connect is now generally available",
+      "publisher": "Microsoft Community Hub",
+      "published": "2015-06-24",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/azure-ad-connect-is-now-generally-available/243026"
+    },
+    {
+      "id": "entra-name-glossary",
+      "title": "New name for Azure Active Directory",
+      "publisher": "Microsoft Learn",
+      "published": "2025-05-07",
+      "url": "https://learn.microsoft.com/en-us/entra/fundamentals/new-name"
+    },
+    {
+      "id": "entra-connect-docs",
+      "title": "What is Microsoft Entra Connect?",
+      "publisher": "Microsoft Learn",
+      "published": "2025-01-23",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/whatis-azure-ad-connect"
+    },
+    {
+      "id": "azure-mfa-ga",
+      "title": "Windows Azure Multi-Factor Authentication is now generally available",
+      "publisher": "Microsoft Azure Blog",
+      "published": "2013-10-07",
+      "url": "https://azure.microsoft.com/en-us/blog/windows-azure-multi-factor-authentication-is-now-generally-available-2/"
+    },
+    {
+      "id": "entra-mfa-docs",
+      "title": "How Microsoft Entra multifactor authentication works",
+      "publisher": "Microsoft Learn",
+      "published": "2025-03-31",
+      "url": "https://learn.microsoft.com/en-us/entra/identity/authentication/concept-mfa-howitworks"
+    },
+    {
+      "id": "azure-defender-iot-launch",
+      "title": "Microsoft delivers unified SIEM and XDR to modernize security operations",
+      "publisher": "Microsoft Security Blog",
+      "published": "2020-09-22",
+      "url": "https://www.microsoft.com/en-us/security/blog/2020/09/22/microsoft-delivers-unified-siem-and-xdr-to-modernize-security-operations/"
+    },
+    {
+      "id": "defender-iot-rename",
+      "title": "Microsoft Defender for Cloud and Defender for IoT product name changes",
+      "publisher": "Microsoft Learn",
+      "published": "2021-11-02",
+      "url": "https://learn.microsoft.com/en-us/azure/defender-for-cloud/release-notes-archive#november-2021"
+    },
+    {
+      "id": "defender-iot-docs",
+      "title": "What is Microsoft Defender for IoT?",
+      "publisher": "Microsoft Learn",
+      "published": "2025-08-06",
+      "url": "https://learn.microsoft.com/en-us/azure/defender-for-iot/organizations/overview"
+    },
+    {
+      "id": "windows-defender-security-center",
+      "title": "What's new in Windows 10, version 1703",
+      "publisher": "Microsoft Learn",
+      "published": "2017-04-11",
+      "url": "https://learn.microsoft.com/en-us/windows/whats-new/whats-new-windows-10-version-1703"
+    },
+    {
+      "id": "windows-security-rename",
+      "title": "What's new in Windows 10, version 1809",
+      "publisher": "Microsoft Learn",
+      "published": "2018-10-02",
+      "url": "https://learn.microsoft.com/en-us/windows/whats-new/whats-new-windows-10-version-1809"
+    },
+    {
+      "id": "windows-security-docs",
+      "title": "Windows Security",
+      "publisher": "Microsoft Learn",
+      "published": "2025-03-26",
+      "url": "https://learn.microsoft.com/en-us/windows/security/operating-system-security/system-security/windows-defender-security-center/windows-defender-security-center"
+    },
+    {
+      "id": "microsoft-azure-rename",
+      "title": "Upcoming name change for Windows Azure",
+      "publisher": "Microsoft Azure Blog",
+      "published": "2014-03-25",
+      "url": "https://azure.microsoft.com/en-us/blog/upcoming-name-change-for-windows-azure/"
     }
   ]
 }

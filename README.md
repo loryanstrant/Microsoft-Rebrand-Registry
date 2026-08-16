@@ -4,7 +4,7 @@ A static, accessible proof of concept for exploring the names and visual identit
 
 The initial dataset covers product-name periods and displays each product’s current logo from the Microsoft Cloud Logos collection. Researching historical logo periods remains the next dataset expansion, because Microsoft branding history has never been content with one dimension.
 
-The site also links to [Microsoft Cloud Logos](https://www.mscloudlogos.com/) for current and historical visual identities and [Let Me Correct That For You](https://www.letmecorrectthatforyou.com/) for Microsoft terminology. Together they form the tongue-in-cheek “Get Your Story Straight” network: if you’re going to say something, be right about it.
+The site’s tongue-in-cheek “Get Your Story Straight” network credits [Microsoft Cloud Logos](https://www.mscloudlogos.com/) for current and historical visual identities and [Let Me Correct That For You](https://www.letmecorrectthatforyou.com/) for Microsoft terminology: if you’re going to say something, be right about it. A separate attribution notes that some rename leads were drawn from [M365 Maps](https://m365maps.com/renames.htm) and [Rebranded by Microsoft](https://rebrandedbyms.com/), then checked against cited sources.
 
 ## Run locally
 
@@ -21,7 +21,10 @@ Open the local URL printed by `serve`. The app has no build step or runtime API 
 ```bash
 npm run validate
 npm test
+npm run package
 ```
+
+`npm run package` creates the complete uploadable site in `.deploy-package/` and fails if a referenced image or application asset is missing. Deploy that directory rather than assembling an upload by hand.
 
 ## Data methodology
 
@@ -31,10 +34,11 @@ npm test
 - `YYYY-MM` values retain month precision. They are normalized to the first day only for calculating and drawing durations.
 - A qualifier records whether a date is a launch, announcement, effective date, or merely the earliest date established by a source (`by`).
 - Each period must cite at least one source, and each product must have exactly one ongoing period.
+- The registry includes only products that still exist. It excludes discontinued products and broader product or platform transformations; former names are included only when they document a continuing product's rename history.
 - Durations for ongoing names are calculated to the top-level `asOf` date, making the output reproducible.
 - Sources are evidence for the transition, but historical pages do not always establish an exact first-use date. The interface exposes precision and qualifiers rather than implying unsupported accuracy.
 
-The registry currently covers 25 cloud and online products. It uses first-party Microsoft announcements wherever available and should be reviewed as research, not as an official Microsoft chronology. Alphabetical jump links divide the growing catalogue without hiding entries behind pagination or collapsed sections. The index ignores a leading “Microsoft” so related product names remain easy to scan; names beginning with a number are under #.
+The registry currently covers 72 cloud and online products across 158 documented name periods, supported by 122 cited sources. It uses first-party Microsoft announcements wherever available and should be reviewed as research, not as an official Microsoft chronology. Alphabetical jump links divide the growing catalogue without hiding entries behind pagination or collapsed sections. The index ignores a leading “Microsoft” so related product names remain easy to scan; names beginning with a number are under #.
 
 ## Add a product
 
@@ -50,6 +54,8 @@ The repository root is both the app location and output location; there is no AP
 - **App location:** `/`
 - **API location:** leave blank
 - **Output location:** leave blank
+
+For token-based manual releases, run `npm run package` and upload `.deploy-package/`. This prevents a partial deployment from silently omitting `src/assets`.
 
 `staticwebapp.config.json` provides navigation fallback and baseline security headers. No credentials are needed by the app.
 

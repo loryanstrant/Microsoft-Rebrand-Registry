@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Explore the names and visual identities Microsoft cloud products have collected along the way.">
   <title>The Rebrand Registry</title>
+  <meta name="theme-color" content="#0d4776">
+  <link rel="icon" href="src/assets/site-mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="src/styles.css">
   <script type="module" src="src/app.js"></script>
 </head>
@@ -12,7 +14,7 @@
   <a class="skip-link" href="#history">Skip to product history</a>
   <header class="site-header">
     <div class="header-inner">
-      <div class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <img class="brand-mark" src="src/assets/site-mark.svg" alt="" width="46" height="46">
       <div><p class="eyebrow">Independent brand archaeology</p><h1>The Rebrand Registry</h1></div>
     </div>
   </header>
@@ -29,6 +31,14 @@
         <div><dt id="name-count">—</dt><dd>documented names</dd></div>
       </dl>
     </section>
+
+    <aside class="scope-note" aria-labelledby="scope-heading">
+      <div class="scope-icon" aria-hidden="true">i</div>
+      <div>
+        <h2 id="scope-heading">What this registry includes</h2>
+        <p>Every entry is a product that still exists today; former names are shown only as the history of that continuing product. Discontinued products are not listed. Product or platform transformations—where something evolved into, was absorbed by, or was replaced by something else—are also outside scope. This registry tracks documented renames, not broader lineage.</p>
+      </div>
+    </aside>
 
     <section class="explorer" aria-labelledby="explorer-heading">
       <div class="section-heading">
@@ -90,6 +100,7 @@
     <aside class="method-note">
       <h2>About the dates</h2>
       <p>Periods use the most precise date supported by available evidence. “By” means a source confirms the name was in use by that month, but may not establish its exact first day. Ongoing durations are calculated to the dataset’s “as of” date.</p>
+      <p>Some rename leads were drawn from <a href="https://m365maps.com/renames.htm" target="_blank" rel="noopener noreferrer">M365 Maps</a> and <a href="https://rebrandedbyms.com/" target="_blank" rel="noopener noreferrer">Rebranded by Microsoft</a>, then checked against the cited sources.</p>
     </aside>
   </main>
   <footer><p>Independent research project. Microsoft product names, logos and trademarks belong to Microsoft. No rebrands were harmed in the making of this registry.</p><p id="as-of"></p></footer>
