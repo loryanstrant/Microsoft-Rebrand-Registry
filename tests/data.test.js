@@ -5,10 +5,16 @@ import { alphabeticalProducts, currentThenChronological, monthDiff, parseDate, d
 
 const data = JSON.parse(await readFile(new URL('../src/data/products.json', import.meta.url), 'utf8'));
 const page = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+const styles = await readFile(new URL('../src/styles.css', import.meta.url), 'utf8');
 test('scope disclaimer excludes former products and transformations', () => {
   assert.match(page, /Every entry is a product that still exists today/);
   assert.match(page, /Discontinued products are not listed/);
   assert.match(page, /Product or platform transformations/);
+});
+test('About the dates note can use the available content width', () => {
+  const rule = styles.match(/\.method-note\{([^}]*)\}/)?.[1];
+  assert.ok(rule, 'method note styles should exist');
+  assert.doesNotMatch(rule, /(?:^|;)max-width:/);
 });
 test('every product has exactly one ongoing period', () => { for (const product of data.products) assert.equal(product.periods.filter(p => !p.end).length, 1, product.id); });
 test('every period cites an existing source', () => { const sources=new Set(data.sources.map(s=>s.id)); for(const product of data.products) for(const period of product.periods) assert.ok(period.sources.every(id=>sources.has(id)),period.id); });
@@ -48,8 +54,9 @@ test('product letters support alphabetical navigation', () => {
   assert.equal(productLetter('Microsoft Entra ID'), 'E');
   assert.equal(productLetter('365 Copilot'), '#');
 });
-test('expanded registry contains 73 cloud products in alphabetical sections', () => {
-  assert.equal(data.products.length, 73);
+test('expanded registry contains 72 cloud products in alphabetical sections', () => {
+  assert.equal(data.products.length, 72);
+  assert.equal(data.products.some(({ id }) => id === 'microsoft-lens'), false);
   const groups = alphabeticalProducts(data.products.map(product => ({ product })));
   const letters = [...new Set(groups.map(group => productLetter(group.product.name)))];
   assert.deepEqual(letters, [...letters].sort());

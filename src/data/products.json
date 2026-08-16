@@ -2338,45 +2338,6 @@
       }
     },
     {
-      "id": "microsoft-lens",
-      "name": "Microsoft Lens",
-      "family": "Productivity",
-      "periods": [
-        {
-          "id": "office-lens",
-          "name": "Office Lens",
-          "start": "2014-03-17",
-          "end": "2021-02-01",
-          "startPrecision": "day",
-          "endPrecision": "day",
-          "startQualifier": "launched",
-          "endQualifier": "announced",
-          "sources": [
-            "office-lens-launch",
-            "lens-rename"
-          ]
-        },
-        {
-          "id": "microsoft-lens-current",
-          "name": "Microsoft Lens",
-          "start": "2021-02-01",
-          "end": null,
-          "startPrecision": "day",
-          "endPrecision": null,
-          "startQualifier": "announced",
-          "endQualifier": null,
-          "sources": [
-            "lens-rename"
-          ]
-        }
-      ],
-      "logo": {
-        "src": "src/assets/logos/microsoft-lens.svg",
-        "alt": "Microsoft Lens logo",
-        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
-      }
-    },
-    {
       "id": "azure-kubernetes-service",
       "name": "Azure Kubernetes Service",
       "family": "Cloud infrastructure",
@@ -3736,20 +3697,6 @@
       "publisher": "The Official Microsoft Blog",
       "published": "2015-07-16",
       "url": "https://blogs.microsoft.com/blog/2015/07/16/microsoft-acquires-fieldone-to-deliver-the-future-of-field-service-management/"
-    },
-    {
-      "id": "lens-rename",
-      "title": "Office Lens is now Microsoft Lens",
-      "publisher": "Microsoft Support",
-      "published": "2021-02-01",
-      "url": "https://support.microsoft.com/en-us/office/office-lens-for-windows-577ec09d-8da2-4029-8bb7-12f8114f472a"
-    },
-    {
-      "id": "office-lens-launch",
-      "title": "Office Lens: a OneNote scanner for your pocket",
-      "publisher": "Microsoft 365 Blog",
-      "published": "2014-03-17",
-      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2014/03/17/office-lens-a-onenote-scanner-for-your-pocket/"
     },
     {
       "id": "aks-announce",
