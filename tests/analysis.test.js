@@ -1,0 +1,81 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import { analyseRegistry, median } from '../src/analysis.js';
+
+const data = JSON.parse(await readFile(new URL('../src/data/products.json', import.meta.url), 'utf8'));
+const page = await readFile(new URL('../analysis.html', import.meta.url), 'utf8');
+
+function fixture(asOf = '2026-01-01') {
+  return {
+    asOf,
+    products: [
+      { id: 'alpha', name: 'Alpha', family: 'Cloud', periods: [
+        { start: '2020-01-01', end: '2022-01-01' },
+        { start: '2022-01-01', end: null }
+      ] },
+      { id: 'beta', name: 'Beta', family: 'Cloud', periods: [
+        { start: '2018-01-01', end: '2020-01-01' },
+        { start: '2020-01-01', end: '2023-01-01' },
+        { start: '2023-01-01', end: null }
+      ] },
+      { id: 'gamma', name: 'Gamma', family: 'Sparse', periods: [{ start: '2025-01-01', end: null }] }
+    ]
+  };
+}
+
+test('median supports odd, even, and empty collections without mutation', () => {
+  const values = [7, 1, 5, 3];
+  assert.equal(median(values), 4);
+  assert.equal(median([9, 1, 5]), 5);
+  assert.equal(median([]), null);
+  assert.deepEqual(values, [7, 1, 5, 3]);
+});
+
+test('analysis aggregates renames, durations, years, and families', () => {
+  const result = analyseRegistry(fixture());
+  assert.equal(result.renames, 3);
+  assert.equal(result.medianMonths, 24);
+  assert.deepEqual(result.annualRenames, [{ year: 2020, count: 1 }, { year: 2022, count: 1 }, { year: 2023, count: 1 }]);
+  assert.equal(result.families.find(item => item.family === 'Cloud').evidence, 'sufficient');
+  assert.equal(result.families.find(item => item.family === 'Sparse').evidence, 'sparse');
+});
+
+test('current identity age is anchored to data asOf, not today', () => {
+  const first = analyseRegistry(fixture('2025-01-01')).forecast.find(item => item.id === 'gamma');
+  const second = analyseRegistry(fixture('2026-01-01')).forecast.find(item => item.id === 'gamma');
+  assert.equal(first.ageMonths, 1);
+  assert.equal(second.ageMonths, 12);
+});
+
+test('forecast is deterministic with stable alphabetical tie-breaking', () => {
+  const first = analyseRegistry(fixture()).forecast;
+  const second = analyseRegistry(fixture()).forecast;
+  assert.deepEqual(first, second);
+  assert.equal(first[0].id, 'beta');
+  assert.ok(first.every(item => ['Elevated', 'Watchlist', 'Not imminent'].includes(item.label)));
+});
+
+test('analysis page separates entertainment from evidence and provides states', () => {
+  assert.match(page, /playful extrapolation/);
+  assert.match(page, /not reporting, a leak/);
+  assert.match(page, /survivorship bias/);
+  assert.match(page, /◐ Analysing the paperwork/);
+  assert.match(page, /○ We couldn’t analyse the registry/);
+  assert.match(page, /● Elevated, ◐ Watchlist and ○ Not imminent/);
+});
+
+test('analysis navigation and contribution route to public pages', () => {
+  assert.match(page, /href="index\.html">Registry<\/a>/);
+  assert.match(page, /href="analysis\.html" aria-current="page">Analysis<\/a>/);
+  assert.match(page, /https:\/\/github\.com\/loryanstrant\/Microsoft-Rebrand-Registry/);
+});
+
+test('canonical dataset produces useful non-empty analysis', () => {
+  const result = analyseRegistry(data);
+  assert.equal(result.products, 72);
+  assert.equal(result.renames, 86);
+  assert.ok(result.families.length > 5);
+  assert.equal(result.forecast.length, 72);
+  assert.ok(result.busiest.count > 1);
+});

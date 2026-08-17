@@ -5,16 +5,17 @@ const output = path.resolve('.deploy-package');
 
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
+const pages = ['index.html', 'analysis.html'];
 await Promise.all([
-  cp('index.html', path.join(output, 'index.html')),
+  ...pages.map(page => cp(page, path.join(output, page))),
   cp('staticwebapp.config.json', path.join(output, 'staticwebapp.config.json')),
   cp('src', path.join(output, 'src'), { recursive: true })
 ]);
 
-const page = await readFile(path.join(output, 'index.html'), 'utf8');
+const pageContents = await Promise.all(pages.map(page => readFile(path.join(output, page), 'utf8')));
 const data = JSON.parse(await readFile(path.join(output, 'src/data/products.json'), 'utf8'));
 const referencedAssets = new Set([
-  ...[...page.matchAll(/(?:src|href)="(src\/[^"?#]+)"/g)].map(([, asset]) => asset),
+  ...pageContents.flatMap(page => [...page.matchAll(/(?:src|href)="(src\/[^"?#]+)"/g)].map(([, asset]) => asset)),
   ...data.products.map(product => product.logo.src)
 ]);
 

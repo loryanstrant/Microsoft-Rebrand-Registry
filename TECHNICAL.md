@@ -20,7 +20,15 @@ npm test
 npm run package
 ```
 
-`npm run package` creates the complete uploadable site in `.deploy-package/` and fails if a referenced image or application asset is missing. Deploy that directory rather than assembling an upload by hand.
+`npm run package` creates the complete uploadable site in `.deploy-package/` and fails if an application asset referenced by either HTML page, or a product image referenced by the dataset, is missing. Deploy that directory rather than assembling an upload by hand.
+
+## Analysis calculations
+
+`src/analysis.js` derives the analysis page from the canonical dataset at runtime. Date-sensitive calculations use `products.json`'s `asOf` value, not the visitor's current date, so results remain reproducible. Completed name periods supply rename counts and median historical durations; current periods supply current-name age.
+
+The Rebrand Risk Index normalises current-name age, prior identity count, and family rename frequency before applying documented weights. It uses deterministic alphabetical tie-breaking and broad word-and-symbol status bands. Families with fewer than two completed renames are labelled as sparse rather than presented as comparable evidence.
+
+The page is a separate static entry point at `analysis.html`. Deployment packaging copies both entry points and validates their local application references.
 
 ## Azure Static Web Apps
 
