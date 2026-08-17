@@ -9,7 +9,23 @@ const FORMER_SITE_NAMES = [
   'Rebrand Pending',
   'Previously Branded As',
   'Brandwidth',
-  'Names, Marks & Question Marks'
+  'Names, Marks & Question Marks',
+  'The Product Formerly Known As',
+  'What Is It Called Now?',
+  'Same Product, New Name',
+  'Microsoft Brand Changelog',
+  'Microsoft Naming Service',
+  'The Great Microsoft Rename',
+  'Identity Crisis as a Service',
+  'Cloudy with a Chance of Rebrands',
+  'Microsoft Name Resolver',
+  'Product Name History',
+  'Alias Active',
+  'Brand Drift',
+  'Rebrand Rewind',
+  'Name Change Notification Center',
+  'Microsoft 365 Name Roulette',
+  'Rename, Rebrand, Repeat'
 ];
 const state = { data: null, view: 'table', query: '', family: 'all', status: 'all' };
 const $ = (selector) => document.querySelector(selector);

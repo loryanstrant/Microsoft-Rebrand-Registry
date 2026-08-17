@@ -21,8 +21,13 @@ test('primary navigation reaches analysis and identifies the registry page', () 
 });
 test('homepage rotates crossed-out former and alternate site names', () => {
   assert.match(page, /<span>Formerly:<\/span> <s id="former-site-name" aria-hidden="true">Microsoft Product Lifecycle Tracker<\/s>/);
-  for (const name of ['Rename Pending', 'Previously Known As', 'Name as a Service', 'Rebrand Pending', 'Previously Branded As', 'Brandwidth', 'Names, Marks & Question Marks']) {
-    assert.ok(app.includes(`'${name}'`), name);
+  const formerNames = app.match(/const FORMER_SITE_NAMES = \[([\s\S]*?)\];/)?.[1]
+    .split('\n')
+    .map(line => line.match(/'([^']+)'/)?.[1])
+    .filter(Boolean);
+  assert.equal(formerNames?.length, 24);
+  for (const name of ['Rename Pending', 'Brandwidth', 'The Product Formerly Known As', 'Identity Crisis as a Service', 'Cloudy with a Chance of Rebrands', 'Microsoft 365 Name Roulette', 'Rename, Rebrand, Repeat']) {
+    assert.ok(formerNames.includes(name), name);
   }
   assert.match(app, /prefers-reduced-motion: reduce/);
   assert.match(styles, /\.former-site-name s\.is-changing\{opacity:0/);
