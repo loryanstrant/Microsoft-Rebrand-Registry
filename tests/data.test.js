@@ -56,6 +56,11 @@ test('Copilot products use their distinct canonical marks', () => {
   assert.equal(copilot?.logo.src, 'src/assets/logos/microsoft-copilot.png');
   assert.equal(copilotApp?.logo.src, 'src/assets/logos/microsoft-365-copilot-app.svg');
 });
+test('Outlook logo artwork fills its image canvas', async () => {
+  const logo = await readFile(new URL('../src/assets/logos/outlook-com.png', import.meta.url));
+  assert.equal(logo.readUInt32BE(16), 64, 'width');
+  assert.equal(logo.readUInt32BE(20), 60, 'height');
+});
 test('month duration handles year boundaries', () => assert.equal(monthDiff(parseDate('2019-11-04'),parseDate('2020-11-04')),12));
 test('duration labels years and remaining months', () => assert.equal(durationLabel(26),'2 yrs 2 mo'));
 test('month precision is visibly qualified', () => assert.equal(dateLabel('2007-08','month','by'),'By Aug 2007'));
