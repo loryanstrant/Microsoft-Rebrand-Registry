@@ -34,9 +34,27 @@ test('every product has a valid accessible local logo', async () => {
     else assert.fail(`${product.id} uses an unsupported logo format`);
   }
 });
-test('Microsoft 365 Copilot app uses the Copilot product mark', () => {
-  const product = data.products.find(({ name }) => name === 'Microsoft 365 Copilot app');
-  assert.equal(product?.logo.src, 'src/assets/logos/microsoft-365-copilot.png');
+test('Defender variants that share a mark use the same logo asset', () => {
+  const productIds = [
+    'microsoft-defender-xdr',
+    'defender-cloud',
+    'defender-cloud-apps',
+    'defender-endpoint',
+    'defender-identity',
+    'defender-office-365',
+    'defender-vulnerability-management',
+    'defender-antivirus'
+  ];
+  for (const id of productIds) {
+    const product = data.products.find(product => product.id === id);
+    assert.equal(product?.logo.src, 'src/assets/logos/defender.png', id);
+  }
+});
+test('Copilot products use their distinct canonical marks', () => {
+  const copilot = data.products.find(({ id }) => id === 'microsoft-copilot');
+  const copilotApp = data.products.find(({ id }) => id === 'm365-copilot-app');
+  assert.equal(copilot?.logo.src, 'src/assets/logos/microsoft-copilot.png');
+  assert.equal(copilotApp?.logo.src, 'src/assets/logos/microsoft-365-copilot-app.svg');
 });
 test('month duration handles year boundaries', () => assert.equal(monthDiff(parseDate('2019-11-04'),parseDate('2020-11-04')),12));
 test('duration labels years and remaining months', () => assert.equal(durationLabel(26),'2 yrs 2 mo'));

@@ -744,7 +744,7 @@
       "logo": {
         "src": "src/assets/logos/microsoft-copilot.png",
         "alt": "Microsoft Copilot logo",
-        "source": "https://www.mscloudlogos.com"
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos/blob/main/logos/copilot/m365-copilot---600.png"
       }
     },
     {
@@ -795,7 +795,7 @@
         }
       ],
       "logo": {
-        "src": "src/assets/logos/microsoft-defender.png",
+        "src": "src/assets/logos/defender.png",
         "alt": "Microsoft Defender XDR logo",
         "source": "https://www.mscloudlogos.com"
       }
@@ -1721,7 +1721,7 @@
         }
       ],
       "logo": {
-        "src": "src/assets/logos/defender-vulnerability-management.png",
+        "src": "src/assets/logos/defender.png",
         "alt": "Microsoft Defender Vulnerability Management logo",
         "source": "https://www.mscloudlogos.com"
       }
@@ -1930,9 +1930,9 @@
         }
       ],
       "logo": {
-        "src": "src/assets/logos/microsoft-365-copilot.png",
+        "src": "src/assets/logos/microsoft-365-copilot-app.svg",
         "alt": "Microsoft 365 Copilot app logo",
-        "source": "https://www.mscloudlogos.com"
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos/blob/main/logos/copilot/microsoft-365-copilot-badge.svg"
       }
     },
     {
@@ -2784,9 +2784,9 @@
         }
       ],
       "logo": {
-        "src": "src/assets/logos/defender-antivirus.png",
+        "src": "src/assets/logos/defender.png",
         "alt": "Microsoft Defender Antivirus logo",
-        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
+        "source": "https://www.mscloudlogos.com"
       }
     },
     {
