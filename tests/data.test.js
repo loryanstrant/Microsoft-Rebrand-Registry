@@ -5,6 +5,7 @@ import { alphabeticalProducts, currentThenChronological, monthDiff, parseDate, d
 
 const data = JSON.parse(await readFile(new URL('../src/data/products.json', import.meta.url), 'utf8'));
 const page = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+const app = await readFile(new URL('../src/app.js', import.meta.url), 'utf8');
 const styles = await readFile(new URL('../src/styles.css', import.meta.url), 'utf8');
 test('scope disclaimer excludes former products and transformations', () => {
   assert.match(page, /Every entry is a product that still exists today/);
@@ -17,6 +18,14 @@ test('footer links contributors to the public GitHub repository', () => {
 test('primary navigation reaches analysis and identifies the registry page', () => {
   assert.match(page, /href="index\.html" aria-current="page">Registry<\/a>/);
   assert.match(page, /href="analysis\.html">Analysis<\/a>/);
+});
+test('homepage rotates crossed-out former and alternate site names', () => {
+  assert.match(page, /<span>Formerly:<\/span> <s id="former-site-name" aria-hidden="true">Microsoft Product Lifecycle Tracker<\/s>/);
+  for (const name of ['Rename Pending', 'Previously Known As', 'Name as a Service', 'Rebrand Pending', 'Previously Branded As', 'Brandwidth', 'Names, Marks & Question Marks']) {
+    assert.ok(app.includes(`'${name}'`), name);
+  }
+  assert.match(app, /prefers-reduced-motion: reduce/);
+  assert.match(styles, /\.former-site-name s\.is-changing\{opacity:0/);
 });
 test('About the dates note can use the available content width', () => {
   const rule = styles.match(/\.method-note\{([^}]*)\}/)?.[1];

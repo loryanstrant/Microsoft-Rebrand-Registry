@@ -1,12 +1,36 @@
 import { alphabeticalProducts, currentThenChronological, dateLabel, durationLabel, monthDiff, parseDate, productLetter } from './dates.js';
 
 const DATA_URL = './src/data/products.json';
+const FORMER_SITE_NAMES = [
+  'Microsoft Product Lifecycle Tracker',
+  'Rename Pending',
+  'Previously Known As',
+  'Name as a Service',
+  'Rebrand Pending',
+  'Previously Branded As',
+  'Brandwidth',
+  'Names, Marks & Question Marks'
+];
 const state = { data: null, view: 'table', query: '', family: 'all', status: 'all' };
 const $ = (selector) => document.querySelector(selector);
 const els = {
   loading: $('#loading'), error: $('#error'), empty: $('#empty'), table: $('#table-view'),
   timeline: $('#timeline-view'), body: $('#history-body'), timelineGrid: $('#timeline'), letterNav: $('#letter-nav')
 };
+
+function rotateFormerSiteNames() {
+  const label = $('#former-site-name');
+  if (!label || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let index = 0;
+  window.setInterval(() => {
+    label.classList.add('is-changing');
+    window.setTimeout(() => {
+      index = (index + 1) % FORMER_SITE_NAMES.length;
+      label.textContent = FORMER_SITE_NAMES[index];
+      label.classList.remove('is-changing');
+    }, 200);
+  }, 1400);
+}
 
 function letterId(letter, view) {
   return `${view}-letter-${letter === '#' ? 'other' : letter.toLowerCase()}`;
@@ -121,4 +145,5 @@ $('#search').addEventListener('input', event => { state.query = event.target.val
 $('#family').addEventListener('change', event => { state.family = event.target.value; render(); });
 $('#status').addEventListener('change', event => { state.status = event.target.value; render(); });
 $('#retry').addEventListener('click', load);
+rotateFormerSiteNames();
 load();
