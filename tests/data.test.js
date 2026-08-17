@@ -11,6 +11,9 @@ test('scope disclaimer excludes former products and transformations', () => {
   assert.match(page, /Discontinued products are not listed/);
   assert.match(page, /Product or platform transformations/);
 });
+test('footer links contributors to the public GitHub repository', () => {
+  assert.match(page, /href="https:\/\/github\.com\/loryanstrant\/Microsoft-Rebrand-Registry"[^>]*>Contribute on GitHub<\/a>/);
+});
 test('About the dates note can use the available content width', () => {
   const rule = styles.match(/\.method-note\{([^}]*)\}/)?.[1];
   assert.ok(rule, 'method note styles should exist');
