@@ -33,6 +33,7 @@ test('homepage rotates crossed-out former and alternate site names', () => {
   assert.match(app, /prefers-reduced-motion: reduce/);
   assert.match(app, /}, 3000\);/);
   assert.match(styles, /\.site-header\{position:sticky;top:0;z-index:10/);
+  assert.match(styles, /\.skip-link\{[^}]*z-index:11/);
   assert.match(styles, /\.former-site-name s\.is-changing\{opacity:0/);
 });
 test('About the dates note can use the available content width', () => {
