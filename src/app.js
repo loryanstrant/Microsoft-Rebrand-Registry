@@ -45,7 +45,7 @@ function rotateFormerSiteNames() {
       label.textContent = FORMER_SITE_NAMES[index];
       label.classList.remove('is-changing');
     }, 200);
-  }, 1400);
+  }, 3000);
 }
 
 function letterId(letter, view) {
