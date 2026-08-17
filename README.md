@@ -6,26 +6,6 @@ The initial dataset covers product-name periods and displays each product’s cu
 
 The site’s tongue-in-cheek “Get Your Story Straight” network credits [Microsoft Cloud Logos](https://www.mscloudlogos.com/) for current and historical visual identities and [Let Me Correct That For You](https://www.letmecorrectthatforyou.com/) for Microsoft terminology: if you’re going to say something, be right about it. A separate attribution notes that some rename leads were drawn from [M365 Maps](https://m365maps.com/renames.htm) and [Rebranded by Microsoft](https://rebrandedbyms.com/), then checked against cited sources.
 
-## Run locally
-
-Requires Node.js 20 or later.
-
-```bash
-npm start
-```
-
-Open the local URL printed by `serve`. The app has no build step or runtime API and can be deployed directly as an Azure Static Web App.
-
-## Validate and test
-
-```bash
-npm run validate
-npm test
-npm run package
-```
-
-`npm run package` creates the complete uploadable site in `.deploy-package/` and fails if a referenced image or application asset is missing. Deploy that directory rather than assembling an upload by hand.
-
 ## Data methodology
 
 `src/data/products.json` is the canonical dataset.
@@ -40,34 +20,17 @@ npm run package
 
 The registry currently covers 72 cloud and online products across 158 documented name periods, supported by 122 cited sources. It uses first-party Microsoft announcements wherever available and should be reviewed as research, not as an official Microsoft chronology. Alphabetical jump links divide the growing catalogue without hiding entries behind pagination or collapsed sections. The index ignores a leading “Microsoft” so related product names remain easy to scan; names beginning with a number are under #.
 
-## Add a product
+## Contribute
+
+Contributions are welcome through the public [GitHub repository](https://github.com/loryanstrant/Microsoft-Rebrand-Registry).
+
+To add a product:
 
 1. Add its stable ID, current name, family, and ordered name periods to `products`.
 2. Add first-party sources to `sources`; reference their IDs from each supported period.
 3. Preserve the precision of the evidence. Do not invent a day or month.
-4. Run `npm run validate && npm test`.
+4. Follow the checks in the [technical guide](TECHNICAL.md) before submitting your contribution.
 
-## Azure Static Web Apps
+## Technical documentation
 
-The repository root is both the app location and output location; there is no API or build output. A typical deployment uses:
-
-- **App location:** `/`
-- **API location:** leave blank
-- **Output location:** leave blank
-
-For token-based manual releases, run `npm run package` and upload `.deploy-package/`. This prevents a partial deployment from silently omitting `src/assets`.
-
-`staticwebapp.config.json` provides navigation fallback and baseline security headers. No credentials are needed by the app.
-
-The production shell is provisioned on the **Free** Static Web Apps tier in the **MVP 1k per month benefit** subscription:
-
-- Resource group: `rebrandregistry`
-- Static Web App: `swa-rebrand-registry`
-- Region: West US 2
-- Azure hostname: `wonderful-ocean-034ff8f1e.7.azurestaticapps.net`
-
-The proof of concept is published at <https://wonderful-ocean-034ff8f1e.7.azurestaticapps.net>. The resource is not connected to a repository; releases are currently uploaded with a deployment token. The example workflow can be adopted later for automatic deployments from `main`.
-
-## Accessibility
-
-Status is conveyed with symbols and words, not colour alone. The table remains the complete primary representation on narrow screens. The timeline is keyboard-focusable, horizontally scrollable, and supplementary; citations and date precision remain available in the table.
+See the [technical guide](TECHNICAL.md) for local development, validation and testing, deployment packaging, Azure Static Web Apps configuration, and accessibility implementation notes.
