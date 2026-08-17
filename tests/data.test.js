@@ -34,6 +34,10 @@ test('every product has a valid accessible local logo', async () => {
     else assert.fail(`${product.id} uses an unsupported logo format`);
   }
 });
+test('Microsoft 365 Copilot app uses the Copilot product mark', () => {
+  const product = data.products.find(({ name }) => name === 'Microsoft 365 Copilot app');
+  assert.equal(product?.logo.src, 'src/assets/logos/microsoft-365-copilot.png');
+});
 test('month duration handles year boundaries', () => assert.equal(monthDiff(parseDate('2019-11-04'),parseDate('2020-11-04')),12));
 test('duration labels years and remaining months', () => assert.equal(durationLabel(26),'2 yrs 2 mo'));
 test('month precision is visibly qualified', () => assert.equal(dateLabel('2007-08','month','by'),'By Aug 2007'));

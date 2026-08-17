@@ -1930,7 +1930,7 @@
         }
       ],
       "logo": {
-        "src": "src/assets/logos/microsoft-365-copilot-app.png",
+        "src": "src/assets/logos/microsoft-365-copilot.png",
         "alt": "Microsoft 365 Copilot app logo",
         "source": "https://www.mscloudlogos.com"
       }
