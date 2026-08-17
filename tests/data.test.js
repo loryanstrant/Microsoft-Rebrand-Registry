@@ -20,7 +20,8 @@ test('primary navigation reaches analysis and identifies the registry page', () 
   assert.match(page, /href="analysis\.html">Analysis<\/a>/);
 });
 test('homepage rotates crossed-out former and alternate site names', () => {
-  assert.match(page, /<span>Formerly:<\/span> <s id="former-site-name" aria-hidden="true">Microsoft Product Lifecycle Tracker<\/s>/);
+  assert.match(page, /<header class="site-header">[\s\S]*<span>Formerly:<\/span> <s id="former-site-name" aria-hidden="true">Microsoft Product Lifecycle Tracker<\/s>[\s\S]*<\/header>/);
+  assert.doesNotMatch(page, /<main id="history">\s*<p class="former-site-name">/);
   const formerNames = app.match(/const FORMER_SITE_NAMES = \[([\s\S]*?)\];/)?.[1]
     .split('\n')
     .map(line => line.match(/'([^']+)'/)?.[1])
@@ -30,6 +31,8 @@ test('homepage rotates crossed-out former and alternate site names', () => {
     assert.ok(formerNames.includes(name), name);
   }
   assert.match(app, /prefers-reduced-motion: reduce/);
+  assert.match(app, /}, 3000\);/);
+  assert.match(styles, /\.site-header\{position:sticky;top:0;z-index:10/);
   assert.match(styles, /\.former-site-name s\.is-changing\{opacity:0/);
 });
 test('About the dates note can use the available content width', () => {
