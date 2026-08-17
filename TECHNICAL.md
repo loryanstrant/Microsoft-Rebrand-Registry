@@ -24,7 +24,7 @@ npm run package
 
 ## Analysis calculations
 
-`src/analysis.js` derives the analysis page from the canonical dataset at runtime. Date-sensitive calculations use `products.json`'s `asOf` value, not the visitor's current date, so results remain reproducible. Completed name periods supply rename counts and median historical durations; current periods supply current-name age.
+`src/analysis.js` derives the analysis page from the canonical dataset at runtime. Date-sensitive calculations use `products.json`'s `asOf` value, not the visitor's current date, so results remain reproducible. Completed name periods supply rename counts and median historical durations; current periods supply current-name age. The days-since-last-rename tracker compares the latest completed period end with that same `asOf` date and lists every product sharing the latest recorded transition.
 
 The Rebrand Risk Index normalises current-name age, prior identity count, and family rename frequency before applying documented weights. It uses deterministic alphabetical tie-breaking and broad word-and-symbol status bands. Families with fewer than two completed renames are labelled as sparse rather than presented as comparable evidence.
 

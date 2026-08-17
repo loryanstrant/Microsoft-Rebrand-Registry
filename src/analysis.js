@@ -20,6 +20,13 @@ export function analyseRegistry(data) {
   const completed = data.products.flatMap(product => product.periods
     .filter(period => period.end)
     .map(period => ({ ...period, productId: product.id, productName: product.name, family: product.family })));
+  const latestRenameDate = completed.reduce((latest, period) => !latest || period.end > latest ? period.end : latest, null);
+  const latestRenamePeriods = completed.filter(period => period.end === latestRenameDate);
+  const latestRename = latestRenameDate ? {
+    date: latestRenameDate,
+    daysAgo: Math.max(0, Math.floor((asOf - parseDate(latestRenameDate)) / 86_400_000)),
+    products: latestRenamePeriods.map(period => period.productName).sort((a, b) => a.localeCompare(b))
+  } : null;
 
   const renameYears = completed.reduce((years, period) => {
     const year = parseDate(period.end).getUTCFullYear();
@@ -93,6 +100,7 @@ export function analyseRegistry(data) {
     asOf: data.asOf,
     products: data.products.length,
     renames: completed.length,
+    latestRename,
     medianMonths: median(completed.map(period => monthDiff(parseDate(period.start), parseDate(period.end)))),
     busiest,
     annualRenames,
@@ -118,6 +126,12 @@ function renderBars(items, value, label) {
 function render(result) {
   document.querySelector('#analysis-as-of').textContent = `Analysis uses registry data as at ${dateAsOf(result.asOf)}.`;
   document.querySelector('#footer-as-of').textContent = `Data as at ${dateAsOf(result.asOf)}`;
+  if (result.latestRename) {
+    const productNames = new Intl.ListFormat('en-AU', { style: 'long', type: 'conjunction' }).format(result.latestRename.products);
+    document.querySelector('#rename-days').textContent = result.latestRename.daysAgo.toLocaleString('en-AU');
+    document.querySelector('#rename-tracker-detail').textContent = `Last recorded on ${dateAsOf(result.latestRename.date)}: ${productNames}. Counted to ${dateAsOf(result.asOf)}.`;
+    document.querySelector('#rename-tracker').hidden = false;
+  }
   document.querySelector('#analysis-summary').innerHTML = `
     <div><strong>${result.products}</strong><span>surviving products</span></div>
     <div><strong>${result.renames}</strong><span>documented renames</span></div>
