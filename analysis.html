@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An evidence-led and not entirely serious analysis of Microsoft cloud product renaming patterns.">
+  <title>The Rebrand Forecast · The Rebrand Registry</title>
+  <meta name="theme-color" content="#0d4776">
+  <link rel="icon" href="src/assets/site-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="src/styles.css">
+  <script type="module" src="src/analysis.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#analysis">Skip to analysis</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-identity" href="index.html"><img class="brand-mark" src="src/assets/site-mark.svg" alt="" width="46" height="46"><span><span class="eyebrow">Independent brand archaeology</span><strong>The Rebrand Registry</strong></span></a>
+      <nav class="primary-nav" aria-label="Primary"><a href="index.html">Registry</a><a href="analysis.html" aria-current="page">Analysis</a></nav>
+    </div>
+  </header>
+
+  <main id="analysis" class="analysis-page">
+    <section class="analysis-hero" aria-labelledby="analysis-heading">
+      <p class="eyebrow">Statistics, speculation and stationery</p>
+      <h1 id="analysis-heading">The Rebrand Forecast</h1>
+      <p>What can several decades of Microsoft naming history tell us? Mostly that a product name is less a permanent identity and more a medium-term tenancy agreement.</p>
+      <p id="analysis-as-of" class="analysis-date">Analysis uses the registry’s reproducible “as of” date.</p>
+    </section>
+
+    <aside class="forecast-disclaimer">
+      <strong>Forecast status: recreational.</strong> This is playful extrapolation from public history—not reporting, a leak, financial advice, or evidence of Microsoft’s future plans. No roadmaps or functioning crystal balls were consulted.
+    </aside>
+
+    <div id="analysis-loading" class="state" role="status">◐ Analysing the paperwork…</div>
+    <div id="analysis-error" class="state error" role="alert" hidden>○ We couldn’t analyse the registry. <button type="button" id="analysis-retry">Try again</button></div>
+
+    <div id="analysis-content" hidden>
+      <section class="analysis-section" aria-labelledby="vitals-heading">
+        <div class="analysis-heading"><p class="eyebrow">Rename vital signs</p><h2 id="vitals-heading">The paperwork at a glance</h2></div>
+        <div id="analysis-summary" class="analysis-summary"></div>
+      </section>
+
+      <section class="analysis-section" aria-labelledby="families-heading">
+        <div class="analysis-heading"><p class="eyebrow">The family league table</p><h2 id="families-heading">Where names have the shortest lease</h2><p>Families are compared without silently merging categories. “Limited history” means fewer than two completed renames, where a confident conclusion would require more optimism than data.</p></div>
+        <div class="analysis-table-scroll" tabindex="0" role="region" aria-label="Product family analysis table">
+          <table class="analysis-table"><thead><tr><th scope="col">Product family</th><th scope="col">Products</th><th scope="col">Renames</th><th scope="col">Median former-name run</th><th scope="col">Evidence</th></tr></thead><tbody id="family-body"></tbody></table>
+        </div>
+      </section>
+
+      <section class="analysis-split">
+        <section class="analysis-section" aria-labelledby="waves-heading">
+          <div class="analysis-heading"><p class="eyebrow">Rename waves</p><h2 id="waves-heading">When the nameplates moved</h2><p>Completed name periods grouped by the year the next identity began.</p></div>
+          <ol id="rename-waves" class="analysis-bars"></ol>
+        </section>
+        <section class="analysis-section" aria-labelledby="repeat-heading">
+          <div class="analysis-heading"><p class="eyebrow">Repeat offenders</p><h2 id="repeat-heading">Most documented identities</h2><p>A leaderboard nobody explicitly asked to win.</p></div>
+          <ol id="repeat-offenders" class="repeat-list"></ol>
+        </section>
+      </section>
+
+      <section class="analysis-section forecast-section" aria-labelledby="forecast-heading">
+        <div class="analysis-heading"><p class="eyebrow">The Rebrand Risk Index</p><h2 id="forecast-heading">What might be renamed next?</h2><p>The index weighs current-name age (45%), prior identities (35%), and family rename frequency (20%). It measures historical rebrand pressure, not probability. Corporate naming committees remain stubbornly non-deterministic.</p></div>
+        <div id="forecast" class="forecast-grid"></div>
+      </section>
+
+      <section class="analysis-section methodology" aria-labelledby="method-heading">
+        <div class="analysis-heading"><p class="eyebrow">How this was calculated</p><h2 id="method-heading">Enough method to keep the joke honest</h2></div>
+        <div class="method-columns">
+          <div><h3>Measured</h3><p>All figures are calculated in the browser from the canonical registry. Durations use completed name periods; current-name age ends at the dataset’s “as of” date. Medians limit distortion from unusually durable names.</p></div>
+          <div><h3>Limited</h3><p>The registry includes surviving products only, so discontinued products are absent and the analysis has survivorship bias. Family sizes differ, partial dates retain their documented precision, and correlation is not a secret product roadmap.</p></div>
+          <div><h3>Predicted, technically</h3><p>Scores are deterministic rankings of three historical signals. Status bands are deliberately broad: ● Elevated, ◐ Watchlist and ○ Not imminent. A high score means “good setup for a joke,” not “confirmed for Build.”</p></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Independent research project. Microsoft product names, logos and trademarks belong to Microsoft. No rebrands were harmed in the making of this forecast.</p>
+    <p><a href="https://github.com/loryanstrant/Microsoft-Rebrand-Registry">Contribute on GitHub</a> · <span id="footer-as-of"></span></p>
+  </footer>
+</body>
+</html>

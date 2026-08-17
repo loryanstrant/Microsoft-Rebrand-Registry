@@ -14,6 +14,10 @@ test('scope disclaimer excludes former products and transformations', () => {
 test('footer links contributors to the public GitHub repository', () => {
   assert.match(page, /href="https:\/\/github\.com\/loryanstrant\/Microsoft-Rebrand-Registry"[^>]*>Contribute on GitHub<\/a>/);
 });
+test('primary navigation reaches analysis and identifies the registry page', () => {
+  assert.match(page, /href="index\.html" aria-current="page">Registry<\/a>/);
+  assert.match(page, /href="analysis\.html">Analysis<\/a>/);
+});
 test('About the dates note can use the available content width', () => {
   const rule = styles.match(/\.method-note\{([^}]*)\}/)?.[1];
   assert.ok(rule, 'method note styles should exist');

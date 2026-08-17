@@ -20,6 +20,12 @@ The site’s tongue-in-cheek “Get Your Story Straight” network credits [Micr
 
 The registry currently covers 72 cloud and online products across 158 documented name periods, supported by 122 cited sources. It uses first-party Microsoft announcements wherever available and should be reviewed as research, not as an official Microsoft chronology. Alphabetical jump links divide the growing catalogue without hiding entries behind pagination or collapsed sections. The index ignores a leading “Microsoft” so related product names remain easy to scan; names beginning with a number are under #.
 
+## Analysis
+
+**The Rebrand Forecast** turns the canonical dataset into an evidence-led—and intentionally playful—analysis of rename timing, product-family patterns, repeat offenders, and possible future naming turbulence. Statistics are calculated from the registry rather than maintained separately. The forecast is entertainment, not reporting or evidence of Microsoft’s plans.
+
+Because the registry covers surviving products only, its analysis has survivorship bias: discontinued products and broader platform transformations are outside scope. Product families also vary in size, so sparse groups are labelled rather than treated as conclusive.
+
 ## Contribute
 
 Contributions are welcome through the public [GitHub repository](https://github.com/loryanstrant/Microsoft-Rebrand-Registry).
