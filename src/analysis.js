@@ -1,4 +1,5 @@
 import { durationLabel, monthDiff, parseDate } from './dates.js';
+import { rotateFormerSiteNames } from './former-site-names.js';
 
 const DATA_URL = './src/data/products.json';
 
@@ -190,5 +191,6 @@ async function loadAnalysis() {
 
 if (typeof document !== 'undefined') {
   document.querySelector('#analysis-retry')?.addEventListener('click', loadAnalysis);
+  rotateFormerSiteNames();
   loadAnalysis();
 }

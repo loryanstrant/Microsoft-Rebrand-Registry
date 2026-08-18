@@ -5,7 +5,10 @@ import { alphabeticalProducts, currentThenChronological, monthDiff, parseDate, d
 
 const data = JSON.parse(await readFile(new URL('../src/data/products.json', import.meta.url), 'utf8'));
 const page = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+const analysisPage = await readFile(new URL('../analysis.html', import.meta.url), 'utf8');
 const app = await readFile(new URL('../src/app.js', import.meta.url), 'utf8');
+const analysisApp = await readFile(new URL('../src/analysis.js', import.meta.url), 'utf8');
+const formerSiteNames = await readFile(new URL('../src/former-site-names.js', import.meta.url), 'utf8');
 const styles = await readFile(new URL('../src/styles.css', import.meta.url), 'utf8');
 test('scope disclaimer excludes former products and transformations', () => {
   assert.match(page, /Every entry is a product that still exists today/);
@@ -19,10 +22,16 @@ test('primary navigation reaches analysis and identifies the registry page', () 
   assert.match(page, /href="index\.html" aria-current="page">Registry<\/a>/);
   assert.match(page, /href="analysis\.html">Analysis<\/a>/);
 });
-test('homepage rotates crossed-out former and alternate site names', () => {
-  assert.match(page, /<header class="site-header">[\s\S]*<span>Formerly:<\/span> <s id="former-site-name" aria-hidden="true">Microsoft Product Lifecycle Tracker<\/s>[\s\S]*<\/header>/);
+test('both pages rotate crossed-out former and alternate site names', () => {
+  const formerNameMarkup = /<header class="site-header">[\s\S]*<span>Formerly:<\/span> <s id="former-site-name" aria-hidden="true">Microsoft Product Lifecycle Tracker<\/s>[\s\S]*<\/header>/;
+  assert.match(page, formerNameMarkup);
+  assert.match(analysisPage, formerNameMarkup);
   assert.doesNotMatch(page, /<main id="history">\s*<p class="former-site-name">/);
-  const formerNames = app.match(/const FORMER_SITE_NAMES = \[([\s\S]*?)\];/)?.[1]
+  assert.match(app, /import \{ rotateFormerSiteNames \} from '\.\/former-site-names\.js'/);
+  assert.match(analysisApp, /import \{ rotateFormerSiteNames \} from '\.\/former-site-names\.js'/);
+  assert.match(app, /rotateFormerSiteNames\(\);/);
+  assert.match(analysisApp, /rotateFormerSiteNames\(\);/);
+  const formerNames = formerSiteNames.match(/const FORMER_SITE_NAMES = \[([\s\S]*?)\];/)?.[1]
     .split('\n')
     .map(line => line.match(/'([^']+)'/)?.[1])
     .filter(Boolean);
@@ -30,11 +39,13 @@ test('homepage rotates crossed-out former and alternate site names', () => {
   for (const name of ['Rename Pending', 'Brandwidth', 'The Product Formerly Known As', 'Identity Crisis as a Service', 'Cloudy with a Chance of Rebrands', 'Microsoft 365 Name Roulette', 'Rename, Rebrand, Repeat']) {
     assert.ok(formerNames.includes(name), name);
   }
-  assert.match(app, /prefers-reduced-motion: reduce/);
-  assert.match(app, /}, 3000\);/);
+  assert.match(formerSiteNames, /prefers-reduced-motion: reduce/);
+  assert.match(formerSiteNames, /}, 2000\);/);
   assert.match(styles, /\.site-header\{position:sticky;top:0;z-index:10/);
   assert.match(styles, /\.skip-link\{[^}]*z-index:11/);
   assert.match(styles, /main\{[^}]*scroll-margin-top:7rem/);
+  assert.match(styles, /\.former-site-name\{[^}]*width:30rem/);
+  assert.match(styles, /\.former-site-name span:first-child\{[^}]*flex:0 0 auto/);
   assert.match(styles, /\.former-site-name s\.is-changing\{opacity:0/);
 });
 test('About the dates note can use the available content width', () => {
