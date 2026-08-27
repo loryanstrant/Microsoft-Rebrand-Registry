@@ -29,6 +29,7 @@
       </div>
       <dl class="summary" aria-label="Dataset summary">
         <div><dt id="product-count">—</dt><dd>products</dd></div>
+        <div><dt id="resource-count">—</dt><dd>resources</dd></div>
         <div><dt id="name-count">—</dt><dd>documented names</dd></div>
       </dl>
     </section>
@@ -37,7 +38,8 @@
       <div class="scope-icon" aria-hidden="true">i</div>
       <div>
         <h2 id="scope-heading">What this registry includes</h2>
-        <p>Every entry is a product that still exists today; former names are shown only as the history of that continuing product. Discontinued products are not listed. Product or platform transformations—where something evolved into, was absorbed by, or was replaced by something else—are also outside scope. This registry tracks documented renames, not broader lineage.</p>
+        <p>Every entry is something Microsoft still operates today; former names are shown only as the history of that continuing thing. Most entries are products; a small number are significant Microsoft resources—roadmaps, portals and programmes—and are tagged as such. Discontinued products are not listed. Where products converge into a shared experience, each documented rename is still recorded separately: this registry tracks names, not broader lineage.</p>
+        <p>Where two entries share an identical current name, the registry adds a small clarifying label. That label is ours, not Microsoft’s, and is never part of the official name.</p>
       </div>
     </aside>
 
@@ -53,7 +55,7 @@
       <div class="controls">
         <label class="search"><span>Search products or names</span><input id="search" type="search" placeholder="For example, SkyDrive"></label>
         <label><span>Product family</span><select id="family"><option value="all">All families</option></select></label>
-        <label><span>Status</span><select id="status"><option value="all">Current and former</option><option value="current">Current only</option><option value="former">Former only</option></select></label>
+        <label><span>Show</span><select id="show"><option value="all">Everything</option><option value="current">Current names only</option><option value="former">Former names only</option><option value="products">Products only</option><option value="resources">Resources only</option></select></label>
       </div>
 
       <nav id="letter-nav" class="letter-nav" aria-label="Jump to product letter" hidden></nav>

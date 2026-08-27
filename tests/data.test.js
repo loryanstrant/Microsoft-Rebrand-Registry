@@ -10,10 +10,14 @@ const app = await readFile(new URL('../src/app.js', import.meta.url), 'utf8');
 const analysisApp = await readFile(new URL('../src/analysis.js', import.meta.url), 'utf8');
 const formerSiteNames = await readFile(new URL('../src/former-site-names.js', import.meta.url), 'utf8');
 const styles = await readFile(new URL('../src/styles.css', import.meta.url), 'utf8');
-test('scope disclaimer excludes former products and transformations', () => {
-  assert.match(page, /Every entry is a product that still exists today/);
+test('scope disclaimer excludes former products and explains convergence', () => {
+  assert.match(page, /Every entry is something Microsoft still operates today/);
   assert.match(page, /Discontinued products are not listed/);
-  assert.match(page, /Product or platform transformations/);
+  assert.match(page, /each documented rename is still recorded separately/);
+  assert.match(page, /tracks names, not broader lineage/);
+});
+test('scope disclaimer owns the clarifying labels it adds', () => {
+  assert.match(page, /That label is ours, not Microsoft’s, and is never part of the official name/);
 });
 test('footer links contributors to the public GitHub repository', () => {
   assert.match(page, /href="https:\/\/github\.com\/loryanstrant\/Microsoft-Rebrand-Registry"[^>]*>Contribute on GitHub<\/a>/);
@@ -81,10 +85,17 @@ test('Defender variants that share a mark use the same logo asset', () => {
   }
 });
 test('Copilot products use their distinct canonical marks', () => {
-  const copilot = data.products.find(({ id }) => id === 'microsoft-copilot');
-  const copilotApp = data.products.find(({ id }) => id === 'm365-copilot-app');
-  assert.equal(copilot?.logo.src, 'src/assets/logos/microsoft-copilot.png');
-  assert.equal(copilotApp?.logo.src, 'src/assets/logos/microsoft-365-copilot-app.svg');
+  const marks = {
+    'microsoft-copilot': 'src/assets/logos/microsoft-copilot.png',
+    'microsoft-copilot-service': 'src/assets/logos/microsoft-copilot-service.svg',
+    'microsoft-copilot-chat': 'src/assets/logos/microsoft-copilot-chat.png',
+    'm365-copilot-app': 'src/assets/logos/microsoft-365-copilot-app.svg'
+  };
+  for (const [id, src] of Object.entries(marks)) {
+    assert.equal(data.products.find(product => product.id === id)?.logo.src, src, id);
+  }
+  // Microsoft's Copilot marks are converging; the registry still keeps one file per entry.
+  assert.equal(new Set(Object.values(marks)).size, Object.keys(marks).length);
 });
 test('Outlook logo artwork fills its image canvas', async () => {
   const logo = await readFile(new URL('../src/assets/logos/outlook-com.png', import.meta.url));
@@ -118,8 +129,11 @@ test('product letters support alphabetical navigation', () => {
   assert.equal(productLetter('Microsoft Entra ID'), 'E');
   assert.equal(productLetter('365 Copilot'), '#');
 });
-test('expanded registry contains 72 cloud products in alphabetical sections', () => {
-  assert.equal(data.products.length, 72);
+test('expanded registry contains 74 cloud products and 1 resource in alphabetical sections', () => {
+  const resources = data.products.filter(({ kind }) => kind === 'resource');
+  assert.equal(resources.length, 1);
+  assert.equal(data.products.length - resources.length, 74);
+  assert.equal(data.products.length, 75);
   assert.equal(data.products.some(({ id }) => id === 'microsoft-lens'), false);
   const groups = alphabeticalProducts(data.products.map(product => ({ product })));
   const letters = [...new Set(groups.map(group => productLetter(group.product.name)))];
@@ -188,4 +202,107 @@ test('Foundry products use their current names and preserve Azure histories', ()
     'Azure AI services',
     'Foundry Tools'
   ]);
+});
+
+test('optional kind, disambiguator and note are absent from ordinary products', () => {
+  const entra = data.products.find(({ id }) => id === 'entra-id');
+  assert.equal('kind' in entra, false);
+  assert.equal('disambiguator' in entra, false);
+  assert.equal('note' in entra, false);
+});
+test('only the roadmap is tagged as a resource rather than a product', () => {
+  const resources = data.products.filter(({ kind }) => kind === 'resource');
+  assert.deepEqual(resources.map(({ id }) => id), ['ai-at-work-roadmap']);
+  for (const product of data.products) {
+    if ('kind' in product) assert.ok(['product', 'resource'].includes(product.kind), product.id);
+  }
+});
+test('the disambiguator is never part of any product or period name', () => {
+  for (const product of data.products.filter(({ disambiguator }) => disambiguator)) {
+    assert.equal(product.name.includes(product.disambiguator), false, product.id);
+    for (const period of product.periods) {
+      assert.equal(period.name.includes(product.disambiguator), false, period.id);
+    }
+  }
+});
+test('annotations stay plain prose so they render safely', () => {
+  for (const product of data.products) {
+    for (const value of [product.note, product.disambiguator].filter(Boolean)) {
+      assert.equal(typeof value, 'string', product.id);
+      assert.ok(value.trim().length > 0, product.id);
+      assert.doesNotMatch(value, /[<&]/, product.id);
+    }
+  }
+});
+test('both Microsoft Copilot entries are told apart without renaming them', () => {
+  const named = data.products.filter(({ name }) => name === 'Microsoft Copilot');
+  assert.equal(named.length, 2);
+  assert.deepEqual(named.map(({ disambiguator }) => disambiguator).sort(),
+    ['for individuals', 'for organizations']);
+});
+test('the converged Copilot entries admit the confusion in the registry voice', () => {
+  for (const id of ['microsoft-copilot', 'm365-copilot-app']) {
+    const product = data.products.find(candidate => candidate.id === id);
+    assert.match(product.note, /naming whiplash/, id);
+  }
+  assert.match(data.products.find(({ id }) => id === 'microsoft-copilot-service').note,
+    /Renamed, un-renamed, then renamed again/);
+  assert.match(data.products.find(({ id }) => id === 'microsoft-copilot-chat').note,
+    /fourteen months/);
+});
+test('the Copilot service records its round trip through Copilot for Microsoft 365', () => {
+  const service = data.products.find(({ id }) => id === 'microsoft-copilot-service');
+  assert.deepEqual(service.periods.map(({ name }) => name), [
+    'Microsoft 365 Copilot',
+    'Copilot for Microsoft 365',
+    'Microsoft 365 Copilot',
+    'Microsoft Copilot'
+  ]);
+});
+test('Copilot Chat preserves the Bing Chat Enterprise lineage', () => {
+  const chat = data.products.find(({ id }) => id === 'microsoft-copilot-chat');
+  assert.deepEqual(chat.periods.map(({ name }) => name), [
+    'Bing Chat Enterprise',
+    'Microsoft Copilot',
+    'Microsoft 365 Copilot Chat',
+    'Microsoft Copilot Chat'
+  ]);
+});
+test('the Copilot app rename is dated to when it took effect', () => {
+  const app = data.products.find(({ id }) => id === 'm365-copilot-app');
+  assert.equal(app.name, 'Microsoft Copilot app');
+  const current = app.periods.find(({ end }) => end === null);
+  assert.equal(current.name, 'Microsoft Copilot app');
+  assert.equal(current.start, '2026-08-18');
+  assert.equal(current.startQualifier, 'effective');
+});
+test('the roadmap keeps all three of its names', () => {
+  const roadmap = data.products.find(({ id }) => id === 'ai-at-work-roadmap');
+  assert.deepEqual(roadmap.periods.map(({ name }) => name), [
+    'Office 365 Roadmap',
+    'Microsoft 365 Roadmap',
+    'AI at Work Roadmap'
+  ]);
+  assert.equal(roadmap.periods.at(-1).start, '2026-08-25');
+});
+test('the Show control offers both name status and entry type', () => {
+  assert.match(page, /<label><span>Show<\/span><select id="show">/);
+  for (const value of ['all', 'current', 'former', 'products', 'resources']) {
+    assert.match(page, new RegExp(`<option value="${value}">`));
+  }
+  assert.doesNotMatch(page, /id="status"/);
+});
+test('the header counts products and resources separately', () => {
+  assert.match(page, /<dt id="product-count">—<\/dt><dd>products<\/dd>/);
+  assert.match(page, /<dt id="resource-count">—<\/dt><dd>resources<\/dd>/);
+  assert.match(page, /<dt id="name-count">—<\/dt><dd>documented names<\/dd>/);
+});
+test('the registry renders resource tags, disambiguators and notes', () => {
+  assert.match(app, /badge resource">◇ Resource, not a product/);
+  assert.match(app, /class="disambiguator"/);
+  assert.match(app, /our label, not Microsoft’s/);
+  assert.match(app, /class="entry-note"/);
+  assert.match(styles, /\.badge\.resource\{/);
+  assert.match(styles, /\.disambiguator\{/);
+  assert.match(styles, /\.entry-note\{/);
 });

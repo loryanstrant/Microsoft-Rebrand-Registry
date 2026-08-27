@@ -6,6 +6,9 @@ const errors = [];
 const ids = new Set();
 const sourceIds = new Set(data.sources.map(source => source.id));
 const datePattern = /^\d{4}-\d{2}(-\d{2})?$/;
+const kinds = new Set(['product', 'resource']);
+// Annotations are interpolated into the page unescaped, so keep them plain prose.
+const prose = value => typeof value === 'string' && value.trim().length > 0 && !/[<&]/.test(value);
 
 for (const source of data.sources) {
   if (ids.has(source.id)) errors.push(`Duplicate ID: ${source.id}`);
@@ -18,6 +21,10 @@ for (const product of data.products) {
   ids.add(product.id);
   if (!product.logo?.src || !product.logo?.alt || !product.logo?.source) errors.push(`Incomplete logo: ${product.id}`);
   if (product.logo?.src && !product.logo.src.startsWith('src/assets/logos/')) errors.push(`Invalid logo path: ${product.id}`);
+  if ('kind' in product && !kinds.has(product.kind)) errors.push(`Invalid kind: ${product.id}`);
+  if ('disambiguator' in product && !prose(product.disambiguator)) errors.push(`Invalid disambiguator: ${product.id}`);
+  if ('note' in product && !prose(product.note)) errors.push(`Invalid note: ${product.id}`);
+  if (product.disambiguator && product.name.includes(product.disambiguator)) errors.push(`Disambiguator must not be part of the name: ${product.id}`);
   const current = product.periods.filter(period => period.end === null);
   if (current.length !== 1) errors.push(`${product.id} must have exactly one current period`);
   let previousEnd = null;
@@ -36,4 +43,5 @@ for (const product of data.products) {
 }
 if (!datePattern.test(data.asOf)) errors.push('Invalid asOf date');
 if (errors.length) { console.error(errors.map(error => `○ ${error}`).join('\n')); process.exit(1); }
-console.log(`● Validated ${data.products.length} products, ${data.products.reduce((n,p)=>n+p.periods.length,0)} name periods, and ${data.sources.length} sources.`);
+const resources = data.products.filter(product => product.kind === 'resource').length;
+console.log(`● Validated ${data.products.length - resources} products, ${resources} resources, ${data.products.reduce((n,p)=>n+p.periods.length,0)} name periods, and ${data.sources.length} sources.`);

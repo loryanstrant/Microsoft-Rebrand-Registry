@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-08-01",
+  "asOf": "2026-08-28",
   "methodology": "Dates are inclusive starts and exclusive ends. Month-only evidence is normalized to the first of that month for duration calculations while its precision remains visible.",
   "products": [
     {
@@ -745,7 +745,9 @@
         "src": "src/assets/logos/microsoft-copilot.png",
         "alt": "Microsoft Copilot logo",
         "source": "https://github.com/loryanstrant/MicrosoftCloudLogos/blob/main/logos/copilot/m365-copilot---600.png"
-      }
+      },
+      "disambiguator": "for individuals",
+      "note": "If you have naming whiplash, you are reading it correctly. Since August 2026 this shares a single client app with the Microsoft Copilot app. Both name histories are kept separately, because each rename is separately documented."
     },
     {
       "id": "microsoft-defender-xdr",
@@ -1884,7 +1886,7 @@
     },
     {
       "id": "m365-copilot-app",
-      "name": "Microsoft 365 Copilot app",
+      "name": "Microsoft Copilot app",
       "family": "Productivity",
       "periods": [
         {
@@ -1919,21 +1921,37 @@
           "id": "m365-copilot-app-current",
           "name": "Microsoft 365 Copilot app",
           "start": "2025-01",
-          "end": null,
+          "end": "2026-08-18",
           "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "effective",
+          "endQualifier": "effective",
+          "sources": [
+            "m365-copilot-app-announce",
+            "copilot-app-renamed"
+          ]
+        },
+        {
+          "id": "copilot-app-unified",
+          "name": "Microsoft Copilot app",
+          "start": "2026-08-18",
+          "end": null,
+          "startPrecision": "day",
           "endPrecision": null,
           "startQualifier": "effective",
           "endQualifier": null,
           "sources": [
-            "m365-copilot-app-announce"
+            "copilot-app-unified-announce",
+            "copilot-app-renamed"
           ]
         }
       ],
       "logo": {
         "src": "src/assets/logos/microsoft-365-copilot-app.svg",
-        "alt": "Microsoft 365 Copilot app logo",
+        "alt": "Microsoft Copilot app logo",
         "source": "https://github.com/loryanstrant/MicrosoftCloudLogos/blob/main/logos/copilot/microsoft-365-copilot-badge.svg"
-      }
+      },
+      "note": "If you have naming whiplash, you are reading it correctly. Since August 2026 this shares a single client app with Microsoft Copilot. Both name histories are kept separately, because each rename is separately documented."
     },
     {
       "id": "viva-glint",
@@ -3002,6 +3020,198 @@
         "alt": "Windows Security logo",
         "source": "https://github.com/loryanstrant/MicrosoftCloudLogos"
       }
+    },
+    {
+      "id": "microsoft-copilot-service",
+      "name": "Microsoft Copilot",
+      "disambiguator": "for organizations",
+      "family": "Artificial intelligence",
+      "note": "Renamed, un-renamed, then renamed again. This product spent ten months as Copilot for Microsoft 365 before reverting to the name it started with — and has since dropped the 365 entirely.",
+      "periods": [
+        {
+          "id": "m365-copilot-original",
+          "name": "Microsoft 365 Copilot",
+          "start": "2023-03-16",
+          "end": "2023-11-15",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "by",
+          "sources": [
+            "m365-copilot-announce",
+            "copilot-for-m365-name"
+          ]
+        },
+        {
+          "id": "copilot-for-m365",
+          "name": "Copilot for Microsoft 365",
+          "start": "2023-11-15",
+          "end": "2024-09-16",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "by",
+          "sources": [
+            "copilot-for-m365-name",
+            "m365-copilot-wave2"
+          ]
+        },
+        {
+          "id": "m365-copilot-restored",
+          "name": "Microsoft 365 Copilot",
+          "start": "2024-09-16",
+          "end": "2026-08",
+          "startPrecision": "day",
+          "endPrecision": "month",
+          "startQualifier": "by",
+          "endQualifier": "by",
+          "sources": [
+            "m365-copilot-wave2",
+            "copilot-service-renamed"
+          ]
+        },
+        {
+          "id": "copilot-service-current",
+          "name": "Microsoft Copilot",
+          "start": "2026-08",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "by",
+          "endQualifier": null,
+          "sources": [
+            "copilot-service-renamed"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/microsoft-copilot-service.svg",
+        "alt": "Microsoft Copilot logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos/blob/main/logos/copilot/microsoft-365-copilot/2023-2024/microsoft-365-copilot.svg"
+      }
+    },
+    {
+      "id": "microsoft-copilot-chat",
+      "name": "Microsoft Copilot Chat",
+      "family": "Artificial intelligence",
+      "note": "For fourteen months this was called exactly Microsoft Copilot, the same as the consumer product, before Microsoft split the names again in January 2025. No, that was not a typo at the time.",
+      "periods": [
+        {
+          "id": "bing-chat-enterprise",
+          "name": "Bing Chat Enterprise",
+          "start": "2023-07-18",
+          "end": "2023-12-01",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "generally available",
+          "sources": [
+            "bing-chat-enterprise-announce",
+            "copilot-ga"
+          ]
+        },
+        {
+          "id": "copilot-chat-as-copilot",
+          "name": "Microsoft Copilot",
+          "start": "2023-12-01",
+          "end": "2025-01",
+          "startPrecision": "day",
+          "endPrecision": "month",
+          "startQualifier": "generally available",
+          "endQualifier": "effective",
+          "sources": [
+            "copilot-ga",
+            "copilot-chat-split"
+          ]
+        },
+        {
+          "id": "m365-copilot-chat",
+          "name": "Microsoft 365 Copilot Chat",
+          "start": "2025-01",
+          "end": "2026-08",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "effective",
+          "endQualifier": "by",
+          "sources": [
+            "copilot-chat-split",
+            "copilot-service-renamed"
+          ]
+        },
+        {
+          "id": "copilot-chat-current",
+          "name": "Microsoft Copilot Chat",
+          "start": "2026-08",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "by",
+          "endQualifier": null,
+          "sources": [
+            "copilot-service-renamed"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/microsoft-copilot-chat.png",
+        "alt": "Microsoft Copilot Chat logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos/blob/main/logos/copilot/microsoft-copilot-510x510.png"
+      }
+    },
+    {
+      "id": "ai-at-work-roadmap",
+      "name": "AI at Work Roadmap",
+      "kind": "resource",
+      "family": "Programs and resources",
+      "periods": [
+        {
+          "id": "office-365-roadmap",
+          "name": "Office 365 Roadmap",
+          "start": "2015-01",
+          "end": "2018-09-24",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "effective",
+          "sources": [
+            "office-365-roadmap-archive",
+            "m365-roadmap-live"
+          ]
+        },
+        {
+          "id": "m365-roadmap",
+          "name": "Microsoft 365 Roadmap",
+          "start": "2018-09-24",
+          "end": "2026-08-25",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "effective",
+          "endQualifier": "effective",
+          "sources": [
+            "m365-roadmap-live",
+            "ai-at-work-roadmap-blog"
+          ]
+        },
+        {
+          "id": "ai-at-work-roadmap-current",
+          "name": "AI at Work Roadmap",
+          "start": "2026-08-25",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "effective",
+          "endQualifier": null,
+          "sources": [
+            "ai-at-work-roadmap-doc",
+            "ai-at-work-roadmap-blog"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/ai-at-work-roadmap.svg",
+        "alt": "AI at Work Roadmap mark drawn for this registry",
+        "source": "https://github.com/loryanstrant/Microsoft-Rebrand-Registry"
+      }
     }
   ],
   "sources": [
@@ -3858,6 +4068,104 @@
       "publisher": "Microsoft Azure Blog",
       "published": "2014-03-25",
       "url": "https://azure.microsoft.com/en-us/blog/upcoming-name-change-for-windows-azure/"
+    },
+    {
+      "id": "m365-copilot-announce",
+      "title": "Introducing Microsoft 365 Copilot—A whole new way to work",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2023-03-16",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/16/introducing-microsoft-365-copilot-a-whole-new-way-to-work/"
+    },
+    {
+      "id": "copilot-for-m365-name",
+      "title": "Introducing Microsoft Copilot Studio and new features in Copilot for Microsoft 365",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2023-11-15",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2023/11/15/introducing-microsoft-copilot-studio-and-new-features-in-copilot-for-microsoft-365/"
+    },
+    {
+      "id": "m365-copilot-wave2",
+      "title": "Microsoft 365 Copilot Wave 2: Pages, Python in Excel, and agents",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2024-09-16",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2024/09/16/microsoft-365-copilot-wave-2-pages-python-in-excel-and-agents/"
+    },
+    {
+      "id": "copilot-service-renamed",
+      "title": "Application card: Microsoft Copilot (for organizations)",
+      "publisher": "Microsoft Learn",
+      "published": "2026-08-14",
+      "url": "https://learn.microsoft.com/microsoft-365/copilot/microsoft-365-copilot-application-card"
+    },
+    {
+      "id": "copilot-app-unified-announce",
+      "title": "Prepare customers for a simpler, unified Microsoft Copilot app experience",
+      "publisher": "Microsoft Partner Center",
+      "published": "2026-08-14",
+      "url": "https://learn.microsoft.com/partner-center/announcements/2026-august"
+    },
+    {
+      "id": "copilot-app-renamed",
+      "title": "Get started with the Microsoft Copilot app",
+      "publisher": "Microsoft Support",
+      "published": "2026-08-14",
+      "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/what-is-microsoft-copilot-app"
+    },
+    {
+      "id": "copilot-app-unification",
+      "title": "Deploy the unified Microsoft Copilot application",
+      "publisher": "Microsoft Learn",
+      "published": "2026-08-14",
+      "url": "https://learn.microsoft.com/windows/client-management/deploy-unified-copilot-app"
+    },
+    {
+      "id": "bing-chat-enterprise-announce",
+      "title": "Introducing Bing Chat Enterprise, Microsoft 365 Copilot pricing, and Microsoft Sales Copilot",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2023-07-18",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2023/07/18/introducing-bing-chat-enterprise-microsoft-365-copilot-pricing-and-microsoft-sales-copilot/"
+    },
+    {
+      "id": "copilot-ga",
+      "title": "Microsoft Copilot is now generally available",
+      "publisher": "Microsoft Copilot Blog",
+      "published": "2023-12-01",
+      "url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/2023/12/01/microsoft-copilot-is-now-generally-available/"
+    },
+    {
+      "id": "copilot-chat-split",
+      "title": "Manage Microsoft Copilot Chat",
+      "publisher": "Microsoft Learn",
+      "published": "2025-01-15",
+      "url": "https://learn.microsoft.com/copilot/manage"
+    },
+    {
+      "id": "office-365-roadmap-archive",
+      "title": "Office 365 Roadmap — archived capture of roadmap.office.com",
+      "publisher": "Internet Archive",
+      "published": "2015-01-14",
+      "url": "https://web.archive.org/web/20150114204341/http://roadmap.office.com/en-us"
+    },
+    {
+      "id": "m365-roadmap-live",
+      "title": "The New Microsoft 365 Roadmap is Live",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2018-09-24",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft_365blog/the-new-microsoft-365-roadmap-is-live/260038"
+    },
+    {
+      "id": "ai-at-work-roadmap-doc",
+      "title": "Use the AI at Work Roadmap",
+      "publisher": "Microsoft Learn",
+      "published": "2026-08-25",
+      "url": "https://learn.microsoft.com/microsoft-365/admin/manage/roadmap"
+    },
+    {
+      "id": "ai-at-work-roadmap-blog",
+      "title": "One always-on roadmap: Dynamics 365, Power Platform, and Dataverse join the AI at Work roadmap",
+      "publisher": "Microsoft Dynamics 365 Blog",
+      "published": "2026-08-25",
+      "url": "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2026/08/25/one-always-on-roadmap-dynamics-365-power-platform-and-dataverse-join-the-ai-at-work-roadmap/"
     }
   ]
 }

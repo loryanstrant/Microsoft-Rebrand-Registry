@@ -12,6 +12,7 @@ What looked like a single rename is three related changes:
 
 - **The app.** *Microsoft 365 Copilot app* → *Microsoft Copilot app*, effective 18 August 2026, with a new icon and a web address move from `m365.cloud.microsoft` to `copilot.cloud.microsoft` (MC1454108).
 - **The service.** *Microsoft 365 Copilot* → *Microsoft Copilot*. Microsoft Learn states this plainly. That service **is not in the registry at all today** — the registry has only the consumer assistant and the app.
+- **The chat product.** *Microsoft 365 Copilot Chat* → *Microsoft Copilot Chat*, in the same Learn note. This is the Bing Chat Enterprise lineage, also missing from the registry, and it is the sharpest illustration of the confusion: for fourteen months it carried the exact name *Microsoft Copilot*, identical to the consumer product, before diverging again in January 2025.
 - **A genuine merge.** The consumer Copilot app and the work app are becoming one client: *"Microsoft Copilot application unification updates existing Microsoft Copilot and Microsoft 365 Copilot app installations to a single Copilot application experience."*
 
 The schema holds one linear, non-overlapping name history per entry with exactly one open-ended period. It cannot represent two lineages converging into one. The scope note in `index.html` also puts merges explicitly out of scope.
@@ -30,7 +31,7 @@ Record every rename as ordinary name periods. **Annotate** the Copilot convergen
 
 A visitor lands on the registry table.
 
-1. They search `copilot`. Three rows appear together: **Microsoft Copilot** *(for individuals)*, **Microsoft Copilot** *(for organizations)*, and **Microsoft Copilot app**. Each carries its family, its disambiguating label where it has one, and — for the two that converged — a note explaining why two histories are recorded separately. Nothing reads as a duplicate-row bug.
+1. They search `copilot`. Four rows appear together: **Microsoft Copilot** *(for individuals)*, **Microsoft Copilot** *(for organizations)*, **Microsoft Copilot app** and **Microsoft Copilot Chat**. Each carries its family, its disambiguating label where it has one, and a note where the history needs one. Nothing reads as a duplicate-row bug — the notes say out loud that it is confusing, in the registry's own voice.
 2. They scroll to the roadmap. **AI at Work Roadmap** carries a `◇ Resource, not a product` pill and its three name periods back to *Office 365 Roadmap*.
 3. They set the **Show** filter to *Resources only*. Only tagged non-products remain. Set to *Products only*, the roadmap disappears and the table is products alone.
 4. The header counts read *products* / *resources* / *documented names* separately, so the product count never silently includes a roadmap.
@@ -42,6 +43,7 @@ A visitor lands on the registry table.
 - [ ] `m365-copilot-app` is named `Microsoft Copilot app`; its `id` is unchanged.
 - [ ] Its previous period ends `2026-08-18`, day precision, qualifier `effective`; a new open period `Microsoft Copilot app` starts on the same date with the same precision and qualifier.
 - [ ] A new entry `microsoft-copilot-service` exists, named `Microsoft Copilot`, with four periods: `Microsoft 365 Copilot` (2023-03-16, `announced`) → `Copilot for Microsoft 365` (2023-11-15, `by`) → `Microsoft 365 Copilot` (2024-09-16, `by`) → `Microsoft Copilot` (2026-08, month precision, `by`).
+- [ ] A new entry `microsoft-copilot-chat` exists, named `Microsoft Copilot Chat`, with four periods: `Bing Chat Enterprise` (2023-07-18, `announced`) → `Microsoft Copilot` (2023-12-01, `generally available`) → `Microsoft 365 Copilot Chat` (2025-01, month precision, `effective`) → `Microsoft Copilot Chat` (2026-08, month precision, `by`).
 - [ ] A new entry `ai-at-work-roadmap` exists with `kind: "resource"` and three periods: `Office 365 Roadmap` (2015-01, month precision, `by`) → `Microsoft 365 Roadmap` (2018-09-24, day, `effective`) → `AI at Work Roadmap` (2026-08-25, day, `effective`).
 - [ ] `microsoft-copilot` keeps its existing periods, dates and sources **unchanged**, and gains only `disambiguator` and `note`.
 - [ ] Every new period cites at least one source; every new source has a title, publisher and resolvable URL.
@@ -59,6 +61,10 @@ A visitor lands on the registry table.
 - [ ] An entry with a `disambiguator` shows it on its own line beneath the family, in the smaller/lighter `.family` treatment, suffixed `— our label, not Microsoft's`.
 - [ ] The `disambiguator` never appears inside any `name` or period name, is not matched by search, and does not affect alphabetical sorting.
 - [ ] An entry with a `note` renders it full-width above its period rows in the table view, and as an `aria-label`/`title` on the product label in the timeline view.
+- [ ] Three notes ship, in the registry's own wry voice:
+  - **Convergence** (on `microsoft-copilot` and `m365-copilot-app`): *"If you have naming whiplash, you are reading it correctly. Since August 2026 this shares a single client app with …. Both name histories are kept separately, because each rename is separately documented."*
+  - **Flip-flop** (on `microsoft-copilot-service`): *"Renamed, un-renamed, then renamed again. This product spent ten months as Copilot for Microsoft 365 before reverting to the name it started with — and has since dropped the 365 entirely."*
+  - **Shared name** (on `microsoft-copilot-chat`): *"For fourteen months this was called exactly Microsoft Copilot, the same as the consumer product, before Microsoft split the names again in January 2025. No, that was not a typo at the time."*
 - [ ] The third filter control is labelled **Show** and offers *Everything* (default), *Current only*, *Former only*, *Products only*, *Resources only*. There is no fourth control.
 - [ ] The header summary shows three counts: products, resources, documented names — with resources excluded from the product count.
 - [ ] Status remains shape + words, never colour alone.
@@ -89,7 +95,7 @@ A visitor lands on the registry table.
 - **A per-product detail page.** Out of scope; the table row remains the unit of display.
 - **Renaming entry IDs to match new names.** IDs are stable identifiers.
 - **Backfilling `kind` across the existing 72 entries.** Absent means product.
-- **Adding Microsoft 365 Copilot Chat.** Also renamed (to Microsoft Copilot Chat), but a separate entry and a separate change.
+- **A `renamed back` badge or repeat-offender marker.** The flip-flop is called out in prose on the one entry that has it; the Rebrand Forecast already has a repeat-offenders section. No new UI concept for it.
 
 ## Sources
 
@@ -104,6 +110,9 @@ All first-party unless noted.
 | `copilot-app-renamed` | Get started with the Microsoft Copilot app | Microsoft Support | 2026-08-14 |
 | `copilot-service-renamed` | Application card: Microsoft Copilot (for organizations) | Microsoft Learn | 2026-08-14 |
 | `copilot-app-unification` | Deploy the unified Microsoft Copilot application | Microsoft Learn | 2026-08-14 |
+| `bing-chat-enterprise-announce` | Introducing Bing Chat Enterprise, Microsoft 365 Copilot pricing, and Microsoft Sales Copilot | Microsoft 365 Blog | 2023-07-18 |
+| `copilot-ga` | Microsoft Copilot is now generally available | Microsoft Copilot Blog | 2023-12-01 |
+| `copilot-chat-split` | Manage Microsoft Copilot Chat | Microsoft Learn | 2025-01-15 |
 | `office-365-roadmap-archive` | Office 365 Roadmap — archived capture of roadmap.office.com | Internet Archive | 2015-01-14 |
 | `m365-roadmap-live` | The New Microsoft 365 Roadmap is Live | Microsoft 365 Blog | 2018-09-24 |
 | `ai-at-work-roadmap-doc` | Use the AI at Work Roadmap | Microsoft Learn | 2026-08-25 |
@@ -116,6 +125,7 @@ Load-bearing quotes:
 - *"the Microsoft AI at Work Roadmap, formerly known as Microsoft 365 Roadmap"* — `ai-at-work-roadmap-doc`
 - *"Starting August 18, 2026 … a simplified app name and icon, and a transition of the web app URL from m365.cloud.microsoft to copilot.cloud.microsoft"* — `copilot-app-unified-announce`
 - *"…the Office 365 Roadmap URL will automatically redirect to the new page."* — `m365-roadmap-live`
+- *"Since January 2025, the Copilot experience for work and education no longer shares the same name as the Copilot experience for personal use"* — `copilot-chat-split`
 
 ### Notes on evidence
 

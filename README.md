@@ -14,17 +14,27 @@ The site’s tongue-in-cheek “Get Your Story Straight” network credits [Micr
 - `YYYY-MM` values retain month precision. They are normalized to the first day only for calculating and drawing durations.
 - A qualifier records whether a date is a launch, announcement, effective date, or merely the earliest date established by a source (`by`).
 - Each period must cite at least one source, and each product must have exactly one ongoing period.
-- The registry includes only products that still exist. It excludes discontinued products and broader product or platform transformations; former names are included only when they document a continuing product's rename history.
+- The registry includes only things Microsoft still operates. It excludes discontinued products; former names are
+  included only when they document a continuing thing's rename history.
+- Most entries are products. An optional `kind: "resource"` marks a significant Microsoft resource that is not a
+  product — a roadmap, portal or programme — and the interface tags it as such so the product count stays honest.
+- Where products converge into a shared experience, each documented rename is still recorded separately. The schema
+  holds one linear name history per entry; it deliberately cannot express lineage, because this registry tracks names.
+- An optional `note` carries a short editorial annotation, shown above an entry's name periods.
+- An optional `disambiguator` tells apart two entries that share an identical current name. It is the registry's own
+  clarifying label, never part of the official name, never part of a period name, and never matched by search.
+- Sources are dated by publication. Where a first-party page is evergreen and carries no date, it takes the date of
+  the dated announcement that corroborates it rather than an invented one.
 - Durations for ongoing names are calculated to the top-level `asOf` date, making the output reproducible.
 - Sources are evidence for the transition, but historical pages do not always establish an exact first-use date. The interface exposes precision and qualifiers rather than implying unsupported accuracy.
 
-The registry currently covers 72 cloud and online products across 158 documented name periods, supported by 122 cited sources. It uses first-party Microsoft announcements wherever available and should be reviewed as research, not as an official Microsoft chronology. Alphabetical jump links divide the growing catalogue without hiding entries behind pagination or collapsed sections. The index ignores a leading “Microsoft” so related product names remain easy to scan; names beginning with a number are under #.
+The registry currently covers 74 cloud and online products plus 1 non-product resource, across 170 documented name periods, supported by 136 cited sources. It uses first-party Microsoft announcements wherever available and should be reviewed as research, not as an official Microsoft chronology. Alphabetical jump links divide the growing catalogue without hiding entries behind pagination or collapsed sections. The index ignores a leading “Microsoft” so related product names remain easy to scan; names beginning with a number are under #.
 
 ## Analysis
 
 **The Rebrand Forecast** turns the canonical dataset into an evidence-led—and intentionally playful—analysis of rename timing, product-family patterns, repeat offenders, and possible future naming turbulence. Statistics are calculated from the registry rather than maintained separately. The forecast is entertainment, not reporting or evidence of Microsoft’s plans.
 
-Because the registry covers surviving products only, its analysis has survivorship bias: discontinued products and broader platform transformations are outside scope. Product families also vary in size, so sparse groups are labelled rather than treated as conclusive.
+Because the registry covers surviving entries only, its analysis has survivorship bias: discontinued products are outside scope. Resources are analysed alongside products, so a roadmap rename moves the statistics like any other. Product families also vary in size, so sparse groups are labelled rather than treated as conclusive.
 
 ## Contribute
 
@@ -34,8 +44,9 @@ To add a product:
 
 1. Add its stable ID, current name, family, and ordered name periods to `products`.
 2. Add first-party sources to `sources`; reference their IDs from each supported period.
-3. Preserve the precision of the evidence. Do not invent a day or month.
-4. Follow the checks in the [technical guide](TECHNICAL.md) before submitting your contribution.
+3. Preserve the precision of the evidence. Do not invent a day or month. Date a period to when the change took effect, not to when it was announced.
+4. If the entry is not a product, set `kind` to `resource`. If its current name collides with another entry's, add a `disambiguator` rather than editing the name.
+5. Follow the checks in the [technical guide](TECHNICAL.md) before submitting your contribution.
 
 ## Technical documentation
 
