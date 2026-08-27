@@ -84,9 +84,10 @@ test('analysis navigation and contribution route to public pages', () => {
 
 test('canonical dataset produces useful non-empty analysis', () => {
   const result = analyseRegistry(data);
-  assert.equal(result.products, 72);
-  assert.equal(result.renames, 86);
+  // Resources are analysed alongside products: a roadmap rename moves the clock too.
+  assert.equal(result.products, 75);
+  assert.equal(result.renames, 95);
   assert.ok(result.families.length > 5);
-  assert.equal(result.forecast.length, 72);
+  assert.equal(result.forecast.length, 75);
   assert.ok(result.busiest.count > 1);
 });

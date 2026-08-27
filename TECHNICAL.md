@@ -22,6 +22,18 @@ npm run package
 
 `npm run package` creates the complete uploadable site in `.deploy-package/` and fails if an application asset referenced by either HTML page, or a product image referenced by the dataset, is missing. Deploy that directory rather than assembling an upload by hand.
 
+## Dataset shape
+
+`scripts/validate-data.js` is the de facto schema. Every entry requires `id`, `name`, `family`, ordered `periods` and a `logo`. Three fields are optional and absent from most entries:
+
+| Field | Values | Effect |
+| --- | --- | --- |
+| `kind` | `product` (default when absent) or `resource` | A `resource` is a significant Microsoft thing that is not a product. It is tagged in the table, excluded from the product count, and selectable through the **Show** filter. It is still analysed on the Rebrand Forecast alongside products. |
+| `disambiguator` | short lowercase phrase | Rendered beneath the family as the registry's own clarifying label for two entries sharing an identical current name. Validation rejects it if it appears inside `name`. It never affects sorting or search. |
+| `note` | one or two sentences | Rendered above the entry's name periods in the table, and carried as the label description in the timeline. |
+
+`disambiguator` and `note` are interpolated into the page unescaped, so validation rejects `<` and `&` in either. Keep them plain prose.
+
 ## Analysis calculations
 
 `src/analysis.js` derives the analysis page from the canonical dataset at runtime. Date-sensitive calculations use `products.json`'s `asOf` value, not the visitor's current date, so results remain reproducible. Completed name periods supply rename counts and median historical durations; current periods supply current-name age. The days-since-last-rename tracker compares the latest completed period end with that same `asOf` date and lists every product sharing the latest recorded transition.

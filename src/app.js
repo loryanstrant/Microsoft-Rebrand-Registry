@@ -2,7 +2,8 @@ import { alphabeticalProducts, currentThenChronological, dateLabel, durationLabe
 import { rotateFormerSiteNames } from './former-site-names.js';
 
 const DATA_URL = './src/data/products.json';
-const state = { data: null, view: 'table', query: '', family: 'all', status: 'all' };
+const state = { data: null, view: 'table', query: '', family: 'all', show: 'all' };
+const isResource = product => product.kind === 'resource';
 const $ = (selector) => document.querySelector(selector);
 const els = {
   loading: $('#loading'), error: $('#error'), empty: $('#empty'), table: $('#table-view'),
@@ -21,11 +22,24 @@ function renderLetterNav(groups) {
   els.letterNav.hidden = groups.length < 10;
 }
 
+// "Show" combines two axes: which name periods to list, and whether to list
+// products, resources or both. Only one applies at a time.
+function keepsPeriod(period) {
+  if (state.show === 'current') return !period.end;
+  if (state.show === 'former') return !!period.end;
+  return true;
+}
+
+function keepsProduct(product) {
+  if (state.show === 'products') return !isResource(product);
+  if (state.show === 'resources') return isResource(product);
+  return true;
+}
+
 function visibleProducts() {
   const query = state.query.toLowerCase();
-  const groups = state.data.products.map(product => {
-    const periods = currentThenChronological(product.periods.filter(period => state.status === 'all'
-      || (state.status === 'current') === !period.end));
+  const groups = state.data.products.filter(keepsProduct).map(product => {
+    const periods = currentThenChronological(product.periods.filter(keepsPeriod));
     return { product, periods };
   });
   return alphabeticalProducts(groups.filter(({ product, periods }) => (state.family === 'all' || product.family === state.family)
@@ -49,6 +63,18 @@ function renderPeriod(period, max, asOf) {
   </div>`;
 }
 
+// The disambiguator is the registry's own clarifying label, never part of the
+// official name, so it says so in the markup as well as in the styling.
+function renderIdentity(product) {
+  return `<div class="product-identity"><img class="product-logo" src="${product.logo.src}" alt="${product.logo.alt}" width="52" height="52"><div><span class="product-name">${product.name}</span><span class="family">${product.family}</span>${product.disambiguator
+    ? `<span class="disambiguator">${product.disambiguator}<span class="ours">our label, not Microsoft’s</span></span>` : ''}${isResource(product)
+    ? '<span class="badge resource">◇ Resource, not a product</span>' : ''}</div></div>`;
+}
+
+function renderNote(product) {
+  return product.note ? `<p class="entry-note"><span class="note-mark" aria-hidden="true">ℹ</span><span>${product.note}</span></p>` : '';
+}
+
 function renderTable(groups) {
   const asOf = parseDate(state.data.asOf);
   const allPeriods = groups.flatMap(group => group.periods);
@@ -59,8 +85,8 @@ function renderTable(groups) {
     const heading = letter !== previousLetter ? `<tr class="letter-row" id="${letterId(letter, 'table')}"><th colspan="6" scope="colgroup"><span>${letter}</span><a href="#explorer-heading">Back to registry</a></th></tr>` : '';
     previousLetter = letter;
     return `${heading}<tr>
-      <th scope="row" class="product-cell"><div class="product-identity"><img class="product-logo" src="${product.logo.src}" alt="${product.logo.alt}" width="52" height="52"><div><span class="product-name">${product.name}</span><span class="family">${product.family}</span></div></div></th>
-      <td colspan="5" class="history-cell">${periods.map(period => renderPeriod(period, max, asOf)).join('')}</td>
+      <th scope="row" class="product-cell">${renderIdentity(product)}</th>
+      <td colspan="5" class="history-cell">${renderNote(product)}${periods.map(period => renderPeriod(period, max, asOf)).join('')}</td>
     </tr>`;
   }).join('');
 }
@@ -77,7 +103,9 @@ function renderTimeline(groups) {
     const letter = productLetter(product.name);
     const heading = letter !== previousLetter ? `<div class="timeline-letter" id="${letterId(letter, 'timeline')}"><strong>${letter}</strong><a href="#explorer-heading">Back to registry</a></div>` : '';
     previousLetter = letter;
-    return `${heading}<div class="timeline-row"><div class="timeline-product"><img src="${product.logo.src}" alt="" width="32" height="32"><span>${product.name}</span></div><div class="timeline-lanes" style="min-height:${Math.max(72, periods.length * 29 + 19)}px">${periods.map((period, index) => {
+    // The lane grid has no room for prose, so a note travels as the label's description.
+    const aside = [product.disambiguator && `${product.disambiguator} (our label, not Microsoft’s)`, product.note].filter(Boolean).join(' ');
+    return `${heading}<div class="timeline-row"><div class="timeline-product"${aside ? ` title="${aside}"` : ''}><img src="${product.logo.src}" alt="" width="32" height="32"><span>${product.name}</span>${isResource(product) ? '<span class="sr-only"> (a resource, not a product)</span>' : ''}${aside ? `<span class="sr-only"> ${aside}</span>` : ''}</div><div class="timeline-lanes" style="min-height:${Math.max(72, periods.length * 29 + 19)}px">${periods.map((period, index) => {
       const left = pct(parseDate(period.start)), right = pct(period.end ? parseDate(period.end) : maxDate);
       const label = `${period.name}: ${dateLabel(period.start, period.startPrecision, period.startQualifier)} to ${dateLabel(period.end, period.endPrecision, period.endQualifier)}`;
       return `<div class="timeline-bar ${period.end ? '' : 'current'}" tabindex="0" aria-label="${label}" style="left:${left}%;width:${Math.max(.5, right - left)}%;top:${10 + index * 29}px" title="${label}">${period.name}</div>`;
@@ -100,7 +128,9 @@ async function load() {
     const response = await fetch(DATA_URL);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.data = await response.json();
-    $('#product-count').textContent = state.data.products.length;
+    const resources = state.data.products.filter(isResource);
+    $('#product-count').textContent = state.data.products.length - resources.length;
+    $('#resource-count').textContent = resources.length;
     $('#name-count').textContent = state.data.products.reduce((count, product) => count + product.periods.length, 0);
     $('#as-of').textContent = `Dataset as of ${dateLabel(state.data.asOf, 'day', '')}.`;
     [...new Set(state.data.products.map(product => product.family))].sort().forEach(family => $('#family').add(new Option(family, family)));
@@ -120,7 +150,7 @@ document.querySelectorAll('.view-button').forEach(button => button.addEventListe
 }));
 $('#search').addEventListener('input', event => { state.query = event.target.value; render(); });
 $('#family').addEventListener('change', event => { state.family = event.target.value; render(); });
-$('#status').addEventListener('change', event => { state.status = event.target.value; render(); });
+$('#show').addEventListener('change', event => { state.show = event.target.value; render(); });
 $('#retry').addEventListener('click', load);
 rotateFormerSiteNames();
 load();
