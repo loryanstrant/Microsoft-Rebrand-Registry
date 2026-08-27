@@ -85,9 +85,35 @@ test('analysis navigation and contribution route to public pages', () => {
 test('canonical dataset produces useful non-empty analysis', () => {
   const result = analyseRegistry(data);
   // Resources are analysed alongside products: a roadmap rename moves the clock too.
-  assert.equal(result.products, 75);
-  assert.equal(result.renames, 95);
+  assert.equal(result.products, 77);
+  assert.equal(result.renames, 100);
   assert.ok(result.families.length > 5);
-  assert.equal(result.forecast.length, 75);
+  assert.equal(result.forecast.length, 77);
   assert.ok(result.busiest.count > 1);
+});
+
+test('boomerangs find products that took an abandoned name back', () => {
+  const result = analyseRegistry(data);
+  const copilot = result.boomerangs.find(item => item.id === 'microsoft-copilot-service');
+  assert.ok(copilot, 'the Copilot service wore Microsoft 365 Copilot twice');
+  assert.equal(copilot.returnedName, 'Microsoft 365 Copilot');
+  assert.equal(copilot.times, 2);
+  assert.equal(copilot.awayMonths, 10);
+  assert.deepEqual(copilot.journey, [
+    'Microsoft 365 Copilot',
+    'Copilot for Microsoft 365',
+    'Microsoft 365 Copilot',
+    'Microsoft Copilot'
+  ]);
+});
+
+test('boomerangs stay empty when no product reuses a name', () => {
+  assert.deepEqual(analyseRegistry(fixture()).boomerangs, []);
+});
+
+test('the Boomerang Club section is present with an empty state', () => {
+  assert.match(page, /id="boomerang-heading">The Boomerang Club<\/h2>/);
+  assert.match(page, /id="boomerang-intro"/);
+  assert.match(page, /id="boomerang-list"/);
+  assert.match(page, /id="boomerang-empty"[^>]*>○ No product has yet reused one of its own names\./);
 });

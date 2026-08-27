@@ -1642,6 +1642,20 @@
       "family": "Endpoint management",
       "periods": [
         {
+          "id": "sms",
+          "name": "Systems Management Server",
+          "start": "1994-11-07",
+          "end": "2007-11",
+          "startPrecision": "day",
+          "endPrecision": "month",
+          "startQualifier": "released",
+          "endQualifier": "effective",
+          "sources": [
+            "sms-1994-release",
+            "configmgr-at-25"
+          ]
+        },
+        {
           "id": "configmgr-system-center",
           "name": "System Center Configuration Manager",
           "start": "2007-11",
@@ -1652,6 +1666,7 @@
           "endQualifier": "announced",
           "sources": [
             "configmgr-2007",
+            "configmgr-at-25",
             "endpoint-manager-announce"
           ]
         },
@@ -3212,6 +3227,114 @@
         "alt": "AI at Work Roadmap mark drawn for this registry",
         "source": "https://github.com/loryanstrant/Microsoft-Rebrand-Registry"
       }
+    },
+    {
+      "id": "microsoft-account",
+      "name": "Microsoft account",
+      "family": "Identity and access",
+      "periods": [
+        {
+          "id": "passport",
+          "name": "Microsoft Passport",
+          "start": "2000-03",
+          "end": "2002-09",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "by",
+          "endQualifier": "by",
+          "sources": [
+            "passport-2000-archive",
+            "net-passport-msdn"
+          ]
+        },
+        {
+          "id": "net-passport",
+          "name": ".NET Passport",
+          "start": "2002-09",
+          "end": "2006-11",
+          "startPrecision": "month",
+          "endPrecision": "month",
+          "startQualifier": "by",
+          "endQualifier": "by",
+          "sources": [
+            "net-passport-msdn",
+            "windows-live-id-2006"
+          ]
+        },
+        {
+          "id": "windows-live-id",
+          "name": "Windows Live ID",
+          "start": "2006-11",
+          "end": "2012-05-02",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "announced",
+          "sources": [
+            "windows-live-id-2006",
+            "microsoft-account-announce"
+          ]
+        },
+        {
+          "id": "microsoft-account-current",
+          "name": "Microsoft account",
+          "start": "2012-05-02",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "microsoft-account-announce"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/microsoft-account.png",
+        "alt": "Microsoft account logo",
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos/blob/main/logos/microsoft/microsoft-logo.png"
+      }
+    },
+    {
+      "id": "windows-app",
+      "name": "Windows App",
+      "family": "Virtual desktop",
+      "note": "Only the macOS and iOS app was renamed. The separate Remote Desktop app for Windows was replaced and retired, which is a different thing and outside this registry's scope.",
+      "periods": [
+        {
+          "id": "microsoft-remote-desktop",
+          "name": "Microsoft Remote Desktop",
+          "start": "2013-10-21",
+          "end": "2024-09-19",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "released",
+          "endQualifier": "generally available",
+          "sources": [
+            "remote-desktop-apps-2013",
+            "windows-app-rename"
+          ]
+        },
+        {
+          "id": "windows-app-current",
+          "name": "Windows App",
+          "start": "2024-09-19",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "generally available",
+          "endQualifier": null,
+          "sources": [
+            "windows-app-rename",
+            "windows-app-ga"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/windows-app.svg",
+        "alt": "Windows App mark drawn for this registry",
+        "source": "https://github.com/loryanstrant/Microsoft-Rebrand-Registry"
+      }
     }
   ],
   "sources": [
@@ -4166,6 +4289,69 @@
       "publisher": "Microsoft Dynamics 365 Blog",
       "published": "2026-08-25",
       "url": "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2026/08/25/one-always-on-roadmap-dynamics-365-power-platform-and-dataverse-join-the-ai-at-work-roadmap/"
+    },
+    {
+      "id": "sms-1994-release",
+      "title": "20 Years Of SMS/Configuration Manager",
+      "publisher": "Microsoft Learn",
+      "published": "2014-11-07",
+      "url": "https://learn.microsoft.com/en-us/archive/blogs/configmgrdogs/20-years-of-smsconfiguration-manager"
+    },
+    {
+      "id": "configmgr-at-25",
+      "title": "ConfigMgr at 25",
+      "publisher": "Microsoft 365 Blog",
+      "published": "2017-09-26",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2017/09/26/configmgr-25/"
+    },
+    {
+      "id": "passport-2000-archive",
+      "title": "Microsoft Passport — archived capture of passport.com",
+      "publisher": "Internet Archive",
+      "published": "2000-03-01",
+      "url": "https://web.archive.org/web/20000301052514/http://www.passport.com/"
+    },
+    {
+      "id": "net-passport-msdn",
+      "title": "Providing Secure Authentication Using Microsoft .NET Passport",
+      "publisher": "Microsoft Learn",
+      "published": "2002-09-01",
+      "url": "https://learn.microsoft.com/en-us/archive/msdn-magazine/2002/september/providing-secure-authentication-using-microsoft-net-passport"
+    },
+    {
+      "id": "windows-live-id-2006",
+      "title": "Windows Live ID Adoption Solution in Microsoft.com",
+      "publisher": "Microsoft Learn",
+      "published": "2006-11-15",
+      "url": "https://learn.microsoft.com/en-us/archive/blogs/mscom/windows-live-id-adoption-solution-in-microsoft-com"
+    },
+    {
+      "id": "microsoft-account-announce",
+      "title": "Cloud services for Windows 8 and Windows Phone: Windows Live reimagined",
+      "publisher": "Windows Experience Blog",
+      "published": "2012-05-02",
+      "url": "https://blogs.windows.com/windowsexperience/2012/05/02/cloud-services-for-windows-8-and-windows-phone-windows-live-reimagined/"
+    },
+    {
+      "id": "remote-desktop-apps-2013",
+      "title": "Microsoft Remote Desktop Apps for iOS, Mac OS X, and Android available for download",
+      "publisher": "Microsoft Community Hub",
+      "published": "2013-10-21",
+      "url": "https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-remote-desktop-apps-for-ios-mac-os-x-and-android/ba-p/247981"
+    },
+    {
+      "id": "windows-app-rename",
+      "title": "Windows App update for Remote Desktop on iOS and macOS",
+      "publisher": "Microsoft Community Hub",
+      "published": "2024-08-12",
+      "url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/windows-app-update-for-remote-desktop-on-ios-and-macos/td-p/4216988"
+    },
+    {
+      "id": "windows-app-ga",
+      "title": "Windows App now available on all major platforms",
+      "publisher": "Windows IT Pro Blog",
+      "published": "2024-09-19",
+      "url": "https://techcommunity.microsoft.com/blog/windows-itpro-blog/windows-app-now-available-on-all-major-platforms/4246939"
     }
   ]
 }
