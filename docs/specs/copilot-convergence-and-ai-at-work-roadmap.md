@@ -134,8 +134,14 @@ Load-bearing quotes:
 - **Undated evergreen pages.** The four Learn/Support pages carry no publish date. Each takes the date of the dated announcement that corroborates it rather than an invented one.
 - **One non-Microsoft source.** `office-365-roadmap-archive` is an Internet Archive capture of Microsoft's own page — used because no first-party announcement of the Office 365 Roadmap's launch could be found. It establishes a `by` date only.
 
-## Open risks
+## Logos
 
-- The Copilot app's new icon may not yet exist in the MicrosoftCloudLogos collection. If not, the existing mark stays and the PR says so rather than substituting a lookalike.
-- `microsoft-copilot-service` needs a third distinct Copilot mark; if none is available the distinct-marks test needs a deliberate decision, not a silent relaxation.
-- The roadmap needs a mark that isn't an appropriated Microsoft product logo — one is drawn for the registry, establishing the pattern for future resource entries.
+Two open questions at planning time; both resolved during the build.
+
+**The Copilot family now shares one mark.** The consolidation covered the icons as well as the names: Microsoft ships a single Copilot mark, and MicrosoftCloudLogos carries it at [`logos/copilot/microsoft-copilot-510x510.png`](https://github.com/loryanstrant/MicrosoftCloudLogos/blob/main/logos/copilot/microsoft-copilot-510x510.png). All four Copilot entries point at it as `src/assets/logos/copilot.png`, each keeping its own `alt`. This follows the existing Defender pattern, where eight entries share `defender.png`.
+
+The collection's structure is itself evidence: the Microsoft 365 Copilot marks are foldered `2023-2024/` and `2024-2026/` — a line that ends in 2026, with no successor — while the unified mark sits at the top of `logos/copilot/`.
+
+Because the registry stores one `logo` per entry and always renders the current mark, the retired artwork (`microsoft-copilot.png`, `microsoft-365-copilot-app.svg`, `microsoft-copilot-service.svg`) is no longer referenced. Those files stay in the repository but drop out of the deployed package. `copilot-studio` kept its own identity through the consolidation and is untouched.
+
+**The roadmap needed a mark that isn't an appropriated Microsoft product logo**, since none exists for a roadmap. One is drawn for the registry in the site's own visual language, establishing the pattern for future `kind: "resource"` entries.

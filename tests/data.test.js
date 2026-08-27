@@ -84,18 +84,22 @@ test('Defender variants that share a mark use the same logo asset', () => {
     assert.equal(product?.logo.src, 'src/assets/logos/defender.png', id);
   }
 });
-test('Copilot products use their distinct canonical marks', () => {
-  const marks = {
-    'microsoft-copilot': 'src/assets/logos/microsoft-copilot.png',
-    'microsoft-copilot-service': 'src/assets/logos/microsoft-copilot-service.svg',
-    'microsoft-copilot-chat': 'src/assets/logos/microsoft-copilot-chat.png',
-    'm365-copilot-app': 'src/assets/logos/microsoft-365-copilot-app.svg'
-  };
-  for (const [id, src] of Object.entries(marks)) {
-    assert.equal(data.products.find(product => product.id === id)?.logo.src, src, id);
+test('Copilot entries share the unified 2026 Copilot mark', () => {
+  // Microsoft consolidated the Copilot family onto one icon in August 2026. The
+  // registry shows current marks only, so these entries legitimately match.
+  const productIds = [
+    'microsoft-copilot',
+    'microsoft-copilot-service',
+    'microsoft-copilot-chat',
+    'm365-copilot-app'
+  ];
+  for (const id of productIds) {
+    const product = data.products.find(product => product.id === id);
+    assert.equal(product?.logo.src, 'src/assets/logos/copilot.png', id);
+    assert.ok(product.logo.alt.includes(product.name), id);
   }
-  // Microsoft's Copilot marks are converging; the registry still keeps one file per entry.
-  assert.equal(new Set(Object.values(marks)).size, Object.keys(marks).length);
+  // Copilot Studio kept its own identity through the consolidation.
+  assert.equal(data.products.find(({ id }) => id === 'copilot-studio')?.logo.src, 'src/assets/logos/copilot-studio.svg');
 });
 test('Outlook logo artwork fills its image canvas', async () => {
   const logo = await readFile(new URL('../src/assets/logos/outlook-com.png', import.meta.url));

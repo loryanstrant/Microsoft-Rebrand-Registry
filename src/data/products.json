@@ -742,9 +742,9 @@
         }
       ],
       "logo": {
-        "src": "src/assets/logos/microsoft-copilot.png",
+        "src": "src/assets/logos/copilot.png",
         "alt": "Microsoft Copilot logo",
-        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos/blob/main/logos/copilot/m365-copilot---600.png"
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos/blob/main/logos/copilot/microsoft-copilot-510x510.png"
       },
       "disambiguator": "for individuals",
       "note": "If you have naming whiplash, you are reading it correctly. Since August 2026 this shares a single client app with the Microsoft Copilot app. Both name histories are kept separately, because each rename is separately documented."
@@ -1947,9 +1947,9 @@
         }
       ],
       "logo": {
-        "src": "src/assets/logos/microsoft-365-copilot-app.svg",
+        "src": "src/assets/logos/copilot.png",
         "alt": "Microsoft Copilot app logo",
-        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos/blob/main/logos/copilot/microsoft-365-copilot-badge.svg"
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos/blob/main/logos/copilot/microsoft-copilot-510x510.png"
       },
       "note": "If you have naming whiplash, you are reading it correctly. Since August 2026 this shares a single client app with Microsoft Copilot. Both name histories are kept separately, because each rename is separately documented."
     },
@@ -3085,9 +3085,9 @@
         }
       ],
       "logo": {
-        "src": "src/assets/logos/microsoft-copilot-service.svg",
+        "src": "src/assets/logos/copilot.png",
         "alt": "Microsoft Copilot logo",
-        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos/blob/main/logos/copilot/microsoft-365-copilot/2023-2024/microsoft-365-copilot.svg"
+        "source": "https://github.com/loryanstrant/MicrosoftCloudLogos/blob/main/logos/copilot/microsoft-copilot-510x510.png"
       }
     },
     {
@@ -3153,7 +3153,7 @@
         }
       ],
       "logo": {
-        "src": "src/assets/logos/microsoft-copilot-chat.png",
+        "src": "src/assets/logos/copilot.png",
         "alt": "Microsoft Copilot Chat logo",
         "source": "https://github.com/loryanstrant/MicrosoftCloudLogos/blob/main/logos/copilot/microsoft-copilot-510x510.png"
       }
