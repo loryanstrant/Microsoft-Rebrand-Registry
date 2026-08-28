@@ -132,7 +132,7 @@ async function load() {
     $('#product-count').textContent = state.data.products.length - resources.length;
     $('#resource-count').textContent = resources.length;
     $('#name-count').textContent = state.data.products.reduce((count, product) => count + product.periods.length, 0);
-    $('#as-of').textContent = `Dataset as of ${dateLabel(state.data.asOf, 'day', '')}.`;
+    $('#as-of').textContent = `Data as at ${dateLabel(state.data.asOf, 'day', '')}`;
     [...new Set(state.data.products.map(product => product.family))].sort().forEach(family => $('#family').add(new Option(family, family)));
     render();
   } catch (error) {

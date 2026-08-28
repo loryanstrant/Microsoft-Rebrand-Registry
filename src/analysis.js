@@ -1,4 +1,4 @@
-import { durationLabel, monthDiff, parseDate } from './dates.js';
+import { dateLabel, durationLabel, monthDiff, parseDate } from './dates.js';
 import { rotateFormerSiteNames } from './former-site-names.js';
 
 const DATA_URL = './src/data/products.json';
@@ -60,6 +60,28 @@ export function analyseRegistry(data) {
     identities: product.periods.length
   })).sort((a, b) => b.identities - a.identities || a.name.localeCompare(b.name)).slice(0, 8);
 
+  // Products that abandoned a name and later took it back. The gap is measured from
+  // the first period ending to the next period carrying that name beginning.
+  const boomerangs = data.products.flatMap(product => {
+    const counts = new Map();
+    for (const period of product.periods) {
+      if (!period.name) continue;
+      counts.set(period.name, (counts.get(period.name) || 0) + 1);
+    }
+    return [...counts.entries()].filter(([, count]) => count > 1).map(([name]) => {
+      const worn = product.periods.filter(period => period.name === name);
+      return {
+        id: product.id,
+        name: product.name,
+        family: product.family,
+        returnedName: name,
+        journey: product.periods.map(period => period.name),
+        times: worn.length,
+        awayMonths: monthDiff(parseDate(worn[0].end), parseDate(worn[1].start))
+      };
+    });
+  }).sort((a, b) => b.awayMonths - a.awayMonths || a.name.localeCompare(b.name));
+
   const globalMedian = median(completed.map(period => monthDiff(parseDate(period.start), parseDate(period.end))));
   const riskInputs = data.products.map(product => {
     const current = product.periods.find(period => !period.end);
@@ -107,8 +129,14 @@ export function analyseRegistry(data) {
     annualRenames,
     families,
     repeatOffenders,
+    boomerangs,
     forecast
   };
+}
+
+// Small counts read better as words in a sentence than as digits.
+function numberWord(count) {
+  return ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'][count] || String(count);
 }
 
 function dateAsOf(value) {
@@ -126,7 +154,7 @@ function renderBars(items, value, label) {
 
 function render(result) {
   document.querySelector('#analysis-as-of').textContent = `Analysis uses registry data as at ${dateAsOf(result.asOf)}.`;
-  document.querySelector('#footer-as-of').textContent = `Data as at ${dateAsOf(result.asOf)}`;
+  document.querySelector('#footer-as-of').textContent = `Data as at ${dateLabel(result.asOf, 'day', '')}`;
   if (result.latestRename) {
     const productNames = new Intl.ListFormat('en-AU', { style: 'long', type: 'conjunction' }).format(result.latestRename.products);
     document.querySelector('#rename-days').textContent = result.latestRename.daysAgo.toLocaleString('en-AU');
@@ -152,6 +180,18 @@ function render(result) {
   document.querySelector('#repeat-offenders').innerHTML = result.repeatOffenders.map((product, index) => `<li>
     <span class="rank">${index + 1}</span><span><strong>${product.name}</strong><small>${product.family}</small></span>
     <b>${product.identities} identities</b>
+  </li>`).join('');
+
+  const club = result.boomerangs;
+  document.querySelector('#boomerang-intro').textContent = club.length
+    ? `Products that abandoned a name, thought better of it, and took it back. Membership is currently ${numberWord(club.length)}.`
+    : 'Products that abandoned a name, thought better of it, and took it back.';
+  document.querySelector('#boomerang-empty').hidden = club.length > 0;
+  document.querySelector('#boomerang-list').innerHTML = club.map(item => `<li>
+    <p class="boomerang-head"><strong>${item.name}</strong><small>${item.family}</small><span class="badge returned">↩ Returned to “${item.returnedName}”</span></p>
+    <p class="boomerang-journey">${item.journey.map((name, index) =>
+      `${index ? '<span class="arrow" aria-hidden="true">→</span>' : ''}<span class="step${name === item.returnedName ? ' again' : ''}">${name}</span>`).join('')}</p>
+    <p class="boomerang-gap">Away for ${durationLabel(item.awayMonths)} before coming back.</p>
   </li>`).join('');
 
   document.querySelector('#forecast').innerHTML = result.forecast.slice(0, 8).map(item => `<article class="forecast-card">

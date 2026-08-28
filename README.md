@@ -28,7 +28,7 @@ The site’s tongue-in-cheek “Get Your Story Straight” network credits [Micr
 - Durations for ongoing names are calculated to the top-level `asOf` date, making the output reproducible.
 - Sources are evidence for the transition, but historical pages do not always establish an exact first-use date. The interface exposes precision and qualifiers rather than implying unsupported accuracy.
 
-The registry currently covers 74 cloud and online products plus 1 non-product resource, across 170 documented name periods, supported by 136 cited sources. It uses first-party Microsoft announcements wherever available and should be reviewed as research, not as an official Microsoft chronology. Alphabetical jump links divide the growing catalogue without hiding entries behind pagination or collapsed sections. The index ignores a leading “Microsoft” so related product names remain easy to scan; names beginning with a number are under #.
+The registry currently covers 76 cloud and online products plus 1 non-product resource, across 177 documented name periods, supported by 145 cited sources. It uses first-party Microsoft announcements wherever available and should be reviewed as research, not as an official Microsoft chronology. Alphabetical jump links divide the growing catalogue without hiding entries behind pagination or collapsed sections. The index ignores a leading “Microsoft” so related product names remain easy to scan; names beginning with a number are under #.
 
 ## Analysis
 

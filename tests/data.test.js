@@ -133,11 +133,11 @@ test('product letters support alphabetical navigation', () => {
   assert.equal(productLetter('Microsoft Entra ID'), 'E');
   assert.equal(productLetter('365 Copilot'), '#');
 });
-test('expanded registry contains 74 cloud products and 1 resource in alphabetical sections', () => {
+test('expanded registry contains 76 cloud products and 1 resource in alphabetical sections', () => {
   const resources = data.products.filter(({ kind }) => kind === 'resource');
   assert.equal(resources.length, 1);
-  assert.equal(data.products.length - resources.length, 74);
-  assert.equal(data.products.length, 75);
+  assert.equal(data.products.length - resources.length, 76);
+  assert.equal(data.products.length, 77);
   assert.equal(data.products.some(({ id }) => id === 'microsoft-lens'), false);
   const groups = alphabeticalProducts(data.products.map(product => ({ product })));
   const letters = [...new Set(groups.map(group => productLetter(group.product.name)))];
@@ -147,6 +147,7 @@ test('expanded registry contains 74 cloud products and 1 resource in alphabetica
 test('larger expansion preserves multi-step Configuration Manager history', () => {
   const product = data.products.find(({ id }) => id === 'configuration-manager');
   assert.deepEqual(product.periods.map(({ name }) => name), [
+    'Systems Management Server',
     'System Center Configuration Manager',
     'Microsoft Endpoint Configuration Manager',
     'Microsoft Configuration Manager'
@@ -309,4 +310,41 @@ test('the registry renders resource tags, disambiguators and notes', () => {
   assert.match(styles, /\.badge\.resource\{/);
   assert.match(styles, /\.disambiguator\{/);
   assert.match(styles, /\.entry-note\{/);
+});
+
+test('both pages state the dataset date identically in the footer', () => {
+  assert.match(app, /#as-of'\)\.textContent = `Data as at \$\{dateLabel\(state\.data\.asOf, 'day', ''\)\}`/);
+  assert.match(analysisApp, /#footer-as-of'\)\.textContent = `Data as at \$\{dateLabel\(result\.asOf, 'day', ''\)\}`/);
+});
+test('the footer stacks rather than competing for width', () => {
+  const rules = [...styles.matchAll(/footer\{([^}]*)\}/g)].map(([, body]) => body);
+  assert.ok(rules.some(rule => /display:block/.test(rule)), 'footer should be a block layout');
+  assert.ok(rules.every(rule => !/justify-content/.test(rule)), 'footer should not lay its paragraphs out in columns');
+  assert.match(styles, /footer p\+p\{margin-top:/);
+});
+test('Configuration Manager keeps its 1994 origin', () => {
+  const product = data.products.find(({ id }) => id === 'configuration-manager');
+  const sms = product.periods[0];
+  assert.equal(sms.name, 'Systems Management Server');
+  assert.equal(sms.start, '1994-11-07');
+  assert.equal(sms.startQualifier, 'released');
+});
+test('the consumer sign-in service records its Passport lineage', () => {
+  const product = data.products.find(({ id }) => id === 'microsoft-account');
+  assert.deepEqual(product.periods.map(({ name }) => name), [
+    'Microsoft Passport',
+    '.NET Passport',
+    'Windows Live ID',
+    'Microsoft account'
+  ]);
+});
+test('Windows App records the renamed macOS and iOS client only', () => {
+  const product = data.products.find(({ id }) => id === 'windows-app');
+  assert.deepEqual(product.periods.map(({ name }) => name), ['Microsoft Remote Desktop', 'Windows App']);
+  assert.equal(product.periods[1].start, '2024-09-19');
+  assert.match(product.note, /Remote Desktop app for Windows was replaced and retired/);
+});
+test('Intune is not credited with a rename Microsoft never made', () => {
+  const product = data.products.find(({ id }) => id === 'microsoft-intune');
+  assert.deepEqual(product.periods.map(({ name }) => name), ['Windows Intune', 'Microsoft Intune']);
 });

@@ -52,6 +52,20 @@ The repository root is both the app location and output location; there is no AP
 
 For token-based manual releases, run `npm run package` and upload `.deploy-package/`. This prevents a partial deployment from silently omitting `src/assets`.
 
+```bash
+npm run package
+npx @azure/static-web-apps-cli deploy .deploy-package --deployment-token <token> --env production
+```
+
+`--env production` matters: without it the CLI publishes to a preview environment rather than the live site.
+
+On a minimal Linux container the CLI's `StaticSitesClient` binary aborts with *"Couldn't find a valid ICU package installed on the system"*. Either install `libicu`, or run the deploy with globalization disabled:
+
+```bash
+DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1 npx @azure/static-web-apps-cli deploy .deploy-package \
+  --deployment-token <token> --env production
+```
+
 `staticwebapp.config.json` provides navigation fallback and baseline security headers. No credentials are needed by the app.
 
 The production shell is provisioned on the **Free** Static Web Apps tier in the **MVP 1k per month benefit** subscription:
