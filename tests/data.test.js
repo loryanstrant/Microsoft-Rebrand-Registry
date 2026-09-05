@@ -133,11 +133,11 @@ test('product letters support alphabetical navigation', () => {
   assert.equal(productLetter('Microsoft Entra ID'), 'E');
   assert.equal(productLetter('365 Copilot'), '#');
 });
-test('expanded registry contains 76 cloud products and 1 resource in alphabetical sections', () => {
+test('expanded registry contains 81 products and 1 resource in alphabetical sections', () => {
   const resources = data.products.filter(({ kind }) => kind === 'resource');
   assert.equal(resources.length, 1);
-  assert.equal(data.products.length - resources.length, 76);
-  assert.equal(data.products.length, 77);
+  assert.equal(data.products.length - resources.length, 81);
+  assert.equal(data.products.length, 82);
   assert.equal(data.products.some(({ id }) => id === 'microsoft-lens'), false);
   const groups = alphabeticalProducts(data.products.map(product => ({ product })));
   const letters = [...new Set(groups.map(group => productLetter(group.product.name)))];
@@ -347,4 +347,46 @@ test('Windows App records the renamed macOS and iOS client only', () => {
 test('Intune is not credited with a rename Microsoft never made', () => {
   const product = data.products.find(({ id }) => id === 'microsoft-intune');
   assert.deepEqual(product.periods.map(({ name }) => name), ['Windows Intune', 'Microsoft Intune']);
+});
+test('the console line records four generation names in order', () => {
+  const product = data.products.find(({ id }) => id === 'xbox-console');
+  assert.deepEqual(product.periods.map(({ name }) => name), [
+    'Xbox',
+    'Xbox 360',
+    'Xbox One',
+    'Xbox Series X|S'
+  ]);
+  assert.ok(product.periods.every(({ startQualifier }) => startQualifier === 'launched'));
+  assert.match(product.note, /Mid-generation models/);
+});
+test('the Game Pass subscription records its Xbox Live Gold origin', () => {
+  const product = data.products.find(({ id }) => id === 'xbox-game-pass-essential');
+  assert.deepEqual(product.periods.map(({ name }) => name), [
+    'Xbox Live Gold',
+    'Xbox Game Pass Core',
+    'Xbox Game Pass Essential'
+  ]);
+  assert.equal(product.periods[1].start, '2023-09-14');
+  assert.match(product.note, /Games with Gold ended/);
+});
+test('Xbox Live belongs to the network entry alone', () => {
+  const network = data.products.find(({ id }) => id === 'xbox-network');
+  assert.deepEqual(network.periods.map(({ name }) => name), ['Xbox Live', 'Xbox network']);
+  assert.equal(network.periods[1].startQualifier, 'by');
+  const claiming = data.products.filter(product =>
+    product.periods.some(({ name }) => name === 'Xbox Live'));
+  assert.deepEqual(claiming.map(({ id }) => id), ['xbox-network']);
+});
+test('the Gaming family holds the five Xbox entries and no codenames', () => {
+  const gaming = data.products.filter(({ family }) => family === 'Gaming');
+  assert.deepEqual(gaming.map(({ id }) => id).sort(), [
+    'pc-game-pass',
+    'xbox-console',
+    'xbox-game-pass-essential',
+    'xbox-game-pass-premium',
+    'xbox-network'
+  ]);
+  assert.ok(gaming.every(({ kind }) => kind === undefined), 'no Xbox entry is a resource');
+  const names = data.products.flatMap(({ periods }) => periods.map(({ name }) => name));
+  assert.ok(names.every(name => !name.startsWith('Project ')), 'codenames stay out of the registry');
 });
