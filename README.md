@@ -2,7 +2,7 @@
 
 A static, accessible proof of concept for exploring the names and visual identities Microsoft products have accumulated over time, from the cloud to the console. The primary view is a research table with inline duration bars; a timeline is available as a secondary view.
 
-The initial dataset covers product-name periods and displays each product’s current logo from the Microsoft Cloud Logos collection. Researching historical logo periods remains the next dataset expansion, because Microsoft branding history has never been content with one dimension.
+The initial dataset covers product-name periods and displays each product’s current logo, almost all of them from the Microsoft Cloud Logos collection. The gaming entries are the exception: that collection covers the cloud, so their marks come from Wikimedia Commons instead, and each entry records where its own logo came from. Researching historical logo periods remains the next dataset expansion, because Microsoft branding history has never been content with one dimension.
 
 The site’s tongue-in-cheek “Get Your Story Straight” network credits [Microsoft Cloud Logos](https://www.mscloudlogos.com/) for current and historical visual identities and [Let Me Correct That For You](https://www.letmecorrectthatforyou.com/) for Microsoft terminology: if you’re going to say something, be right about it. A separate attribution notes that some rename leads were drawn from [M365 Maps](https://m365maps.com/renames.htm) and [Rebranded by Microsoft](https://rebrandedbyms.com/), then checked against cited sources.
 
