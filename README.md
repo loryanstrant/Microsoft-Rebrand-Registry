@@ -1,6 +1,6 @@
 # The Rebrand Registry
 
-A static, accessible proof of concept for exploring the names and visual identities Microsoft cloud products have accumulated over time. The primary view is a research table with inline duration bars; a timeline is available as a secondary view.
+A static, accessible proof of concept for exploring the names and visual identities Microsoft products have accumulated over time, from the cloud to the console. The primary view is a research table with inline duration bars; a timeline is available as a secondary view.
 
 The initial dataset covers product-name periods and displays each product’s current logo from the Microsoft Cloud Logos collection. Researching historical logo periods remains the next dataset expansion, because Microsoft branding history has never been content with one dimension.
 
@@ -15,7 +15,10 @@ The site’s tongue-in-cheek “Get Your Story Straight” network credits [Micr
 - A qualifier records whether a date is a launch, announcement, effective date, or merely the earliest date established by a source (`by`).
 - Each period must cite at least one source, and each product must have exactly one ongoing period.
 - The registry includes only things Microsoft still operates. It excludes discontinued products; former names are
-  included only when they document a continuing thing's rename history.
+  included only when they document a continuing thing's rename history. Consoles are the one deliberate exception:
+  a generation stays listed after it stops being sold, because the generation names form one continuing history.
+- Codenames are not names. A project codename Microsoft used before naming the thing it sold is not recorded, so
+  there is no Project xCloud, Project Scarlett or Project Scorpio here.
 - Most entries are products. An optional `kind: "resource"` marks a significant Microsoft resource that is not a
   product — a roadmap, portal or programme — and the interface tags it as such so the product count stays honest.
 - Where products converge into a shared experience, each documented rename is still recorded separately. The schema
@@ -28,7 +31,7 @@ The site’s tongue-in-cheek “Get Your Story Straight” network credits [Micr
 - Durations for ongoing names are calculated to the top-level `asOf` date, making the output reproducible.
 - Sources are evidence for the transition, but historical pages do not always establish an exact first-use date. The interface exposes precision and qualifiers rather than implying unsupported accuracy.
 
-The registry currently covers 76 cloud and online products plus 1 non-product resource, across 177 documented name periods, supported by 145 cited sources. It uses first-party Microsoft announcements wherever available and should be reviewed as research, not as an official Microsoft chronology. Alphabetical jump links divide the growing catalogue without hiding entries behind pagination or collapsed sections. The index ignores a leading “Microsoft” so related product names remain easy to scan; names beginning with a number are under #.
+The registry currently covers 81 products plus 1 non-product resource, across 190 documented name periods, supported by 158 cited sources. It uses first-party Microsoft announcements wherever available and should be reviewed as research, not as an official Microsoft chronology. Alphabetical jump links divide the growing catalogue without hiding entries behind pagination or collapsed sections. The index ignores a leading “Microsoft” so related product names remain easy to scan; names beginning with a number are under #.
 
 ## Analysis
 

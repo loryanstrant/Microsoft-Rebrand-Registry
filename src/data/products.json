@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-08-28",
+  "asOf": "2026-09-06",
   "methodology": "Dates are inclusive starts and exclusive ends. Month-only evidence is normalized to the first of that month for duration calculations while its precision remains visible.",
   "products": [
     {
@@ -3335,6 +3335,249 @@
         "alt": "Windows App mark drawn for this registry",
         "source": "https://github.com/loryanstrant/Microsoft-Rebrand-Registry"
       }
+    },
+    {
+      "id": "xbox-console",
+      "name": "Xbox Series X|S",
+      "family": "Gaming",
+      "note": "Mid-generation models sold alongside their generation rather than replacing it, so Xbox 360 S and E, Xbox One S and X, and Xbox Series S are not separate periods here. The dates are North American launch days, and each name gives way on the day the next one arrived.",
+      "periods": [
+        {
+          "id": "xbox-original",
+          "name": "Xbox",
+          "start": "2001-11-15",
+          "end": "2005-11-22",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "launched",
+          "sources": [
+            "xbox-launch-2001",
+            "xbox-360-launch-2005"
+          ]
+        },
+        {
+          "id": "xbox-360",
+          "name": "Xbox 360",
+          "start": "2005-11-22",
+          "end": "2013-11-22",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "launched",
+          "sources": [
+            "xbox-360-launch-2005",
+            "xbox-one-launch-2013"
+          ]
+        },
+        {
+          "id": "xbox-one",
+          "name": "Xbox One",
+          "start": "2013-11-22",
+          "end": "2020-11-10",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "launched",
+          "sources": [
+            "xbox-one-launch-2013",
+            "xbox-series-launch-2020"
+          ]
+        },
+        {
+          "id": "xbox-series",
+          "name": "Xbox Series X|S",
+          "start": "2020-11-10",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "launched",
+          "endQualifier": null,
+          "sources": [
+            "xbox-series-launch-2020"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/xbox-console.svg",
+        "alt": "Xbox Series X|S logo",
+        "source": "https://commons.wikimedia.org/wiki/File:Xbox_Series_X_S_color.svg"
+      }
+    },
+    {
+      "id": "xbox-network",
+      "name": "Xbox network",
+      "family": "Gaming",
+      "note": "Microsoft never announced this one. The Xbox Live name simply left the Microsoft Services Agreement and the support pages, and Xbox network took its place. The Xbox Live Gold subscription kept the old name for another two years.",
+      "periods": [
+        {
+          "id": "xbox-live-network",
+          "name": "Xbox Live",
+          "start": "2002-11-15",
+          "end": "2021-03",
+          "startPrecision": "day",
+          "endPrecision": "month",
+          "startQualifier": "launched",
+          "endQualifier": "by",
+          "sources": [
+            "xbox-live-launch-2002",
+            "xbox-network-rename-2021"
+          ]
+        },
+        {
+          "id": "xbox-network-current",
+          "name": "Xbox network",
+          "start": "2021-03",
+          "end": null,
+          "startPrecision": "month",
+          "endPrecision": null,
+          "startQualifier": "by",
+          "endQualifier": null,
+          "sources": [
+            "xbox-network-rename-2021",
+            "xbox-network-terminology"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/xbox-network.svg",
+        "alt": "Xbox network logo",
+        "source": "https://commons.wikimedia.org/wiki/File:Xbox_Logo.svg"
+      }
+    },
+    {
+      "id": "xbox-game-pass-essential",
+      "name": "Xbox Game Pass Essential",
+      "family": "Gaming",
+      "note": "Xbox Live Gold did not simply change its name in 2023. Members moved across at the same price, but Games with Gold ended and a catalogue of games arrived in its place, so this renaming came with a different deal attached.",
+      "periods": [
+        {
+          "id": "xbox-live-gold",
+          "name": "Xbox Live Gold",
+          "start": "2005-09-08",
+          "end": "2023-09-14",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "announced",
+          "endQualifier": "effective",
+          "sources": [
+            "xbox-live-gold-2005",
+            "game-pass-core-2023"
+          ]
+        },
+        {
+          "id": "game-pass-core",
+          "name": "Xbox Game Pass Core",
+          "start": "2023-09-14",
+          "end": "2025-10-01",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "effective",
+          "endQualifier": "effective",
+          "sources": [
+            "game-pass-core-2023",
+            "game-pass-plans-2025"
+          ]
+        },
+        {
+          "id": "game-pass-essential",
+          "name": "Xbox Game Pass Essential",
+          "start": "2025-10-01",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "effective",
+          "endQualifier": null,
+          "sources": [
+            "game-pass-plans-2025",
+            "xbox-network-terminology"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/xbox-game-pass-essential.svg",
+        "alt": "Xbox Game Pass Essential logo",
+        "source": "https://commons.wikimedia.org/wiki/File:Xbox_Game_Pass_new_logo_-_colored_version.svg"
+      }
+    },
+    {
+      "id": "xbox-game-pass-premium",
+      "name": "Xbox Game Pass Premium",
+      "family": "Gaming",
+      "periods": [
+        {
+          "id": "game-pass-standard",
+          "name": "Xbox Game Pass Standard",
+          "start": "2024-09-10",
+          "end": "2025-10-01",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "effective",
+          "sources": [
+            "game-pass-standard-2024",
+            "game-pass-plans-2025"
+          ]
+        },
+        {
+          "id": "game-pass-premium",
+          "name": "Xbox Game Pass Premium",
+          "start": "2025-10-01",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "effective",
+          "endQualifier": null,
+          "sources": [
+            "game-pass-plans-2025"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/xbox-game-pass-premium.svg",
+        "alt": "Xbox Game Pass Premium logo",
+        "source": "https://commons.wikimedia.org/wiki/File:Xbox_Game_Pass_2020_logo_-_colored_version.svg"
+      }
+    },
+    {
+      "id": "pc-game-pass",
+      "name": "PC Game Pass",
+      "family": "Gaming",
+      "periods": [
+        {
+          "id": "game-pass-for-pc",
+          "name": "Xbox Game Pass for PC",
+          "start": "2019-06-09",
+          "end": "2021-12-09",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "launched",
+          "endQualifier": "announced",
+          "sources": [
+            "game-pass-pc-beta-2019",
+            "pc-game-pass-2021"
+          ]
+        },
+        {
+          "id": "pc-game-pass-current",
+          "name": "PC Game Pass",
+          "start": "2021-12-09",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "announced",
+          "endQualifier": null,
+          "sources": [
+            "pc-game-pass-2021",
+            "xbox-network-terminology"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/pc-game-pass.svg",
+        "alt": "PC Game Pass logo",
+        "source": "https://commons.wikimedia.org/wiki/File:PC_Game_Pass_logo.svg"
+      }
     }
   ],
   "sources": [
@@ -4352,6 +4595,97 @@
       "publisher": "Windows IT Pro Blog",
       "published": "2024-09-19",
       "url": "https://techcommunity.microsoft.com/blog/windows-itpro-blog/windows-app-now-available-on-all-major-platforms/4246939"
+    },
+    {
+      "id": "xbox-launch-2001",
+      "title": "Xbox Manufacturing Underway for Nov. 15 Launch Date",
+      "publisher": "Microsoft News Center",
+      "published": "2001-09-21",
+      "url": "https://news.microsoft.com/source/2001/09/21/xbox-manufacturing-underway-for-nov-15-launch-date/"
+    },
+    {
+      "id": "xbox-live-launch-2002",
+      "title": "Xbox Live Arrives in Stores, Sparking the Next Revolution in Video Games",
+      "publisher": "Microsoft News Center",
+      "published": "2002-11-15",
+      "url": "https://news.microsoft.com/source/2002/11/15/xbox-live-arrives-in-stores-sparking-the-next-revolution-in-video-games/"
+    },
+    {
+      "id": "xbox-live-gold-2005",
+      "title": "Xbox Live Offers New Levels, Features and Premium Retail Packs to Supercharge Online Gaming Experiences on Xbox 360",
+      "publisher": "Microsoft News Center",
+      "published": "2005-09-08",
+      "url": "https://news.microsoft.com/source/2005/09/08/xbox-live-offers-new-levels-features-and-premium-retail-packs-to-supercharge-online-gaming-experiences-on-xbox-360/"
+    },
+    {
+      "id": "xbox-360-launch-2005",
+      "title": "Microsoft Announces Xbox 360 Day One Launch Lineup",
+      "publisher": "Microsoft News Center",
+      "published": "2005-11-14",
+      "url": "https://news.microsoft.com/source/2005/11/14/microsoft-announces-xbox-360-day-one-launch-lineup-strongest-launch-in-the-history-of-video-game-consoles/"
+    },
+    {
+      "id": "xbox-one-launch-2013",
+      "title": "Xbox One is Biggest Launch in Xbox History",
+      "publisher": "Xbox Wire",
+      "published": "2013-11-23",
+      "url": "https://news.xbox.com/en-us/2013/11/23/xbox-one-biggest-launch-in-xbox-history/"
+    },
+    {
+      "id": "game-pass-pc-beta-2019",
+      "title": "E3 2019: How to Experience Xbox Game Pass for PC",
+      "publisher": "Xbox Wire",
+      "published": "2019-06-09",
+      "url": "https://news.xbox.com/en-us/2019/06/09/how-to-experience-xbox-game-pass-for-pc/"
+    },
+    {
+      "id": "xbox-series-launch-2020",
+      "title": "Power Your Dreams: Xbox Series X and Xbox Series S Now Available Worldwide",
+      "publisher": "Xbox Wire",
+      "published": "2020-11-10",
+      "url": "https://news.xbox.com/en-us/2020/11/10/power-your-dreams-xbox-series-x-and-xbox-series-s-available-now/"
+    },
+    {
+      "id": "xbox-network-rename-2021",
+      "title": "Microsoft officially ends the Xbox Live brand, changes to Xbox network",
+      "publisher": "Windows Central",
+      "published": "2021-03-22",
+      "url": "https://www.windowscentral.com/microsoft-officially-ends-xbox-live-brand-changes-xbox-network"
+    },
+    {
+      "id": "pc-game-pass-2021",
+      "title": "Coming Soon to Xbox Game Pass: Mortal Kombat 11, The Gunk, Broken Age, and More",
+      "publisher": "Xbox Wire",
+      "published": "2021-12-14",
+      "url": "https://news.xbox.com/en-us/2021/12/14/coming-soon-xbox-game-pass-december-2021-wave-2/"
+    },
+    {
+      "id": "game-pass-core-2023",
+      "title": "Introducing Xbox Game Pass Core, Coming This September",
+      "publisher": "Xbox Wire",
+      "published": "2023-07-17",
+      "url": "https://news.xbox.com/en-us/2023/07/17/xbox-game-pass-core/"
+    },
+    {
+      "id": "game-pass-standard-2024",
+      "title": "Xbox Game Pass Standard Is Here - How to Choose the Right Plan for You",
+      "publisher": "Xbox Wire",
+      "published": "2024-09-10",
+      "url": "https://news.xbox.com/en-us/2024/09/10/xbox-game-pass-standard-is-here/"
+    },
+    {
+      "id": "game-pass-plans-2025",
+      "title": "Microsoft revamps Xbox Game Pass plans and hikes Ultimate to $29.99 a month",
+      "publisher": "The Verge",
+      "published": "2025-10-01",
+      "url": "https://www.theverge.com/news/789424/xbox-game-pass-premium-essentials-ultimate-price-increase-changes"
+    },
+    {
+      "id": "xbox-network-terminology",
+      "title": "Xbox Network integration terminology",
+      "publisher": "Microsoft Learn",
+      "published": "2019-03-18",
+      "url": "https://learn.microsoft.com/en-us/gaming/gdk/docs/store/policies/pc/live-terminology-pc"
     }
   ]
 }
