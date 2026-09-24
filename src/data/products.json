@@ -3578,6 +3578,74 @@
         "alt": "PC Game Pass logo",
         "source": "https://commons.wikimedia.org/wiki/File:PC_Game_Pass_logo.svg"
       }
+    },
+    {
+      "id": "skype-for-business",
+      "name": "Skype for Business Server",
+      "family": "Business applications",
+      "periods": [
+        {
+          "id": "live-communication-server",
+          "name": "Microsoft Office Live Communications Server",
+          "start": "2003-11-12",
+          "end": "2015-04-14",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "generally available",
+          "endQualifier": "effective",
+          "sources": [
+            "lcs-2003-lifecycle",
+            "lcs-2005-lifecycle"
+          ]
+        },
+        {
+          "id": "office-communication-server",
+          "name": "Microsoft Office Communications Server",
+          "start": "2007-10-26",
+          "end": "2018-01-09",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "generally available",
+          "endQualifier": "effective",
+          "sources": [
+            "ocs-2007-lifecycle",
+            "ocs-2007r2-lifecycle"
+          ]
+        },
+        {
+          "id": "lync",
+          "name": "Microsoft Lync Server",
+          "start": "2011-01-24",
+          "end": "2023-04-11",
+          "startPrecision": "day",
+          "endPrecision": "day",
+          "startQualifier": "generally available",
+          "endQualifier": "effective",
+          "sources": [
+            "lync-2010-lifecycle",
+            "lync-2013-lifecycle"
+          ]
+        },
+        {
+          "id": "skype-for-business-server",
+          "name": "Skype for Business Server",
+          "start": "2015-07-29",
+          "end": null,
+          "startPrecision": "day",
+          "endPrecision": null,
+          "startQualifier": "generally available",
+          "endQualifier": null,
+          "sources": [
+            "sfb-2015-lifecycle",
+            "sfb-se-lifecycle"
+          ]
+        }
+      ],
+      "logo": {
+        "src": "src/assets/logos/skype-for-business.svg",
+        "alt": "Skype for Business Server logo",
+        "source": "https://commons.wikimedia.org/wiki/File:Skype-for-Business.svg"
+      }
     }
   ],
   "sources": [
@@ -4686,6 +4754,62 @@
       "publisher": "Microsoft Learn",
       "published": "2019-03-18",
       "url": "https://learn.microsoft.com/en-us/gaming/gdk/docs/store/policies/pc/live-terminology-pc"
+    },
+    {
+      "id": "lcs-2003-lifecycle",
+      "title": "Microsoft Office Live Communications Server 2003 - Microsoft Lifecycle",
+      "publisher": "Microsoft Learn",
+      "published": "2021-08-27",
+      "url": "https://learn.microsoft.com/en-us/lifecycle/products/microsoft-office-live-communications-server-2003"
+    },
+    {
+      "id": "lcs-2005-lifecycle",
+      "title": "Microsoft Office Live Communications Server 2005 - Microsoft Lifecycle",
+      "publisher": "Microsoft Learn",
+      "published": "2022-11-01",
+      "url": "https://learn.microsoft.com/en-us/lifecycle/products/microsoft-office-live-communications-server-2005"
+    },
+    {
+      "id": "ocs-2007-lifecycle",
+      "title": "Microsoft Office Communications Server 2007 - Microsoft Lifecycle",
+      "publisher": "Microsoft Learn",
+      "published": "2022-10-12",
+      "url": "https://learn.microsoft.com/en-us/lifecycle/products/microsoft-office-communications-server-2007"
+    },
+    {
+      "id": "ocs-2007r2-lifecycle",
+      "title": "Microsoft Office Communications Server 2007 R2 - Microsoft Lifecycle",
+      "publisher": "Microsoft Learn",
+      "published": "2020-08-07",
+      "url": "https://learn.microsoft.com/en-us/lifecycle/products/microsoft-office-communications-server-2007-r2"
+    },
+    {
+      "id": "lync-2010-lifecycle",
+      "title": "Microsoft Lync Server 2010 - Microsoft Lifecycle",
+      "publisher": "Microsoft Learn",
+      "published": "2022-10-25",
+      "url": "https://learn.microsoft.com/en-us/lifecycle/products/microsoft-lync-server-2010"
+    },
+    {
+      "id": "lync-2013-lifecycle",
+      "title": "Microsoft Lync Server 2013 - Microsoft Lifecycle",
+      "publisher": "Microsoft Learn",
+      "published": "2022-10-25",
+      "url": "https://learn.microsoft.com/en-us/lifecycle/products/microsoft-lync-server-2013"
+    },
+    {
+      "id": "sfb-2015-lifecycle",
+      "title": "Skype for Business Server 2015 - Microsoft Lifecycle",
+      "publisher": "Microsoft Learn",
+      "published": "2024-09-17",
+      "url": "https://learn.microsoft.com/en-us/lifecycle/products/skype-for-business-server-2015"
+    },
+    {
+      "id": "sfb-se-lifecycle",
+      "title": "Skype for Business Server Subscription Edition - Microsoft Lifecycle",
+      "publisher": "Microsoft Learn",
+      "published": "2025-07-01",
+      "url": "https://learn.microsoft.com/en-us/lifecycle/products/skype-for-business-server-subscription-edition"
     }
   ]
 }
