@@ -2052,6 +2052,21 @@
       "family": "Business applications",
       "periods": [
         {
+          "id": "navision",
+          "name": "Microsoft Business Solution Navision",
+          "start": "2005-09",
+          "end": "2018-04-02",
+          "startPrecision": "month",
+          "endPrecision": "day",
+          "startQualifier": "by",
+          "endQualifier": "launched",
+          "sources": [
+            "navision-history",
+            "nav-history",
+            "business-central-launch"
+          ]
+        },
+        {
           "id": "nav",
           "name": "Microsoft Dynamics NAV",
           "start": "2005-09",
@@ -4231,6 +4246,13 @@
       "publisher": "Microsoft Learn",
       "published": "2018-06-05",
       "url": "https://learn.microsoft.com/en-us/dynamics-nav/welcome-to-dynamics-nav"
+    },
+    {
+      "id": "navision-history",
+      "title": "Microsoft Dynamics NAV stops responding when it is processing messages from Message Queuing",
+      "publisher": "Microsoft Learn",
+      "published": "2017-01-01",
+      "url": "https://support.microsoft.com/en-us/servicing/dynamics/nav/hotfix/2017/01/microsoft-dynamics-nav-stops-responding-when-it-is-processing-messages-from-message-queuing-also-kno"
     },
     {
       "id": "finance-operations-split",
