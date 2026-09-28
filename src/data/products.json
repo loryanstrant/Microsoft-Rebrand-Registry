@@ -2054,13 +2054,14 @@
         {
           "id": "navision",
           "name": "Microsoft Business Solution Navision",
-          "start": "2005-09",
-          "end": "2018-04-02",
+          "start": "2002-07",
+          "end": "2005-09",
           "startPrecision": "month",
-          "endPrecision": "day",
+          "endPrecision": "month",
           "startQualifier": "by",
           "endQualifier": "launched",
           "sources": [
+            "navision-acquisition",
             "navision-history",
             "nav-history",
             "business-central-launch"
@@ -4253,6 +4254,13 @@
       "publisher": "Microsoft Learn",
       "published": "2017-01-01",
       "url": "https://support.microsoft.com/en-us/servicing/dynamics/nav/hotfix/2017/01/microsoft-dynamics-nav-stops-responding-when-it-is-processing-messages-from-message-queuing-also-kno"
+    },
+    {
+      "id": "navision-acquisition",
+      "title": "It's Official: Microsoft To Buy Navision",
+      "publisher": "ChannelWeb",
+      "published": "2002-05-07",
+      "url": "https://web.archive.org/web/20090202133133/http://www.crn.com/it-channel/18828346"
     },
     {
       "id": "finance-operations-split",
