@@ -19,6 +19,11 @@ test('scope disclaimer excludes former products and explains convergence', () =>
 test('scope disclaimer owns the clarifying labels it adds', () => {
   assert.match(page, /That label is ours, not Microsoft’s, and is never part of the official name/);
 });
+test('scope disclaimer copy can use the available content width', () => {
+  const rule = styles.match(/\.scope-note p\{([^}]*)\}/)?.[1];
+  assert.ok(rule, 'scope note paragraph styles should exist');
+  assert.doesNotMatch(rule, /(?:^|;)max-width:(?!none)/);
+});
 test('footer links contributors to the public GitHub repository', () => {
   assert.match(page, /href="https:\/\/github\.com\/loryanstrant\/Microsoft-Rebrand-Registry"[^>]*>Contribute on GitHub<\/a>/);
 });
