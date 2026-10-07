@@ -22,7 +22,11 @@ test('scope disclaimer owns the clarifying labels it adds', () => {
 test('editorial site copy uses regular dashes instead of em dashes', () => {
   assert.match(page, /resources - roadmaps, portals and programmes - and are tagged as such/);
   assert.match(analysisPage, /public history - not reporting/);
-  assert.match(data.products.find(({ id }) => id === 'microsoft-copilot-service').note, /started with - and has since/);
+  assert.doesNotMatch(page.replaceAll('>—<', '><'), /—/);
+  assert.doesNotMatch(analysisPage.replaceAll('>—<', '><'), /—/);
+  for (const product of data.products) {
+    assert.doesNotMatch(product.note ?? '', /—/, `${product.id} note should not contain an em dash`);
+  }
 });
 test('scope disclaimer copy can use the available content width', () => {
   const rule = styles.match(/\.scope-note p\{([^}]*)\}/)?.[1];
