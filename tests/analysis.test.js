@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { analyseRegistry, median } from '../src/analysis.js';
+import { FORMER_SITE_NAME_INTERVAL_MS, FORMER_SITE_NAME_TRANSITION_MS } from '../src/former-site-names.js';
 
 const data = JSON.parse(await readFile(new URL('../src/data/products.json', import.meta.url), 'utf8'));
 const page = await readFile(new URL('../analysis.html', import.meta.url), 'utf8');
@@ -33,7 +34,7 @@ test('median supports odd, even, and empty collections without mutation', () => 
 });
 
 test('analysis aggregates renames, durations, years, and families', () => {
-  const result = analyseRegistry(fixture());
+  const result = analyseRegistry(fixture(), new Date(2026, 0, 1));
   assert.equal(result.renames, 3);
   assert.equal(result.medianMonths, 24);
   assert.deepEqual(result.latestRename, { date: '2023-01-01', daysAgo: 1096, products: ['Beta'] });
@@ -42,24 +43,36 @@ test('analysis aggregates renames, durations, years, and families', () => {
   assert.equal(result.families.find(item => item.family === 'Sparse').evidence, 'sparse');
 });
 
-test('current identity age and rename tracker are anchored to data asOf, not today', () => {
-  const firstResult = analyseRegistry(fixture('2025-01-01'));
-  const secondResult = analyseRegistry(fixture('2026-01-01'));
+test('current identity age and rename tracker advance with the visitor date', () => {
+  const firstResult = analyseRegistry(fixture(), new Date(2025, 0, 1));
+  const secondResult = analyseRegistry(fixture(), new Date(2026, 0, 1));
   assert.equal(firstResult.forecast.find(item => item.id === 'gamma').ageMonths, 1);
   assert.equal(secondResult.forecast.find(item => item.id === 'gamma').ageMonths, 12);
   assert.equal(firstResult.latestRename.daysAgo, 731);
   assert.equal(secondResult.latestRename.daysAgo, 1096);
 });
 
+test('rename tracker counts calendar days since the latest recorded rename', () => {
+  const input = fixture();
+  input.products[1].periods[1].end = '2026-08-25';
+  assert.equal(analyseRegistry(input, new Date(2026, 9, 7)).latestRename.daysAgo, 43);
+});
+
 test('rename tracker groups products sharing the latest recorded date', () => {
   const input = fixture();
   input.products[0].periods[0].end = '2023-01-01';
-  assert.deepEqual(analyseRegistry(input).latestRename.products, ['Alpha', 'Beta']);
+  assert.deepEqual(analyseRegistry(input, new Date(2026, 0, 1)).latestRename.products, ['Alpha', 'Beta']);
+});
+
+test('former site names rotate every two and a half seconds', () => {
+  assert.equal(FORMER_SITE_NAME_INTERVAL_MS, 2500);
+  assert.equal(FORMER_SITE_NAME_TRANSITION_MS, 200);
 });
 
 test('forecast is deterministic with stable alphabetical tie-breaking', () => {
-  const first = analyseRegistry(fixture()).forecast;
-  const second = analyseRegistry(fixture()).forecast;
+  const now = new Date(2026, 0, 1);
+  const first = analyseRegistry(fixture(), now).forecast;
+  const second = analyseRegistry(fixture(), now).forecast;
   assert.deepEqual(first, second);
   assert.equal(first[0].id, 'beta');
   assert.ok(first.every(item => ['Elevated', 'Watchlist', 'Not imminent'].includes(item.label)));
