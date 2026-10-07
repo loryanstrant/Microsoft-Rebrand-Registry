@@ -27,7 +27,7 @@ npm run package
 
 ## Authoritative logo sync
 
-Most logos are copies of artwork from [MicrosoftCloudLogos](https://github.com/loryanstrant/MicrosoftCloudLogos), the collection behind www.mscloudlogos.com. `.gitea/workflows/sync-authoritative-logos.yml` keeps them current: it runs daily, copies the mapped files byte for byte, validates them, and opens **one** review pull request. It never merges and never deploys.
+Most logos are copies of artwork from [MicrosoftCloudLogos](https://github.com/loryanstrant/MicrosoftCloudLogos), the collection behind www.mscloudlogos.com. `.gitea/workflows/sync-authoritative-logos.yml` keeps them current: it runs daily, copies the mapped files byte for byte, validates them, and opens **one** review pull request. It never merges and never deploys. After merging, publish with the [release workflow](#releasing).
 
 `config/logo-sources.json` is the mapping. Each `managed` entry names the local asset, its exact upstream path under `logos/`, the expected format, and an optional reviewed validation exception. Each `unmanaged` entry records why an asset stays local; those credited to the authoritative collection carry `creditedUpstream: true` so the opt-out is deliberate. Several registry assets may share one upstream mark; two mappings writing to the same local file is a conflict and fails the run.
 
@@ -101,7 +101,17 @@ The production shell is provisioned on the **Free** Static Web Apps tier in the 
 - Region: West US 2
 - Azure hostname: `wonderful-ocean-034ff8f1e.7.azurestaticapps.net`
 
-The proof of concept is published at <https://wonderful-ocean-034ff8f1e.7.azurestaticapps.net>. The resource is not connected to a repository; releases are currently uploaded with a deployment token. The example workflow can be adopted later for automatic deployments from `main`.
+The proof of concept is published at <https://wonderful-ocean-034ff8f1e.7.azurestaticapps.net>. The resource is not connected to a repository, so merging a pull request changes `main` without touching the live site.
+
+### Releasing
+
+`.gitea/workflows/deploy-production.yml` performs a release. It is **`workflow_dispatch` only**: merging never publishes. Run it from the repository's Actions tab, optionally naming a ref other than `main`.
+
+The workflow validates the dataset and every logo, runs the suite, builds `.deploy-package/`, publishes with the Static Web Apps CLI, then polls the live site until `src/assets/logos/azure-devops.svg` matches the committed file and both entry points return HTTP 200. A release that cannot be observed on the live site fails.
+
+It reads the deployment token from the Actions secret `SWA_DEPLOYMENT_TOKEN`, whose value is stored in Vaultwarden as *Rebrand Registry - SWA deployment token*. If the secret is missing the workflow stops with that instruction rather than reporting a hollow success.
+
+To publish automatically on every merge, add a `push` trigger on `main` to that workflow; nothing else needs to change.
 
 ## Accessibility implementation
 

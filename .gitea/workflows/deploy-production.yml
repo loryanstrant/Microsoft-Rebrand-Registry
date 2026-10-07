@@ -1,0 +1,81 @@
+# Publishes the registry to its Azure Static Web App.
+#
+# Deliberately manual: this runs only when a human dispatches it, never on push or on a
+# merged pull request. Merging a logo sync changes main; publishing it is a separate,
+# explicit act. To make deployment automatic, add a `push` trigger on `main` - everything
+# else here already works unattended.
+name: Deploy to production
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Branch, tag or commit to publish
+        required: false
+        default: main
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the registry
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || 'main' }}
+          fetch-depth: 0
+
+      - name: Use Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Refuse to publish an unsound build
+        run: |
+          set -euo pipefail
+          npm run validate
+          npm run validate:logos
+          npm test
+
+      - name: Build the deployment package
+        run: |
+          set -euo pipefail
+          npm run package
+          test -f .deploy-package/index.html
+          test -f .deploy-package/staticwebapp.config.json
+
+      - name: Publish to the Static Web App
+        env:
+          SWA_CLI_DEPLOYMENT_TOKEN: ${{ secrets.SWA_DEPLOYMENT_TOKEN }}
+          DOTNET_SYSTEM_GLOBALIZATION_INVARIANT: '1'
+        run: |
+          set -euo pipefail
+          if [ -z "${SWA_CLI_DEPLOYMENT_TOKEN:-}" ]; then
+            echo '○ SWA_DEPLOYMENT_TOKEN is not set on this repository. Add it under' >&2
+            echo '  Settings > Actions > Secrets. The value lives in Vaultwarden as' >&2
+            echo '  "Rebrand Registry - SWA deployment token".' >&2
+            exit 1
+          fi
+          npx --yes @azure/static-web-apps-cli@2 deploy .deploy-package --env production
+
+      - name: Verify the published site
+        run: |
+          set -euo pipefail
+          site='https://wonderful-ocean-034ff8f1e.7.azurestaticapps.net'
+          expected=$(sha256sum src/assets/logos/azure-devops.svg | cut -d' ' -f1)
+          for attempt in 1 2 3 4 5 6; do
+            live=$(curl -fsS --max-time 30 -H 'Cache-Control: no-cache' \
+              "${site}/src/assets/logos/azure-devops.svg" | sha256sum | cut -d' ' -f1) || live=''
+            if [ "$live" = "$expected" ]; then
+              echo "● Live artwork matches the repository (${expected:0:12})."
+              curl -fsS -o /dev/null -w '● Home page: HTTP %{http_code}\n' "${site}/"
+              curl -fsS -o /dev/null -w '● Analysis page: HTTP %{http_code}\n' "${site}/analysis.html"
+              exit 0
+            fi
+            echo "◐ Attempt ${attempt}: edge still serving ${live:-nothing}; waiting for propagation."
+            sleep 20
+          done
+          echo '○ The deployed site never served the expected artwork.' >&2
+          exit 1
