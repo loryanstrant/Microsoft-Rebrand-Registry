@@ -19,6 +19,11 @@ test('scope disclaimer excludes former products and explains convergence', () =>
 test('scope disclaimer owns the clarifying labels it adds', () => {
   assert.match(page, /That label is ours, not Microsoft’s, and is never part of the official name/);
 });
+test('editorial site copy uses regular dashes instead of em dashes', () => {
+  assert.match(page, /resources - roadmaps, portals and programmes - and are tagged as such/);
+  assert.match(analysisPage, /public history - not reporting/);
+  assert.match(data.products.find(({ id }) => id === 'microsoft-copilot-service').note, /started with - and has since/);
+});
 test('scope disclaimer copy can use the available content width', () => {
   const rule = styles.match(/\.scope-note p\{([^}]*)\}/)?.[1];
   assert.ok(rule, 'scope note paragraph styles should exist');
