@@ -1,0 +1,711 @@
+{
+  "schemaVersion": 1,
+  "sourceRepository": {
+    "name": "loryanstrant/MicrosoftCloudLogos",
+    "github": "https://github.com/loryanstrant/MicrosoftCloudLogos.git",
+    "giteaMirror": "https://gitea.strant.casa/loryanstrant/MicrosoftCloudLogos.git",
+    "branch": "main",
+    "assetRoot": "logos",
+    "contract": "Only the mapped files under logos/ are read. No generated website manifest is consumed: upstream removed docs/js/logo-data.js when the website moved to its own repository, and logos/ plus metadata.md is the stated source contract."
+  },
+  "display": {
+    "registryPx": 52,
+    "timelinePx": 32,
+    "densityFactor": 2
+  },
+  "validation": {
+    "minVisibleShare": 0.5,
+    "maxAspectRatio": 4
+  },
+  "managed": [
+    {
+      "local": "src/assets/logos/azure-ai-document-intelligence.svg",
+      "upstream": "logos/azure-ai-document-intelligence/00819-icon-service-form-recognizers.svg",
+      "format": "svg",
+      "upstreamProduct": "Azure AI Document Intelligence",
+      "upstreamSlug": "azure-ai-document-intelligence",
+      "products": [
+        "azure-ai-document-intelligence"
+      ]
+    },
+    {
+      "local": "src/assets/logos/azure-ai-search.svg",
+      "upstream": "logos/azure-ai-search/10044-icon-service-cognitive-search.svg",
+      "format": "svg",
+      "upstreamProduct": "Azure AI Search",
+      "upstreamSlug": "azure-ai-search",
+      "products": [
+        "azure-ai-search"
+      ]
+    },
+    {
+      "local": "src/assets/logos/azure-ai-services.svg",
+      "upstream": "logos/azure-ai-services/10162-icon-service-cognitive-services.svg",
+      "format": "svg",
+      "upstreamProduct": "Azure AI Services",
+      "upstreamSlug": "azure-ai-services",
+      "products": [
+        "azure-ai-services"
+      ]
+    },
+    {
+      "local": "src/assets/logos/azure-app-service.svg",
+      "upstream": "logos/azure-app-service/10035-icon-service-app-services.svg",
+      "format": "svg",
+      "upstreamProduct": "Azure App Service",
+      "upstreamSlug": "azure-app-service",
+      "products": [
+        "azure-app-service"
+      ]
+    },
+    {
+      "local": "src/assets/logos/azure-cosmos-db.svg",
+      "upstream": "logos/azure-cosmos-db/10121-icon-service-azure-cosmos-db.svg",
+      "format": "svg",
+      "upstreamProduct": "Azure Cosmos DB",
+      "upstreamSlug": "azure-cosmos-db",
+      "products": [
+        "azure-cosmos-db"
+      ]
+    },
+    {
+      "local": "src/assets/logos/azure-devops.svg",
+      "upstream": "logos/azure-devops/azure-devops-scalable.svg",
+      "format": "svg",
+      "upstreamProduct": "Azure DevOps",
+      "upstreamSlug": "azure-devops",
+      "products": [
+        "azure-devops"
+      ]
+    },
+    {
+      "local": "src/assets/logos/azure-kubernetes-service.svg",
+      "upstream": "logos/azure-kubernetes-service/10023-icon-service-kubernetes-services.svg",
+      "format": "svg",
+      "upstreamProduct": "Azure Kubernetes Service",
+      "upstreamSlug": "azure-kubernetes-service",
+      "products": [
+        "azure-kubernetes-service"
+      ]
+    },
+    {
+      "local": "src/assets/logos/azure-monitor.svg",
+      "upstream": "logos/azure-monitor/00001-icon-service-monitor.svg",
+      "format": "svg",
+      "upstreamProduct": "Azure Monitor",
+      "upstreamSlug": "azure-monitor",
+      "products": [
+        "azure-monitor"
+      ]
+    },
+    {
+      "local": "src/assets/logos/azure-sql-database.svg",
+      "upstream": "logos/azure-sql-database/10130-icon-service-sql-database.svg",
+      "format": "svg",
+      "upstreamProduct": "Azure SQL Database",
+      "upstreamSlug": "azure-sql-database",
+      "products": [
+        "azure-sql-database"
+      ]
+    },
+    {
+      "local": "src/assets/logos/azure-synapse-analytics.svg",
+      "upstream": "logos/azure-synapse-analytics/00606-icon-service-azure-synapse-analytics.svg",
+      "format": "svg",
+      "upstreamProduct": "Azure Synapse Analytics",
+      "upstreamSlug": "azure-synapse-analytics",
+      "products": [
+        "azure-synapse-analytics"
+      ]
+    },
+    {
+      "local": "src/assets/logos/azure-virtual-desktop.svg",
+      "upstream": "logos/azure-virtual-desktop/00327-icon-service-azure-virtual-desktop.svg",
+      "format": "svg",
+      "upstreamProduct": "Azure Virtual Desktop",
+      "upstreamSlug": "azure-virtual-desktop",
+      "products": [
+        "azure-virtual-desktop"
+      ]
+    },
+    {
+      "local": "src/assets/logos/configuration-manager.png",
+      "upstream": "logos/intune/intune.png",
+      "format": "png",
+      "upstreamProduct": "Intune",
+      "upstreamSlug": "intune",
+      "products": [
+        "configuration-manager"
+      ]
+    },
+    {
+      "local": "src/assets/logos/copilot-studio.svg",
+      "upstream": "logos/copilot-studio/copilotstudio-scalable.svg",
+      "format": "svg",
+      "upstreamProduct": "Copilot Studio",
+      "upstreamSlug": "copilot-studio",
+      "products": [
+        "copilot-studio"
+      ]
+    },
+    {
+      "local": "src/assets/logos/copilot.png",
+      "upstream": "logos/copilot/microsoft-copilot-510x510.png",
+      "format": "png",
+      "upstreamProduct": "Copilot",
+      "upstreamSlug": "copilot",
+      "products": [
+        "microsoft-copilot",
+        "m365-copilot-app",
+        "microsoft-copilot-service",
+        "microsoft-copilot-chat"
+      ]
+    },
+    {
+      "local": "src/assets/logos/customer-voice.svg",
+      "upstream": "logos/dynamics-365-customer-voice/customervoice-scalable-fluid.svg",
+      "format": "svg",
+      "upstreamProduct": "Customer Voice",
+      "upstreamSlug": "dynamics-365-customer-voice",
+      "products": [
+        "customer-voice"
+      ]
+    },
+    {
+      "local": "src/assets/logos/dataverse.svg",
+      "upstream": "logos/dataverse/dataverse-scalable.svg",
+      "format": "svg",
+      "upstreamProduct": "Dataverse",
+      "upstreamSlug": "dataverse",
+      "products": [
+        "dataverse"
+      ]
+    },
+    {
+      "local": "src/assets/logos/defender-iot.svg",
+      "upstream": "logos/microsoft-defender-for-iot/02247-icon-service-microsoft-defender-for-iot.svg",
+      "format": "svg",
+      "upstreamProduct": "Microsoft Defender for IoT",
+      "upstreamSlug": "microsoft-defender-for-iot",
+      "products": [
+        "defender-iot"
+      ]
+    },
+    {
+      "local": "src/assets/logos/defender.png",
+      "upstream": "logos/defender/defender-512.png",
+      "format": "png",
+      "upstreamProduct": "Defender",
+      "upstreamSlug": "defender",
+      "products": [
+        "microsoft-defender-xdr",
+        "defender-cloud",
+        "defender-cloud-apps",
+        "defender-endpoint",
+        "defender-identity",
+        "defender-office-365",
+        "defender-vulnerability-management",
+        "defender-antivirus"
+      ]
+    },
+    {
+      "local": "src/assets/logos/dynamics-365-commerce.svg",
+      "upstream": "logos/dynamics-365-commerce/commerce-scalable-fluid.svg",
+      "format": "svg",
+      "upstreamProduct": "Commerce",
+      "upstreamSlug": "dynamics-365-commerce",
+      "products": [
+        "dynamics-365-commerce"
+      ]
+    },
+    {
+      "local": "src/assets/logos/dynamics-365-customer-service.svg",
+      "upstream": "logos/dynamics-365-customer-service/customerservices-scalable-fluid.svg",
+      "format": "svg",
+      "upstreamProduct": "Customer Service",
+      "upstreamSlug": "dynamics-365-customer-service",
+      "products": [
+        "dynamics-365-customer-service"
+      ]
+    },
+    {
+      "local": "src/assets/logos/dynamics-365-field-service.svg",
+      "upstream": "logos/dynamics-365-field-service/fieldservice-scalable-fluid.svg",
+      "format": "svg",
+      "upstreamProduct": "Field Service",
+      "upstreamSlug": "dynamics-365-field-service",
+      "products": [
+        "dynamics-365-field-service"
+      ]
+    },
+    {
+      "local": "src/assets/logos/dynamics-365-finance.svg",
+      "upstream": "logos/dynamics-365-finance/finance-scalable-fluid.svg",
+      "format": "svg",
+      "upstreamProduct": "Finance",
+      "upstreamSlug": "dynamics-365-finance",
+      "products": [
+        "dynamics-365-finance"
+      ]
+    },
+    {
+      "local": "src/assets/logos/dynamics-365-project-operations.svg",
+      "upstream": "logos/dynamics-365-project-operations/projectoperations-scalable-fluid.svg",
+      "format": "svg",
+      "upstreamProduct": "Project Operations",
+      "upstreamSlug": "dynamics-365-project-operations",
+      "products": [
+        "dynamics-365-project-operations"
+      ]
+    },
+    {
+      "local": "src/assets/logos/dynamics-365-sales.svg",
+      "upstream": "logos/dynamics-365-sales/sales-scalable-fluid.svg",
+      "format": "svg",
+      "upstreamProduct": "Sales",
+      "upstreamSlug": "dynamics-365-sales",
+      "products": [
+        "dynamics-365-sales"
+      ]
+    },
+    {
+      "local": "src/assets/logos/dynamics-365-supply-chain-management.svg",
+      "upstream": "logos/dynamics-365-supply-chain-management/supplychainmanagement-scalable.svg",
+      "format": "svg",
+      "upstreamProduct": "Supply Chain Management",
+      "upstreamSlug": "dynamics-365-supply-chain-management",
+      "products": [
+        "dynamics-365-supply-chain-management"
+      ]
+    },
+    {
+      "local": "src/assets/logos/dynamics-365.svg",
+      "upstream": "logos/dynamics-365/dynamics365-scalable.svg",
+      "format": "svg",
+      "upstreamProduct": "Dynamics 365",
+      "upstreamSlug": "dynamics-365",
+      "products": [
+        "dynamics-365"
+      ]
+    },
+    {
+      "local": "src/assets/logos/entra-connect.svg",
+      "upstream": "logos/entra/microsoft-entra-product-family.svg",
+      "format": "svg",
+      "upstreamProduct": "Entra",
+      "upstreamSlug": "entra",
+      "products": [
+        "entra-connect"
+      ]
+    },
+    {
+      "local": "src/assets/logos/entra-id-governance.svg",
+      "upstream": "logos/entra-id-governance/microsoft-entra-id-governance-color-icon.svg",
+      "format": "svg",
+      "upstreamProduct": "Entra ID Governance",
+      "upstreamSlug": "entra-id-governance",
+      "products": [
+        "entra-id-governance"
+      ]
+    },
+    {
+      "local": "src/assets/logos/entra-id.svg",
+      "upstream": "logos/entra-id/microsoft-entra-id-color-icon.svg",
+      "format": "svg",
+      "upstreamProduct": "Entra ID",
+      "upstreamSlug": "entra-id",
+      "products": [
+        "entra-id"
+      ]
+    },
+    {
+      "local": "src/assets/logos/entra-permissions-management.svg",
+      "upstream": "logos/entra-id/microsoft-entra-id-color-icon.svg",
+      "format": "svg",
+      "upstreamProduct": "Entra ID",
+      "upstreamSlug": "entra-id",
+      "products": [
+        "entra-permissions-management"
+      ]
+    },
+    {
+      "local": "src/assets/logos/entra-workload-id.svg",
+      "upstream": "logos/entra-id/microsoft-entra-id-color-icon.svg",
+      "format": "svg",
+      "upstreamProduct": "Entra ID",
+      "upstreamSlug": "entra-id",
+      "products": [
+        "entra-workload-id"
+      ]
+    },
+    {
+      "local": "src/assets/logos/microsoft-365-apps-business.png",
+      "upstream": "logos/microsoft-365/microsoft-365-800x800.png",
+      "format": "png",
+      "upstreamProduct": "Microsoft 365",
+      "upstreamSlug": "microsoft-365",
+      "products": [
+        "m365-apps-business"
+      ]
+    },
+    {
+      "local": "src/assets/logos/microsoft-365-apps-enterprise.png",
+      "upstream": "logos/microsoft-365/microsoft-365-800x800.png",
+      "format": "png",
+      "upstreamProduct": "Microsoft 365",
+      "upstreamSlug": "microsoft-365",
+      "products": [
+        "m365-apps-enterprise"
+      ]
+    },
+    {
+      "local": "src/assets/logos/microsoft-365.png",
+      "upstream": "logos/microsoft-365/microsoft-365-800x800.png",
+      "format": "png",
+      "upstreamProduct": "Microsoft 365",
+      "upstreamSlug": "microsoft-365",
+      "products": [
+        "microsoft-365"
+      ]
+    },
+    {
+      "local": "src/assets/logos/microsoft-account.png",
+      "upstream": "logos/microsoft/microsoft-logo.png",
+      "format": "png",
+      "upstreamProduct": "Microsoft",
+      "upstreamSlug": "microsoft",
+      "products": [
+        "microsoft-account"
+      ]
+    },
+    {
+      "local": "src/assets/logos/microsoft-azure.png",
+      "upstream": "logos/azure/azure.png",
+      "format": "png",
+      "upstreamProduct": "Azure",
+      "upstreamSlug": "azure",
+      "products": [
+        "microsoft-azure"
+      ]
+    },
+    {
+      "local": "src/assets/logos/microsoft-intune.png",
+      "upstream": "logos/intune/intune.png",
+      "format": "png",
+      "upstreamProduct": "Intune",
+      "upstreamSlug": "intune",
+      "products": [
+        "microsoft-intune"
+      ]
+    },
+    {
+      "local": "src/assets/logos/microsoft-purview.svg",
+      "upstream": "logos/purview/purview-scalable.svg",
+      "format": "svg",
+      "upstreamProduct": "Purview",
+      "upstreamSlug": "purview",
+      "products": [
+        "microsoft-purview"
+      ]
+    },
+    {
+      "local": "src/assets/logos/microsoft-sentinel.svg",
+      "upstream": "logos/microsoft-sentinel/10248-icon-service-azure-sentinel.svg",
+      "format": "svg",
+      "upstreamProduct": "Microsoft Sentinel",
+      "upstreamSlug": "microsoft-sentinel",
+      "products": [
+        "microsoft-sentinel"
+      ]
+    },
+    {
+      "local": "src/assets/logos/power-apps.svg",
+      "upstream": "logos/power-apps/powerapps-scalable.svg",
+      "format": "svg",
+      "upstreamProduct": "Power Apps",
+      "upstreamSlug": "power-apps",
+      "products": [
+        "power-apps"
+      ]
+    },
+    {
+      "local": "src/assets/logos/power-automate.svg",
+      "upstream": "logos/power-automate/2020-2025-powerautomate-scalable.svg",
+      "format": "svg",
+      "upstreamProduct": "Power Automate",
+      "upstreamSlug": "power-automate",
+      "products": [
+        "power-automate"
+      ]
+    },
+    {
+      "local": "src/assets/logos/power-bi.svg",
+      "upstream": "logos/power-bi/powerbi-scalable.svg",
+      "format": "svg",
+      "upstreamProduct": "Power BI",
+      "upstreamSlug": "power-bi",
+      "products": [
+        "power-bi"
+      ]
+    },
+    {
+      "local": "src/assets/logos/power-pages.svg",
+      "upstream": "logos/power-pages/powerpages-scalable.svg",
+      "format": "svg",
+      "upstreamProduct": "Power Pages",
+      "upstreamSlug": "power-pages",
+      "products": [
+        "power-pages"
+      ]
+    },
+    {
+      "local": "src/assets/logos/viva-engage.png",
+      "upstream": "logos/viva-engage/viva-engage-128x128.png",
+      "format": "png",
+      "upstreamProduct": "Viva Engage",
+      "upstreamSlug": "viva-engage",
+      "products": [
+        "viva-engage"
+      ]
+    },
+    {
+      "local": "src/assets/logos/viva-glint.svg",
+      "upstream": "logos/viva-glint/glint.svg",
+      "format": "svg",
+      "upstreamProduct": "Viva Glint",
+      "upstreamSlug": "viva-glint",
+      "products": [
+        "viva-glint"
+      ]
+    },
+    {
+      "local": "src/assets/logos/viva-insights.png",
+      "upstream": "logos/viva-insights/insights-launch-c-256-1x.png",
+      "format": "png",
+      "upstreamProduct": "Viva Insights",
+      "upstreamSlug": "viva-insights",
+      "products": [
+        "viva-insights"
+      ]
+    },
+    {
+      "local": "src/assets/logos/windows-security.png",
+      "upstream": "logos/defender/defender-512.png",
+      "format": "png",
+      "upstreamProduct": "Defender",
+      "upstreamSlug": "defender",
+      "products": [
+        "windows-security"
+      ]
+    }
+  ],
+  "unmanaged": [
+    {
+      "local": "src/assets/logos/ai-at-work-roadmap.svg",
+      "products": [
+        "ai-at-work-roadmap"
+      ],
+      "reason": "Registry-created artwork; no upstream equivalent."
+    },
+    {
+      "local": "src/assets/logos/azure-ai-foundry.png",
+      "products": [
+        "azure-ai-foundry"
+      ],
+      "reason": "Sourced from rebrandedbyms.com, not MicrosoftCloudLogos."
+    },
+    {
+      "local": "src/assets/logos/azure-local.svg",
+      "products": [
+        "azure-local"
+      ],
+      "reason": "No Azure Local entry exists in MicrosoftCloudLogos yet.",
+      "creditedUpstream": true
+    },
+    {
+      "local": "src/assets/logos/dynamics-365-business-central.svg",
+      "products": [
+        "dynamics-365-business-central"
+      ],
+      "reason": "Local artwork does not match any upstream file; confirm provenance with the author before managing it.",
+      "creditedUpstream": true
+    },
+    {
+      "local": "src/assets/logos/entra-connect-health.svg",
+      "products": [
+        "entra-connect-health"
+      ],
+      "reason": "No Entra Connect Health entry exists in MicrosoftCloudLogos yet.",
+      "creditedUpstream": true
+    },
+    {
+      "local": "src/assets/logos/entra-domain-services.svg",
+      "products": [
+        "entra-domain-services"
+      ],
+      "reason": "No Entra Domain Services entry exists in MicrosoftCloudLogos yet.",
+      "creditedUpstream": true
+    },
+    {
+      "local": "src/assets/logos/entra-external-id.svg",
+      "products": [
+        "entra-external-id"
+      ],
+      "reason": "No Entra External ID entry exists in MicrosoftCloudLogos yet.",
+      "creditedUpstream": true
+    },
+    {
+      "local": "src/assets/logos/entra-id-protection.svg",
+      "products": [
+        "entra-id-protection"
+      ],
+      "reason": "No Entra ID Protection entry exists in MicrosoftCloudLogos yet.",
+      "creditedUpstream": true
+    },
+    {
+      "local": "src/assets/logos/entra-multifactor-authentication.svg",
+      "products": [
+        "entra-multifactor-authentication"
+      ],
+      "reason": "No Entra multifactor authentication entry exists in MicrosoftCloudLogos yet.",
+      "creditedUpstream": true
+    },
+    {
+      "local": "src/assets/logos/onedrive.png",
+      "products": [
+        "onedrive"
+      ],
+      "reason": "Local artwork does not match any upstream file; the only current upstream raster is an unofficial 2025 variant.",
+      "creditedUpstream": true
+    },
+    {
+      "local": "src/assets/logos/outlook-com.png",
+      "products": [
+        "outlook-com"
+      ],
+      "reason": "Local artwork does not match any upstream file; the only current upstream raster is an unofficial 2025 variant.",
+      "exception": {
+        "minSourcePx": 64,
+        "reason": "The 64x60 Outlook.com mark is the only artwork available at this size; tests/data.test.js pins its dimensions."
+      },
+      "creditedUpstream": true
+    },
+    {
+      "local": "src/assets/logos/pc-game-pass.svg",
+      "products": [
+        "pc-game-pass"
+      ],
+      "reason": "Wikimedia Commons artwork; gaming brands are out of scope upstream."
+    },
+    {
+      "local": "src/assets/logos/purview-communication-compliance.svg",
+      "products": [
+        "purview-communication-compliance"
+      ],
+      "reason": "MicrosoftCloudLogos carries only the Purview family mark, not this solution icon.",
+      "creditedUpstream": true
+    },
+    {
+      "local": "src/assets/logos/purview-compliance-manager.svg",
+      "products": [
+        "purview-compliance-manager"
+      ],
+      "reason": "MicrosoftCloudLogos carries only the Purview family mark, not this solution icon.",
+      "creditedUpstream": true
+    },
+    {
+      "local": "src/assets/logos/purview-data-lifecycle-management.svg",
+      "products": [
+        "purview-data-lifecycle-management"
+      ],
+      "reason": "MicrosoftCloudLogos carries only the Purview family mark, not this solution icon.",
+      "creditedUpstream": true
+    },
+    {
+      "local": "src/assets/logos/purview-data-loss-prevention.svg",
+      "products": [
+        "purview-data-loss-prevention"
+      ],
+      "reason": "MicrosoftCloudLogos carries only the Purview family mark, not this solution icon.",
+      "creditedUpstream": true
+    },
+    {
+      "local": "src/assets/logos/purview-ediscovery.svg",
+      "products": [
+        "purview-ediscovery"
+      ],
+      "reason": "MicrosoftCloudLogos carries only the Purview family mark, not this solution icon.",
+      "creditedUpstream": true
+    },
+    {
+      "local": "src/assets/logos/purview-information-protection.svg",
+      "products": [
+        "purview-information-protection"
+      ],
+      "reason": "MicrosoftCloudLogos carries only the Purview family mark, not this solution icon.",
+      "creditedUpstream": true
+    },
+    {
+      "local": "src/assets/logos/purview-insider-risk-management.svg",
+      "products": [
+        "purview-insider-risk-management"
+      ],
+      "reason": "MicrosoftCloudLogos carries only the Purview family mark, not this solution icon.",
+      "creditedUpstream": true
+    },
+    {
+      "local": "src/assets/logos/purview-records-management.svg",
+      "products": [
+        "purview-records-management"
+      ],
+      "reason": "MicrosoftCloudLogos carries only the Purview family mark, not this solution icon.",
+      "creditedUpstream": true
+    },
+    {
+      "local": "src/assets/logos/skype-for-business.svg",
+      "products": [
+        "skype-for-business"
+      ],
+      "reason": "Wikimedia Commons artwork contributed with the community rebrand histories."
+    },
+    {
+      "local": "src/assets/logos/windows-app.svg",
+      "products": [
+        "windows-app"
+      ],
+      "reason": "Registry-created artwork; no upstream equivalent."
+    },
+    {
+      "local": "src/assets/logos/xbox-console.svg",
+      "products": [
+        "xbox-console"
+      ],
+      "reason": "Wikimedia Commons artwork; gaming brands are out of scope upstream."
+    },
+    {
+      "local": "src/assets/logos/xbox-game-pass-essential.svg",
+      "products": [
+        "xbox-game-pass-essential"
+      ],
+      "reason": "Wikimedia Commons artwork; gaming brands are out of scope upstream."
+    },
+    {
+      "local": "src/assets/logos/xbox-game-pass-premium.svg",
+      "products": [
+        "xbox-game-pass-premium"
+      ],
+      "reason": "Wikimedia Commons artwork; gaming brands are out of scope upstream."
+    },
+    {
+      "local": "src/assets/logos/xbox-network.svg",
+      "products": [
+        "xbox-network"
+      ],
+      "reason": "Wikimedia Commons artwork; gaming brands are out of scope upstream."
+    }
+  ],
+  "resolution": {
+    "allowSlugFallback": true,
+    "note": "When a mapped upstream path disappears, the sync looks for exactly one same-extension file at the top level of logos/<upstreamSlug>/. One candidate is reported as relocated and still requires PR review; zero or several candidates fail the entry without touching the approved local asset."
+  }
+}

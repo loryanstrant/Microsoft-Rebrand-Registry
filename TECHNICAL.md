@@ -16,11 +16,37 @@ Open the local URL printed by `serve`. The app has no build step or runtime API 
 
 ```bash
 npm run validate
+npm run validate:logos
 npm test
 npm run package
 ```
 
 `npm run package` creates the complete uploadable site in `.deploy-package/` and fails if an application asset referenced by either HTML page, or a product image referenced by the dataset, is missing. Deploy that directory rather than assembling an upload by hand.
+
+`npm run validate:logos` checks every shipped logo against the two sizes the site renders: 52px in the registry table and 32px in the timeline. It is pure Node, with no image library, and reports `● Validated` or `○ Invalid` per asset.
+
+## Authoritative logo sync
+
+Most logos are copies of artwork from [MicrosoftCloudLogos](https://github.com/loryanstrant/MicrosoftCloudLogos), the collection behind www.mscloudlogos.com. `.gitea/workflows/sync-authoritative-logos.yml` keeps them current: it runs daily, copies the mapped files byte for byte, validates them, and opens **one** review pull request. It never merges and never deploys.
+
+`config/logo-sources.json` is the mapping. Each `managed` entry names the local asset, its exact upstream path under `logos/`, the expected format, and an optional reviewed validation exception. Each `unmanaged` entry records why an asset stays local; those credited to the authoritative collection carry `creditedUpstream: true` so the opt-out is deliberate. Several registry assets may share one upstream mark; two mappings writing to the same local file is a conflict and fails the run.
+
+The sync reads nothing but the mapped files. The upstream site moved to its own repository and its generated `docs/js/logo-data.js` manifest no longer exists, so `logos/` plus `metadata.md` is the whole source contract, and a test asserts no generated manifest creeps back in.
+
+To run it by hand against a local checkout of the authoritative repository:
+
+```bash
+git clone --depth 1 https://github.com/loryanstrant/MicrosoftCloudLogos.git /tmp/mscl
+npm run sync:logos -- --source /tmp/mscl --report sync-report.json          # dry run
+npm run sync:logos -- --source /tmp/mscl --report sync-report.json --apply  # write files
+npm run preview:logos -- --report sync-report.json --out _IMAGES/logo-sync-preview.html
+```
+
+The preview is a self-contained HTML contact sheet showing each changed logo at 52px and 32px on light, dark and checkerboard backgrounds. The workflow uploads it as the `logo-sync-review` artifact; open it in a browser before approving a sync pull request, because dimensions alone cannot prove a mark looks right.
+
+Artwork is never cropped, resized, optimised or re-encoded. A missing or ambiguous upstream path fails the run and leaves the approved local asset untouched; corrections belong in the authoritative repository. Full acceptance criteria are in [docs/specs/authoritative-logo-sync.md](docs/specs/authoritative-logo-sync.md).
+
+To add a logo to the sync, add a `managed` entry and run the dry run above. If the workflow token cannot push branches or open pull requests on this Gitea instance, add a repository-scoped `LOGO_SYNC_TOKEN` Actions secret; the workflow prefers it when present.
 
 ## Dataset shape
 
