@@ -25,6 +25,9 @@ export const FORMER_SITE_NAMES = [
   'Rename, Rebrand, Repeat'
 ];
 
+export const FORMER_SITE_NAME_INTERVAL_MS = 2500;
+export const FORMER_SITE_NAME_TRANSITION_MS = 200;
+
 export function rotateFormerSiteNames() {
   const label = document.querySelector('#former-site-name');
   if (!label || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -35,6 +38,6 @@ export function rotateFormerSiteNames() {
       index = (index + 1) % FORMER_SITE_NAMES.length;
       label.textContent = FORMER_SITE_NAMES[index];
       label.classList.remove('is-changing');
-    }, 200);
-  }, 2000);
+    }, FORMER_SITE_NAME_TRANSITION_MS);
+  }, FORMER_SITE_NAME_INTERVAL_MS);
 }

@@ -16,8 +16,12 @@ function normalise(value, values) {
   return high === low ? 0 : (value - low) / (high - low);
 }
 
-export function analyseRegistry(data) {
-  const asOf = parseDate(data.asOf);
+function localCalendarDate(value) {
+  return new Date(Date.UTC(value.getFullYear(), value.getMonth(), value.getDate()));
+}
+
+export function analyseRegistry(data, now = new Date()) {
+  const today = localCalendarDate(now);
   const completed = data.products.flatMap(product => product.periods
     .filter(period => period.end)
     .map(period => ({ ...period, productId: product.id, productName: product.name, family: product.family })));
@@ -25,7 +29,7 @@ export function analyseRegistry(data) {
   const latestRenamePeriods = completed.filter(period => period.end === latestRenameDate);
   const latestRename = latestRenameDate ? {
     date: latestRenameDate,
-    daysAgo: Math.max(0, Math.floor((asOf - parseDate(latestRenameDate)) / 86_400_000)),
+    daysAgo: Math.max(0, Math.floor((today - parseDate(latestRenameDate)) / 86_400_000)),
     products: latestRenamePeriods.map(period => period.productName).sort((a, b) => a.localeCompare(b))
   } : null;
 
@@ -86,7 +90,7 @@ export function analyseRegistry(data) {
   const riskInputs = data.products.map(product => {
     const current = product.periods.find(period => !period.end);
     const family = familyMap.get(product.family);
-    const ageMonths = monthDiff(parseDate(current.start), asOf);
+    const ageMonths = monthDiff(parseDate(current.start), today);
     const expectedRun = family.renames >= 2 ? median(family.durations) : globalMedian;
     const remaining = expectedRun - ageMonths;
     const window = remaining <= 0 ? 'Overdue by historical standards'
@@ -158,7 +162,7 @@ function render(result) {
   if (result.latestRename) {
     const productNames = new Intl.ListFormat('en-AU', { style: 'long', type: 'conjunction' }).format(result.latestRename.products);
     document.querySelector('#rename-days').textContent = result.latestRename.daysAgo.toLocaleString('en-AU');
-    document.querySelector('#rename-tracker-detail').textContent = `Last recorded on ${dateAsOf(result.latestRename.date)}: ${productNames}. Counted to ${dateAsOf(result.asOf)}.`;
+    document.querySelector('#rename-tracker-detail').textContent = `Last recorded on ${dateAsOf(result.latestRename.date)}: ${productNames}. Counted through today.`;
     document.querySelector('#rename-tracker').hidden = false;
   }
   document.querySelector('#analysis-summary').innerHTML = `

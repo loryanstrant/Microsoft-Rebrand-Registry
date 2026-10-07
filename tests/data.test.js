@@ -44,7 +44,8 @@ test('both pages rotate crossed-out former and alternate site names', () => {
     assert.ok(formerNames.includes(name), name);
   }
   assert.match(formerSiteNames, /prefers-reduced-motion: reduce/);
-  assert.match(formerSiteNames, /}, 2000\);/);
+  assert.match(formerSiteNames, /FORMER_SITE_NAME_INTERVAL_MS = 2500/);
+  assert.match(formerSiteNames, /FORMER_SITE_NAME_TRANSITION_MS = 200/);
   assert.match(styles, /\.site-header\{position:sticky;top:0;z-index:10/);
   assert.match(styles, /\.skip-link\{[^}]*z-index:11/);
   assert.match(styles, /main\{[^}]*scroll-margin-top:7rem/);
