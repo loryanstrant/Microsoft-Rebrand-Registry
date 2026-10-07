@@ -438,3 +438,38 @@ test('the Gaming family holds the five Xbox entries and no codenames', () => {
   const names = data.products.flatMap(({ periods }) => periods.map(({ name }) => name));
   assert.ok(names.every(name => !name.startsWith('Project ')), 'codenames stay out of the registry');
 });
+test('every logo asset is classified exactly once in the sync manifest', async () => {
+  const config = JSON.parse(await readFile(new URL('../config/logo-sources.json', import.meta.url), 'utf8'));
+  const classified = [...config.managed, ...config.unmanaged].map(({ local }) => local);
+  assert.equal(new Set(classified).size, classified.length, 'no asset may be classified twice');
+  const used = [...new Set(data.products.map(({ logo }) => logo.src))].sort();
+  assert.deepEqual(used.filter(src => !classified.includes(src)), [], 'every logo in use needs a managed or unmanaged entry');
+  assert.deepEqual(classified.filter(src => !used.includes(src)).sort(), [], 'the manifest must not list assets the registry no longer uses');
+});
+test('every logo credited to Microsoft Cloud Logos is synced from the authoritative repository', async () => {
+  const config = JSON.parse(await readFile(new URL('../config/logo-sources.json', import.meta.url), 'utf8'));
+  const managed = new Set(config.managed.map(({ local }) => local));
+  const unmanaged = new Map(config.unmanaged.map(entry => [entry.local, entry]));
+  for (const product of data.products) {
+    const source = product.logo.source ?? '';
+    if (!/mscloudlogos\.com|MicrosoftCloudLogos/.test(source)) continue;
+    if (managed.has(product.logo.src)) continue;
+    const exempt = unmanaged.get(product.logo.src);
+    assert.ok(
+      exempt?.creditedUpstream && exempt.reason?.length,
+      `${product.id} credits the authoritative collection, so ${product.logo.src} must either be managed or carry an explicit creditedUpstream opt-out with a reason`
+    );
+  }
+  for (const [local, entry] of unmanaged) assert.ok(entry.reason?.length, `${local} needs a reason for staying unmanaged`);
+});
+test('managed entries point at real paths under the authoritative logos tree', async () => {
+  const config = JSON.parse(await readFile(new URL('../config/logo-sources.json', import.meta.url), 'utf8'));
+  assert.equal(config.sourceRepository.assetRoot, 'logos');
+  assert.equal(config.sourceRepository.manifest, undefined, 'no generated upstream manifest is consumed');
+  for (const entry of config.managed) {
+    assert.match(entry.upstream, /^logos\/[a-z0-9-]+\/[^/]+\.(svg|png)$/, entry.local);
+    assert.ok(entry.upstream.startsWith(`logos/${entry.upstreamSlug}/`), `${entry.local} slug must match its upstream folder`);
+    assert.equal(entry.upstream.split('.').pop(), entry.format, entry.local);
+    assert.equal(`.${entry.format}`, entry.local.slice(entry.local.lastIndexOf('.')), entry.local);
+  }
+});

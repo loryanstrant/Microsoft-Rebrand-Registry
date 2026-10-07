@@ -7,7 +7,10 @@
     "start": "npx --yes serve@14.2.4 .",
     "package": "node scripts/package-deployment.js",
     "test": "node --test",
-    "validate": "node scripts/validate-data.js"
+    "validate": "node scripts/validate-data.js",
+    "validate:logos": "node scripts/validate-logos.js",
+    "sync:logos": "node scripts/sync-authoritative-logos.js",
+    "preview:logos": "node scripts/render-logo-preview.js"
   },
   "engines": {
     "node": ">=20"

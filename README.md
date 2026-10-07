@@ -51,6 +51,8 @@ To add a product:
 4. If the entry is not a product, set `kind` to `resource`. If its current name collides with another entry's, add a `disambiguator` rather than editing the name.
 5. Follow the checks in the [technical guide](TECHNICAL.md) before submitting your contribution.
 
+Logo artwork is mostly **not** edited here. Most marks are synced automatically from [MicrosoftCloudLogos](https://github.com/loryanstrant/MicrosoftCloudLogos), the collection behind www.mscloudlogos.com, so a corrected or updated logo belongs in that repository: a daily check copies it across and opens a review pull request here. See the [technical guide](TECHNICAL.md#authoritative-logo-sync) for which assets are synced and which stay local.
+
 ### Contributor acknowledgements
 
 - [Michael Schierl (schierlm)](https://github.com/schierlm) contributed the Lync and Skype for Business Server history in [GitHub PR #9](https://github.com/loryanstrant/Microsoft-Rebrand-Registry/pull/9).

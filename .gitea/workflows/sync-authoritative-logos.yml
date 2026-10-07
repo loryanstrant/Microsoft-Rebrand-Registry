@@ -1,0 +1,159 @@
+# Syncs the registry's logo artwork from the authoritative MicrosoftCloudLogos repository
+# and opens one review pull request. Nothing is merged or deployed automatically: a human
+# reviews the contact sheet and merges, and deployment stays the existing separate step.
+#
+# Only the files mapped in config/logo-sources.json are read. No generated upstream
+# website data is consumed, so the upstream site's move to its own repository - and the
+# removal of docs/js/logo-data.js with it - does not affect this workflow.
+name: Sync authoritative logos
+on:
+  schedule:
+    - cron: '20 16 * * *'
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Authoritative ref to sync from
+        required: false
+        default: main
+
+concurrency:
+  group: sync-authoritative-logos
+  cancel-in-progress: false
+
+env:
+  SYNC_BRANCH: automation/sync-authoritative-logos
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the registry
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Use Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Read the source repository from the manifest
+        id: source
+        run: |
+          set -euo pipefail
+          node -e '
+            const config = require("./config/logo-sources.json").sourceRepository;
+            const append = (key, value) => require("fs").appendFileSync(process.env.GITHUB_OUTPUT, `${key}=${value}\n`);
+            append("url", config.github);
+            append("branch", config.branch);
+          '
+
+      - name: Check out the authoritative logo collection
+        run: |
+          set -euo pipefail
+          ref='${{ inputs.ref }}'
+          git clone --depth 1 --branch "${ref:-${{ steps.source.outputs.branch }}}" \
+            '${{ steps.source.outputs.url }}' upstream
+          echo "UPSTREAM_SHA=$(git -C upstream rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Sync the mapped artwork
+        run: |
+          set -euo pipefail
+          node scripts/sync-authoritative-logos.js \
+            --source upstream --sha "$UPSTREAM_SHA" --report sync-report.json --apply
+
+      - name: Validate every logo at its rendered sizes
+        run: npm run validate:logos
+
+      - name: Validate the dataset, run the suite and build the package
+        run: |
+          set -euo pipefail
+          npm run validate
+          npm test
+          npm run package
+
+      - name: Build the review contact sheet
+        run: |
+          set -euo pipefail
+          mkdir -p review
+          node scripts/render-logo-preview.js \
+            --report sync-report.json --sha "$UPSTREAM_SHA" --out review/logo-sync-preview.html
+          cp sync-report.json review/sync-report.json
+
+      - name: Upload the review evidence
+        uses: actions/upload-artifact@v3
+        with:
+          name: logo-sync-review
+          path: review/
+
+      - name: Decide whether anything changed
+        id: changes
+        run: |
+          set -euo pipefail
+          rm -rf upstream review .deploy-package
+          if [ -z "$(git status --porcelain src/assets/logos)" ]; then
+            echo '● No authoritative logo changed; nothing to review.'
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+          else
+            echo '◐ Authoritative logo changes found:'
+            git status --porcelain src/assets/logos
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Push the review branch
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name 'rebrand-registry-bot'
+          git config user.email 'rebrand-registry-bot@users.noreply.gitea.strant.casa'
+          git checkout -B "$SYNC_BRANCH"
+          git add src/assets/logos
+          git commit -m "Sync authoritative logos from MicrosoftCloudLogos@${UPSTREAM_SHA:0:12}"
+          git push --force origin "$SYNC_BRANCH"
+
+      - name: Open or update the review pull request
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          # The built-in workflow token is tried first; set LOGO_SYNC_TOKEN as an Actions
+          # secret if this runner's token cannot push branches or open pull requests.
+          GITEA_TOKEN: ${{ secrets.LOGO_SYNC_TOKEN || github.token }}
+        run: |
+          set -euo pipefail
+          api="${GITHUB_SERVER_URL}/api/v1/repos/${GITHUB_REPOSITORY}"
+          payload=$(node -e '
+            const report = require("./sync-report.json");
+            const moved = report.entries.filter(entry => entry.relocated);
+            const body = [
+              `Synced from **${report.sourceRepository}@${process.env.UPSTREAM_SHA}**.`,
+              "",
+              "### Changed artwork",
+              ...report.changed.map(file => `- \`${file}\``),
+              ...(moved.length
+                ? ["", "### Upstream files that moved", ...moved.map(entry => `- \`${entry.local}\` now comes from \`${entry.resolved}\``)]
+                : []),
+              "",
+              "Each file is a byte-for-byte copy of the authoritative artwork; nothing was",
+              "cropped, resized or re-encoded. Download the `logo-sync-review` artifact and",
+              "open `logo-sync-preview.html` to check both rendered sizes before merging.",
+              "Deployment remains a separate, manual step after merge.",
+            ].join("\n");
+            console.log(JSON.stringify({
+              title: "Sync authoritative logos from MicrosoftCloudLogos",
+              body,
+              head: process.env.SYNC_BRANCH,
+              base: "main"
+            }));
+          ')
+          existing=$(curl -fsS -H "Authorization: token ${GITEA_TOKEN}" \
+            "${api}/pulls?state=open" \
+            | node -p "JSON.parse(require('fs').readFileSync(0,'utf8')).find(pull => pull.head.ref === process.env.SYNC_BRANCH)?.number ?? ''")
+          if [ -n "$existing" ]; then
+            curl -fsS -X PATCH -H "Authorization: token ${GITEA_TOKEN}" \
+              -H 'Content-Type: application/json' -d "$payload" "${api}/pulls/${existing}" > /dev/null
+            echo "● Updated pull request #${existing}."
+          else
+            curl -fsS -X POST -H "Authorization: token ${GITEA_TOKEN}" \
+              -H 'Content-Type: application/json' -d "$payload" "${api}/pulls" > /dev/null
+            echo '● Opened a review pull request.'
+          fi
