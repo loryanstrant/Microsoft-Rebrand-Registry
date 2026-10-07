@@ -148,17 +148,50 @@ test('product letters support alphabetical navigation', () => {
   assert.equal(productLetter('Microsoft Entra ID'), 'E');
   assert.equal(productLetter('365 Copilot'), '#');
 });
-test('expanded registry contains 81 products and 1 resource in alphabetical sections', () => {
+test('expanded registry contains 82 products and 1 resource in alphabetical sections', () => {
   const resources = data.products.filter(({ kind }) => kind === 'resource');
   assert.equal(resources.length, 1);
-  assert.equal(data.products.length - resources.length, 81);
-  assert.equal(data.products.length, 82);
+  assert.equal(data.products.length - resources.length, 82);
+  assert.equal(data.products.length, 83);
   assert.equal(data.products.some(({ id }) => id === 'microsoft-lens'), false);
   const groups = alphabeticalProducts(data.products.map(product => ({ product })));
   const letters = [...new Set(groups.map(group => productLetter(group.product.name)))];
   assert.deepEqual(letters, [...letters].sort());
   assert.ok(letters.length >= 4);
 });
+test('Business Central preserves the contributor-supplied Navision history', () => {
+  const product = data.products.find(({ id }) => id === 'dynamics-365-business-central');
+  assert.deepEqual(product.periods.map(({ name }) => name), [
+    'Microsoft Business Solutions-Navision',
+    'Microsoft Dynamics NAV',
+    'Microsoft Dynamics 365 Business Central'
+  ]);
+  assert.equal(product.periods[0].start, '2002-07');
+  assert.ok(product.periods[0].sources.includes('navision-foundation'));
+  assert.ok(product.periods[0].sources.includes('navision-history'));
+});
+
+test('Skype for Business Server records sequential brand periods, not overlapping version support', () => {
+  const product = data.products.find(({ id }) => id === 'skype-for-business');
+  assert.deepEqual(product.periods.map(({ name }) => name), [
+    'Microsoft Office Live Communications Server',
+    'Microsoft Office Communications Server',
+    'Microsoft Lync Server',
+    'Skype for Business Server'
+  ]);
+  for (let index = 1; index < product.periods.length; index += 1) {
+    assert.equal(product.periods[index - 1].end, product.periods[index].start);
+  }
+  assert.match(product.note, /overlap in support/);
+  assert.ok(product.periods.at(-1).sources.includes('sfb-se-lifecycle'));
+});
+
+test('README recognises the external contributors and their original pull requests', async () => {
+  const readme = await readFile(new URL('../README.md', import.meta.url), 'utf8');
+  assert.match(readme, /Michael Schierl \(schierlm\)[\s\S]*pull\/9/);
+  assert.match(readme, /SimonOfHH[\s\S]*pull\/10/);
+});
+
 test('larger expansion preserves multi-step Configuration Manager history', () => {
   const product = data.products.find(({ id }) => id === 'configuration-manager');
   assert.deepEqual(product.periods.map(({ name }) => name), [

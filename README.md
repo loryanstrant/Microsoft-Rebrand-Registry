@@ -31,7 +31,7 @@ The site’s tongue-in-cheek “Get Your Story Straight” network credits [Micr
 - Durations for ongoing names are calculated to the top-level `asOf` date, making the output reproducible.
 - Sources are evidence for the transition, but historical pages do not always establish an exact first-use date. The interface exposes precision and qualifiers rather than implying unsupported accuracy.
 
-The registry currently covers 81 products plus 1 non-product resource, across 190 documented name periods, supported by 158 cited sources. It uses first-party Microsoft announcements wherever available and should be reviewed as research, not as an official Microsoft chronology. Alphabetical jump links divide the growing catalogue without hiding entries behind pagination or collapsed sections. The index ignores a leading “Microsoft” so related product names remain easy to scan; names beginning with a number are under #.
+The registry currently covers 82 products plus 1 non-product resource, across 195 documented name periods, supported by 169 cited sources. It uses first-party Microsoft announcements wherever available and should be reviewed as research, not as an official Microsoft chronology. Alphabetical jump links divide the growing catalogue without hiding entries behind pagination or collapsed sections. The index ignores a leading “Microsoft” so related product names remain easy to scan; names beginning with a number are under #.
 
 ## Analysis
 
@@ -50,6 +50,11 @@ To add a product:
 3. Preserve the precision of the evidence. Do not invent a day or month. Date a period to when the change took effect, not to when it was announced.
 4. If the entry is not a product, set `kind` to `resource`. If its current name collides with another entry's, add a `disambiguator` rather than editing the name.
 5. Follow the checks in the [technical guide](TECHNICAL.md) before submitting your contribution.
+
+### Contributor acknowledgements
+
+- [Michael Schierl (schierlm)](https://github.com/schierlm) contributed the Lync and Skype for Business Server history in [GitHub PR #9](https://github.com/loryanstrant/Microsoft-Rebrand-Registry/pull/9).
+- [SimonOfHH](https://github.com/SimonOfHH) contributed the early Navision history for Dynamics 365 Business Central in [GitHub PR #10](https://github.com/loryanstrant/Microsoft-Rebrand-Registry/pull/10).
 
 ## Technical documentation
 
